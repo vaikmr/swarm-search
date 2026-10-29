@@ -1,4 +1,4 @@
-"""PAPER-ONLY accounting replay scaffolding; NOT an EVM/fork replay or T2 evidence.
+"""PAPER-ONLY CLOSED-POSITION accounting; NOT full-portfolio coverage or T2 evidence.
 
 Consumes locally supplied precomputed opportunity/mark records. Never fetches RPC
 state, signs, sends, deploys, or executes transactions. Every output is T4, including
@@ -161,7 +161,7 @@ class ReplayInput:
                 raise EvidenceError("duplicate opportunity identifier")
             for item in value.opportunities:
                 if not value.start <= item.decision_at < item.settlement_at <= value.end:
-                    raise EvidenceError("all opportunities must settle inside the supplied period")
+                    raise EvidenceError("closed_positions_only: all opportunities must settle inside the supplied period")
                 if not set(item.source_ids) <= set(value.source_ids):
                     raise EvidenceError("opportunity references an unknown source")
             return value
@@ -309,6 +309,9 @@ def run_replay(data: ReplayInput, scenario: Scenario) -> dict[str, Any]:
     return {
         "scenario": scenario.name, "paper_only": True, "evidence_tier": "T4",
         "data_kind": data.data_kind, "is_t2_evidence": False,
+        "scope": "closed_positions_only",
+        "portfolio_coverage_complete": False,
+        "monthly_portfolio_pnl_validated": False,
         "recommendation_eligible": False,
         "gross_pnl_usd": str(gross), "variable_cost_usd": str(costs),
         "failed_attempt_cost_usd": str(failed_costs),
@@ -324,12 +327,12 @@ def run_replay(data: ReplayInput, scenario: Scenario) -> dict[str, Any]:
         "profitable_fill_fraction": str(D(counters["profitable_fill"]) / filled) if filled else None,
         "capture_fraction": str(D(filled) / len(opportunities)) if opportunities else None,
         "outcome_counts": dict(counters),
-        "rolling_30d_pnl_usd": {
+        "closed_position_rolling_30d_economic_pnl_usd": {
             "window_count": len(rolling_30d), "overlapping_windows": True,
             **{name: str(quantile(rolling_30d, D(fraction))) if rolling_30d else None
                for name, fraction in (("p5", ".05"), ("p50", ".5"), ("p95", ".95"))},
         },
-        "coverage_days": str(duration_s / D(86400)),
+        "input_window_days": str(duration_s / D(86400)),
         "decisions": decisions,
         "equity_curve": [{"at": at.isoformat(), "equity_usd": str(value)} for at, value in curve],
         "limits": [
@@ -341,7 +344,9 @@ def run_replay(data: ReplayInput, scenario: Scenario) -> dict[str, Any]:
             "Profits do not compound; prior marked losses/fees reduce available capital. No margin-call model.",
             "Capital locks reserve principal from decision to settlement, conservatively.",
             "Same-time events use identifier order; strategy-specific opportunity selection is absent.",
-            "Input must include rejected opportunities and end-of-window positions, not just winning trades.",
+            "Closed-position-only accounting rejects pending positions; full portfolio coverage is unestablished.",
+            "Filtering pending positions can censor losses/locks; these outputs cannot validate monthly portfolio PnL or risk.",
+            "Future carryover adapters must mark receivables/collateral at cutoff without later settlement lookahead.",
             "Monthly samples overlap and empirical percentiles do not certify a 99% tail limit.",
             "Capture stress is relative incumbent win-count uplift, rounding up, not probability.",
             "Zero incumbent wins gives zero relative uplift; use absolute takeover stress separately.",

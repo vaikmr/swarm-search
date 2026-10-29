@@ -53,8 +53,13 @@ class ReplayTests(unittest.TestCase):
         self.assertEqual(D(result["benchmark_excess_usd"]), D("60"))
         self.assertEqual(D(result["terminal_equity_usd"]), D("50065"))
         self.assertEqual(D(result["equity_curve"][-1]["equity_usd"]), D("50065"))
-        self.assertEqual(D(result["rolling_30d_pnl_usd"]["p50"]), D("65"))
-        self.assertEqual(result["rolling_30d_pnl_usd"]["window_count"], 1)
+        self.assertEqual(D(result["closed_position_rolling_30d_economic_pnl_usd"]["p50"]), D("65"))
+        self.assertEqual(result["closed_position_rolling_30d_economic_pnl_usd"]["window_count"], 1)
+        self.assertEqual(result["scope"], "closed_positions_only")
+        self.assertFalse(result["portfolio_coverage_complete"])
+        self.assertFalse(result["monthly_portfolio_pnl_validated"])
+        self.assertNotIn("rolling_30d_pnl_usd", result)
+        self.assertNotIn("coverage_days", result)
         self.assertFalse(result["is_t2_evidence"])
         self.assertEqual(result["evidence_tier"], "T4")
         self.assertFalse(result["recommendation_eligible"])
@@ -152,8 +157,23 @@ class ReplayTests(unittest.TestCase):
         row = fixture()
         row["end"] = "2026-09-03T00:00:00Z"
         result = self.run_fixture(row)
-        self.assertEqual(result["rolling_30d_pnl_usd"]["window_count"], 0)
-        self.assertIsNone(result["rolling_30d_pnl_usd"]["p50"])
+        self.assertEqual(result["closed_position_rolling_30d_economic_pnl_usd"]["window_count"], 0)
+        self.assertIsNone(result["closed_position_rolling_30d_economic_pnl_usd"]["p50"])
+
+    def test_pending_loss_cannot_be_silently_counted_as_covered_portfolio(self):
+        row = fixture()
+        item = row["opportunities"][0]
+        item.update(decision_at="2026-09-29T00:00:00Z",
+                    settlement_at="2026-10-02T00:00:00Z",
+                    latest_fill_at="2026-09-29T00:00:01Z",
+                    competitor_arrival_at="2026-09-29T00:00:00.200Z",
+                    marks=[
+                        {"at": "2026-09-30T00:00:00Z",
+                         "cumulative_gross_pnl_usd": "-6000"},
+                        {"at": "2026-10-02T00:00:00Z",
+                         "cumulative_gross_pnl_usd": "100"}])
+        with self.assertRaisesRegex(EvidenceError, "closed_positions_only"):
+            ReplayInput.parse(row)
 
     def test_invalid_costs_marks_sources_duplicates_and_schema(self):
         variants = []
