@@ -1,10 +1,10 @@
 # Strategy board
 
-**Initial status:** research assigned; no performance evidence packages validated; no recommendation.
+**Discovery checkpoint, 2026-10-29:** both scout packages, capacity, costs, risk, tool scaffolding and independent review were integrated. No qualifying T1/T2/T3 performance package or strategy recommendation was established. See the [interim report](STAGE01_REPORT.md).
 
 States distinguish `unverified`, `keep-for-testing`, `killed`, and `evidence-qualified`. A candidate with missing data stays unverified unless an independent hard-constraint failure establishes rejection. Returning no qualifying strategy is valid.
 
-| Slug | Candidate | Initial state | Evidence / next gate |
+| Slug | Candidate | Current state | Evidence / next gate |
 | --- | --- | --- | --- |
 | `benchmark-lending` | Blue-chip stablecoin lending baseline | Unverified | Current and 30/90-day rates, eligible markets, net total-capital benchmark |
 | `cross-chain-relaying` | Cross-chain relaying and intent filling | Unverified | Identified actors, realized capital-adjusted PnL, competition and bond/lock requirements |
@@ -20,3 +20,7 @@ States distinguish `unverified`, `keep-for-testing`, `killed`, and `evidence-qua
 | `cex-dex-arbitrage` | CEX-DEX arbitrage | Unverified | Slower-than-incumbent capture, CEX fees/access/withdrawals and inventory risk |
 
 No claim of attainable monthly profit, proven drawdown protection, or profitability ranking is made by this initial board.
+
+Each candidate now has a `strategies/<slug>/hypothesis.md` and independent `redteam.md`. Evidence directories contain source notes, bounded public samples or explicit gaps. Unknown net returns are not zero.
+
+Route-level finding: CoW's documented self-funded bonding routes exceed this capital budget. This does not reject all intent solving or establish that the separate sponsored route is accessible. Across and UniswapX have useful attributable discovery samples, not demonstrated entrant profit.
