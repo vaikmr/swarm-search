@@ -12,6 +12,8 @@ Research date: 2026-10-29. Scope: the lending benchmark and all eleven candidate
 
 The maximum on-chain deployment is not a target. The [follow-up review of the scout's nominal baseline](baseline-nominal-review.md) explains shared settlement, stablecoin look-through and reserve-custody blockers without assuming that every shared dependency causes total loss.
 
+The [smaller-sleeve follow-up](lower-deployment-review.md) distinguishes newly recorded deployment identity from audit/withdrawal guarantees, and a conditional annual cost budget from the charter's annual tail-probability gate.
+
 ## Evidence labeling and reproducibility
 
 - Input constraints: the study charter; not market observations.
