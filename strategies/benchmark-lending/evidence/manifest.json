@@ -1,0 +1,101 @@
+[
+  {
+    "file": "aave-ethereum-usdc-history.json",
+    "source": "https://yields.llama.fi/chart/aa70268e-4b52-42bf-a116-608b370f9501",
+    "retrieved_at": "2026-10-29T07:22:03.615710+00:00",
+    "full_response_sha256": "7e568e5951498b368c8751730cffb00996635ade3c65afa9d1c4682b17069796",
+    "full_response_rows": 1362,
+    "retained_rows": 92,
+    "retained_sha256": "d9d9ccc9459c83a35be323216cd1c0c45a0a63e744b60bda68728a0e23166a13"
+  },
+  {
+    "file": "aave-ethereum-usdt-history.json",
+    "source": "https://yields.llama.fi/chart/f981a304-bb6c-45b8-b0c5-fd2f515ad23a",
+    "retrieved_at": "2026-10-29T07:22:03.622737+00:00",
+    "full_response_sha256": "5e0607e85e52125ef27cf048a5a9deb0f77e1c705f56cd3fb86542da716162d7",
+    "full_response_rows": 1355,
+    "retained_rows": 92,
+    "retained_sha256": "fee839ae4d172a5aa32782e18e48bff66bceb3e7121874af3537f5a6d51bb379"
+  },
+  {
+    "file": "aave-ethereum-dai-history.json",
+    "source": "https://yields.llama.fi/chart/3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
+    "retrieved_at": "2026-10-29T07:22:03.629648+00:00",
+    "full_response_sha256": "cb9446cb24891686e8b2b86c44d6594b7c24b752dd6263cd59b4c6168340e6cc",
+    "full_response_rows": 1362,
+    "retained_rows": 92,
+    "retained_sha256": "795fcd0b45e8279b7b8c7eacddc7091569c541173867f2b0342c9b91b4996483"
+  },
+  {
+    "file": "aave-arbitrum-usdc-history.json",
+    "source": "https://yields.llama.fi/chart/d9fa8e14-0447-4207-9ae8-7810199dfa1f",
+    "retrieved_at": "2026-10-29T07:22:03.688321+00:00",
+    "full_response_sha256": "6385aceb70d8b1df0b6ea8ed10c10281cfeebb1c15ca81b301d8d6fd82a9daf4",
+    "full_response_rows": 1220,
+    "retained_rows": 92,
+    "retained_sha256": "347f24ba141ba1dee9d32a4a16f8a19095fef64a5ad625b98ac170addd16f4b2"
+  },
+  {
+    "file": "aave-base-usdc-history.json",
+    "source": "https://yields.llama.fi/chart/7e0661bf-8cf3-45e6-9424-31916d4c7b84",
+    "retrieved_at": "2026-10-29T07:22:03.693309+00:00",
+    "full_response_sha256": "f7a0e19e984d5f8a7b1cf3494fd627749ed7309067ee43ac7358ae9c074982d6",
+    "full_response_rows": 964,
+    "retained_rows": 92,
+    "retained_sha256": "2867cf71323834ef48a618d6ce05299bdb52c467880b7a9f486724c1129e9624"
+  },
+  {
+    "file": "compound-ethereum-usdc-history.json",
+    "source": "https://yields.llama.fi/chart/7da72d09-56ca-4ec5-a45f-59114353e487",
+    "retrieved_at": "2026-10-29T07:22:04.181032+00:00",
+    "full_response_sha256": "2a780f70c3d870c83256ad02eeb8404ca977f39bcee907809d9bbec046d67c83",
+    "full_response_rows": 1481,
+    "retained_rows": 92,
+    "retained_sha256": "5bcbb42f3f8138434e06acb497d342495bc0251617a18ed069d1ad83f08a15ae"
+  },
+  {
+    "file": "compound-ethereum-usdt-history.json",
+    "source": "https://yields.llama.fi/chart/f4d5b566-e815-4ca2-bb07-7bcd8bc797f1",
+    "retrieved_at": "2026-10-29T07:22:04.186014+00:00",
+    "full_response_sha256": "2fb18b8536d6e1195bf6741f8c5b6fb3f7aae62064931cdfad5c636886b14c40",
+    "full_response_rows": 755,
+    "retained_rows": 92,
+    "retained_sha256": "f54cda374ea692d2cae8ba627a9fc7eda28d168f416fb644273de7a7ada33c4a"
+  },
+  {
+    "file": "compound-base-usdc-history.json",
+    "source": "https://yields.llama.fi/chart/0c8567f8-ba5b-41ad-80de-00a71895eb19",
+    "retrieved_at": "2026-10-29T07:22:04.190907+00:00",
+    "full_response_sha256": "23b87bf8b02117591e4f64ad87cd9b10a62fcba5e78e6bd856e2d7905d66e98e",
+    "full_response_rows": 945,
+    "retained_rows": 92,
+    "retained_sha256": "0cdb51a62dad91f3a8204363a65a766fb8c3d3db3f92140f0a3e8a797ab73623"
+  },
+  {
+    "file": "compound-arbitrum-usdt-history.json",
+    "source": "https://yields.llama.fi/chart/85247b13-8180-44e7-b38c-4d324cc68a92",
+    "retrieved_at": "2026-10-29T07:22:04.195177+00:00",
+    "full_response_sha256": "2af4da73af98f4eae1131c23f9c827f4fb296e1852f8184999121653fa5cd7a4",
+    "full_response_rows": 844,
+    "retained_rows": 92,
+    "retained_sha256": "589c7fbb306a6727991e2ddfd834c46906865dce2591f946ce147cbc03844af5"
+  },
+  {
+    "file": "morpho-base-sparkusdc-history.json",
+    "source": "https://yields.llama.fi/chart/a5fab52f-73fa-4f44-9c09-9af1eb20996c",
+    "retrieved_at": "2026-10-29T07:22:04.198873+00:00",
+    "full_response_sha256": "4b7e88af0c3abe91136b6886d12525966eaba2ecbc7ac234adcbf76d71b7d126",
+    "full_response_rows": 652,
+    "retained_rows": 92,
+    "retained_sha256": "71424168a57a8bc2198c8a722a0665536066f4fbcdf9815cd9371631f5e607bb"
+  },
+  {
+    "file": "morpho-base-steakusdc-history.json",
+    "source": "https://yields.llama.fi/chart/ba68527f-8ec2-4c55-827a-8f4673ae047c",
+    "retrieved_at": "2026-10-29T07:22:04.201079+00:00",
+    "full_response_sha256": "df887b64975aa7d400a0075f19a6b5fdb6649bbc1d5ec74778305d897c3e3abd",
+    "full_response_rows": 332,
+    "retained_rows": 92,
+    "retained_sha256": "46beb4dec664252525064fafb52ca3302641030552e4adf5f7eea96b2db90d0e"
+  }
+]

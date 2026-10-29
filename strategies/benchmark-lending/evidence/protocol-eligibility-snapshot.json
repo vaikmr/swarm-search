@@ -1,0 +1,121 @@
+{
+  "built_at": "2026-10-29T07:19:28.935865+00:00",
+  "data": [
+    {
+      "slug": "aave-v3",
+      "source": "https://api.llama.fi/protocol/aave-v3",
+      "retrieved_at_basis": "local cached file modification time",
+      "retrieved_at": "2026-10-29T07:15:02.194747+00:00",
+      "full_response_sha256": "6a67bbaa449183bcd0be6ca1dcd9fbf474ed482e829288482d399c7dfe40abfb",
+      "name": "Aave V3",
+      "first_tvl_observation": {
+        "date": 1647216000,
+        "totalLiquidityUSD": 6
+      },
+      "latest_tvl_observation": {
+        "date": 1793250215,
+        "totalLiquidityUSD": 16326376925
+      },
+      "audit_links": [
+        "https://aave.com/security"
+      ],
+      "warning": "TVL is third-party protocol-level measurement; first observed TVL is not independently verified deployment timestamp; audit links require version/deployment linkage."
+    },
+    {
+      "slug": "compound-v3",
+      "source": "https://api.llama.fi/protocol/compound-v3",
+      "retrieved_at_basis": "local cached file modification time",
+      "retrieved_at": "2026-10-29T07:15:01.943144+00:00",
+      "full_response_sha256": "885135ae16d704a42813d192341fe725605bad2ecfbe10fabe6ee8a73d60c75b",
+      "name": "Compound V3",
+      "first_tvl_observation": {
+        "date": 1661558400,
+        "totalLiquidityUSD": 3881681
+      },
+      "latest_tvl_observation": {
+        "date": 1793248439,
+        "totalLiquidityUSD": 1333873989
+      },
+      "audit_links": [
+        "https://compound.finance/docs/security"
+      ],
+      "warning": "TVL is third-party protocol-level measurement; first observed TVL is not independently verified deployment timestamp; audit links require version/deployment linkage."
+    },
+    {
+      "slug": "morpho-blue",
+      "source": "https://api.llama.fi/protocol/morpho-blue",
+      "retrieved_at_basis": "local cached file modification time",
+      "retrieved_at": "2026-10-29T07:15:02.743371+00:00",
+      "full_response_sha256": "0ac1ad6e93abd3a540c9f82037b87198cff4fb8d29adc4a896b9c0e0345d14ea",
+      "name": "Morpho Blue",
+      "first_tvl_observation": {
+        "date": 1705190400,
+        "totalLiquidityUSD": 11208493
+      },
+      "latest_tvl_observation": {
+        "date": 1793251079,
+        "totalLiquidityUSD": 11202789087
+      },
+      "audit_links": [
+        "https://github.com/morpho-org/morpho-blue/blob/main/audits/2023-11-13-morpho-blue-cantina-managed-review.pdf"
+      ],
+      "warning": "TVL is third-party protocol-level measurement; first observed TVL is not independently verified deployment timestamp; audit links require version/deployment linkage."
+    },
+    {
+      "slug": "pendle",
+      "source": "https://api.llama.fi/protocol/pendle",
+      "retrieved_at_basis": "local cached file modification time",
+      "retrieved_at": "2026-10-29T07:15:02.619250+00:00",
+      "full_response_sha256": "7bb3bff9998091028b72c847d2f8a635a260870ed6d4e1a7c42b221738c2efea",
+      "name": "Pendle",
+      "first_tvl_observation": {
+        "date": 1623801600,
+        "totalLiquidityUSD": 899394
+      },
+      "latest_tvl_observation": {
+        "date": 1793251511,
+        "totalLiquidityUSD": 1070955796
+      },
+      "audit_links": null,
+      "warning": "TVL is third-party protocol-level measurement; first observed TVL is not independently verified deployment timestamp; audit links require version/deployment linkage."
+    },
+    {
+      "slug": "hyperliquid",
+      "source": "https://api.llama.fi/protocol/hyperliquid",
+      "retrieved_at_basis": "local cached file modification time",
+      "retrieved_at": "2026-10-29T07:15:03.223145+00:00",
+      "full_response_sha256": "17463d210a40dcfccfdf8a6d9c03352dbbea6cff6b84ac5ac3c7e2b49a33f687",
+      "name": "Hyperliquid",
+      "first_tvl_observation": {
+        "date": 1686268800,
+        "totalLiquidityUSD": 3578746
+      },
+      "latest_tvl_observation": {
+        "date": 1793252411,
+        "totalLiquidityUSD": 8240557893
+      },
+      "audit_links": null,
+      "warning": "TVL is third-party protocol-level measurement; first observed TVL is not independently verified deployment timestamp; audit links require version/deployment linkage."
+    },
+    {
+      "slug": "orange-finance",
+      "source": "https://api.llama.fi/protocol/orange-finance",
+      "retrieved_at_basis": "local cached file modification time",
+      "retrieved_at": "2026-10-29T07:15:04.199178+00:00",
+      "full_response_sha256": "d1a6f690454313b8a3f6faefbfa31027a0ba8bd880e73240c5ab83216437d8aa",
+      "name": "Orange Finance",
+      "first_tvl_observation": {
+        "date": 1688428800,
+        "totalLiquidityUSD": 117760
+      },
+      "latest_tvl_observation": {
+        "date": 1793245739,
+        "totalLiquidityUSD": 89
+      },
+      "audit_links": [
+        "https://orange-finance.gitbook.io/orange-finance/risk-and-security/audit"
+      ],
+      "warning": "TVL is third-party protocol-level measurement; first observed TVL is not independently verified deployment timestamp; audit links require version/deployment linkage."
+    }
+  ]
+}

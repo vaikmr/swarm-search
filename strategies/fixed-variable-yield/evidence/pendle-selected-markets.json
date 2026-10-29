@@ -1,0 +1,2577 @@
+{
+  "retrieved_at": "2026-10-29T07:17:32.104173+00:00",
+  "source": "https://api-v2.pendle.finance/core/v2/markets/all?limit=100&skip=0",
+  "pagination": [
+    {
+      "skip": 0,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "9b88b63d181b652d49d102e3485d463bc3c9898c30ec20062f6e60b1af92f96e"
+    },
+    {
+      "skip": 100,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "ea8f9ac3ecdc21c634bf213a6c8df620ed0a42a8fb81a96e21799a0097a1459b"
+    },
+    {
+      "skip": 200,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "cc0b12fd30078f45bc18347ac42a119266cd3ebc42e9c926075baf765e5bf80c"
+    },
+    {
+      "skip": 300,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "e299e5060bdb5a73ac80a7dcc89790f36321baf7c2d65d30de95218c94f5abc8"
+    },
+    {
+      "skip": 400,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "0c73e893108d1bd1e894e257fd901c0a14b23675f977c4150ae2c576c0d60194"
+    },
+    {
+      "skip": 500,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "dc43d9a8437f011888acfa0902ce593ef72cb9e9d94d7f7678f2639c94a4f99a"
+    },
+    {
+      "skip": 600,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "2fe9401be1a15ba4bf46b868867f1e00f6d0e3e552c578748a5af295d4812681"
+    },
+    {
+      "skip": 700,
+      "limit": 100,
+      "rows": 100,
+      "sha256": "a37c00c152b05fe1bb1003fdfe268b3cdb2bd8efc5396dcf9ab8e3775e2818c3"
+    },
+    {
+      "skip": 800,
+      "limit": 100,
+      "rows": 33,
+      "sha256": "f999c2f101fb4e28bbd739819a0544f2f52d67087f0ca77ff997a6b5cd4e72ce"
+    }
+  ],
+  "total_reported": 833,
+  "rows_fetched": 833,
+  "unique_markets": 833,
+  "filter": "unexpired; stables category; chain in Ethereum/Arbitrum/Base",
+  "matching_rows": 38,
+  "selected": [
+    {
+      "name": "siUSD",
+      "protocol": "InfiniFi",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f12d8b2c-ca75-4df5-8a60-5c157afc2c6a.svg",
+      "address": "0xd44f2630260ff3805d7cb317d4f6740b0044c408",
+      "expiry": "2027-01-07T00:00:00.000Z",
+      "pt": "1-0x76543ac61ba84c6feeee76c6a918127bf0ca5fd1",
+      "yt": "1-0xd42f23aa6d2b886524006c6aecb1ad80579e736c",
+      "sy": "1-0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920",
+      "underlyingAsset": "1-0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+      "accountingAsset": "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+        "1-0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+        "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+      ],
+      "outputTokens": [
+        "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+        "1-0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+        "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+      ],
+      "details": {
+        "liquidity": 17742767.026174493,
+        "totalTvl": 27565851.003245756,
+        "tradingVolume": 209071.30295779393,
+        "underlyingApy": 0.06517823705741854,
+        "swapFeeApy": 0.002201489610339058,
+        "pendleApy": 0.0019821121155311236,
+        "ytFloatingApy": -0.6997820251031491,
+        "impliedApy": 0.09368084203494353,
+        "feeRate": 0.0017549403725070079,
+        "yieldRange": {
+          "min": 0.055,
+          "max": 0.14
+        },
+        "aggregatedApy": 0.08225508069107171,
+        "maxBoostedApy": 0.0852282488643684,
+        "totalPt": 8166692.0325753745,
+        "totalSy": 8857093.59766459,
+        "totalSupply": 8513402.882541642,
+        "totalActiveSupply": 8513402.882541642,
+        "ytRoi": -0.20527458303454438,
+        "ptRoi": 0.017246299771764617
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-09-09T14:18:35.000Z",
+      "lpWrapper": "1-0x6d3732801144aa45306e696a1452984223188a42",
+      "categoryIds": [
+        "stables",
+        "points"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [
+        {
+          "asset": "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+          "absoluteApy": 0.0102136990517064,
+          "relativeApy": 1,
+          "source": "EXTERNAL_REWARD",
+          "ytExclusive": true,
+          "lpExclusive": false
+        }
+      ],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.06517823705741854,
+            "items": [
+              {
+                "id": "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+                "apy": 0.06517823705741854,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "YT Bonus Rewards",
+            "apy": 0.0102136990517064,
+            "items": [
+              {
+                "id": "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+                "apy": 0.0102136990517064,
+                "tags": [
+                  "REWARD",
+                  "BOOSTABLE"
+                ],
+                "source": "EXTERNAL_REWARD"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.03569466161420045,
+            "items": [
+              {
+                "id": "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+                "apy": 0.03569466161420045,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.042376816226070056,
+            "items": [
+              {
+                "id": "1-0x48f9e38f3070ad8945dfeae3fa70987722e3d89c",
+                "apy": 0.042376816226070056,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.004183601725870182,
+            "items": [
+              {
+                "id": "1-0xd44f2630260ff3805d7cb317d4f6740b0044c408",
+                "apy": 0.002201489610339058,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.001982112115531124,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "points": [
+        {
+          "key": "Infinifi Points",
+          "type": "multiplier",
+          "pendleAsset": "basic",
+          "value": 20,
+          "perDollarLp": null
+        },
+        {
+          "key": "Infinifi Points",
+          "type": "multiplier",
+          "pendleAsset": "lp",
+          "value": 12,
+          "perDollarLp": false
+        }
+      ],
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x0c93c623fd2a78a2ffa36b019f74c400c3f3d81fcb22851c88e0c96e510f9689",
+            "description": "The PT-siUSD-7JAN2027 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 509893.4142052073,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.07491571980267153,
+            "supplyApy": 0.06794289376393792,
+            "totalSupply": 5649170.161767,
+            "maxLtv": 0.86,
+            "chainId": 1,
+            "maxLoopingApy": 0.09987547089886875
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/monad/market/0xe9eeaf0885c769d73ae68e3c3fe2c214b7d210ec0ac318ede65d0d174044e9d7",
+            "description": "The PT-siUSD-7JAN2027-(ETH) is the asset used as collateral in a Morpho market with AUSD as the loan token.",
+            "subtitle": "AUSD",
+            "liquidity": 161456.83348701816,
+            "liquidityToTargetUsd": 91545.20831316245,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.049849776583358096,
+            "supplyApy": 0.03486218904749361,
+            "totalSupply": 700022.612234,
+            "maxLtv": 0.915,
+            "chainId": 143,
+            "spokeAddress": "0xdbc05cfa3c359654704c81c3498874e2df8a7af4",
+            "maxLoopingApy": 0.5655093701314222
+          }
+        ]
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 9.720045844154073e-05,
+        "impliedApy": 0.09368084203494353,
+        "buyYtApr": 0.5412844851532455,
+        "sellPtApr": 0.009336926595556414,
+        "sellYtApr": 0.07104355205372567,
+        "buyPtApr": 0.0012253981878195567,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 7.486998386009683e-05,
+          "minApy": 0.0904020125637205,
+          "maxApy": 0.09695967150616656
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 2.2330474581443898e-05,
+          "minApy": 0.08968084203494353,
+          "maxApy": 0.09768084203494354
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 413.94799002286095,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 306.7662590163257,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 58.786837265443836
+      },
+      "marketInfo": {
+        "assetDescription": "<p>iUSD is a non-yield bearing token from InfiniFi, a protocol that enables depositors to allocate USDC deposits into other defi protocols based on votes.</p>\n<p>siUSD is the yield-bearing version of iUSD, which yields are by depositing funds into different farms such as Aave, Euler, Fluid. For more information on allocation of funds, refer <a href=\"https://stats.infinifi.xyz/\">here</a>.</p>",
+        "riskInvolved": "<p>This pool has minimal risk of generating negative yield (from underlying protocol)</p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "InfiniFi",
+        "conversionRate": {
+          "rate": 1.097366528236027,
+          "fromUnit": "siUSD",
+          "toUnit": "iUSD staked in InfiniFi"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "iusd-(infinifi)",
+            "url": "https://infinifi.xyz/",
+            "name": "InfiniFi",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/062ddfee-0c6e-4bb1-8e8a-b28c63b52a12.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.infinifi.xyz/deposit",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.infinifi.xyz/portfolio",
+          "description": "Pendle Router automatically finds the best route between native withdrawal and DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "reUSD",
+      "protocol": "re.xyz",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/954e01d1-2913-40f6-96ad-32b5cd8ac140.svg",
+      "address": "0x13285bcbc27f92b47b4edb99d744c07b48c977c0",
+      "expiry": "2026-12-10T00:00:00.000Z",
+      "pt": "1-0xecfafdc7741323a945a163ed068b5a3c43483957",
+      "yt": "1-0xa8bd3b21291ace53927b35563fc80615919e63d7",
+      "sy": "1-0x9487bd5a3b16ecb5f3184453e3ee75b800141648",
+      "underlyingAsset": "1-0x5086bf358635b81d8c47c66d1c8b9e567db70c72",
+      "accountingAsset": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0x5086bf358635b81d8c47c66d1c8b9e567db70c72"
+      ],
+      "outputTokens": [
+        "1-0x5086bf358635b81d8c47c66d1c8b9e567db70c72"
+      ],
+      "details": {
+        "liquidity": 13277775.8977627,
+        "totalTvl": 285768937.63995296,
+        "tradingVolume": 940256.04498896,
+        "underlyingApy": 0.07017779634909127,
+        "swapFeeApy": 0.0005876215242834881,
+        "pendleApy": 0.002706821260179422,
+        "ytFloatingApy": -0.992240914117147,
+        "impliedApy": 0.12009952343689845,
+        "feeRate": 0.002216131296696844,
+        "yieldRange": {
+          "min": 0.060000000000000005,
+          "max": 0.18999999999999997
+        },
+        "aggregatedApy": 0.0960883072050497,
+        "maxBoostedApy": 0.10014853909531883,
+        "totalPt": 6097604.440585,
+        "totalSy": 6546550.693109148,
+        "totalSupply": 6.112234386065616,
+        "totalActiveSupply": 6.112234386065616,
+        "ytRoi": -0.42598120497822856,
+        "ptRoi": 0.013041441531010278
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-06-09T14:29:47.000Z",
+      "categoryIds": [
+        "stables",
+        "rwa",
+        "rexyz",
+        "pt-looping"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.07017779634909127,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.07017779634909127,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.03838510983912794,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.03838510983912794,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.05440875458145885,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.05440875458145885,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.0032944427844629103,
+            "items": [
+              {
+                "id": "1-0x13285bcbc27f92b47b4edb99d744c07b48c977c0",
+                "apy": 0.0005876215242834881,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.002706821260179422,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "points": [
+        {
+          "key": "Re",
+          "type": "multiplier",
+          "pendleAsset": "basic",
+          "value": 30,
+          "perDollarLp": false
+        },
+        {
+          "key": "Re",
+          "type": "multiplier",
+          "pendleAsset": "lp",
+          "value": 30,
+          "perDollarLp": false
+        }
+      ],
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x1e9d614631a7df0ec07fb05b2c8cb2491575fd1a63a33bf187a6afb295a4fc64",
+            "description": "The PT-reUSD-10DEC2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 13906301.65058723,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.08863101414778107,
+            "supplyApy": 0.07902031199147475,
+            "totalSupply": 139297079.086713,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": 0.3624809995233389
+          },
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x6acd18854e43f93f5a90446004c35c72a68af1ad99f08cb247782ce6457914ca",
+            "description": "The PT-reUSD-10DEC2026 is the asset used as collateral in a Morpho market with USDT as the loan token.",
+            "subtitle": "USDT",
+            "liquidity": 4515322.480426892,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.08573526806654286,
+            "supplyApy": 0.07723760435796367,
+            "totalSupply": 17061085.93903,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": 0.2616093659275253
+          },
+          {
+            "protocol": {
+              "id": "euler",
+              "name": "Euler",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/0191faca-dbd0-4a76-97b4-550c2a016a45.png",
+              "category": "money market",
+              "url": "https://app.euler.finance/borrow?network=ethereum",
+              "description": "Euler is a modular lending platform that enables users to lend, borrow and build without limits."
+            },
+            "integrationUrl": "https://app.euler.finance/positions/0x6876374e4ac054bfca389109570ae15b4d25e279/0xd5b786e64eb320940eefb1570fa4c82ec54dbf72?network=1",
+            "description": "The PT-reUSD-10DEC2026 is the asset used as collateral in an Euler market with eAUSD-10 as the loan token.",
+            "curatorAddress": "0xeef44faf5fe0cc1fab04bb052bff750cf37a7fc4",
+            "subtitle": "AUSD",
+            "liquidity": 2426.9202345370477,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9199999999254942,
+            "borrowApy": 0.10641926933219793,
+            "totalSupply": 94801.146663,
+            "supplyCap": -1,
+            "maxLtv": 0.92,
+            "chainId": 1,
+            "maxLoopingApy": 0.15965855072696772
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": []
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 0.0003245108863212862,
+        "impliedApy": 0.12009952343689845,
+        "buyYtApr": 0.10867139983904328,
+        "sellPtApr": 0.0014174364472748985,
+        "sellYtApr": 0.10135371723396187,
+        "buyPtApr": 0.0013220135009292813,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 0.00022245746587918358,
+          "minApy": 0.11609952343689844,
+          "maxApy": 0.12409952343689845
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 0.00010205342044210262,
+          "minApy": 0.11609952343689844,
+          "maxApy": 0.12409952343689845
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 559.2258871052998,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 314.56680931709445,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 196.2641840471139
+      },
+      "marketInfo": {
+        "assetDescription": "<p>reUSD is a stable, yield-bearing token from re.xyz which is backed by T-bills and delta-neutral ETH basis strategies. It targets 6% - 8% baseline APY without insurance risk, with instant liquidity.</p>",
+        "riskInvolved": "<p>This pool generates negative yield if allocation to reinsurance strategies is unprofitable</p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "RE",
+        "auditedUrl": "",
+        "conversionRate": {
+          "rate": 1.110082,
+          "fromUnit": "reUSD",
+          "toUnit": "USDC staked in re.xyz"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "re.xyz",
+            "url": "https://re.xyz/",
+            "name": "re.xyz",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b45cb807-c968-4430-a5f0-b87e295594da.svg"
+          },
+          {
+            "id": "ethena",
+            "url": "https://app.ethena.fi/",
+            "name": "Ethena",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d0918b29-562c-4534-ae7c-089646d37a65.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.re.xyz/reusd?tab=mint",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.re.xyz/reusd?tab=mint",
+          "description": "Native withdrawal after several days wait is available in the link attached. Pendle Router only supports DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "sUSDx",
+      "protocol": "Axis",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ac120196-9d63-4ec8-a236-0076353be30a.svg",
+      "address": "0x5e572498e9f83650f0ff24194999bddb4b390928",
+      "expiry": "2026-12-03T00:00:00.000Z",
+      "pt": "1-0x06ebad062fd573ca31a72d6dfb0f425da2153985",
+      "yt": "1-0x96dcb9501bcc8128b7683980a63250448ea5334b",
+      "sy": "1-0x3b184870f40ca026341593cedb37ab09e611e928",
+      "underlyingAsset": "1-0xeb892628d1e58bc475a6dcb7f5dbc4f591632aa4",
+      "accountingAsset": "1-0xa1fa7777974312f7d801a8880714a218f76233f8",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0xa1fa7777974312f7d801a8880714a218f76233f8",
+        "1-0xeb892628d1e58bc475a6dcb7f5dbc4f591632aa4"
+      ],
+      "outputTokens": [
+        "1-0xeb892628d1e58bc475a6dcb7f5dbc4f591632aa4"
+      ],
+      "details": {
+        "liquidity": 7146483.083574378,
+        "totalTvl": 15487050.230135737,
+        "tradingVolume": 134584.89955357832,
+        "underlyingApy": 0.15273921622482356,
+        "swapFeeApy": 0.0005746245180959786,
+        "pendleApy": 0.0016892748592240332,
+        "ytFloatingApy": -0.6678568592645269,
+        "impliedApy": 0.1642311276575077,
+        "feeRate": 0.0032782289290973488,
+        "yieldRange": {
+          "min": 0.08,
+          "max": 0.3
+        },
+        "aggregatedApy": 0.15941339532811608,
+        "maxBoostedApy": 0.1619473076169521,
+        "totalPt": 2783331.9877319266,
+        "totalSy": 4219490.430537046,
+        "totalSupply": 3275709.3991058846,
+        "totalActiveSupply": 3275709.3991058846,
+        "ytRoi": -0.09947059646253964,
+        "ptRoi": 0.014559655161648921
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-09-02T05:53:35.000Z",
+      "categoryIds": [
+        "stables",
+        "points",
+        "rwa"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.15273921622482356,
+            "items": [
+              {
+                "id": "1-0xa1fa7777974312f7d801a8880714a218f76233f8",
+                "apy": 0.15273921622482356,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.09412210499228651,
+            "items": [
+              {
+                "id": "1-0xa1fa7777974312f7d801a8880714a218f76233f8",
+                "apy": 0.09412210499228651,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.0630273908409683,
+            "items": [
+              {
+                "id": "1-0xa1fa7777974312f7d801a8880714a218f76233f8",
+                "apy": 0.0630273908409683,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.002263899377320012,
+            "items": [
+              {
+                "id": "1-0x5e572498e9f83650f0ff24194999bddb4b390928",
+                "apy": 0.0005746245180959786,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.0016892748592240334,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "points": [
+        {
+          "key": "Axis",
+          "type": "multiplier",
+          "pendleAsset": "basic",
+          "value": 6
+        },
+        {
+          "key": "Axis per $ LP",
+          "type": "multiplier",
+          "pendleAsset": "lp",
+          "value": 5,
+          "perDollarLp": true
+        }
+      ],
+      "limitOrderIncentive": {
+        "amountPerSec": 5.464412927938964e-05,
+        "impliedApy": 0.1642311276575077,
+        "buyYtApr": 0.273688702881405,
+        "sellPtApr": 0.003985792563315114,
+        "sellYtApr": 0.25540109278784495,
+        "buyPtApr": 0.0037205846178982043,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 4.387889526383516e-05,
+          "minApy": 0.1602311276575077,
+          "maxApy": 0.1682311276575077
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 1.0765234015554476e-05,
+          "minApy": 0.1602311276575077,
+          "maxApy": 0.1682311276575077
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 154.96697987659448,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 73.52331674732815,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 33.048769388174854
+      },
+      "marketInfo": {
+        "assetDescription": "<p>sUSDx is the rewards vault of USDx from Axis Protocol. Deposits are compounded via a market-neutral trading engine spanning cross-venue arbitrage, cross-currency arbitrage, funding rate arbitrage, and OTC/RFQ strategies, plus yield-bearing margin (T-bills and tokenized money-market funds).</p>\n<p>Refer to <a href=\"https://docs.axis.to/susdx-the-rewards-vault/how-axis-earns-yield\">Axis's yield source page</a> for the full strategy breakdown.</p>",
+        "riskInvolved": "<p>sUSDx holders retain all USDx risks plus additional exposure to vault performance and the redemption process. <strong>Negative yield</strong> may occur when:</p>\n<ul>\n<li>Market-neutral strategies underperform \u2014 funding reverses, spot/perp prices diverge, or margin becomes insufficient</li>\n<li>Counterparty or venue failures cause backing losses</li>\n<li>Slippage, partial fills, or latency eliminate expected spreads</li>\n</ul>\n\n<p><strong>(From Underlying Protocol)</strong></p>",
+        "importantQuirks": "<ul>\n<li>There is a <strong>7-day cooldown period</strong> for unstaking sUSDx to USDx.</li>\n</ul>\n",
+        "initiatedBy": "Axis",
+        "auditedUrl": "",
+        "conversionRate": {
+          "rate": 1.0439849401992456,
+          "fromUnit": "sUSDx",
+          "toUnit": "USDx staked in Axis"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "axis",
+            "url": "https://axis.to/",
+            "name": "Axis",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e796fb83-8d2e-4299-9e0c-cd3cfb34a186.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.axis.to/stake",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.axis.to/stake",
+          "description": "Native withdrawal after several days wait is available in the link attached"
+        }
+      }
+    },
+    {
+      "name": "USD3",
+      "protocol": "3Jane",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/499d793c-11da-4062-b1bf-de01c1cf1be4.svg",
+      "address": "0x4a5067c3ff1abb7449244025b0e37feaf77d8e3e",
+      "expiry": "2026-12-17T00:00:00.000Z",
+      "pt": "1-0x7f47c3e6b2c00fc4eb4d5ae50d0ab0ab6888eb4d",
+      "yt": "1-0x5cffcc9ddef0fdcf395e2ea24ca5ed5a12032706",
+      "sy": "1-0xea3bc608f32847b97965c5e1648bdfcd4c2c40d0",
+      "underlyingAsset": "1-0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
+      "accountingAsset": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "1-0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc"
+      ],
+      "outputTokens": [
+        "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "1-0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc"
+      ],
+      "details": {
+        "liquidity": 6412561.720436592,
+        "totalTvl": 68564355.67245726,
+        "tradingVolume": 220158.1044354644,
+        "underlyingApy": 0.06485547385191026,
+        "swapFeeApy": 0.0004573354036720989,
+        "pendleApy": 0.0024829207122197146,
+        "ytFloatingApy": -0.9972501154801054,
+        "impliedApy": 0.1515687863242241,
+        "feeRate": 0.0028593978638133954,
+        "yieldRange": {
+          "min": 0.03500000000000001,
+          "max": 0.19999999999999998
+        },
+        "aggregatedApy": 0.12863543516268353,
+        "maxBoostedApy": 0.1323598162310131,
+        "totalPt": 4558795.098612,
+        "totalSy": 1603901.666829,
+        "totalSupply": 2.240324185315e-06,
+        "totalActiveSupply": 2.240324185315e-06,
+        "ytRoi": -0.5446273050594819,
+        "ptRoi": 0.01900653612354475
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-05-19T02:32:23.000Z",
+      "categoryIds": [
+        "stables",
+        "rwa"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [
+        {
+          "asset": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "absoluteApy": 0.0037152671328940044,
+          "relativeApy": 1,
+          "source": "EXTERNAL_REWARD",
+          "ytExclusive": true,
+          "lpExclusive": false
+        }
+      ],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.06485547385191026,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.06485547385191026,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "YT Bonus Rewards",
+            "apy": 0.0037152671328940044,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.0037152671328940044,
+                "tags": [
+                  "REWARD",
+                  "BOOSTABLE"
+                ],
+                "source": "EXTERNAL_REWARD"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.019351649787609605,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.019351649787609605,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.10634352009030813,
+            "items": [
+              {
+                "id": "1-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "apy": 0.10634352009030813,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.0029402561158918135,
+            "items": [
+              {
+                "id": "1-0x4a5067c3ff1abb7449244025b0e37feaf77d8e3e",
+                "apy": 0.0004573354036720989,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.0024829207122197146,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0xf8c5aa31ea6b2a068a9eddb46dd110cae57bf0f12be9583a3f9a818effecba89",
+            "description": "The PT-USD3-17DEC2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 1867981.5604124747,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.10459782451156863,
+            "supplyApy": 0.09495334335469563,
+            "totalSupply": 21067417.512614,
+            "maxLtv": 0.86,
+            "chainId": 1,
+            "maxLoopingApy": 0.2187075349657202
+          },
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0xecabc12c73a97c766d0c6aeb4c15c635630d78158b2ac8370455a09efcc50837",
+            "description": "The PT-USD3-17DEC2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 1444013.8002396314,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.0584951608439066,
+            "supplyApy": 0.052864139891602324,
+            "totalSupply": 15318959.364459,
+            "maxLtv": 0.86,
+            "chainId": 1,
+            "maxLoopingApy": 0.4540817059931343
+          },
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x37a584c981f6f59f7532ae5565732ee54647773d425978eb94d4cd29c21ff53b",
+            "description": "The PT-USD3-17DEC2026 is the asset used as collateral in a Morpho market with USDT as the loan token.",
+            "subtitle": "USDT",
+            "liquidity": 728692.7147509238,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.017107612986408283,
+            "supplyApy": 0.014917997535197847,
+            "totalSupply": 8000471.312777,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": 0.9269116111486845
+          },
+          {
+            "protocol": {
+              "id": "odyssey",
+              "name": "Odyssey",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/9e1b13cb-cda2-4b88-8311-cce7df74127b.png",
+              "category": "yield strategy",
+              "url": "https://app.odyssey.finance/en/loopr",
+              "description": "Odyssey provides one-click leveraged looping strategies across Pendle PTs and other supported assets using leading DeFi lending markets."
+            },
+            "integrationUrl": "https://app.odyssey.finance/en/loopr/strategy/7529f260-2c79-4d96-b865-7f318d25b475",
+            "description": "One-click leveraged looping for this Pendle PT.",
+            "subtitle": null,
+            "chainId": 1
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": []
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 0.000119990957640281,
+        "impliedApy": 0.1515687863242241,
+        "buyYtApr": 0.05899622827103219,
+        "sellPtApr": 0.0011214449951964954,
+        "sellYtApr": 0.4203906153058112,
+        "buyPtApr": 0.00799198978844882,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 5.99954788201405e-05,
+          "minApy": 0.1475687863242241,
+          "maxApy": 0.1555687863242241
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 5.99954788201405e-05,
+          "minApy": 0.1475687863242241,
+          "maxApy": 0.1555687863242241
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 233.3647019365058,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 112.3992770145724,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 72.57053118084195
+      },
+      "marketInfo": {
+        "assetDescription": "<p>USD3 is a senior tranche and sits ahead of sUSD3 in the waterfall: it is paid first and is the last to be impaired. USD3 is credit-enhanced \u2014 it sits behind originator first-loss equity, overcollateralization, reserves, performance triggers, and the sUSD3 junior tranche beneath it.</p>\n<p>USD3 yield is a variable share of pool interest that floats with what the backing generates <a href=\"https://app.3jane.xyz/info/backing\">here</a>.</p>\n<p>There is an ongoing $JANE emissions program for this pool. Refer to the <a href=\"https://app.3jane.xyz/farm\">here</a> for the latest APY and reward details.</p>",
+        "riskInvolved": "<p>This pool has minimal risk of generating negative yield</p>",
+        "importantQuirks": "<ul>\n<li>Redemptions are available up to the amount of liquidity available in the lending pool.</li>\n<li>There is a minimum amount of $1000 required to mint USD3</li>\n</ul>\n",
+        "initiatedBy": "3Jane",
+        "auditedUrl": "",
+        "conversionRate": {
+          "rate": 1.1862195885244382,
+          "fromUnit": "USD3",
+          "toUnit": "USDC staked in 3Jane"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "3jane",
+            "url": "https://app.3jane.xyz/supply",
+            "name": "3Jane",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/9bee8dd9-4b84-4424-b2bf-deb98c712581.svg"
+          },
+          {
+            "id": "aave",
+            "url": "https://app.aave.com/markets/",
+            "name": "Aave",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8f3cf9fb-42ce-4602-b1d8-ca90dfb8018e.svg"
+          },
+          {
+            "id": "morpho",
+            "url": "https://app.morpho.org/?network=mainnet",
+            "name": "Morpho",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8ffa28a2-24d5-46d1-bba3-33ee5156689f.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.3jane.xyz/supply",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.3jane.xyz/supply",
+          "description": "Pendle Router automatically finds the best route between native withdrawal and DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "sUSDai",
+      "protocol": "USD.AI",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/03d74b71-f1ab-4c86-a7bf-c08488e55901.svg",
+      "address": "0xf86119a39f8654f38acbbd5488bd83f3f51983c8",
+      "expiry": "2027-02-25T00:00:00.000Z",
+      "pt": "42161-0xe9d07c2a3588b9a25edd55664be44ecfe5f92fce",
+      "yt": "42161-0x9adc5ff64705ccedf6ba61cdac124a720c0ff902",
+      "sy": "42161-0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62",
+      "underlyingAsset": "42161-0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+      "accountingAsset": "42161-0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      "rewardTokens": [
+        "42161-0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8"
+      ],
+      "inputTokens": [
+        "42161-0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+        "42161-0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+        "42161-0x46850ad61c2b7d64d08c9c754f45254596696984"
+      ],
+      "outputTokens": [
+        "42161-0x0b2b2b2076d95dda7817e785989fe353fe955ef9"
+      ],
+      "details": {
+        "liquidity": 6304629.058333154,
+        "totalTvl": 25452205.9346137,
+        "tradingVolume": 28430.082851166153,
+        "underlyingApy": 0.06560610853017002,
+        "swapFeeApy": 0.002258214075820053,
+        "pendleApy": 0.005366203923369297,
+        "ytFloatingApy": -0.677020266462736,
+        "impliedApy": 0.09348726993825607,
+        "feeRate": 0.0017840737315859556,
+        "yieldRange": {
+          "min": 0.030000000000000002,
+          "max": 0.12999999999999998
+        },
+        "aggregatedApy": 0.09093393105870966,
+        "maxBoostedApy": 0.0989832369437636,
+        "totalPt": 4122840.0427217884,
+        "totalSy": 2052786.341082998,
+        "totalSupply": 2877142.248116413,
+        "totalActiveSupply": 2877142.248116413,
+        "ytRoi": -0.30755383934311775,
+        "ptRoi": 0.029489805677304304
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-06-15T18:59:30.000Z",
+      "categoryIds": [
+        "stables",
+        "rwa",
+        "points"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.06560610853017002,
+            "items": [
+              {
+                "id": "42161-0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+                "apy": 0.06560610853017002,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.023948896531728974,
+            "items": [
+              {
+                "id": "42161-0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+                "apy": 0.023948896531728974,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.059360616110655406,
+            "items": [
+              {
+                "id": "42161-0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+                "apy": 0.059360616110655406,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.00762441799918935,
+            "items": [
+              {
+                "id": "42161-0xf86119a39f8654f38acbbd5488bd83f3f51983c8",
+                "apy": 0.002258214075820053,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.005366203923369297,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 42161,
+      "points": [
+        {
+          "key": "USD.AI",
+          "type": "multiplier",
+          "pendleAsset": "basic",
+          "value": 12
+        }
+      ],
+      "limitOrderIncentive": {
+        "amountPerSec": 0.00028680326384654994,
+        "impliedApy": 0.09348726993825607,
+        "buyYtApr": 0.03834952875754939,
+        "sellPtApr": 0.001130980151240835,
+        "sellYtApr": 1.0000000000000002,
+        "buyPtApr": 0.06695815525280474,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 6.1988380067707e-05,
+          "minApy": 0.09021521549041711,
+          "maxApy": 0.09675932438609502
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 0.00022481488377884296,
+          "minApy": 0.08948726993825606,
+          "maxApy": 0.09748726993825607
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 514.973983916637,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 293.1204762011522,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 173.45861397439342
+      },
+      "marketInfo": {
+        "assetDescription": "<p>USD.AI is a synthetic dollar protocol designed to finance the physical infrastructure of AI (Compute) and other emerging sectors. sUSDai is the yield-bearing token backed by income-generating Compute or other infrastructure assets. These assets are inherently less liquid than stablecoins, so holders accrue yield for the added risk and are also subject to redemption periods.</p>\n<p>The pool will also earn additional points which entitles users to airdrop during USD.AI TGE.</p>",
+        "riskInvolved": "<p>The pool could generate negative yield if the loan that has been originated has defaulted. In this situation, the collateral will be sold to recoup the value of the loan, which may be lower than the remaining principal on the original loan - which leads to negative yield. (from underlying protocol)</p>",
+        "importantQuirks": "<ul>\n<li>The minting cap for USDai has been reached. Users will swap their input token into USDai via a DEX to obtain USDai. <strong>Be aware of potential price impact when swapping.</strong></li>\n<li>Points earned for this pool entitles you to airdrop for USD.AI tokens, rather than allocation to purchase USD.AI tokens during TGE. Refer <a href=\"https://docs.usd.ai/app-guide/allo-points\">here</a> for more details.</li>\n<li>No KYC is required for airdrop earned from this pool.</li>\n</ul>\n",
+        "initiatedBy": "USD.AI",
+        "conversionRate": {
+          "rate": 1.121568751113472,
+          "fromUnit": "sUSDai",
+          "toUnit": "USDai staked in USD.AI"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "usd.ai",
+            "url": "https://usd.ai/",
+            "name": "USD.AI",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d4816a29-2263-4b64-be5d-ff89e1614932.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.usd.ai/stake",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.usd.ai/unstake",
+          "description": "Pendle Router automatically finds the best route between native withdrawal and DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "sUSDD",
+      "protocol": "USDD",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1e4c11b9-3399-4c9a-94ba-810b4eef4b24.svg",
+      "address": "0xbeab098b510f758cd35122ee345957b8eccbb322",
+      "expiry": "2026-11-26T00:00:00.000Z",
+      "pt": "1-0x459bcab2490843ad1fe1e4feff7f7ea16a14408b",
+      "yt": "1-0xc08aaed663c1c257f677f9d4b92a7a265967e54f",
+      "sy": "1-0xdd0c9da25f8eb47116f3bed8a311899a5eb449b4",
+      "underlyingAsset": "1-0xc5d6a7b61d18afa11435a889557b068bb9f29930",
+      "accountingAsset": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+        "1-0xc5d6a7b61d18afa11435a889557b068bb9f29930"
+      ],
+      "outputTokens": [
+        "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+        "1-0xc5d6a7b61d18afa11435a889557b068bb9f29930"
+      ],
+      "details": {
+        "liquidity": 5138952.174897619,
+        "totalTvl": 21965126.85181938,
+        "tradingVolume": 0,
+        "underlyingApy": 0.03999999999998516,
+        "swapFeeApy": 2.0864544420629016e-05,
+        "pendleApy": 0.0009494663766707841,
+        "ytFloatingApy": 0.34231815860719106,
+        "impliedApy": 0.05350104814667578,
+        "feeRate": 0.001008774368269627,
+        "yieldRange": {
+          "min": 0.029999999999999992,
+          "max": 0.08999999999999998
+        },
+        "aggregatedApy": 0.05978504594221791,
+        "maxBoostedApy": 0.06120924550722409,
+        "totalPt": 1995199.312568479,
+        "totalSy": 2959071.60671539,
+        "totalSupply": 2339429.3779309085,
+        "totalActiveSupply": 2339429.3779309085,
+        "ytRoi": 0.02259072269715623,
+        "ptRoi": 0.003962688226476274
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-08-18T06:28:35.000Z",
+      "categoryIds": [
+        "stables",
+        "yt-leverage"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [
+        {
+          "asset": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+          "absoluteApy": 0.015875925758288088,
+          "relativeApy": 0,
+          "source": "DYNAMIC_INCENTIVE",
+          "ytExclusive": true
+        },
+        {
+          "asset": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+          "absoluteApy": 0.03531018560427977,
+          "relativeApy": 0,
+          "source": "DYNAMIC_INCENTIVE"
+        }
+      ],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.07531018560426493,
+            "items": [
+              {
+                "id": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+                "apy": 0.03999999999998516,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              },
+              {
+                "id": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+                "apy": 0.03531018560427977,
+                "tags": [
+                  "REWARD",
+                  "BOOSTABLE"
+                ],
+                "source": "DYNAMIC_INCENTIVE"
+              }
+            ]
+          },
+          {
+            "label": "YT Extra Rewards",
+            "apy": 0.015875925758288088,
+            "items": [
+              {
+                "id": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+                "apy": 0.015875925758288088,
+                "tags": [
+                  "REWARD"
+                ],
+                "source": "DYNAMIC_INCENTIVE"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.02458165239364461,
+            "items": [
+              {
+                "id": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+                "apy": 0.02458165239364461,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "External Rewards",
+            "apy": 0.02169956771199504,
+            "items": [
+              {
+                "id": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+                "apy": 0.02169956771199504,
+                "tags": [
+                  "REWARD",
+                  "BOOSTABLE"
+                ],
+                "source": "DYNAMIC_INCENTIVE"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.020622443940732878,
+            "items": [
+              {
+                "id": "1-0x4f8e5de400de08b164e7421b3ee387f461becd1a",
+                "apy": 0.020622443940732878,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.0009703309210914133,
+            "items": [
+              {
+                "id": "1-0xbeab098b510f758cd35122ee345957b8eccbb322",
+                "apy": 2.0864544420629016e-05,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.0009494663766707842,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0xfa7453a6a9112c96e71e2042fbdc84d537fc8f4ac0ca11e8b0c31b17eacd56bc",
+            "description": "The PT-sUSDD-26NOV2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 69803.96884982928,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.05031527532837865,
+            "supplyApy": 0.045342236319376505,
+            "totalSupply": 721094.402547,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": 0.08779495554363892
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": []
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 9.503965069987032e-05,
+        "impliedApy": 0.05350104814667578,
+        "buyYtApr": 0.03623805086948668,
+        "sellPtApr": 0.00014362561439178976,
+        "sellYtApr": 0.45964097012130223,
+        "buyPtApr": 0.001822250969705856,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 6.718179357732254e-05,
+          "minApy": 0.051628511461542126,
+          "maxApy": 0.05537358483180943
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 2.785785712254778e-05,
+          "minApy": 0.049755974776408474,
+          "maxApy": 0.05724612151694308
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 106.99021320525671,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 0.8804946944653426,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 57.7148247696999
+      },
+      "marketInfo": {
+        "assetDescription": "<p>sUSDD represents the yield-bearing version of USDD. Yield is generated through the Smart Allocator, which manages the USDD protocol's over-collateralized reserves.</p>\n<p>To generate yield, the Smart Allocator identifies and moves idle reserve assets into whitelisted DeFi protocols (such as JustLend DAO, Spark, or Morpho). The earnings are then funneled back and generates yield for sUSDD.</p>",
+        "riskInvolved": "<p>This pool has minimal risk of generating negative yield</p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "USDD",
+        "auditedUrl": "",
+        "conversionRate": {
+          "rate": 1.0707457488703478,
+          "fromUnit": "sUSDD",
+          "toUnit": "USDD staked in USDD.io"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "usdd",
+            "url": "https://usdd.io/",
+            "name": "USDD",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/08eb880d-5771-4476-9388-fbafc5a6b040.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.usdd.io/eth/earn",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.usdd.io/eth/earn",
+          "description": "Pendle Router automatically finds the best route between native withdrawal and DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "sUSDe",
+      "protocol": "Ethena",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5f26d431-2164-461d-a3f2-755f3caf6f0b.svg",
+      "address": "0x47ad2cd1dd15739a7a035b9d3b7828d916fef77e",
+      "expiry": "2026-11-26T00:00:00.000Z",
+      "pt": "1-0xb195b618ea52b77cb2a58846f452f59f8dfa9390",
+      "yt": "1-0x89e6e5f7c3a60e7d6347f054051a29a272f4ce44",
+      "sy": "1-0xbf98480425a29197e5d99d003017f63a1e595d02",
+      "underlyingAsset": "1-0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+      "accountingAsset": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+        "1-0x9d39a5de30e57443bff2a8307a4256c8797a3497"
+      ],
+      "outputTokens": [
+        "1-0x9d39a5de30e57443bff2a8307a4256c8797a3497"
+      ],
+      "details": {
+        "liquidity": 5104935.449229764,
+        "totalTvl": 24962114.0438393,
+        "tradingVolume": 31144.76514574607,
+        "underlyingApy": 0.05066060790688698,
+        "swapFeeApy": 8.19611585658464e-05,
+        "pendleApy": 0.0010163038455288573,
+        "ytFloatingApy": 0.29335506660192534,
+        "impliedApy": 0.04729221645036907,
+        "feeRate": 0.0009792415961249468,
+        "yieldRange": {
+          "min": 0.03,
+          "max": 0.10999999999999999
+        },
+        "aggregatedApy": 0.05100328502277686,
+        "maxBoostedApy": 0.05252774079107014,
+        "totalPt": 1149862.4719328894,
+        "totalSy": 3156093.805136735,
+        "totalSupply": 1835160.3865264999,
+        "totalActiveSupply": 1835160.3865264999,
+        "ytRoi": 0.01971120487136213,
+        "ptRoi": 0.0035124361285430172
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-08-10T05:19:47.000Z",
+      "categoryIds": [
+        "stables",
+        "ethena",
+        "points",
+        "rwa",
+        "fixed-rates",
+        "blue-chips"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.05066060790688698,
+            "items": [
+              {
+                "id": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "apy": 0.05066060790688698,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.039296565809041166,
+            "items": [
+              {
+                "id": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "apy": 0.039296565809041166,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.010608454198382609,
+            "items": [
+              {
+                "id": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "apy": 0.010608454198382609,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.0010982650040947037,
+            "items": [
+              {
+                "id": "1-0x47ad2cd1dd15739a7a035b9d3b7828d916fef77e",
+                "apy": 8.19611585658464e-05,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.0010163038455288573,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x5613b170ded221c588b6e9637b910f49e5508680ceede207f44aa72e5c46cb05",
+            "description": "The PT-sUSDE-26NOV2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 514130.83477758145,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.04338058313519588,
+            "supplyApy": 0.0391804089506238,
+            "totalSupply": 5415929.882395,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": 0.0808025631551772
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": []
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 1.1500520055499304e-05,
+        "impliedApy": 0.04729221645036907,
+        "buyYtApr": 0.15666939683283337,
+        "sellPtApr": 0.0005505886508561095,
+        "sellYtApr": 0.05410756105244973,
+        "buyPtApr": 0.0001901261645879603,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 7.18872290131155e-06,
+          "minApy": 0.045636988874606155,
+          "maxApy": 0.04894744402613199
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 4.311797154187754e-06,
+          "minApy": 0.043981761298843236,
+          "maxApy": 0.05060267160189491
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 59.35049882850364,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 4.0000905578462,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 6.955514529565979
+      },
+      "marketInfo": {
+        "assetDescription": "<p>sUSDe is the yield bearing synthetic dollar from Ethena, a protocol that combines yield from staked ETH and basis spread from perps and futures, to create on-chain money solution.</p>",
+        "riskInvolved": "<p>This pool has minimal risk of generating negative yield</p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "Pendle Team",
+        "conversionRate": {
+          "rate": 1.2554368750201235,
+          "fromUnit": "sUSDe",
+          "toUnit": "USDe staked in Ethena"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "ethena",
+            "url": "https://app.ethena.fi/",
+            "name": "Ethena",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d0918b29-562c-4534-ae7c-089646d37a65.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.ethena.fi/",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.ethena.fi/",
+          "description": "Pendle Router automatically finds the best route between native withdrawal and DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "sUSDS",
+      "protocol": "Sky Protocol",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2c6d3ada-f43c-48e5-b56d-9c5f486e7481.svg",
+      "address": "0x9c560ebaf78e596cbcc27411d633a74d628dd7dc",
+      "expiry": "2026-11-26T00:00:00.000Z",
+      "pt": "1-0xdc169abe56461a2e0c034da431ac2a3ebf596094",
+      "yt": "1-0xc7b8551c6b286ce0b44952320e940bd3dee58a09",
+      "sy": "1-0xbe3d4ec488a0a042bb86f9176c24f8cd54018ba7",
+      "underlyingAsset": "1-0xa3931d71877c0e7a3148cb7eb4463524fec27fbd",
+      "accountingAsset": "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "1-0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+      ],
+      "outputTokens": [
+        "1-0x6b175474e89094c44da98b954eedeac495271d0f",
+        "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+        "1-0xa3931d71877c0e7a3148cb7eb4463524fec27fbd"
+      ],
+      "details": {
+        "liquidity": 4690771.439855154,
+        "totalTvl": 72862580.1834441,
+        "tradingVolume": 317023.6225659224,
+        "underlyingApy": 0.03800000000002468,
+        "swapFeeApy": 0.0005161452105679754,
+        "pendleApy": 0.0016733447062756077,
+        "ytFloatingApy": 1.0711887593528124,
+        "impliedApy": 0.05639403106851448,
+        "feeRate": 0.0009985765669870972,
+        "yieldRange": {
+          "min": 0.03,
+          "max": 0.11999999999999998
+        },
+        "aggregatedApy": 0.04543402345038814,
+        "maxBoostedApy": 0.047944040509801555,
+        "totalPt": 1343217.8688652616,
+        "totalSy": 3009366.735220627,
+        "totalSupply": 1495605.3246266309,
+        "totalActiveSupply": 1495605.3246266309,
+        "ytRoi": 0.05680578931722868,
+        "ptRoi": 0.0041716242006448745
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-05-15T07:10:23.000Z",
+      "categoryIds": [
+        "stables",
+        "rwa",
+        "skymoney",
+        "fixed-rates",
+        "yt-leverage"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [
+        {
+          "asset": "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+          "absoluteApy": 0.02237599743022586,
+          "relativeApy": 1,
+          "source": "PORTAL_INCENTIVE",
+          "ytExclusive": true,
+          "lpExclusive": false,
+          "portalExtData": {
+            "amount": 30000,
+            "startTimestamp": "2026-10-29T00:00:00.000Z",
+            "endTimestamp": "2026-11-05T00:00:00.000Z"
+          },
+          "portalExtDataList": [
+            {
+              "amount": 30000,
+              "startTimestamp": "2026-10-29T00:00:00.000Z",
+              "endTimestamp": "2026-11-05T00:00:00.000Z"
+            }
+          ]
+        }
+      ],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.03800000000002468,
+            "items": [
+              {
+                "id": "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+                "apy": 0.03800000000002468,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "YT Extra Rewards",
+            "apy": 0.02237599743022586,
+            "items": [
+              {
+                "id": "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+                "apy": 0.02237599743022586,
+                "tags": [
+                  "REWARD"
+                ],
+                "source": "PORTAL_INCENTIVE",
+                "campaignDetail": {
+                  "amount": 30000,
+                  "startTimestamp": "2026-10-29T00:00:00.000Z",
+                  "endTimestamp": "2026-11-05T00:00:00.000Z"
+                },
+                "campaignDetails": [
+                  {
+                    "amount": 30000,
+                    "startTimestamp": "2026-10-29T00:00:00.000Z",
+                    "endTimestamp": "2026-11-05T00:00:00.000Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.02716538412923962,
+            "items": [
+              {
+                "id": "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+                "apy": 0.02716538412923962,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.016079149053475687,
+            "items": [
+              {
+                "id": "1-0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+                "apy": 0.016079149053475687,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.002189489916843583,
+            "items": [
+              {
+                "id": "1-0x9c560ebaf78e596cbcc27411d633a74d628dd7dc",
+                "apy": 0.0005161452105679754,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.0016733447062756079,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x9a8dab6de1059e6dc66c34b358764b70effb289e514e237f3161ffb09eaaf24f",
+            "description": "The PT-sUSDS-26NOV2026 is the asset used as collateral in a Morpho market with USDS as the loan token.",
+            "subtitle": "USDS",
+            "liquidity": 401918.4139132998,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.04727859927055933,
+            "supplyApy": 0.04276343895822321,
+            "totalSupply": 4298635.702132386,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": -0.0008728955166298347
+          },
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x0367161b7cb23dfd03747dd3815d1c445b0437b648a6d50346249c6e7b92ff1b",
+            "description": "The PT-sUSDS-26NOV2026 is the asset used as collateral in a Morpho market with USDT as the loan token.",
+            "subtitle": "USDT",
+            "liquidity": 3193490.34614395,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.08240823391584318,
+            "supplyApy": 0.07558570489952565,
+            "totalSupply": 3827188.018808,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": -0.30682441848101794
+          },
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0x22fe4c688161863c73571a2b8db65cc11a4a6bceee4f0dea4aa83e4b784f1bd9",
+            "description": "The PT-sUSDS-26NOV2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 4010052.6261676997,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.054773625705981877,
+            "supplyApy": 0.04947319746915069,
+            "totalSupply": 11796860.222204,
+            "maxLtv": 0.915,
+            "chainId": 1,
+            "maxLoopingApy": 0.001026702028344636
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": []
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 8.994612297499768e-05,
+        "impliedApy": 0.05639403106851448,
+        "buyYtApr": 1,
+        "sellPtApr": 1.0000000000000002,
+        "sellYtApr": 0.03332988895748959,
+        "buyPtApr": 0.00013906805624584718,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 5.8399168986920934e-05,
+          "minApy": 0.054420239981116475,
+          "maxApy": 0.05836782215591249
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 3.154695398807674e-05,
+          "minApy": 0.05244644889371847,
+          "maxApy": 0.0603416132433105
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 134.1533572014163,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 30.874507385648275,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 54.88395607467657
+      },
+      "marketInfo": {
+        "assetDescription": "<p>Sky sUSDS is the yield-bearing version of USDS, Sky\u2019s dollar stablecoin. Users deposit USDS into the Sky Savings Rate module and receive sUSDS, which accrues yield from the protocol-set Sky Savings Rate.</p>\n<p><strong>$30k weekly incentives</strong> will also be given to Pendle users until maturity, distributed every Saturday and claimable on Pendle dashboard.</p>",
+        "riskInvolved": "<p>This pool has minimal risk of generating negative yield</p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "Pendle",
+        "conversionRate": {
+          "rate": 1.114462871947813,
+          "fromUnit": "sUSDS",
+          "toUnit": "USDS supplied into Sky"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "sky",
+            "url": "https://app.sky.money/",
+            "name": "Sky",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8a0e0cbf-9624-4e01-b8ec-889f39aa38ec.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.sky.money/earn/savings?network=ethereum",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.sky.money/earn/savings?network=ethereum",
+          "description": "Pendle Router automatically finds the best route between native withdrawal and DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "reUSDe",
+      "protocol": "re.xyz",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/71dedaab-bf06-4999-9a95-91e436dee982.svg",
+      "address": "0x90b70c407f1077f8eb92bf423b44cd92329b737a",
+      "expiry": "2026-12-10T00:00:00.000Z",
+      "pt": "1-0x2ae4f59e500b6ddeb88c480edf277eda54a00205",
+      "yt": "1-0xfd9aa51f530369ff5024bc3f6d6f3a00a789f94a",
+      "sy": "1-0x47dfd0c8eee949748c1d5cb6b695a4aba5fe7379",
+      "underlyingAsset": "1-0xddc0f880ff6e4e22e4b74632fbb43ce4df6ccc5a",
+      "accountingAsset": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0xddc0f880ff6e4e22e4b74632fbb43ce4df6ccc5a"
+      ],
+      "outputTokens": [
+        "1-0xddc0f880ff6e4e22e4b74632fbb43ce4df6ccc5a"
+      ],
+      "details": {
+        "liquidity": 4584476.368505131,
+        "totalTvl": 17421399.245031707,
+        "tradingVolume": 59560.00415084204,
+        "underlyingApy": 0.12523476526308186,
+        "swapFeeApy": 0.0005715281794349547,
+        "pendleApy": 0.001604246485994174,
+        "ytFloatingApy": -0.9734633618706715,
+        "impliedApy": 0.18829215179443914,
+        "feeRate": 0.003399615342895901,
+        "yieldRange": {
+          "min": 0.09000000000000001,
+          "max": 0.21
+        },
+        "aggregatedApy": 0.17725138483341663,
+        "maxBoostedApy": 0.1796577545624079,
+        "totalPt": 3702224.9035699307,
+        "totalSy": 669480.0321776505,
+        "totalSupply": 1901552.9426240667,
+        "totalActiveSupply": 1901552.9426240667,
+        "ytRoi": -0.33938940355714886,
+        "ptRoi": 0.019903245835019234
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-06-09T14:39:47.000Z",
+      "categoryIds": [
+        "stables",
+        "rwa",
+        "rexyz",
+        "lp-with-no-il"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.12523476526308186,
+            "items": [
+              {
+                "id": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "apy": 0.12523476526308186,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.026248659408864155,
+            "items": [
+              {
+                "id": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "apy": 0.026248659408864155,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.1488269397869602,
+            "items": [
+              {
+                "id": "1-0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+                "apy": 0.1488269397869602,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.0021757746654291286,
+            "items": [
+              {
+                "id": "1-0x90b70c407f1077f8eb92bf423b44cd92329b737a",
+                "apy": 0.0005715281794349547,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.001604246485994174,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "points": [
+        {
+          "key": "Re",
+          "type": "multiplier",
+          "pendleAsset": "basic",
+          "value": 40,
+          "perDollarLp": false
+        },
+        {
+          "key": "Re",
+          "type": "multiplier",
+          "pendleAsset": "lp",
+          "value": 40,
+          "perDollarLp": false
+        }
+      ],
+      "limitOrderIncentive": {
+        "amountPerSec": 4.3041532716567687e-05,
+        "impliedApy": 0.18829215179443914,
+        "buyYtApr": 0.45974957560474083,
+        "sellPtApr": 0.009155661759898666,
+        "sellYtApr": 1,
+        "buyPtApr": 0.028337961906218203,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 1.6933375190270954e-05,
+          "minApy": 0.18429215179443914,
+          "maxApy": 0.19229215179443915
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 2.610815752629673e-05,
+          "minApy": 0.18429215179443914,
+          "maxApy": 0.19229215179443915
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 100.3055040289967,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 25.87909130092511,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 26.031518986980135
+      },
+      "marketInfo": {
+        "assetDescription": "<p>reUSDe is a yield-bearing token from re.xyz that is fully backed by collateralized insurance programs. It delivers 15% - 23% net APY from underwriting low-volatility personal &amp; commercial lines.</p>",
+        "riskInvolved": "<p>This pool has minimal risk of generating negative yield</p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "re.xyz",
+        "auditedUrl": "",
+        "conversionRate": {
+          "rate": 1.4378004917815177,
+          "fromUnit": "reUSDe",
+          "toUnit": "USDe staked in re.xyz"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "re.xyz",
+            "url": "https://re.xyz/",
+            "name": "re.xyz",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b45cb807-c968-4430-a5f0-b87e295594da.svg"
+          },
+          {
+            "id": "ethena",
+            "url": "https://app.ethena.fi/",
+            "name": "Ethena",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d0918b29-562c-4534-ae7c-089646d37a65.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.re.xyz/reusde?tab=mint",
+          "description": "Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.re.xyz/reusde?tab=redeem",
+          "description": "Pendle Router only supports DEX swapping"
+        }
+      }
+    },
+    {
+      "name": "strUSD",
+      "protocol": "Tori",
+      "icon": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/708652f0-8c21-4d4a-8c7f-9ee998ea4664.svg",
+      "address": "0xac028348c46d3455899a2b9b50077c11960eaddb",
+      "expiry": "2026-11-26T00:00:00.000Z",
+      "pt": "1-0x74299580811e1c3c1a2831db079ba0a8f513998f",
+      "yt": "1-0xc4bb3ec6588ff14d7676445a40f2716e690a3203",
+      "sy": "1-0x7e8a16e87fa6b0f2e657db47f3dbfe2e981ef211",
+      "underlyingAsset": "1-0x280839980a7ed0d7717f64125fe241012e5f5815",
+      "accountingAsset": "1-0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+      "rewardTokens": [
+        "1-0x808507121b80c02388fad14726482e061b8da827"
+      ],
+      "inputTokens": [
+        "1-0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+        "1-0x280839980a7ed0d7717f64125fe241012e5f5815"
+      ],
+      "outputTokens": [
+        "1-0x280839980a7ed0d7717f64125fe241012e5f5815"
+      ],
+      "details": {
+        "liquidity": 4467401.289212274,
+        "totalTvl": 6547399.116911562,
+        "tradingVolume": 4418.862166528604,
+        "underlyingApy": 0.09913921737992637,
+        "swapFeeApy": 1.535533022356539e-05,
+        "pendleApy": 0.0012478812781124326,
+        "ytFloatingApy": -0.896087901303173,
+        "impliedApy": 0.11344048791733985,
+        "feeRate": 0.002209803243826025,
+        "yieldRange": {
+          "min": 0.060000000000000005,
+          "max": 0.3
+        },
+        "aggregatedApy": 0.1037085795904393,
+        "maxBoostedApy": 0.10558040150760796,
+        "totalPt": 1041506.162355221,
+        "totalSy": 3320393.9579270734,
+        "totalSupply": 1914784.5652354572,
+        "totalActiveSupply": 1914784.5652354572,
+        "ytRoi": -0.15786198146863784,
+        "ptRoi": 0.0081871477035651
+      },
+      "isNew": false,
+      "isPrime": false,
+      "timestamp": "2026-07-19T18:15:59.000Z",
+      "categoryIds": [
+        "stables",
+        "points",
+        "lp-with-no-il"
+      ],
+      "isVolatile": false,
+      "underlyingRewardApyBreakdown": [],
+      "lpRewardApyBreakdown": [],
+      "ytApyBreakdown": {
+        "categories": [
+          {
+            "label": "Protocol Yield",
+            "apy": 0.09913921737992637,
+            "items": [
+              {
+                "id": "1-0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+                "apy": 0.09913921737992637,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          }
+        ]
+      },
+      "lpApyBreakdown": {
+        "categories": [
+          {
+            "label": "Underlying Yield",
+            "apy": 0.07622050637303164,
+            "items": [
+              {
+                "id": "1-0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+                "apy": 0.07622050637303164,
+                "tags": [
+                  "INTEREST",
+                  "AUTO"
+                ],
+                "source": "CONTRACT"
+              }
+            ]
+          },
+          {
+            "label": "PT Fixed Yield",
+            "apy": 0.026224836424672774,
+            "items": [
+              {
+                "id": "1-0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+                "apy": 0.026224836424672774,
+                "tags": [
+                  "FIXED_YIELD",
+                  "AUTO"
+                ]
+              }
+            ]
+          },
+          {
+            "label": "LP Rewards",
+            "apy": 0.001263236608335998,
+            "items": [
+              {
+                "id": "1-0xac028348c46d3455899a2b9b50077c11960eaddb",
+                "apy": 1.535533022356539e-05,
+                "tags": [
+                  "SWAP_FEE",
+                  "AUTO"
+                ]
+              },
+              {
+                "id": "PENDLE",
+                "apy": 0.0012478812781124326,
+                "tags": [
+                  "INCENTIVE",
+                  "BOOSTABLE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "chainId": 1,
+      "points": [
+        {
+          "key": "Cores",
+          "type": "points-per-asset",
+          "pendleAsset": "basic",
+          "value": 6,
+          "perDollarLp": false
+        },
+        {
+          "key": "Cores",
+          "type": "points-per-asset",
+          "pendleAsset": "lp",
+          "value": 9,
+          "perDollarLp": false
+        }
+      ],
+      "externalProtocols": {
+        "pt": [
+          {
+            "protocol": {
+              "id": "morpho",
+              "name": "Morpho",
+              "iconUrl": "https://storage.googleapis.com/external-integration-prod/f2b5eb7e-539f-4aea-b73f-d7f4e37a35c7.png",
+              "category": "money market",
+              "url": "https://app.morpho.org/ethereum/borrow",
+              "description": "A permissionless and non-custodial lending protocol where users can earn interest on over-collaterized lending and borrow digital assets using immutable infrastructure."
+            },
+            "integrationUrl": "https://app.morpho.org/ethereum/market/0xf062a110320da27e0e7e7d9e1bdf458dd51e2d2089e55f63ff9fd54f415ce35d",
+            "description": "The PT-strUSD-26NOV2026 is the asset used as collateral in a Morpho market with USDC as the loan token.",
+            "subtitle": "USDC",
+            "liquidity": 72349.13301779686,
+            "liquidityToTargetUsd": 0,
+            "optimalUtilization": 0.9,
+            "borrowApy": 0.09025528241993275,
+            "supplyApy": 0.08136815797577412,
+            "totalSupply": 762244.140721,
+            "maxLtv": 0.86,
+            "chainId": 1,
+            "maxLoopingApy": 0.2192338398617316
+          }
+        ],
+        "yt": [],
+        "lp": [],
+        "crossPt": []
+      },
+      "limitOrderIncentive": {
+        "amountPerSec": 1.4298499893881366e-05,
+        "impliedApy": 0.11344048791733985,
+        "buyYtApr": 0.07475004960367629,
+        "sellPtApr": 0.00061215781151286,
+        "sellYtApr": 0.03236196548510567,
+        "buyPtApr": 0.00026505582092580025,
+        "long": {
+          "mode": "RELATIVE",
+          "amountPerSec": 1.1688916706098176e-05,
+          "minApy": 0.10947007084023296,
+          "maxApy": 0.11741090499444674
+        },
+        "short": {
+          "mode": "RELATIVE",
+          "amountPerSec": 2.6095831877831905e-06,
+          "minApy": 0.10944048791733985,
+          "maxApy": 0.11744048791733985
+        }
+      },
+      "pendleEmission": {
+        "totalIncentive": 64.94717921900812,
+        "tvlIncentive": 48.39489374109146,
+        "feeIncentive": 7.904552742097218,
+        "discretionaryIncentive": 0,
+        "cobribingIncentive": 0,
+        "limitOrderIncentive": 8.647732735819451
+      },
+      "marketInfo": {
+        "assetDescription": "<p>strUSD is Tori Finance's yield-bearing token, minted by staking trUSD. It accrues yield automatically from the protocol's institutional trading strategies (futures arbitrage, calendar spreads, and options positions) all structured to be delta-neutral and market-neutral, so returns come from pricing opportunities rather than market direction. Reserve data is verifiable via Tori's transparency dashboard.</p>",
+        "riskInvolved": "<ul>\n<li><strong>Vault risk:</strong> The underlying vault allocates its deposits across multiple DeFi strategies and is subject to performance of the strategies. There could potentially be negative yield if there are unprofitable strategies. Refer here for the underlying allocation for the vault.<br></li>\n</ul>\n\n<p><strong>(From Underlying Protocol)</strong></p>",
+        "importantQuirks": "<p>This market has no special quirks</p>",
+        "initiatedBy": "Tori",
+        "auditedUrl": "",
+        "conversionRate": {
+          "rate": 1.0346952727060876,
+          "fromUnit": "strUSD",
+          "toUnit": "trUSD staked in Tori Finance"
+        },
+        "utilizedProtocols": [
+          {
+            "id": "tori",
+            "url": "https://app.tori.finance/earn",
+            "name": "Tori",
+            "imageUrl": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/c4f2c78b-c36b-4ae4-bcc5-6ad319163656.svg"
+          }
+        ],
+        "deposit": {
+          "url": "https://app.tori.finance/earn",
+          "description": "Native minting is available in the link attached. Pendle Router automatically finds the best route between native minting and DEX swapping"
+        },
+        "withdrawal": {
+          "url": "https://app.tori.finance/earn",
+          "description": "Native withdrawal after 7 days wait is available in the link attached"
+        }
+      }
+    }
+  ],
+  "evidence_tier": "T4 quote snapshot; not actor PnL or executable fixed yield"
+}
