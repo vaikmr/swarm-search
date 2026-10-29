@@ -54,6 +54,11 @@ The protocol/chain/stablecoin/bridge concentration limits still apply to repayme
 claims, not only wallet balances. Eligibility TVL, protocol age and audits remain
 unverified in this package.
 
+A subsequent [historical-availability probe](evidence/HISTORICAL_LEDGER_AVAILABILITY.md)
+retrieved a complete fixed 14-day page interval for two current event topics and
+selected Optimism balances for the same actor. It did not reconcile all-chain
+receivables, capital, funding or costs, so it did not upgrade the evidence tier.
+
 ## Reproduction
 
 Run `python3 strategies/cross-chain-relaying/evidence/collect_public.py`.
