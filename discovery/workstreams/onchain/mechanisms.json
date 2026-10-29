@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-29",
+  "mechanisms": [
+    {
+      "id": "ONCHAIN-C1",
+      "name": "Perp-hedged inventory during bridge settlement",
+      "origin": "User-proposed candidate, pressure-tested rather than claimed novel",
+      "status": "economically plausible risk reduction under conditions; identified historical counterfactual blocked",
+      "source_ids": ["O-S01", "O-S05", "O-S06", "O-S07", "O-S08", "O-S09", "O-S10", "O-S11", "O-A02"],
+      "spread_cause_hypothesis": "Fragmented inventories and settlement constraints create chain-local prices; urgently trading users may pay a local premium.",
+      "payer_and_repetition": "Local takers can pay the spread, while the hedge transfers common price risk to perp counterparties. Repeated executable spreads net of competition, funding and fees have not been measured.",
+      "economic_asset_equivalence": "Must establish exact underlying/index/multiplier and source/destination claim equivalence. A ticker match or correlated BTC/ETH/index hedge does not insure wrapped-token, FX, local-basis or bridge risk.",
+      "deployment_and_access": "Observed current first-DEX Hyperliquid metadata and a current BTC book. Historical contract availability for the alleged sample is unknown; HIP-3 namespaces/settings differ. No order or signing tested.",
+      "inventory_credit_repayment_cycle": "Acquire spot inventory, maintain a matched short over a predeclared exposure interval, settle/sell destination inventory, then close hedge and settle funding. If borrowed destination tokens already create the offsetting liability, do not add a duplicate short.",
+      "capital_and_costs": "One total capital constraint includes spot funding, hedge margin/buffers, any loan collateral and reserves. Both perp fills, all route costs, discrete funding, conversions and liquidation/ADL must be included using historical settings.",
+      "cheap_falsifiers": [
+        "The alleged 21-trade manifest cannot be identified.",
+        "The exact hedge contract was not tradable for the required size/time or has a materially different underlying.",
+        "Historical bid/ask/depth, bridge completion or margin path cannot be recovered.",
+        "Added hedge costs, adverse basis or margin failure eliminate the proposed improvement."
+      ],
+      "novelty": "Not established",
+      "persistence": "Not established",
+      "profitability_usd": null,
+      "riskless": false,
+      "next_test": "The finite input gate in counterfactual_input_gate.json, not a new framework or automatic backfill."
+    },
+    {
+      "id": "ONCHAIN-GATEWAY",
+      "name": "Recent native EURC unified-inventory rail changes capital reuse",
+      "origin": "Fresh primary-source deployment lead discovered during assigned data-source review",
+      "status": "Recent issuer announcement plus bounded account-state corroboration; no measured arbitrage spread",
+      "source_ids": ["O-S03", "O-S04", "O-A01", "R006", "O-S02"],
+      "spread_cause_hypothesis": "EURC liquidity and inventory may remain fragmented across supported chains. A unified deposited balance could reduce the cost of servicing urgent destination demand compared with separately funded inventories.",
+      "payer_and_repetition": "Potential payer is an ordinary user valuing destination liquidity or speed. Whether any accessible spread remains after rail fees, settlement, FX, competition and capital costs is unknown.",
+      "economic_asset_equivalence": "Gateway maintains separate asset balances and does not exchange EURC, USDC and cirBTC for each other. Verify issuer-native mint/contract identities and redemption terms; euro-denominated EURC is not a dollar claim at par.",
+      "deployment_and_access": "Circle dated the Solana EURC Gateway pre-mint deployment 2026-10-23. The specified SPL account exists in a 2026-10-29 finalized RPC snapshot. Official overview documents EURC support and permissionless integration, but actual mint/deposit/redemption and legal eligibility were not tested.",
+      "inventory_credit_repayment_cycle": "Deposits establish a unified per-asset balance; later destination availability consumes that established balance. New unfinalized source purchases are not free credit. Pre-mint inventory belongs to issuer infrastructure and cannot be appropriated or counted as entrant capital.",
+      "capital_and_costs": "Requires real deposited capital and source finality, plus chain/rail/quote fees, FX/asset-basis risk, withdrawal delay, issuer/service dependencies and replenishment. No borrow or fee schedule inferred from fast-transfer marketing.",
+      "cheap_falsifiers": [
+        "No size-aware same-claim destination premium remains after all costs and FX.",
+        "The entrant cannot access the relevant chain/asset flow under actual terms.",
+        "Incremental source deposits are not available in time to replenish the intended trade.",
+        "An apparent supply/price signal comes from issuer-only noncirculating pre-mint stock or stale accounting marks."
+      ],
+      "novelty": "Newly documented rail expansion, not a claim of novel arbitrage",
+      "persistence": "Not measured",
+      "profitability_usd": null,
+      "riskless": false,
+      "next_test": "Eligibility, exact asset/route terms and contemporaneous size-aware quotes before any economic replay."
+    }
+  ]
+}
