@@ -2,6 +2,8 @@
 
 Initial review-policy record, 2026-10-29.
 
+This is the historical pre-submission record. For the subsequent inspected packages, individual verdicts and remaining blockers, see [the Stage 0/1 package review](STAGE01_VERDICTS.md). The initial inspection state below is preserved, not a claim that no package has now been reviewed.
+
 **Overall: NOT READY. No strategy is recommended or certified safe.**
 
 The judge has defined evidence gates but has not yet independently inspected a complete strategy evidence package. The table records missing/unreviewed evidence, not measured performance. No return, profitability estimate, event probability, or achievable income is asserted here. The source of the research constraints is the user brief, recorded in the [research charter](../docs/CHARTER.md); thresholds are not empirical results.
