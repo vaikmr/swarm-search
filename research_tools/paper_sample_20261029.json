@@ -1,0 +1,334 @@
+{
+  "book_summary": {
+    "best_ask": 79892.0,
+    "best_bid": 79891.0,
+    "source_age_s": 1.9571678638458252
+  },
+  "costs_usd": {
+    "incurred_trading": 0.0,
+    "infrastructure": null
+  },
+  "decision": "REJECT_NO_PAPER_FILL",
+  "evidence_tier": "input_only_not_T3",
+  "failures": [],
+  "finished_at": "2026-10-29T07:16:34.056173+00:00",
+  "mark_to_market_usd": 0.0,
+  "mode": "read_only_observation",
+  "notes": [
+    "zero-inventory observer; no return is computed",
+    "infrastructure cost unknown, not assumed free"
+  ],
+  "positions": [],
+  "previous_record_sha256": null,
+  "rejection_reasons": [
+    "observation_only_no_strategy_or_cost_model_configured",
+    "spot_book_missing_source_timestamp"
+  ],
+  "schema_version": 1,
+  "simulated_fills": [],
+  "sources": {
+    "perp_book": {
+      "evidence_class": "public_source_input_not_strategy_evidence",
+      "http_date": "Thu, 29 Oct 2026 07:16:32 GMT",
+      "http_status": 200,
+      "latency_ms": 200.03676499982248,
+      "payload": {
+        "coin": "BTC",
+        "levels": [
+          [
+            {
+              "n": 52,
+              "px": "79891.0",
+              "sz": "15.20449"
+            },
+            {
+              "n": 2,
+              "px": "79890.0",
+              "sz": "0.23131"
+            },
+            {
+              "n": 1,
+              "px": "79889.0",
+              "sz": "0.006"
+            },
+            {
+              "n": 2,
+              "px": "79888.0",
+              "sz": "0.00662"
+            },
+            {
+              "n": 2,
+              "px": "79887.0",
+              "sz": "2.52979"
+            },
+            {
+              "n": 6,
+              "px": "79886.0",
+              "sz": "9.03201"
+            },
+            {
+              "n": 3,
+              "px": "79885.0",
+              "sz": "0.13699"
+            },
+            {
+              "n": 3,
+              "px": "79884.0",
+              "sz": "0.1499"
+            },
+            {
+              "n": 2,
+              "px": "79883.0",
+              "sz": "0.0082"
+            },
+            {
+              "n": 10,
+              "px": "79882.0",
+              "sz": "1.92861"
+            },
+            {
+              "n": 6,
+              "px": "79881.0",
+              "sz": "2.59812"
+            },
+            {
+              "n": 11,
+              "px": "79880.0",
+              "sz": "8.15803"
+            },
+            {
+              "n": 15,
+              "px": "79879.0",
+              "sz": "2.84859"
+            },
+            {
+              "n": 12,
+              "px": "79878.0",
+              "sz": "2.11322"
+            },
+            {
+              "n": 6,
+              "px": "79877.0",
+              "sz": "2.21258"
+            },
+            {
+              "n": 7,
+              "px": "79876.0",
+              "sz": "2.45639"
+            },
+            {
+              "n": 7,
+              "px": "79875.0",
+              "sz": "6.26354"
+            },
+            {
+              "n": 7,
+              "px": "79874.0",
+              "sz": "4.73563"
+            },
+            {
+              "n": 6,
+              "px": "79873.0",
+              "sz": "1.525"
+            },
+            {
+              "n": 9,
+              "px": "79872.0",
+              "sz": "4.86044"
+            }
+          ],
+          [
+            {
+              "n": 9,
+              "px": "79892.0",
+              "sz": "1.33525"
+            },
+            {
+              "n": 2,
+              "px": "79893.0",
+              "sz": "0.85178"
+            },
+            {
+              "n": 3,
+              "px": "79894.0",
+              "sz": "0.12483"
+            },
+            {
+              "n": 2,
+              "px": "79895.0",
+              "sz": "0.12358"
+            },
+            {
+              "n": 5,
+              "px": "79896.0",
+              "sz": "1.18665"
+            },
+            {
+              "n": 5,
+              "px": "79897.0",
+              "sz": "2.85481"
+            },
+            {
+              "n": 6,
+              "px": "79898.0",
+              "sz": "2.3793"
+            },
+            {
+              "n": 6,
+              "px": "79899.0",
+              "sz": "2.14709"
+            },
+            {
+              "n": 14,
+              "px": "79900.0",
+              "sz": "7.25104"
+            },
+            {
+              "n": 11,
+              "px": "79901.0",
+              "sz": "1.9832"
+            },
+            {
+              "n": 7,
+              "px": "79902.0",
+              "sz": "2.11192"
+            },
+            {
+              "n": 7,
+              "px": "79903.0",
+              "sz": "1.57837"
+            },
+            {
+              "n": 9,
+              "px": "79904.0",
+              "sz": "6.54076"
+            },
+            {
+              "n": 11,
+              "px": "79905.0",
+              "sz": "9.00298"
+            },
+            {
+              "n": 6,
+              "px": "79906.0",
+              "sz": "7.17055"
+            },
+            {
+              "n": 9,
+              "px": "79907.0",
+              "sz": "3.57603"
+            },
+            {
+              "n": 6,
+              "px": "79908.0",
+              "sz": "5.53055"
+            },
+            {
+              "n": 6,
+              "px": "79909.0",
+              "sz": "3.43394"
+            },
+            {
+              "n": 8,
+              "px": "79910.0",
+              "sz": "6.9349"
+            },
+            {
+              "n": 11,
+              "px": "79911.0",
+              "sz": "2.86055"
+            }
+          ]
+        ],
+        "time": 1793258192099
+      },
+      "received_at": "2026-10-29T07:16:32.611048+00:00",
+      "request_body": {
+        "coin": "BTC",
+        "type": "l2Book"
+      },
+      "requested_at": "2026-10-29T07:16:32.411016+00:00",
+      "sha256": "890c6ae3b25c4d03be5d4170ace82f8d515be2efcff57bdeed5b04ed158a3501",
+      "url": "https://api.hyperliquid.xyz/info"
+    },
+    "spot_book": {
+      "evidence_class": "public_source_input_not_strategy_evidence",
+      "http_date": "Thu, 29 Oct 2026 07:16:33 GMT",
+      "http_status": 200,
+      "latency_ms": 1444.161991999863,
+      "payload": {
+        "asks": [
+          [
+            "79795.66",
+            "0.14508213",
+            6
+          ],
+          [
+            "79798.46",
+            "0.04925208",
+            1
+          ],
+          [
+            "79798.47",
+            "0.02",
+            1
+          ],
+          [
+            "79798.48",
+            "0.06249929",
+            1
+          ],
+          [
+            "79800.07",
+            "0.02",
+            1
+          ]
+        ],
+        "auction": null,
+        "auction_mode": false,
+        "bids": [
+          [
+            "79795.65",
+            "0.00800514",
+            3
+          ],
+          [
+            "79794.19",
+            "0.10025791",
+            1
+          ],
+          [
+            "79793.65",
+            "0.0050128",
+            1
+          ],
+          [
+            "79790.96",
+            "0.006266",
+            1
+          ],
+          [
+            "79790.77",
+            "0.12403016",
+            1
+          ]
+        ],
+        "sequence": 138482192380,
+        "time": "2026-10-29T07:16:33.447194418Z"
+      },
+      "received_at": "2026-10-29T07:16:34.055256+00:00",
+      "request_body": null,
+      "requested_at": "2026-10-29T07:16:32.611115+00:00",
+      "sha256": "fb703fab82bbc3bcefce6ddb4e271cef3fee20fe30025699dfd6bcd4ccb87619",
+      "url": "https://api.exchange.coinbase.com/products/BTC-USD/book?level=2",
+      "full_payload_bid_levels": 20216,
+      "full_payload_ask_levels": 21015,
+      "payload_excerpted": true,
+      "sha256_refers_to": "full upstream HTTP response, not excerpt"
+    }
+  },
+  "started_at": "2026-10-29T07:16:32.410803+00:00",
+  "strategy_version": null,
+  "original_record_sha256": "10399b810bdca97ca661428245ac3b1364974edba70ac8fd6373470e0091096c",
+  "is_compact_excerpt_not_auditable_original_jsonl": true
+}
