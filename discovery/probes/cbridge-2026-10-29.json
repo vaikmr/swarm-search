@@ -3,6 +3,7 @@
   "scope": "One indicative current configuration/quote probe; not a fill, sequential round trip or strategy validation.",
   "recommended": false,
   "rpc_calls": 0,
+  "local_pre_network_preparation_failures": 1,
   "transactions_submitted": 0,
   "wallet_supplied": false,
   "raw_response_hash_policy": "SHA-256 of original HTTP response body. Raw bodies were not retained; hashes do not describe this reserialized JSON.",

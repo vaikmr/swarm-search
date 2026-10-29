@@ -8,7 +8,7 @@ The user clarified that the goal is to discover new cross-chain arbitrage strate
 
 ## Integrated results
 
-Six bounded research packages have been integrated. The on-chain package and final independent source-coverage audit remain pending; this is not a completed claim of 32 exact-original full reads.
+Seven bounded research packages have been integrated. The final independent source-coverage audit remains pending; this is not a completed claim of 32 exact-original full reads. The coordinator's [opportunity map](OPPORTUNITY_MAP.md) distinguishes promising mechanisms, rejected shortcuts and the next small tests.
 
 | Package | Findings |
 | --- | --- |
@@ -18,6 +18,7 @@ Six bounded research packages have been integrated. The on-chain package and fin
 | Settlement | [Inventory-aware filling, spendable repayment and unavailable deposit routes](workstreams/settlement/findings.md) |
 | Economics | [Complete-cycle costs, bridge rebalancing and stablecoin conversion identities](workstreams/economics/findings.md) |
 | Durability | [Independent critiques of all seven proposed mechanisms](workstreams/durability/findings.md) |
+| On-chain evidence | [Current public state, historical hedge-data limits and the unrun counterfactual](workstreams/onchain/findings.md) |
 
 A narrow coordinator [current-quote probe](probes/cbridge-2026-10-29.md) supplements those packages. At one timestamp, two independent 1,000-unit cBridge estimates showed no imbalance bonus. More importantly, the configured Arbitrum `USDC` was bridged USDC.e, not native USDC: a native-USDC return rail cannot silently close that inventory cycle. This is an indicative snapshot, not a fill, historical replay or conclusion about every corridor.
 
