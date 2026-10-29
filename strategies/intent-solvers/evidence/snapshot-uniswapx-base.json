@@ -1,0 +1,406 @@
+{
+  "source_url": "https://api.uniswap.org/v2/orders?orderStatus=filled&chainId=8453&orderType=Dutch_V3&limit=20",
+  "retrieved_at_utc": "2026-10-29T07:17:32.490426+00:00",
+  "method": "GET",
+  "evidence_kind": "public_discovery_sample_not_T1_T2_or_T3",
+  "realized_pnl_usd": null,
+  "capital_deployed_usd": null,
+  "qualifies_t1": false,
+  "http_status": 200,
+  "server_date": "Thu, 29 Oct 2026 07:17:32 GMT",
+  "upstream_body_sha256": "fcd2356b4c19faa5deb465eae814f23041be0b000225c035630bc587d6fce6a6",
+  "selected_records": [
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xaa537f7fb7a50603ccfcfda470b9a746782b9df5e46f43ce69b070ab7868191d",
+      "fillBlock": 53234333,
+      "fillTimestamp": 1793258013,
+      "orderHash": "0x405a0fd09dd9b60826157a2445c5d6330d0b4b1d9b52c8ac792fcf54f6a931e7",
+      "createdAt": 1793258011,
+      "settledAmounts": [
+        {
+          "amountIn": "5703322355",
+          "amountOut": "8173852360",
+          "tokenIn": "0xb2000000000000000000007b9fcbd005511aCBd5",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xc0b130cbe0cdfaf080750e554d519fcecae64ce9cc1beb318ed78b342c059d52",
+      "fillBlock": 53234318,
+      "fillTimestamp": 1793257983,
+      "orderHash": "0x21f6f9fa2bc0bf5daf91cd2bc813ddad4914571a834befa63a35aa1f0e95b92e",
+      "createdAt": 1793257980,
+      "settledAmounts": [
+        {
+          "amountIn": "101987371343099338654125",
+          "amountOut": "1467710302",
+          "tokenIn": "0x940A319B75861014A220D9c6c144d108552B089B",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xdf7d603d75b590778ba6a34ab12874a4622d5d0a8e43a35bd6f5b280806496e9",
+      "fillBlock": 53234232,
+      "fillTimestamp": 1793257811,
+      "orderHash": "0xd301e70a425a9ae22a36e2d60ffc81ed4c4d1640fccea8b32c9764a7e4bf27b5",
+      "createdAt": 1793257808,
+      "settledAmounts": [
+        {
+          "amountIn": "6396483010690555521449",
+          "amountOut": "5352074033",
+          "tokenIn": "0x56ab53b77F07DA3af732150E8aeC4783eB5BbA7D",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x3ca1d69d1319b2259da0e814ab94c64cdb2f1e8259cf9d6ef142b77ab206c70b",
+      "fillBlock": 53234186,
+      "fillTimestamp": 1793257719,
+      "orderHash": "0x3e4968681a028b91f1e280f4560c19832d2372458d6819a80d3f5da131d01604",
+      "createdAt": 1793257717,
+      "settledAmounts": [
+        {
+          "amountIn": "227725306329039452",
+          "amountOut": "526048158",
+          "tokenIn": "0x00000000e20E49e6dCeE6e8283A0C090578F0fb9",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xdf85eb6bc94452d7f5195d61189a52b831314b4772f49897b9fef06ca060e687",
+      "fillBlock": 53233286,
+      "fillTimestamp": 1793255919,
+      "orderHash": "0x2c2942ed813d19c512ddd9860f4126067f03e8baf8fd5fe18d61de54327c67a9",
+      "createdAt": 1793255917,
+      "settledAmounts": [
+        {
+          "amountIn": "540686843",
+          "amountOut": "233556383175933633",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0x0000000000000000000000000000000000000000"
+        }
+      ],
+      "exclusive_filler": "0xCB0C3e880194008e5641c48A6B54CCF67a9Bf2A9"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x950fa48077ef8f930214f6e0f67209faa107e699a84c5461efe452afa9a15e91",
+      "fillBlock": 53233204,
+      "fillTimestamp": 1793255755,
+      "orderHash": "0x11d4e92791fdcf86a0edff27dd7857680b36009b85ab5df280820145c59ba100",
+      "createdAt": 1793255753,
+      "settledAmounts": [
+        {
+          "amountIn": "1875000000",
+          "amountOut": "639257652",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0xb2000000000000000000002D0BA3164cc74f58B7"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x5dcae5905aa2892b53a1544d102a5eea1f8cc1e7f872ba63f4092ed200944125",
+      "fillBlock": 53233147,
+      "fillTimestamp": 1793255641,
+      "orderHash": "0x3ca2f22745e37f81030eb640acc2304ec16f3b01b0e3cfa33a5c4dde557bc34b",
+      "createdAt": 1793255638,
+      "settledAmounts": [
+        {
+          "amountIn": "695893",
+          "amountOut": "240628003461392164",
+          "tokenIn": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+          "tokenOut": "0x4200000000000000000000000000000000000006"
+        }
+      ],
+      "exclusive_filler": "0x302649ccdfC232EE49A28755C8a6C06E707b7D15"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xf31bc45f889c7e9d0a344689b60b84e2018caace9755c99a4994221835ddefcf",
+      "fillBlock": 53233058,
+      "fillTimestamp": 1793255463,
+      "orderHash": "0xa2dd72135597640bb6ae2f83669c644d31efa342e4c6b67f8e79ccbb0005adab",
+      "createdAt": 1793255461,
+      "settledAmounts": [
+        {
+          "amountIn": "5777510",
+          "amountOut": "4622363494",
+          "tokenIn": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x15f6b11a69eb6f814b448afc8d42e6545f8c1a9aef18bb79d0cfd0a87384c87f",
+      "fillBlock": 53232904,
+      "fillTimestamp": 1793255155,
+      "orderHash": "0x9be02b83271fbaa9f81dbd8bc382a91c73b9b8a0915bfe8259a0e966e9afbf70",
+      "createdAt": 1793255153,
+      "settledAmounts": [
+        {
+          "amountIn": "2500000000",
+          "amountOut": "17503621593150370111785",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0x5bE75e3b0aFf5D1A042A5363Ae36AcB1d6d755ea"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x402e47972ac111e609392798340592877fae6dec93f0d995aa6f8cacedb7d240",
+      "fillBlock": 53232387,
+      "fillTimestamp": 1793254121,
+      "orderHash": "0x2ff5b9bd48b94328ef6f928ba68295da070665d9583a564b6885e94bb6016f1c",
+      "createdAt": 1793254119,
+      "settledAmounts": [
+        {
+          "amountIn": "1300000",
+          "amountOut": "449186959324398016",
+          "tokenIn": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+          "tokenOut": "0x4200000000000000000000000000000000000006"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xd11b3dc9ba949cf7b9be7adbf90732d9414d748f1d8df739430007f0fab3803d",
+      "fillBlock": 53232386,
+      "fillTimestamp": 1793254119,
+      "orderHash": "0xc3b76ce194de26965224e24e002a6c4c490ff1b4a55cb71fd742b5ba4de6638d",
+      "createdAt": 1793254117,
+      "settledAmounts": [
+        {
+          "amountIn": "231277077787233371",
+          "amountOut": "535587533",
+          "tokenIn": "0x00000000e20E49e6dCeE6e8283A0C090578F0fb9",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0x0000000000000000000000000000000000000000"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xdc7b11ae49cda4fa50d9a4840ba02899279269a9e5e2958200eb3fda0b9a8cf9",
+      "fillBlock": 53232258,
+      "fillTimestamp": 1793253863,
+      "orderHash": "0x4145805f224985ded6e4496a780a02a2764a2e615a006fa07e265cd09e97c546",
+      "createdAt": 1793253862,
+      "settledAmounts": [
+        {
+          "amountIn": "5613199157859103801344",
+          "amountOut": "1469589882945015268",
+          "tokenIn": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+          "tokenOut": "0x0000000000000000000000000000000000000000"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x85485c7e195c079e65e3b0b0f837ae3a8489fc5892d00ecc08ecc187af78dbb6",
+      "fillBlock": 53232257,
+      "fillTimestamp": 1793253861,
+      "orderHash": "0x8fde8fd4c49299252f3e743931be713e499e78c8111b0b46fe0591a07ee64e57",
+      "createdAt": 1793253857,
+      "settledAmounts": [
+        {
+          "amountIn": "2500000000",
+          "amountOut": "17426230865922464655129",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0x5bE75e3b0aFf5D1A042A5363Ae36AcB1d6d755ea"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x96d3d13efa18a25ee93f7d98cf9108bde22505e94e24122ba4279a2260167e69",
+      "fillBlock": 53232241,
+      "fillTimestamp": 1793253829,
+      "orderHash": "0x08260286c9ec20067d4df4e2eedeee0c726133df194033ca9744daa20bf54211",
+      "createdAt": 1793253826,
+      "settledAmounts": [
+        {
+          "amountIn": "3416059134",
+          "amountOut": "5613199157859103801344",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xe1f3f6ec806187b93918571c4d9d8201bf1e31cdaccc7d54e555fbf4f64f0d26",
+      "fillBlock": 53231597,
+      "fillTimestamp": 1793252541,
+      "orderHash": "0x09bdbc773efd05161c9381e3eb44c242c9b8c0adaa2a1e1a7a3086c8a692c61c",
+      "createdAt": 1793252539,
+      "settledAmounts": [
+        {
+          "amountIn": "2612892010",
+          "amountOut": "612974912541213449722742",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0xB200000000000000000000cFbdF64a8706a94a01"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x6dc3c5157f8d31ecbebef1c0b5fbc158c93fa669ea5aeb2f20bb18722a5cc217",
+      "fillBlock": 53231486,
+      "fillTimestamp": 1793252319,
+      "orderHash": "0x1b266cedce9c3cee1420346d6a87c9a825b7387e15ed1faf26ce457607f75afc",
+      "createdAt": 1793252317,
+      "settledAmounts": [
+        {
+          "amountIn": "554156063",
+          "amountOut": "238043773243733213",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0x0000000000000000000000000000000000000000"
+        }
+      ],
+      "exclusive_filler": "0xCB0C3e880194008e5641c48A6B54CCF67a9Bf2A9"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xed2954626ee710654220f0bde7cf9b8fed2a5972ae3e8430af7ba25306264600",
+      "fillBlock": 53231465,
+      "fillTimestamp": 1793252277,
+      "orderHash": "0x57873007d701b066c40dded7ed071d43449e7d2295642457c162a82ba263e171",
+      "createdAt": 1793252275,
+      "settledAmounts": [
+        {
+          "amountIn": "1800000000",
+          "amountOut": "2242751",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xba619c7f9bd022c3377b070d3921289d4475f67d18fe91f199d72e17c1128012",
+      "fillBlock": 53231410,
+      "fillTimestamp": 1793252167,
+      "orderHash": "0x127d288f9fcfc9286fbc4455261dbb6a8f3e00e5053587d1dfb31cdbcc23a62a",
+      "createdAt": 1793252164,
+      "settledAmounts": [
+        {
+          "amountIn": "1262275629743124016838216",
+          "amountOut": "140000000",
+          "tokenIn": "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0xCB0C3e880194008e5641c48A6B54CCF67a9Bf2A9"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0xa49e75c6d0709484a53bae694eca24dde1e4101fc83d34528d9e208a84feddd7",
+      "fillBlock": 53231349,
+      "fillTimestamp": 1793252045,
+      "orderHash": "0x97768cedd9d894a9240326d8cbb13d3efd7977928cbecf9d069cf0dacbef8d83",
+      "createdAt": 1793252043,
+      "settledAmounts": [
+        {
+          "amountIn": "17382577",
+          "amountOut": "13946106580",
+          "tokenIn": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+          "tokenOut": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+        }
+      ],
+      "exclusive_filler": "0x225a38bc71102999Dd13478BFaBD7c4d53f2DC17"
+    },
+    {
+      "type": "Dutch_V3",
+      "orderStatus": "filled",
+      "chainId": 8453,
+      "txHash": "0x9d2a7d1f67a1995656a85583ff5603dd8ef8223f1c30226ae9f96d323aa8f33b",
+      "fillBlock": 53231284,
+      "fillTimestamp": 1793251915,
+      "orderHash": "0x887a9e1012641e8e3b851eec87a372adc6254ff333951eaf6afad0f17a3b2c82",
+      "createdAt": 1793251913,
+      "settledAmounts": [
+        {
+          "amountIn": "3018000000",
+          "amountOut": "4928435730418808068111",
+          "tokenIn": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "tokenOut": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b"
+        }
+      ],
+      "exclusive_filler": "0xBEEf02961503351625926Ea9a11AE13B29F5c555"
+    }
+  ],
+  "summary": {
+    "sample_rows": 20,
+    "exclusive_filler_counts_in_sample_only": {
+      "0x225a38bc71102999dd13478bfabd7c4d53f2dc17": 7,
+      "0xbeef02961503351625926ea9a11ae13b29f5c555": 8,
+      "0xcb0c3e880194008e5641c48a6b54ccf67a9bf2a9": 3,
+      "0x302649ccdfc232ee49a28755c8a6c06e707b7d15": 1
+    },
+    "orders_without_exclusive_filler": 1,
+    "warning": "Nominee is not proof of actual executor; no PnL."
+  },
+  "ok": true
+}
