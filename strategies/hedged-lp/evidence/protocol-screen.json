@@ -1,0 +1,141 @@
+{
+  "source": "https://api.llama.fi/protocols",
+  "observed_at": "2026-10-29T07:17:50.700154+00:00",
+  "full_response_sha256": "08c89858ca5a87696919a34085c20801aba47796359aa2c84fd9c808102773e8",
+  "selected": [
+    {
+      "name": "Arrakis Modular",
+      "slug": "arrakis-modular",
+      "url": "https://arrakis.finance/",
+      "tvl": 56951823.55099846,
+      "audits": "2",
+      "audit_links": [
+        "https://github.com/ArrakisFinance/arrakis-modular/blob/main/audit/Arrakis_Modular_Audit_Report_by_WatchPug.pdf",
+        "https://github.com/ArrakisFinance/arrakis-modular/blob/main/audit/ChainSecurity_Spacing_Guild_Arrakis_Modular_audit.pdf"
+      ],
+      "listedAt": 1729682594,
+      "chains": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Plasma",
+        "Binance",
+        "Robinhood Chain"
+      ]
+    },
+    {
+      "name": "Neutral Trade",
+      "slug": "neutral-trade",
+      "url": "https://www.neutral.trade/",
+      "tvl": 23141100.823430374,
+      "audits": "0",
+      "audit_links": null,
+      "listedAt": 1734973177,
+      "chains": [
+        "Solana",
+        "Robinhood Chain",
+        "Ethereum",
+        "Monad"
+      ]
+    },
+    {
+      "name": "Charm Finance V2",
+      "slug": "charm-finance-v2",
+      "url": "https://alpha.charm.fi/vaults",
+      "tvl": 1528049.764561871,
+      "audits": "2",
+      "audit_links": [
+        "https://learn.charm.fi/charm/appendix/audit-reports"
+      ],
+      "listedAt": 1701375467,
+      "chains": [
+        "Berachain",
+        "Ethereum",
+        "Katana",
+        "Arbitrum",
+        "Base",
+        "Polygon",
+        "Optimism",
+        "Blast",
+        "Scroll",
+        "Linea",
+        "Boba"
+      ]
+    },
+    {
+      "name": "GammaSwap Yield Tokens",
+      "slug": "gammaswap-yield-tokens",
+      "url": "https://app.gammaswap.com/yield-tokens",
+      "tvl": 81916.65386097977,
+      "audits": "0",
+      "audit_links": null,
+      "listedAt": 1755011589,
+      "chains": [
+        "Base"
+      ]
+    },
+    {
+      "name": "GammaSwap Open Interest",
+      "slug": "gammaswap-open-interest",
+      "url": "https://app.gammaswap.com/",
+      "tvl": 47182.94886093518,
+      "audits": "2",
+      "audit_links": [
+        "https://docs.gammaswap.com/more-info/audits"
+      ],
+      "listedAt": 1713502627,
+      "chains": [
+        "Arbitrum",
+        "Base",
+        "Ethereum"
+      ]
+    },
+    {
+      "name": "GammaSwap Classic",
+      "slug": "gammaswap-classic",
+      "url": "https://app.gammaswap.com/",
+      "tvl": 4509.922522270299,
+      "audits": "2",
+      "audit_links": [
+        "https://docs.gammaswap.com/more-info/audits"
+      ],
+      "listedAt": 1695959981,
+      "chains": [
+        "Arbitrum"
+      ]
+    },
+    {
+      "name": "Orange Finance",
+      "slug": "orange-finance",
+      "url": "",
+      "tvl": 89.5651416104728,
+      "audits": "2",
+      "audit_links": [
+        "https://orange-finance.gitbook.io/orange-finance/risk-and-security/audit"
+      ],
+      "listedAt": 1692625599,
+      "chains": [
+        "Arbitrum",
+        "Berachain"
+      ]
+    },
+    {
+      "name": "Rage Trade v1",
+      "slug": "rage-trade-v1",
+      "url": "",
+      "tvl": 6.091558,
+      "audits": "2",
+      "audit_links": [
+        "https://github.com/RageTrade/core/blob/159a94ca9fa75a7c1b3acf7191c2c87ebd746691/audits/quantstamp/audit.pdf",
+        "https://github.com/RageTrade/core/blob/159a94ca9fa75a7c1b3acf7191c2c87ebd746691/audits/cmichelio/audit.pdf",
+        "https://drive.google.com/file/d/1rgTgB3Zs1A6YhssF4jIsVS5l0Lr8sl1r/view",
+        "https://docs.google.com/document/d/1joxRpf1D-KoACf7h1xnB72YkPYKxd27oDX-9axTbIQw/edit#heading=h.mnockoickb7e"
+      ],
+      "listedAt": 1663144131,
+      "chains": [
+        "Arbitrum"
+      ]
+    }
+  ],
+  "warning": "Not all listed protocols are hedged-CLLP actors. Aggregator audit flag is not audit verification. TVL is not profitability."
+}

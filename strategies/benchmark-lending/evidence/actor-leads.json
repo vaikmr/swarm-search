@@ -1,0 +1,75 @@
+{
+  "built_at": "2026-10-29T07:19:28.935865+00:00",
+  "source": "https://eth.blockscout.com/api/v2/tokens/0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c/holders",
+  "token_source": "https://eth.blockscout.com/api/v2/tokens/0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c",
+  "token": {
+    "address_hash": "0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c",
+    "name": "Aave v3 USDC",
+    "symbol": "AUSDC",
+    "decimals": "6"
+  },
+  "holder_sample": [
+    {
+      "address": "0x56957E411Ea83a0B4A0689C1fB0D1e5eA0d20149",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "134087916331942"
+    },
+    {
+      "address": "0x7055b17A1b911b6b971172C01FF0Cc27881aeA94",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "125663751116992"
+    },
+    {
+      "address": "0xD4fa2D31b7968E448877f69A96DE69f5de8cD23E",
+      "is_contract": true,
+      "name": "Wrapped Aave Ethereum USDC",
+      "token_balance_raw": "69717297180802"
+    },
+    {
+      "address": "0x50b42514389F25E1f471C8F03f6f5954df0204b0",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "65846262577031"
+    },
+    {
+      "address": "0xD2011d314aCAA68E5401E7f5AeC3Be6d2C574DCf",
+      "is_contract": true,
+      "name": "Yield Bearing AAVE USDC",
+      "token_balance_raw": "65121485498959"
+    },
+    {
+      "address": "0x55eA3e38fA0aA495b205fe45641A44cCC1C3DF26",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "45802373705028"
+    },
+    {
+      "address": "0x21AA30C357D4102372Be8F32F7A3104c853BBe22",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "30279379926131"
+    },
+    {
+      "address": "0x4D76ee2d0A5aeFedAD77f05ba81a035533a20e45",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "18554300054622"
+    },
+    {
+      "address": "0xE9B117670203E4674450be3d942daB03564b4014",
+      "is_contract": false,
+      "name": null,
+      "token_balance_raw": "18003249999999"
+    },
+    {
+      "address": "0x7D7F72d393F242DA6e22D3b970491C06742984Ff",
+      "is_contract": true,
+      "name": "AaveV3Lender",
+      "token_balance_raw": "16465621557176"
+    }
+  ],
+  "full_holder_response_sha256": "e67cd6b4f0d27dbd27231215f01c5cc537249b174ee9689c1129649aec0a804c",
+  "scope": "First page, first ten holders only; no beneficial-owner inference; no >=14d ledger or PnL reconciliation; NOT T1."
+}
