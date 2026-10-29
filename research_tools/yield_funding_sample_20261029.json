@@ -102,6 +102,14 @@
       "end_ms": 1793258194383,
       "window_days": 30.0,
       "payments": 720,
+      "coverage": {
+        "grid_origin_ms": 0,
+        "period_ms": 3600000,
+        "timestamp_tolerance_ms": 120000,
+        "expected_events": 720,
+        "first_scheduled_ms": 1790668800000,
+        "last_scheduled_ms": 1793257200000
+      },
       "funding_rate_sum": 0.0070660819000000616,
       "gross_short_funding_usd": 105.99122850000093,
       "explicit_costs_usd": null,
@@ -125,6 +133,14 @@
       "end_ms": 1793258194383,
       "window_days": 90.0,
       "payments": 2160,
+      "coverage": {
+        "grid_origin_ms": 0,
+        "period_ms": 3600000,
+        "timestamp_tolerance_ms": 120000,
+        "expected_events": 2160,
+        "first_scheduled_ms": 1785484800000,
+        "last_scheduled_ms": 1793257200000
+      },
       "funding_rate_sum": 0.02111877589999975,
       "gross_short_funding_usd": 316.7816384999963,
       "explicit_costs_usd": null,

@@ -45,6 +45,43 @@ class LendingTests(unittest.TestCase):
 
 
 class FundingTests(unittest.TestCase):
+    def test_missing_last_scheduled_event_rejected(self):
+        # Independent judge's synthetic fixture: old edge allowance accepted
+        # one payment despite the inclusive cutoff requiring the second.
+        with self.assertRaises(DataError):
+            funding_carry([{"time": 3600000, "fundingRate": ".0001"}],
+                          1, 7200000, 10000, None)
+        result = funding_carry([{"time": 3600000, "fundingRate": ".0001"},
+                                {"time": 7200000, "fundingRate": "-.0002"}],
+                               1, 7200000, 10000, None)
+        self.assertAlmostEqual(result["gross_short_funding_usd"], -1)
+        self.assertEqual(result["coverage"]["expected_events"], 2)
+
+    def test_missing_first_scheduled_event_rejected(self):
+        with self.assertRaises(DataError):
+            funding_carry([{"time": 7200000, "fundingRate": ".0001"}],
+                          1, 7200000, 10000, None)
+
+    def test_unaligned_cutoffs_exact_grid_with_source_jitter(self):
+        rows = [{"time": 7200050, "fundingRate": ".0001"},
+                {"time": 10800025, "fundingRate": "-.0002"}]
+        result = funding_carry(rows, 3900000, 11100000, 10000, None)
+        self.assertEqual(result["payments"], 2)
+        self.assertEqual(result["coverage"]["first_scheduled_ms"], 7200000)
+        for incomplete in (rows[:1], rows[1:]):
+            with self.assertRaises(DataError):
+                funding_carry(incomplete, 3900000, 11100000, 10000, None)
+
+    def test_phase_shift_cannot_mask_missing_boundary(self):
+        with self.assertRaises(DataError):
+            funding_carry([{"time": 5400000, "fundingRate": ".0001"}],
+                          1, 7200000, 10000, None)
+
+    def test_near_grid_ambiguous_actual_time_rejected(self):
+        with self.assertRaises(DataError):
+            funding_carry([{"time": 3600050, "fundingRate": ".0001"}],
+                          3600001, 7200000, 10000, None)
+
     def test_sign_and_explicit_costs(self):
         rows = [{"time": 3600000, "fundingRate": ".0001"},
                 {"time": 7200000, "fundingRate": "-.0002"}]

@@ -67,8 +67,22 @@ hold the position safely or earn the cash flow.
 
 Requests are inclusive at both ends. Pagination resumes at the last timestamp
 plus one millisecond, rejects overlap/non-progress, and has a hard page bound.
-Coverage checks reject empty histories, missing/duplicate hourly observations,
-and truncated window edges. Complete rate history still is not T2 replay.
+Coverage checks require the exact epoch-aligned hourly grid and event count
+inside each **inclusive** nominal window, including its first and last scheduled
+events. The timestamp tolerance applies only to event jitter, not to missing
+boundary payments; it cannot replace an omitted event with an edge allowance.
+Actual source timestamps must also lie inside the queried bounds. A cutoff
+close enough to an hourly boundary that the source event straddles it fails
+closed instead of pretending its inclusion is unambiguous. Empty histories,
+shifted phases, missing/duplicate/reversed events and incomplete edges are rejected.
+Epoch-hour phase is an explicit adapter assumption checked against every input
+row, not inferred from whichever first row happened to arrive.
+Complete rate history still is not T2 replay.
+
+Independent review found that the initial adapter accepted a synthetic omitted
+window-edge event. The correction replaced its edge-distance allowance with
+exact scheduled-event checks and added boundary/unaligned-cutoff regressions.
+The committed BTC sample is separately revalidated against the stricter grid.
 
 ## Run focused tests
 
@@ -141,4 +155,5 @@ approved for live use; the current public market-data reads do not.
 - [Aave Arbitrum USDC history](https://yields.llama.fi/chart/d9fa8e14-0447-4207-9ae8-7810199dfa1f)
 - [Hyperliquid info API and pagination](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint)
 - [Hyperliquid historical funding API](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint/perpetuals)
+- [Hyperliquid hourly funding rules](https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding)
 - [Coinbase BTC-USD public REST book](https://api.exchange.coinbase.com/products/BTC-USD/book?level=2)
