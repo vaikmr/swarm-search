@@ -10,6 +10,8 @@ Research date: 2026-10-29. Scope: the lending benchmark and all eleven candidate
 4. **The Stage-2 p5 screen is insufficient for the hard monthly rule.** Report monthly pathwise maximum drawdown, not only end-of-month PnL. A passing p5/95%-tail screen does not demonstrate that drawdown stays within 10% with 99% monthly coverage. A probability coverage target and statistical confidence in an estimate are different concepts.
 5. **No candidate has been certified by this review.** Sources establish that mechanisms and incidents exist, not their future frequency or the entrant's return. Where conditional losses can be large but probabilities lack a defensible estimate, the correct status is `UNQUANTIFIED TAIL / NOT CERTIFIED`, not a numerical probability or an automatic claim that a particular annual kill threshold was met.
 
+The maximum on-chain deployment is not a target. The [follow-up review of the scout's nominal baseline](baseline-nominal-review.md) explains shared settlement, stablecoin look-through and reserve-custody blockers without assuming that every shared dependency causes total loss.
+
 ## Evidence labeling and reproducibility
 
 - Input constraints: the study charter; not market observations.
