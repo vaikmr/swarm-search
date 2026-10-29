@@ -363,3 +363,49 @@ Morpho vault market/version/audit/age and exit liquidity need verification.
 Gas reserves also need room inside the nominal caps. Do not treat an exact
 30%-per-sleeve headline as proof of look-through compliance. Unknown cost and
 price effects must not be replaced by the scenario table to clear a strategy.
+
+## 7. Lower-deployment follow-up: much less room for costs (T4)
+
+The subsequent [lower-deployment study](https://github.com/vaikmr/swarm-search/blob/18370d81039303e86263dc998c87164d8d75226e/strategies/benchmark-lending/lower-deployment.md)
+uses **$4,000 Aave Ethereum USDC plus $46,000 off-chain reserve before costs**.
+It does not certify reserve custody, full exposure compliance, audited-build
+coverage, exit access or a portfolio drawdown probability. Neither the old
+nominal-cap prototype nor this lower-deployment variant is a recommendation.
+
+The accountant independently integrated the [preserved USDC rate history](https://github.com/vaikmr/swarm-search/blob/18370d81039303e86263dc998c87164d8d75226e/strategies/benchmark-lending/evidence/aave-ethereum-usdc-history.json),
+whose public source is [pool aa70268e](https://yields.llama.fi/chart/aa70268e-4b52-42bf-a116-608b370f9501).
+With the same piecewise base-APY formula as section 6, $4,000 principal,
+reinvestment, fixed $1 USDC marks, zero modeled reserve income and no expenses:
+
+- **30-day modeled gross: $12.581271**, window
+  2026-09-29T06:01:03.674Z to 2026-10-29T06:01:03.674Z, 31 rate intervals.
+- **90-day modeled gross: $35.178977**, window
+  2026-07-31T06:01:03.674Z to 2026-10-29T06:01:03.674Z, 91 rate intervals.
+
+Both are **T4 archived-rate arithmetic**, not T1 realized profit, T2 execution,
+or T3 paper fills. They match the [source sensitivity artifact](https://github.com/vaikmr/swarm-search/blob/18370d81039303e86263dc998c87164d8d75226e/strategies/benchmark-lending/evidence/lower-deployment-sensitivity.json).
+Actual reserve income and economic risk remain unknown, not observed zero.
+
+| Assumed aggregate 30-day cost (T4 sensitivity only) | Conditional modeled economic net, reserve income fixed at zero |
+| --- | ---: |
+| $0 | $12.581271 |
+| $5 | $7.581271 |
+| $10 | $2.581271 |
+| $25 | -$12.418729 |
+| $100 | -$87.418729 |
+| $500 | -$487.418729 |
+
+The cost allowance for a nonnegative result in this specific fixed-price model
+is only **$12.581271 over 30 days**. This does not establish an achievable
+operating budget: no entry/exit gas bill, failed-attempt cost, infrastructure
+invoice or adverse-unwind ceiling has been observed or bounded here.
+The hypothetical $500 all-in ceiling used in component stress examples is not
+the user-specified infrastructure ceiling and is not evidence of an actual cap.
+The API's `infrastructure_within_budget` flag tests the infrastructure line only.
+It must not be reused to certify total costs, opening-capital loss envelopes,
+pathwise maximum drawdown, annual tails or confidence levels.
+
+**Actual net remains unknown.** Lower deployment reduces the amount exposed to
+the on-chain sleeve in specified scenarios, but leaves reserve concentration,
+custody/access/FX risks and missing cost evidence unresolved. Any off-chain
+income must be independently evidenced and reconciled, not assumed or omitted.
