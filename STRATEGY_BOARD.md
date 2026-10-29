@@ -21,6 +21,6 @@ States distinguish `unverified`, `keep-for-testing`, `killed`, and `evidence-qua
 
 No claim of attainable monthly profit, proven drawdown protection, or profitability ranking is made by this initial board.
 
-Each candidate now has a `strategies/<slug>/hypothesis.md` and independent `redteam.md`. Evidence directories contain source notes, bounded public samples or explicit gaps. Unknown net returns are not zero.
+Each candidate now has a `strategies/<slug>/hypothesis.md`, independent `redteam.md` and judge-owned `verdict.md`. The [consolidated independent verdicts](review/STAGE01_VERDICTS.md) preserve all twelve NOT READY decisions. Evidence directories contain source notes, bounded public samples or explicit gaps. Unknown net returns are not zero.
 
 Route-level finding: CoW's documented self-funded bonding routes exceed this capital budget. This does not reject all intent solving or establish that the separate sponsored route is accessible. Across and UniswapX have useful attributable discovery samples, not demonstrated entrant profit.

@@ -6,6 +6,8 @@ The eight research roles delivered initial discovery, capacity, accounting, risk
 
 Current disposition: **all twelve entries remain unverified / NOT READY**. Missing evidence is not proof that a strategy is unprofitable. No positive risk-adjusted return ranking, achievable monthly income band, or 99% monthly drawdown certificate can be reported.
 
+Qualifying T2 **and** T3 plus independent review are required for a recommendation. T1 is preferred supporting evidence, not a mandatory substitute or an extra condition that waives either required tier. The [individual independent verdicts](review/STAGE01_VERDICTS.md) now document each entry's specific missing gates.
+
 ## What the initial data actually shows
 
 | Component | Modeled window | Gross component | Evidence and limitation |
@@ -31,6 +33,14 @@ Sources and reproducible inputs:
 
 These selected BTC/ETH funding components are materially below the $2,000-$5,000 monthly target before costs. That is not a broad rejection of other markets or proof of a complete strategy's net result.
 
+### Lower-deployment follow-up
+
+A separate [single-chain study](strategies/benchmark-lending/lower-deployment.md) reduces the on-chain sleeve to $4,000 Aave Ethereum USDC and leaves $46,000 off-chain. Independently reproduced T4 historical-rate gross is **$12.581271 over 30 days**, before actual costs, reserve contribution, price effects and losses. An assumed $25 aggregate monthly cost would make that modeled sleeve contribution approximately **-$12.418729**; it is not an observed bill or whole-portfolio net return.
+
+The study records a fixed-block deployment identity observation, not an independently certified audited build, a withdrawal guarantee or a fork replay. Reducing deployed capital does not make an unspecified 92% reserve safe or independently accessible. A hypothetical $4,000 principal loss plus $500 all-in monthly cost is a conditional opening-capital component calculation—not a running-peak drawdown or 99% confidence result. Likewise, an annual principal-plus-cost budget is **not** the charter's separate annual occurrence-probability gate.
+
+The [accountant's reconciliation](analysis/costs.md) and [independent risk review](risk/lower-deployment-review.md) preserve those limitations. This remains an unverified baseline candidate, not an approved portfolio or an instruction to add custodians/accounts.
+
 ## Feasibility and market-access findings
 
 The target requires 4%-10% simple monthly net return on total $50,000 capital. Spending the entire $500 infrastructure ceiling would raise required pre-infrastructure profit to $2,500-$5,500 before variable expenses. These are requirement calculations, not attainable returns or spending authorization.
@@ -49,7 +59,7 @@ These make Across and UniswapX useful **data-acquisition priorities**, not an in
 
 ## What the tools validate—and what they do not
 
-The combined six test suites passed **124 tests** at this checkpoint. They cover arithmetic, explicit unknowns, public-response filtering, provenance/path checks, hypothetical capital locks, loss accounting, timestamp coverage, and rejection of unsupported fills. Passing tests do not validate a trading strategy, a source's truth, a historical fork, an executable fill, or a return distribution.
+The combined six test suites passed **133 tests** at this checkpoint. They cover arithmetic, explicit unknowns, public-response filtering, provenance/path checks, hypothetical capital locks, loss accounting, timestamp coverage, historical-header validation, and rejection of unsupported fills. Passing tests do not validate a trading strategy, a source's truth, a historical fork, an executable fill, or a return distribution.
 
 Independent review found and owners corrected several contract problems before economic reporting:
 
@@ -67,7 +77,7 @@ No live trades, signatures, keys, deployments, paid data services or purchases w
 ## Next evidence gates
 
 1. Establish a specific eligible baseline with exact market/audit mapping, dated issuer/settlement/reserve dependencies, period-aligned costs and whole-capital accounting. Lower deployment is allowed; unknown reserve risk is not waived.
-2. Reconcile at least one fully public actor's opening/closing equity, transfers, liabilities, rewards, refunds and costs for fourteen days. Keep receipts separate from realized economic profit and distinguish firms from their contracts/addresses.
+2. Pursue the preferred T1 evidence by reconciling a fully public actor's opening/closing equity, transfers, liabilities, rewards, refunds and costs for fourteen days. Keep receipts separate from realized economic profit and distinguish firms from their contracts/addresses. If complete actor evidence is unavailable, disclose the gap; it cannot substitute for or waive T2/T3.
 3. Only for a defensible surviving candidate, run genuine historical fork/state replay for at least thirty days including a volatile period, with executable information timing, competition, locks, failures, rebalancing and adverse joint scenarios.
 4. Freeze strategy and costs, then collect genuinely elapsed forward paper evidence for at least seven days. Raw no-fill observation time is not a substitute for strategy evidence.
 5. Independently evaluate costs, capacity, monthly drawdown and annual tail gates. Do not substitute a p5 screen or short zero-failure sample for the hard 99% monthly requirement.
