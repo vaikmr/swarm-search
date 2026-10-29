@@ -82,7 +82,7 @@ class CostLine:
 
 @dataclass(frozen=True)
 class NetPnl:
-    net_cash_pnl_usd: Decimal | None
+    net_economic_pnl_usd: Decimal | None
     total_capital_return: Decimal | None
     excess_over_benchmark_usd: Decimal | None
     additional_costs_usd: Decimal
@@ -98,18 +98,24 @@ def net_pnl(
     total_capital_usd: str | int | Decimal,
     gross_strategy_pnl_usd: str | int | Decimal,
     gross_evidence: Evidence,
-    idle_yield_usd: str | int | Decimal,
+    idle_contribution_usd: str | int | Decimal,
     idle_evidence: Evidence,
     costs: Iterable[CostLine],
     benchmark_net_usd: str | int | Decimal | None,
     benchmark_evidence: Evidence | None,
     infrastructure_budget_usd: str | int | Decimal = "500",
 ) -> NetPnl:
-    """Cash net and benchmark excess are distinct outputs, never combined.
+    """Marked economic net and benchmark excess are distinct outputs.
 
     Every category must be provided, even when explicitly inapplicable/zero.
     Unknown/missing costs suppress net results rather than becoming zero.
-    Gross includes marked inventory and hedge PnL; transfer principal is not PnL.
+    Gross includes marked strategy inventory and hedge PnL, not separate idle
+    contributions; transfer principal is not PnL. Signed idle contribution must
+    include negative yields and idle-sleeve price/default losses not in gross.
+    If the caller instead supplies whole-portfolio equity PnL including idle,
+    separate idle MUST be zero and paid/embedded costs MUST be audit-only.
+    Callers declare their boundary: component overlap is not inferred here.
+    This function cannot infer realized cash receipts or withdrawable liquidity.
     Funding received and rebates go in gross; funding paid is a cost once only.
     The budget is for one month; prorate inputs before calling for other periods.
     """
@@ -117,10 +123,10 @@ def net_pnl(
     if capital == ZERO:
         raise ValueError("Total capital must be positive")
     gross = decimal(gross_strategy_pnl_usd)
-    idle = nonnegative(idle_yield_usd)
+    idle = decimal(idle_contribution_usd)
     budget = nonnegative(infrastructure_budget_usd)
     if not isinstance(gross_evidence, Evidence) or not isinstance(idle_evidence, Evidence):
-        raise TypeError("Gross and idle income require explicit evidence")
+        raise TypeError("Gross and signed idle contribution require explicit evidence")
     if (benchmark_net_usd is None) != (benchmark_evidence is None):
         raise ValueError("Benchmark value and evidence must both be present or absent")
     if benchmark_evidence is not None and not isinstance(benchmark_evidence, Evidence):
@@ -162,7 +168,7 @@ def net_pnl(
     if benchmark_evidence is not None:
         evidence.append(benchmark_evidence)
     return NetPnl(
-        net_cash_pnl_usd=net,
+        net_economic_pnl_usd=net,
         total_capital_return=None if net is None else net / capital,
         excess_over_benchmark_usd=excess,
         additional_costs_usd=additional,
@@ -189,6 +195,9 @@ def transaction_fee_usd(
     effective_gas_price already includes a paid priority fee: do not add it again.
     Extra fees MUST be zero with explanation if already embedded in gas_used,
     as can happen with Arbitrum poster fees. Unsigned/dropped txs are separate.
+    If this all-in helper result is booked under execution, its L1/operator/
+    auction components must not also be deducted as additional cost lines.
+    Alternatively book execution-only here and those extra components separately.
     Use historical chain/fork receipt semantics, not today's defaults.
     """
     if isinstance(native_decimals, bool) or not isinstance(native_decimals, int) or native_decimals < 0:
@@ -266,13 +275,13 @@ def required_return(
 def required_gross_usd(
     net_target_usd: str | int | Decimal,
     cash_costs_usd: str | int | Decimal,
-    separate_idle_income_usd: str | int | Decimal,
+    separate_idle_contribution_usd: str | int | Decimal,
 ) -> Decimal:
-    """Requirement only: gross = net target + costs - separate idle income."""
+    """Requirement only; a signed idle loss increases the required gross."""
     return (
         nonnegative(net_target_usd)
         + nonnegative(cash_costs_usd)
-        - nonnegative(separate_idle_income_usd)
+        - decimal(separate_idle_contribution_usd)
     )
 
 

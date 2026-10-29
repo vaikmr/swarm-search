@@ -11,7 +11,7 @@ User-specified total capital `C = $50,000`; desired net monthly profit `N`:
 
 ```
 required simple monthly total-capital net return = N / C
-required gross contribution = N + actual cash costs - separate idle income
+required gross contribution = N + costs - signed separate idle contribution
 ```
 
 | Requirement (T4 arithmetic from user inputs) | Lower target | Upper target |
@@ -34,18 +34,31 @@ Reproduce: `python3 -m research_tools.costs`.
 Use a fixed UTC observation window and USD marks contemporaneous with flows:
 
 ```
-G = earned fees + realized trading PnL + inventory/hedge mark-to-market
+G = strategy earned fees + realized trading PnL + strategy/hedge mark-to-market
     + funding received + actually earned/redeemable rewards and rebates
-N = G + Y_idle - sum(cash costs not already included in G)
+N = G + I_idle - sum(costs not already included in G)
 R_total = N / 50,000
 E = N - B_net
 ```
 
-`Y_idle` is income actually earned on separate, eligible idle funds, not yield
-assumed on locked relayer receivables, gas reserves, hedge collateral, bonds, or
-all cash irrespective of deployment. A counterfactual lending return belongs in
-`B_net`, not in `Y_idle`. Funding paid is a cost. If gross uses **net** funding,
-flag funding paid as already included. Do likewise for rebates and trading fees.
+`N` is **marked net economic PnL**, exposed as `net_economic_pnl_usd`. It is not
+realized cash PnL. Cash received, withdrawable liquidity and settled profit cannot
+be inferred from it: unrealized appreciation or unsettled earned income can
+produce positive `N` while cash receipts are zero. There is deliberately no
+old cash-named output alias. Evidence for realized actor profit still needs a
+separate cashflow/accrual/mark reconciliation.
+
+`I_idle`, supplied as `idle_contribution_usd`, is the **signed** economic
+contribution from separate idle holdings, including negative yield, price
+changes and principal write-downs. Its scope excludes anything already in `G`.
+Only genuinely earned yield on eligible funds belongs here; never assume yield
+on locked relayer receivables, gas reserves, hedge collateral, bonds, or all cash
+irrespective of deployment. A counterfactual lending return belongs in `B_net`,
+not in `I_idle`. Funding paid is a cost. If gross uses **net** funding, flag
+funding paid as already included. Do likewise for rebates and trading fees.
+An idle depeg/default loss is a signed contribution (or is already in whole-
+portfolio equity), not something to omit because an APY helper rejects -100%.
+The helper converts rates; it does not model a principal default or recovery.
 
 `B_net` is a feasible, same-capital, same-period benchmark including its own
 entry/exit/claim gas, token conversion fees, and any necessary monitoring costs.
@@ -67,6 +80,31 @@ owned chains/wallets is not revenue. Pair transfers and the receivable they crea
 If net equity already includes an expense, show it for audit but do not subtract
 again. Record the USD price source, timestamp, decimals, and stablecoin mark;
 do not force every stablecoin to $1 during a depeg.
+
+### Mutually exclusive adapter boundaries
+
+- **Strategy-only contribution:** `G` excludes separate idle holdings; supply
+  their entire signed contribution in `idle_contribution_usd`, and deduct only
+  costs not already reflected in `G`.
+- **Whole-portfolio equity contribution:** if `G` instead contains the reconciled
+  whole portfolio, including idle accrual and price/default losses, supply zero
+  separate idle contribution. All paid/embedded costs are audit-only using
+  `included_in_gross=True`; only expenses genuinely outside the equity boundary
+  are additional. This is an explicitly declared alternative adapter, not a
+  reason to relabel already-net equity as pre-cost gross.
+- **Execution-only transaction fee:** price execution alone in the fee helper
+  and book additional L1/operator/auction components separately.
+- **All-in transaction fee:** book the helper's complete total once, documenting
+  which components it includes. Extra categories for embedded components are
+  explicit zero with an inclusion explanation, not separate additional charges.
+
+For example, $100 of idle accrual is either `G=0, I_idle=100` in a strategy-only
+adapter or `G=100, I_idle=0` in a whole-equity adapter; not `100+100`. Likewise an
+all-in fee of $0.54 is either one deduction or exclusive component deductions
+summing to $0.54. These are synthetic **T4 accounting examples**, not observations.
+The module cannot infer overlapping economic identities from numbers alone.
+Category uniqueness is not provenance deduplication: adapters must preserve
+transaction/cost IDs, component and scope metadata and their inclusion decisions.
 
 ### Mandatory ledger categories
 
@@ -216,7 +254,9 @@ Variable indexes or actual daily history take priority over either conversion.
 APY is not APR divided by twelve. Historical 30/90-day rate summaries are not
 evidence that today's quote persists or that a hypothetical account earned it.
 
-**Current benchmark dollars remain unknown in this cost package.** The yield scout
+**Current net benchmark dollars remain unknown in this cost package.** Section 6
+records a conditional T4 gross allocation model, not an approved net benchmark.
+The yield scout
 must supply source/observation time, pool/chain/asset, protocol fee treatment,
 current rate, 30/90-day histories, protocol age/TVL/audit evidence, allocation,
 feasible liquidity, stablecoin marks, and entry/exit cost policy. A rate directory
@@ -237,8 +277,10 @@ Correlated L2/L1 dependencies require red-team assessment.
 Run focused synthetic tests:
 `python3 -m unittest discover -s tests -p 'test_costs.py' -v`.
 Tests verify target arithmetic, paid/reverted gas, fee inclusion, explicit unknowns,
-budget enforcement, net-vs-benchmark separation, lending conversions, and external
-flow reconciliation. **They do not validate strategy profitability, fills, races,
+budget enforcement, net-vs-benchmark separation, lending conversions, external
+flow reconciliation, unrealized-only reporting, negative idle rates and idle
+principal losses, and mutually exclusive equity/fee adapter paths.
+**They do not validate strategy profitability, fills, races,
 tail probabilities, live rates, or any T1/T2/T3 claim.**
 
 Each strategy package must supply observed/replayed/paper gross PnL and cost
@@ -246,3 +288,78 @@ records with source artifacts and explicit inclusions. Tier metadata in code is 
 label, not a validator or an automatic promotion. The weakest material assumption
 must remain visible; an isolated T2 gas estimate cannot upgrade T4 gross income.
 The independent judge owns evidence sufficiency and recommendation.
+
+## 6. Conditional lending-baseline cost reconciliation (T4)
+
+An independent public-data calculation at **2026-10-29T07:21:20.899Z** reproduced
+the candidate allocation's historical base-rate gross return. This does **not**
+establish an eligible, safe, actually invested, or net-profitable portfolio.
+The input allocation and its original source records are preserved in the
+[public candidate-allocation artifact](https://github.com/vaikmr/swarm-search/blob/0767bcc1cb2b01d3dfc732fc7ed3c8b9f625652f/strategies/benchmark-lending/evidence/candidate-allocation.json).
+The accountant separately fetched all three public histories and reproduced
+the 30-day gross to the precision shown below.
+The model fixes each stablecoin's USD value, assumes continued reinvestment of
+the quoted base APY, excludes reward APY, and assumes zero yield on the separate
+cash sleeve. It does not model depeg/default, actual shares, deposits or fills.
+
+Common 30-day window: **2026-09-29T06:01:03.674Z through
+2026-10-29T06:01:03.674Z**. The latest known base APY is carried forward until
+the next observation; the rate active at the start is the last one at/before
+the start. No observation after the end is used. Gross arithmetic is:
+
+```
+sleeve_gross = 15000 * (product((1 + apyBase_i/100)^(seconds_i/31536000)) - 1)
+candidate_gross = sum(sleeve_gross); conditional_net = candidate_gross - C
+```
+
+| Nominal capital sleeve | Principal | Modeled 30-day gross (T4) | Public history source |
+| --- | ---: | ---: | --- |
+| Aave / Ethereum / DAI | $15,000 | $40.500009 | [3665ee7e](https://yields.llama.fi/chart/3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac) |
+| Compound / Arbitrum / USDT | $15,000 | $29.193998 | [85247b13](https://yields.llama.fi/chart/85247b13-8180-44e7-b38c-4d324cc68a92) |
+| Morpho / Base / SparkUSDC | $15,000 | $50.206106 | [a5fab52f](https://yields.llama.fi/chart/a5fab52f-73fa-4f44-9c09-9af1eb20996c) |
+| Off-chain cash, explicit zero-yield model assumption | $5,000 | $0 | User capital constraint and stated scenario assumption |
+| Aggregate, before costs and price/risk effects | $50,000 | **$119.900112** | Sum of the three public-history calculations |
+
+The three histories each yield 31 piecewise intervals in that common window.
+Largest interval lengths were approximately 24.999, 24.029 and 24.068 hours,
+respectively: this is daily sampled-rate integration, not continuous realized
+index/share accrual or a forked-state replay. Source responses had 1,362 / 844 /
+652 rows respectively. Raw response SHA-256 digests at that retrieval were:
+
+- Aave DAI: `cb9446cb24891686e8b2b86c44d6594b7c24b752dd6263cd59b4c6168340e6cc`
+- Compound USDT: `2af4da73af98f4eae1131c23f9c827f4fb296e1852f8184999121653fa5cd7a4`
+- Morpho SparkUSDC: `4b7e88af0c3abe91136b6886d12525966eaba2ecbc7ac234adcbf76d71b7d126`
+
+These hashes identify the fetched payloads, not an immutable promise that the
+public API will never revise historical rates. Sources were retrieved read-only,
+without account credentials or paid data.
+
+### Explicit aggregate-cost scenarios, not observed costs
+
+`C` below is an **assumed all-in aggregate cash-cost input for that same 30-day
+window**, combining any entry, exit, claim, token conversion, gas, bridge,
+withdrawal, and infrastructure costs without double-counting. None of these
+inputs is an observed or estimated transaction bill. The $0 row is a hypothetical
+frictionless ceiling in this fixed-price model, **not a zero-cost assumption for
+the actual baseline**. Price/risk losses and taxes remain outside these scenarios.
+
+| Assumed aggregate 30-day cash cost `C` (T4 scenario) | Conditional modeled net | Conditional return on total $50,000 |
+| --- | ---: | ---: |
+| $0 | $119.900112 | 0.239800224% |
+| $25 | $94.900112 | 0.189800224% |
+| $100 | $19.900112 | 0.039800224% |
+| $500 | -$380.099888 | -0.760199776% |
+
+The model's all-in break-even cost allowance is **$119.900112 over that window**,
+before any stablecoin price change, credit loss or other omitted economic effect.
+Consuming the full infrastructure ceiling alone would make this particular
+modeled baseline negative, even before transaction costs. That is cost
+sensitivity, not evidence that the operator would actually spend $500.
+
+**Actual `B_net` remains unknown and no risk/compliance gate has passed.**
+The nominal allocation uses different chain/protocol/token labels but DAI's
+collateral can overlap USDC exposure; L2s share Ethereum dependencies; the exact
+Morpho vault market/version/audit/age and exit liquidity need verification.
+Gas reserves also need room inside the nominal caps. Do not treat an exact
+30%-per-sleeve headline as proof of look-through compliance. Unknown cost and
+price effects must not be replaced by the scenario table to clear a strategy.

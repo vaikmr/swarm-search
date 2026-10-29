@@ -35,7 +35,7 @@ def report(costs=None, **overrides):
         total_capital_usd="50000",
         gross_strategy_pnl_usd="1000",
         gross_evidence=FIXTURE,
-        idle_yield_usd="25",
+        idle_contribution_usd="25",
         idle_evidence=FIXTURE,
         costs=lines() if costs is None else costs,
         benchmark_net_usd="150",
@@ -54,26 +54,26 @@ class CostTests(unittest.TestCase):
 
     def test_total_capital_denominator_includes_idle_and_locked(self):
         value = report(lines(infrastructure="100"))
-        self.assertEqual(value.net_cash_pnl_usd, Decimal("925"))
+        self.assertEqual(value.net_economic_pnl_usd, Decimal("925"))
         self.assertEqual(value.total_capital_return, Decimal(".0185"))
         self.assertEqual(value.excess_over_benchmark_usd, Decimal("775"))
         self.assertEqual(value.evidence_tiers, ("T4",))
 
-    def test_benchmark_is_not_subtracted_from_cash_profit(self):
+    def test_benchmark_is_not_subtracted_from_economic_profit(self):
         a = report()
         b = report(benchmark_net_usd="700")
-        self.assertEqual(a.net_cash_pnl_usd, b.net_cash_pnl_usd)
+        self.assertEqual(a.net_economic_pnl_usd, b.net_economic_pnl_usd)
         self.assertNotEqual(a.excess_over_benchmark_usd, b.excess_over_benchmark_usd)
 
     def test_unknown_benchmark_does_not_silently_become_zero(self):
         value = report(benchmark_net_usd=None, benchmark_evidence=None)
-        self.assertEqual(value.net_cash_pnl_usd, Decimal("1025"))
+        self.assertEqual(value.net_economic_pnl_usd, Decimal("1025"))
         self.assertIsNone(value.excess_over_benchmark_usd)
         self.assertTrue(value.benchmark_missing)
 
     def test_unknown_cost_suppresses_pnl(self):
         value = report(lines(bridge_rebalance=None))
-        self.assertIsNone(value.net_cash_pnl_usd)
+        self.assertIsNone(value.net_economic_pnl_usd)
         self.assertIsNone(value.total_capital_return)
         self.assertIsNone(value.excess_over_benchmark_usd)
         self.assertIn("bridge_rebalance", value.missing_costs)
@@ -81,7 +81,7 @@ class CostTests(unittest.TestCase):
     def test_missing_costs_are_not_zero(self):
         value = report([])
         self.assertEqual(set(value.missing_costs), set(COST_CATEGORIES))
-        self.assertIsNone(value.net_cash_pnl_usd)
+        self.assertIsNone(value.net_economic_pnl_usd)
 
     def test_included_slippage_lvr_not_deducted_twice(self):
         costs = [
@@ -92,7 +92,7 @@ class CostTests(unittest.TestCase):
         value = report(costs)
         self.assertEqual(value.already_included_costs_usd, Decimal("160"))
         self.assertEqual(value.additional_costs_usd, Decimal("100"))
-        self.assertEqual(value.net_cash_pnl_usd, Decimal("925"))
+        self.assertEqual(value.net_economic_pnl_usd, Decimal("925"))
 
     def test_duplicate_category_rejected(self):
         with self.assertRaises(ValueError):
@@ -121,7 +121,7 @@ class CostTests(unittest.TestCase):
         )
         self.assertEqual(fee, Decimal(".042"))
         self.assertEqual(
-            report(lines(execution_failed=fee)).net_cash_pnl_usd, Decimal("1024.958")
+            report(lines(execution_failed=fee)).net_economic_pnl_usd, Decimal("1024.958")
         )
 
     def test_arbitrum_embedded_poster_not_added_again(self):
@@ -155,9 +155,111 @@ class CostTests(unittest.TestCase):
         self.assertEqual(equity_pnl_usd("50000", "50000", "0", "0"), 0)
 
     def test_losses_are_allowed(self):
-        value = report(gross_strategy_pnl_usd="-100", idle_yield_usd="0")
-        self.assertEqual(value.net_cash_pnl_usd, -100)
+        value = report(gross_strategy_pnl_usd="-100", idle_contribution_usd="0")
+        self.assertEqual(value.net_economic_pnl_usd, -100)
         self.assertEqual(value.total_capital_return, Decimal("-.002"))
+
+    def test_entirely_unrealized_gain_is_economic_not_cash(self):
+        # Stipulated receipts are zero; all 123 is unrealized marked appreciation.
+        value = report(gross_strategy_pnl_usd="123", idle_contribution_usd="0")
+        self.assertEqual(value.net_economic_pnl_usd, Decimal("123"))
+        self.assertFalse(hasattr(value, "net_cash_pnl_usd"))
+        self.assertFalse(hasattr(value, "realized_cash_pnl_usd"))
+
+    def test_negative_idle_rate_is_accepted_without_clamping(self):
+        idle_loss = lending_income_usd("1000", "-.01", "30", rate_kind="apy")
+        self.assertLess(idle_loss, 0)
+        value = report(gross_strategy_pnl_usd="0", idle_contribution_usd=idle_loss)
+        # The rate helper computes at 40 digits; ledger arithmetic uses the
+        # caller's Decimal context. Unary plus applies that same rounding.
+        self.assertEqual(value.net_economic_pnl_usd, +idle_loss)
+        self.assertLess(value.total_capital_return, 0)
+        self.assertEqual(required_gross_usd("2000", "100", "-25"), Decimal("2125"))
+
+    def test_idle_depeg_and_complete_default_losses_are_not_omitted(self):
+        for idle_loss in ("-200", "-1000"):
+            with self.subTest(idle_loss=idle_loss):
+                value = report(
+                    gross_strategy_pnl_usd="10", idle_contribution_usd=idle_loss
+                )
+                self.assertEqual(value.net_economic_pnl_usd, Decimal("10") + Decimal(idle_loss))
+                already_in_whole_equity = report(
+                    gross_strategy_pnl_usd=Decimal("10") + Decimal(idle_loss),
+                    idle_contribution_usd="0",
+                )
+                self.assertEqual(
+                    value.net_economic_pnl_usd,
+                    already_in_whole_equity.net_economic_pnl_usd,
+                )
+        # Entire idle principal lost is supplied as a signed contribution, NOT
+        # an APY=-100% input: rates and principal write-downs are different.
+        self.assertEqual(
+            report(gross_strategy_pnl_usd="0", idle_contribution_usd="-1000").net_economic_pnl_usd,
+            Decimal("-1000"),
+        )
+
+    def test_strategy_only_and_whole_equity_idle_adapters_are_exclusive(self):
+        strategy_only = report(
+            gross_strategy_pnl_usd="0", idle_contribution_usd="100"
+        )
+        whole_portfolio = report(
+            gross_strategy_pnl_usd=equity_pnl_usd("50000", "50100", "0", "0"),
+            idle_contribution_usd="0",  # Included in the whole-equity input.
+        )
+        self.assertEqual(strategy_only.net_economic_pnl_usd, Decimal("100"))
+        self.assertEqual(whole_portfolio.net_economic_pnl_usd, Decimal("100"))
+        # Callers MUST NOT pass the same idle contribution through both paths.
+        # The arithmetic cannot detect misclassified economic provenance.
+
+    def test_whole_equity_paid_costs_are_audit_only(self):
+        before_fees = report(
+            lines(execution_success="20"),
+            gross_strategy_pnl_usd="100", idle_contribution_usd="0",
+        )
+        embedded = [
+            CostLine(line.category, line.amount_usd, line.evidence, True)
+            for line in lines(execution_success="20")
+        ]
+        after_fees_equity = report(
+            embedded, gross_strategy_pnl_usd="80", idle_contribution_usd="0"
+        )
+        self.assertEqual(before_fees.net_economic_pnl_usd, Decimal("80"))
+        self.assertEqual(after_fees_equity.net_economic_pnl_usd, Decimal("80"))
+        self.assertEqual(after_fees_equity.additional_costs_usd, Decimal("0"))
+
+    def test_execution_only_and_all_in_receipt_adapters_are_exclusive(self):
+        kwargs = dict(
+            gas_used="100000", effective_gas_price_wei="2000000000",
+            native_usd="2500", extra_l1_fee_wei="10000000000000",
+            extra_operator_fee_wei="1000000000000",
+            extra_auction_payment_wei="5000000000000",
+        )
+        all_in_fee = transaction_fee_usd(**kwargs)
+        execution_only = transaction_fee_usd(
+            **dict(kwargs, extra_l1_fee_wei="0", extra_operator_fee_wei="0",
+                   extra_auction_payment_wei="0")
+        )
+        split = report(lines(
+            execution_success=execution_only,
+            data_operator_fees=".0275",
+            auction_payments=".0125",
+        ))
+        # Alternative: book the helper's all-in .54 once. Extra categories are
+        # explicit zero because their components are already in execution,
+        # not because the chain did not charge them.
+        embedded_evidence = Evidence(
+            "T4", "tests/test_costs.py",
+            "Synthetic component booked in execution_success all-in total",
+        )
+        all_in_lines = [
+            CostLine(line.category, "0", embedded_evidence)
+            if line.category in {"data_operator_fees", "auction_payments"} else line
+            for line in lines(execution_success=all_in_fee)
+        ]
+        combined = report(all_in_lines)
+        self.assertEqual(split.additional_costs_usd, Decimal(".54"))
+        self.assertEqual(combined.additional_costs_usd, Decimal(".54"))
+        self.assertEqual(split.net_economic_pnl_usd, combined.net_economic_pnl_usd)
 
     def test_evidence_and_benchmark_pair_required(self):
         with self.assertRaises(ValueError):
