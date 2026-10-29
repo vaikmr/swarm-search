@@ -1,10 +1,10 @@
 # Strategy board
 
-**Discovery checkpoint, 2026-10-29:** both scout packages, capacity, costs, risk, tool scaffolding and independent review were integrated. No qualifying T1/T2/T3 performance package or strategy recommendation was established. See the [interim report](STAGE01_REPORT.md).
+**Search closed at the user's request, 2026-10-29.** No qualifying T1/T2/T3 performance package or strategy recommendation was established. The missing evidence below is not scheduled work. See the [early closeout](FINAL_REPORT.md); the [interim report](STAGE01_REPORT.md) is a historical checkpoint.
 
 States distinguish `unverified`, `keep-for-testing`, `killed`, and `evidence-qualified`. A candidate with missing data stays unverified unless an independent hard-constraint failure establishes rejection. Returning no qualifying strategy is valid.
 
-| Slug | Candidate | Current state | Evidence / next gate |
+| Slug | Candidate | Current state | Missing evidence / unscheduled gate |
 | --- | --- | --- | --- |
 | `benchmark-lending` | Blue-chip stablecoin lending baseline | Unverified | Current and 30/90-day rates, eligible markets, net total-capital benchmark |
 | `cross-chain-relaying` | Cross-chain relaying and intent filling | Unverified | Identified actors, realized capital-adjusted PnL, competition and bond/lock requirements |

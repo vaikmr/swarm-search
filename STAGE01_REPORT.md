@@ -1,5 +1,7 @@
 # Interim on-chain strategy discovery report
 
+**Historical checkpoint.** The search was subsequently stopped at the user's request. See [the early closeout](FINAL_REPORT.md); the next-evidence section below is not an active work plan.
+
 **Checkpoint: 2026-10-29 UTC. Paper-only; no deployment recommendation.**
 
 The eight research roles delivered initial discovery, capacity, accounting, risk and validation packages. The study has **not** reached its required final evidence standard. No strategy has reconciled fourteen-day actor PnL (T1), qualifying thirty-day historical fork/state replay (T2), or seven elapsed days of strategy-specific forward paper trading (T3).

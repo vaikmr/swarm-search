@@ -4,12 +4,15 @@ Evidence-first research into legitimate, risk-adjusted on-chain strategies for a
 
 **Research only. No live trading, transaction signing, mainnet deployments, or private keys. No strategy is currently certified or recommended.**
 
+**Search closed at the user's request, 2026-10-29.** Read the [early closeout](FINAL_REPORT.md): all twelve entries remained unverified, and no further research or paper run is scheduled.
+
 ## Research question
 
 Can a single operator realistically earn $2,000–$5,000 net per month while respecting the capital, loss, concentration, leverage, and infrastructure limits in [the charter](docs/CHARTER.md)? An honest negative result is valid. The target is a research question, not a promised return.
 
 ## Starting points
 
+- [Final early-closeout findings and stop state](FINAL_REPORT.md)
 - [Interim discovery findings and limits](STAGE01_REPORT.md)
 - [Charter, constraints, and evidence gates](docs/CHARTER.md)
 - [Strategy tracker](STRATEGY_BOARD.md)
@@ -21,7 +24,7 @@ Can a single operator realistically earn $2,000–$5,000 net per month while res
 - [Replay-accounting and provenance tools](research_tools/replay_README.md)
 - [Read-only yield inputs and paper observer](research_tools/paper_yield_README.md)
 
-Each strategy package will use `strategies/<slug>/hypothesis.md`, `evidence/`, `sim/`, `redteam.md`, and `verdict.md`. Missing files or evidence are not proof that a strategy fails economically.
+Strategy packages use `strategies/<slug>/hypothesis.md`, `evidence/`, `sim/`, `redteam.md`, and `verdict.md`. Missing files or evidence are not proof that a strategy fails economically.
 
 ## Evidence labels
 
@@ -36,7 +39,7 @@ A recommendation requires T2 **and** T3, plus independent capacity, cost, risk, 
 
 ## Status
 
-Eight workstreams have been assigned. The initial phase establishes the lending benchmark, screens candidates, identifies data gaps, and prepares paper-only tools. No historical replay or forward observation duration has yet been established in this repository.
+Eight workstreams supplied discovery, partial actor evidence, independent reviews and paper-only tools. The user stopped the search before the required economic validation. No qualifying historical strategy replay or forward paper duration was established. Evidence-gathering scripts are preserved for reference, not scheduled to run.
 
 ## Running checks
 
