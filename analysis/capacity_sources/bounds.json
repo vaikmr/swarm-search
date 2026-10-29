@@ -1,0 +1,137 @@
+{
+  "evidence_tier": "T4 deterministic requirement arithmetic and hypothetical sensitivities",
+  "not_performance": true,
+  "as_of_date_utc": "2026-10-29",
+  "month_days": 30,
+  "deployment": {
+    "capital_usd": 50000.0,
+    "per_domain_cap_usd": 15000.0,
+    "onchain_upper_bound_usd": 45000.0,
+    "offchain_or_unallocated_lower_bound_usd": 5000.0
+  },
+  "target_requirements": [
+    {
+      "net_target_usd": 2000,
+      "net_target_fraction_total_capital": 0.04,
+      "required_before_variable_costs_at_full_infra_budget_usd": 2500.0,
+      "required_fraction_of_max_onchain_capital_before_variable_costs": 0.05555555555555555
+    },
+    {
+      "net_target_usd": 5000,
+      "net_target_fraction_total_capital": 0.1,
+      "required_before_variable_costs_at_full_infra_budget_usd": 5500.0,
+      "required_fraction_of_max_onchain_capital_before_variable_costs": 0.12222222222222222
+    }
+  ],
+  "turnover_requirements": [
+    {
+      "net_target_usd": 2000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 1,
+      "required_notional_turnover_usd": 25000000.0
+    },
+    {
+      "net_target_usd": 5000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 1,
+      "required_notional_turnover_usd": 55000000.0
+    },
+    {
+      "net_target_usd": 2000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 2,
+      "required_notional_turnover_usd": 12500000.0
+    },
+    {
+      "net_target_usd": 5000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 2,
+      "required_notional_turnover_usd": 27500000.0
+    },
+    {
+      "net_target_usd": 2000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 5,
+      "required_notional_turnover_usd": 5000000.0
+    },
+    {
+      "net_target_usd": 5000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 5,
+      "required_notional_turnover_usd": 11000000.0
+    },
+    {
+      "net_target_usd": 2000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 10,
+      "required_notional_turnover_usd": 2500000.0
+    },
+    {
+      "net_target_usd": 5000,
+      "fixed_cost_usd": 500.0,
+      "hypothetical_after_variable_cost_margin_bps": 10,
+      "required_notional_turnover_usd": 5500000.0
+    }
+  ],
+  "single_domain_lock_upper_bounds": [
+    {
+      "hypothetical_lock_hours": 1,
+      "at_risk_capital_usd": 15000,
+      "ideal_fluid_turnover_usd": 10800000.0,
+      "limitations": "No guarantee of opportunity, eligibility, timing, utilization or profit"
+    },
+    {
+      "hypothetical_lock_hours": 6,
+      "at_risk_capital_usd": 15000,
+      "ideal_fluid_turnover_usd": 1800000.0,
+      "limitations": "No guarantee of opportunity, eligibility, timing, utilization or profit"
+    },
+    {
+      "hypothetical_lock_hours": 24,
+      "at_risk_capital_usd": 15000,
+      "ideal_fluid_turnover_usd": 450000.0,
+      "limitations": "No guarantee of opportunity, eligibility, timing, utilization or profit"
+    }
+  ],
+  "funding_requirement": {
+    "leverage": 2,
+    "max_perp_collateral_usd": 15000,
+    "paired_notional_upper_bound_usd": 30000.0,
+    "limitations": "Conditional algebraic bound, not a proven feasible allocation or actual funding rate",
+    "required_monthly_funding_fraction_before_trade_hedge_costs": [
+      {
+        "net_target_usd": 2000,
+        "fixed_infrastructure_cost_usd": 500.0,
+        "required_fraction": 0.08333333333333333
+      },
+      {
+        "net_target_usd": 5000,
+        "fixed_infrastructure_cost_usd": 500.0,
+        "required_fraction": 0.18333333333333332
+      }
+    ]
+  },
+  "rpc_sensitivities": [
+    {
+      "chains": 3,
+      "calls_per_second_per_chain": 1,
+      "hypothetical_cu_per_call": 10,
+      "calls_per_month": 7776000,
+      "cu_per_month": 77760000,
+      "payg_compute_only_usd": 40.4352
+    },
+    {
+      "chains": 3,
+      "calls_per_second_per_chain": 1,
+      "hypothetical_cu_per_call": 100,
+      "calls_per_month": 7776000,
+      "cu_per_month": 777600000,
+      "payg_compute_only_usd": 404.35200000000003
+    }
+  ],
+  "source_ids": {
+    "constraints": "docs/CHARTER.md; user-specified constraints",
+    "rpc_price": "ALCHEMY_PRICE in sources.json",
+    "other_inputs": "Explicit hypothetical sensitivity choices, not observed measurements"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "evidence_label": "Access probe only; not T1/T2/T3 performance evidence",
+  "initial_local_failure": {
+    "at": "2026-10-29T07:16:13.483Z",
+    "cause": "AbortSignal was unavailable in the research fetch runtime; requests did not reach the provider.",
+    "resolution": "Retried without that unsupported runtime timeout API.",
+    "interpretation": "Not a provider outage or data-access denial."
+  },
+  "probes": [
+    {
+      "url": "https://api.uniswap.org/v2/orders?orderStatus=open&chainId=8453&orderType=Dutch_V3&limit=50",
+      "retrieved_at": "2026-10-29T07:16:18.787Z",
+      "http_date": "Thu, 29 Oct 2026 07:16:18 GMT",
+      "http_status": 200,
+      "top_level_keys": ["orders"],
+      "returned_order_count": 0
+    },
+    {
+      "url": "https://api.uniswap.org/v2/orders?orderStatus=open&chainId=42161&orderType=Dutch_V3&limit=50",
+      "retrieved_at": "2026-10-29T07:16:19.011Z",
+      "http_date": "Thu, 29 Oct 2026 07:16:19 GMT",
+      "http_status": 200,
+      "top_level_keys": ["orders"],
+      "returned_order_count": 0
+    }
+  ],
+  "limitations": [
+    "One sample per chain; no observation duration or fill outcome is established.",
+    "The documented endpoint is cached and returns at most the last 50 orders.",
+    "HTTP Date is server response time, not an order source timestamp.",
+    "Empty snapshots do not imply no profitable actors, no historical opportunities or an entire empty order universe.",
+    "No order was signed, submitted or filled."
+  ]
+}

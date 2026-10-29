@@ -1,0 +1,264 @@
+{
+  "purpose": "Public technical and admission documentation, not T1/T2/T3 performance evidence",
+  "retrieval_date_utc": "2026-10-29",
+  "retrieval_method": "Public web page text retrieval; no account access or paid services",
+  "sources": [
+    {
+      "id": "ACROSS_RUN",
+      "url": "https://docs.across.to/introduction/relayers/running-relayer",
+      "title": "Running a Relayer",
+      "facts": [
+        "The V3 guide specifies a dual-core 2+ GHz CPU, 4 GB RAM and a UNIX-like OS.",
+        "Relayers need token inventory and RPC access; inventory management includes rebalancing and repayment-chain selection.",
+        "The guide describes root-bundle publication at a minimum interval of about 1.5 hours."
+      ],
+      "caveats": [
+        "The page announces an upcoming protocol upgrade and API documentation.",
+        "Bundle publication interval is not a measured refund latency or an upper bound on capital lock.",
+        "Do not execute the live signing or submission instructions in this research."
+      ]
+    },
+    {
+      "id": "ACROSS_NOMINATION",
+      "url": "https://docs.across.to/introduction/relayers/relayer-nomination",
+      "title": "Relayer Nomination",
+      "facts": [
+        "An exclusiveRelayer may alone fill a deposit until exclusivityDeadline; open filling follows expiration.",
+        "Nomination requires application and a track record including step-in fills and sub-10-second open-flow fills.",
+        "The page says most frontend flow has nominated relayers."
+      ],
+      "caveats": [
+        "The implementation text refers to a Q1-Q2 2025 rollout; this is not a fresh 2026 on-chain census.",
+        "No admission, allocation, fill share or profitable open residual flow has been established for this entrant."
+      ]
+    },
+    {
+      "id": "ACROSS_LIFECYCLE",
+      "url": "https://docs.across.to/concepts/intent-lifecycle-in-across",
+      "title": "Intent Lifecycle in Across",
+      "facts": [
+        "The relayer fronts destination tokens, then waits for fill validation, bundle proposal, challenge and cross-chain execution before refund.",
+        "Repayment chain affects the liquidity-provider fee.",
+        "The documented bundle proposal cadence is about 1.5 hours minimum."
+      ],
+      "caveats": [
+        "The documented V3 lifecycle is not verification of the latest deployed V4 behavior.",
+        "End-to-end fill-to-refund distributions must be measured rather than inferred from cadence."
+      ]
+    },
+    {
+      "id": "UNISWAPX_FILL",
+      "url": "https://developers.uniswap.org/docs/liquidity/uniswapx/filling/overview",
+      "title": "Fillers Overview",
+      "facts": [
+        "Quoters are permissioned and vetted; non-exclusive fillers are permissionless.",
+        "Open filling occurs after exclusivity expires or under the specified override/missing-exclusivity conditions.",
+        "The orders API is cached, returns at most the last 50 orders, and permits at most 4 requests per second.",
+        "The retrieved guide describes RFQ plus exclusive Dutch auctions on supported chains."
+      ],
+      "caveats": [
+        "Open endpoint access does not confer exclusive quoting rights.",
+        "A capped cached snapshot cannot establish the entire eligible flow or prove winning execution."
+      ]
+    },
+    {
+      "id": "COW_BONDS",
+      "url": "https://docs.cow.fi/cow-protocol/reference/core/auctions/bonding-pools",
+      "title": "Setting up a bonding pool",
+      "facts": [
+        "An independent pool is documented with $500,000 stablecoins plus 1,500,000 COW.",
+        "An approved reduced pool starts with $50,000 stablecoins or ETH plus 500,000 COW, rising to $100,000 plus 1,000,000 COW over the following year.",
+        "Reduced pools require core-team approval and remain within the CoW DAO bonding arrangement."
+      ],
+      "caveats": [
+        "These are specific self-funded pool routes, not a universal minimum cash requirement for every solver.",
+        "Do not price COW or assert a dollar bond cost without a time-aligned token quote."
+      ]
+    },
+    {
+      "id": "COW_ONBOARD",
+      "url": "https://docs.cow.fi/cow-protocol/tutorials/solvers/onboard",
+      "title": "Joining The CoW Protocol Solver Competition",
+      "facts": [
+        "The DAO-backed route describes company/shareholder KYC, shadow testing, onboarding and staging before production.",
+        "The current guide says DAO-backed solvers start on BNB Chain, with later L2 and mainnet evaluation.",
+        "The guide describes a 15% weekly COW-reward service fee beginning after six months.",
+        "The onboarding call covers locking 25% of weekly rewards.",
+        "Network-fee reimbursements and COW rewards are paid weekly; orderbook API access can be whitelisted."
+      ],
+      "caveats": [
+        "A subsidized or delegated bond is possible in principle but no accepted admission or exception is established.",
+        "BNB-first onboarding needs explicit scope treatment: distinguish solver operations from builder-dominated arbitrage rather than silently treating the exclusion as settled.",
+        "Weekly reimbursement is not immediate liquid operating capital."
+      ]
+    },
+    {
+      "id": "ONEINCH_TERMS",
+      "url": "https://gov.1inch.community/docs/open-source/resolver-tou",
+      "title": "Terms of Use for Resolvers",
+      "facts": [
+        "Whitelisting eligibility requires delegation of at least 5% of total Unicorn Power, with at most 10 listed resolvers.",
+        "A permissioned-proxy collaboration route is described.",
+        "Exclusive API service levels include a 500 ms quote response and 90% fill rate over a rolling 7 calendar days.",
+        "Fusion+ includes additional native-token safety deposits."
+      ],
+      "caveats": [
+        "The retrieved governance terms state last update 2025-06-16 and effective date 2025-06-17.",
+        "Legacy context only: newer 2025-11-24 and 2026-08-14 business-portal PDFs were subsequently retrieved; use ONEINCH_CURRENT for the current threshold discussion.",
+        "The 500 ms and 90% SLA figures are legacy-document facts, not asserted as verified current requirements.",
+        "No delegation agreement, proxy fee, safety-deposit schedule or accepted access exists for the entrant.",
+        "The 5% threshold is not a known USD bond price."
+      ]
+    },
+    {
+      "id": "ONEINCH_CURRENT",
+      "url": "https://business.1inch.com/portal/assets/legal-docs/resolvers/terms-of_use_resolvers_20260814.pdf",
+      "title": "1inch Network Terms of Use for Resolvers, August 2026",
+      "facts": [
+        "The PDF states last updated 2026-08-14 and effective 2026-08-15.",
+        "The retrieved whitelisting section retains a delegation threshold of at least 5% of total Unicorn Power and at most 10 listed resolvers.",
+        "The text describes permissioned proxies where applicable and enabled, rather than guaranteeing their availability.",
+        "Exclusive Resolver API selection is vetted."
+      ],
+      "caveats": [
+        "The page extraction was truncated at 50000 characters; only the relevant admission and threshold sections were inspected.",
+        "Current SLA timing figures and all legal terms were not independently verified.",
+        "No accepted access, delegation price or proxy commercial agreement is established."
+      ]
+    },
+    {
+      "id": "HL_FUNDING",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/funding",
+      "title": "Funding",
+      "facts": [
+        "Funding is exchanged hourly between position holders, and its sign depends on the premium component.",
+        "The payment uses position size, oracle price and the actual interval funding rate."
+      ],
+      "caveats": [
+        "The documented interest component is not a guaranteed realized funding return.",
+        "Historical, signed funding payments and hedge costs are required."
+      ]
+    },
+    {
+      "id": "HL_FEES",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/trading/fees",
+      "title": "Fees",
+      "facts": [
+        "Base tier-0 validator-operated perps show 0.045% taker and 0.015% maker fees.",
+        "Base tier-0 spot shows 0.070% taker and 0.040% maker fees.",
+        "Fee tiers depend on rolling 14-day weighted volume; staking, aligned quotes and special-market rules can modify the base schedule."
+      ],
+      "caveats": [
+        "Do not assign incumbent volume discounts or staking discounts to a new entrant.",
+        "Separate maker and taker fills; a limit order is not evidence of a maker fill."
+      ]
+    },
+    {
+      "id": "HL_LIMITS",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/rate-limits-and-user-limits",
+      "title": "Rate limits and user limits",
+      "facts": [
+        "REST requests share an aggregate weight allowance of 1200 per minute per IP; requests have method-specific weights.",
+        "The public EVM JSON-RPC endpoint is documented at 100 requests per minute.",
+        "Address action and high-congestion allowances depend on trading history and maker activity."
+      ],
+      "caveats": [
+        "Rate allowance is not a latency or execution-quality guarantee.",
+        "Read-only information limits and signed-action limits differ."
+      ]
+    },
+    {
+      "id": "FLASHBOTS_LIMITS",
+      "url": "https://docs.flashbots.net/flashbots-mev-share/searchers/ratelimiting",
+      "title": "Rate Limits",
+      "facts": [
+        "The MEV-Share guide lists 1800 bundle submissions and 300 bundle simulations per minute per IP for the named methods."
+      ],
+      "caveats": [
+        "Other Flashbots API pages describe different method scopes and limits; do not mix them.",
+        "Do not send bundles or signed transactions during this study."
+      ]
+    },
+    {
+      "id": "FLASHBOTS_COMPETITION",
+      "url": "https://docs.flashbots.net/flashbots-auction/advanced/troubleshooting",
+      "title": "Bundle Inclusion Troubleshooting",
+      "facts": [
+        "A bundle may not be included because of reversion, insufficient incentive, higher competing bids, late receipt or validator configuration.",
+        "Simulation success alone does not establish inclusion."
+      ],
+      "caveats": [
+        "Builder-bid, refund and timing effects must be evaluated using the relevant auction.",
+        "The source's live submission and signing procedures are out of scope."
+      ]
+    },
+    {
+      "id": "ALCHEMY_PRICE",
+      "url": "https://www.alchemy.com/pricing",
+      "title": "Alchemy Pricing: Free, Pay as You Go & Enterprise Plans",
+      "facts": [
+        "The free plan lists 30 million compute units monthly and 15 requests per second.",
+        "The pay-as-you-go compute rate is $0.52 per million compute units.",
+        "The retrieved page lists 300 RPS/10000 CU per second included pay-as-you-go throughput, with additional capacity priced separately."
+      ],
+      "caveats": [
+        "This is a public price schedule, not a bill, account entitlement, spending authorization or latency measurement.",
+        "Method weights, archive methods, traces, peak throughput, storage, redundancy and servers affect actual cost."
+      ]
+    },
+    {
+      "id": "MORPHO_BOTS",
+      "url": "https://docs.morpho.org/developers/ecosystem/bots-and-automations/",
+      "title": "Bots and Automations",
+      "facts": [
+        "The page lists maintained Blue and Midnight liquidators, community Rust and Go liquidators, and vault reallocation tooling.",
+        "The Blue bot discovers borrowers, reads current chain state and simulates before submission."
+      ],
+      "caveats": [
+        "Open source bot availability is evidence against assuming an unserved niche, not an on-chain count of active profitable competitors.",
+        "Protocol TVL is not proof every listed market/version satisfies this study's age, audit and liquidity gates."
+      ]
+    },
+    {
+      "id": "PENDLE_FAQ",
+      "url": "https://docs.pendle.finance/pendle-v2/FAQ",
+      "title": "FAQ",
+      "facts": [
+        "PT can redeem the underlying yield-bearing token after maturity; YT no longer accrues after maturity.",
+        "The page warns about risks in third-party protocols and their contracts."
+      ],
+      "caveats": [
+        "Principal in underlying units is not a risk-free USD redemption.",
+        "Selling before maturity requires executable market prices and costs.",
+        "Underlying protocol, issuer, bridge and chain exposures remain common failure domains."
+      ]
+    },
+    {
+      "id": "CHAINLINK_ARCH",
+      "url": "https://docs.chain.link/chainlink-automation/concepts/automation-architecture",
+      "title": "Automation Architecture",
+      "facts": [
+        "The Automation Registry governs nodes and compensates successful upkeep execution.",
+        "The page describes both developer upkeep registration and node-operator participation."
+      ],
+      "caveats": [
+        "Developer job registration is not proof of an entrant's admission to compensated node rotation.",
+        "No accepted node status, accessible bounty backlog, operator PnL or onboarding terms were measured."
+      ]
+    },
+    {
+      "id": "UNISWAP_CL",
+      "url": "https://docs.uniswap.org/concepts/protocol/concentrated-liquidity",
+      "title": "Concentrated Liquidity",
+      "facts": [
+        "Liquidity outside its chosen price interval becomes inactive and earns no fees.",
+        "As price moves toward a boundary, the position can become entirely one asset.",
+        "Multiple positions do not remove the underlying pool/protocol/asset exposures."
+      ],
+      "caveats": [
+        "Fee growth is not net LP profit.",
+        "Active-liquidity share, inventory marks, hedge costs and executable exits must be replayed."
+      ]
+    }
+  ]
+}
