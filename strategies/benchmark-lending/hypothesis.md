@@ -68,3 +68,11 @@ an off-chain allocation or a changed rule. No rule is relaxed here.
 Protocol-wide age, TVL and public-audit leads are in
 [`protocol-eligibility-snapshot.json`](evidence/protocol-eligibility-snapshot.json).
 They do not establish market-level eligibility or withdrawal availability.
+
+## Lower-deployment follow-up
+
+The maximum 90% deployment is not a goal. A later
+[single-chain low-exposure study](lower-deployment.md) preserves this prototype
+and tests $4,000 of Aave Ethereum USDC against explicit monthly and annual
+full-sleeve-loss/cost budgets. Off-chain cash risks and current audit-build
+coverage remain unresolved; neither iteration is certified compliant.
