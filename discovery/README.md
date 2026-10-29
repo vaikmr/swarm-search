@@ -2,6 +2,8 @@
 
 **Authorized restart, 2026-10-29. One bounded eight-worker discovery pass.**
 
+The user subsequently supplied [seven specific candidate mechanisms](USER_CANDIDATES.md) for pressure testing inside this same pass. The reported 21-trade perp-hedge counterfactual is first priority, conditional on recovering genuine inputs; no returns are assumed.
+
 The user clarified that the goal is to discover new cross-chain arbitrage strategies by following papers, citations, recent instruments and actual on-chain activity. This is not a restart of the old passive-yield/validation loop. The prior [early closeout](../FINAL_REPORT.md) and twelve NOT READY verdicts remain historical facts, not proof that the opportunity space is exhausted.
 
 ## Source coverage
@@ -52,6 +54,8 @@ Do **not** start new generic simulators, replay engines, exhaustive whole-actor 
 One package per worker, then pause. No automatic next research waves, routines, repeated review/fix loops or new peer assignments. Ask focused factual questions on the shared discovery thread; do not start another worker's project.
 
 Use at most **20 public document fetches and 6 searches per worker** for this pass, including priority and newer sources. Report unavailable sources without endless retries. Only the `onchain` owner may make up to **12 new read-only public RPC calls total**; all others use public documents/explorers and existing records. No paid sources, credential requests, private employer data, private keys, signers, transaction submission or live funds. Do not install or start servers.
+
+For the seven additional human-supplied candidates, each owner may use **up to six additional public document fetches and two searches**, solely for its assigned candidate. This resolves the internal quota blocker after several owners had already exhausted the original allowance. It does not authorize a second wave, 30/60-day backfills or extra RPC calls. One small 21-trade paper-only counterfactual is allowed only if actual inputs and historical executable hedge evidence are available; it is not a new replay engine or T2 qualification.
 
 No front-running users, sandwiching, exploitation, oracle manipulation or attack reproduction. Attack-focused references may be marked context-only and excluded from strategy construction. If a vulnerability is noticed incidentally, stop that path and flag minimal safe details privately.
 
