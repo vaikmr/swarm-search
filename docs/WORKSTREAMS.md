@@ -1,5 +1,11 @@
 # Eight-worker research swarm
 
+## Authorized discovery restart
+
+The user authorized a new, single discovery-first pass on 2026-10-29. For this pass the [discovery brief](../discovery/README.md) supersedes the old assignments below. Workers own only their corresponding `discovery/workstreams/<folder>/`; previous strategy/model/risk/verdict files are preserved, not resumed. The coordinator owns the shared source inventory and synthesis. The judge and red team remain independent of strategy return origination. See the brief for the 32-reference reading allocation and full extracted bibliography triage.
+
+## Earlier study ownership (historical)
+
 The coordinator integrates work, maintains the strategy board, resolves written disagreements, enforces gates, and assembles the final report. Eight workers handle the following disjoint responsibilities.
 
 | Worker | Responsibility | Owned paths |

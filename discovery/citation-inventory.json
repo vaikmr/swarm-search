@@ -1,0 +1,962 @@
+{
+  "seed_url": "https://arxiv.org/html/2501.17335v2#A7",
+  "seed_version_date": "2025-06-18",
+  "seed_empirical_window": "2023-09 through2024-08",
+  "extracted_on": "2026-10-29",
+  "extraction_note": "73 bibliography entries extracted from public HTML markdown. R identifiers are LOCAL extraction-order IDs, NOT the paper original bib numbers. Inventory is not source-reading completion; original paper remains canonical. All extracted references are assigned for triage;32distinct entries are prioritized for reading. Inaccessible, abstract-only and context-only items must be explicit, not counted as full reading.",
+  "minimum_distinct_reading_target": 32,
+  "assigned_workers": [
+    {
+      "key": "literature",
+      "role": "Citation archaeology and transferable arbitrage mechanisms",
+      "priority_ids": [
+        "R035",
+        "R039",
+        "R042",
+        "R047"
+      ],
+      "owned_path": "discovery/workstreams/literature/"
+    },
+    {
+      "key": "empirical",
+      "role": "Executed-strategy literature, actors and reproducible economic loops",
+      "priority_ids": [
+        "R037",
+        "R041",
+        "R017",
+        "R034"
+      ],
+      "owned_path": "discovery/workstreams/empirical/"
+    },
+    {
+      "key": "instruments",
+      "role": "New instruments, borrowing and cross-chain asset/claim structures",
+      "priority_ids": [
+        "R001",
+        "R038",
+        "R069",
+        "R063"
+      ],
+      "owned_path": "discovery/workstreams/instruments/"
+    },
+    {
+      "key": "settlement",
+      "role": "Settlement, redemption and reusable-inventory constraints as opportunity sources",
+      "priority_ids": [
+        "R008",
+        "R049",
+        "R059",
+        "R058"
+      ],
+      "owned_path": "discovery/workstreams/settlement/"
+    },
+    {
+      "key": "economics",
+      "role": "Fee, credit and rebalancing mechanisms; persistent basis hypotheses",
+      "priority_ids": [
+        "R002",
+        "R009",
+        "R015",
+        "R060"
+      ],
+      "owned_path": "discovery/workstreams/economics/"
+    },
+    {
+      "key": "onchain",
+      "role": "Public data availability and bounded actual on-chain mechanism spot-checks",
+      "priority_ids": [
+        "R005",
+        "R006",
+        "R026",
+        "R031"
+      ],
+      "owned_path": "discovery/workstreams/onchain/"
+    },
+    {
+      "key": "durability",
+      "role": "Independent durability, risk-premium and access challenges",
+      "priority_ids": [
+        "R032",
+        "R056",
+        "R014",
+        "R028"
+      ],
+      "owned_path": "discovery/workstreams/durability/"
+    },
+    {
+      "key": "audit",
+      "role": "Independent citation coverage, novelty and evidence audit; no return origination",
+      "priority_ids": [
+        "R061",
+        "R025",
+        "R070",
+        "R036"
+      ],
+      "owned_path": "discovery/workstreams/audit/"
+    }
+  ],
+  "references": [
+    {
+      "id": "R001",
+      "extraction_position": 1,
+      "label": "Aave (2025)",
+      "citation_metadata": "Aave (2025)\nAave. 2025.\n\n_Aave Documentation_.\n\nURL: [https://aave.com/docs](https://aave.com/docs \"\").",
+      "urls": [
+        "https://aave.com/docs"
+      ],
+      "priority_32": true,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R002",
+      "extraction_position": 2,
+      "label": "Across Docs (2025)",
+      "citation_metadata": "Across Docs (2025)\nAcross Docs. 2025.\n\n_FAQ \\| Across Documentation_.\n\nURL: [https://docs.across.to/user-docs/additional-info/faq](https://docs.across.to/user-docs/additional-info/faq \"\").",
+      "urls": [
+        "https://docs.across.to/user-docs/additional-info/faq"
+      ],
+      "priority_32": true,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R003",
+      "extraction_position": 3,
+      "label": "Adams et al. (2020)",
+      "citation_metadata": "Adams et al. (2020)\nHayden Adams, Noah Zinsmeister, and Dan Robinson. 2020.\n\nUniswap v2 Core.",
+      "urls": [],
+      "priority_32": false,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R004",
+      "extraction_position": 4,
+      "label": "Aerodrome (2025)",
+      "citation_metadata": "Aerodrome (2025)\nAerodrome. 2025.\n\n_Aerodrome Finance_.\n\nURL: [https://www.aerodrome.finance/](https://www.aerodrome.finance/ \"\").",
+      "urls": [
+        "https://www.aerodrome.finance/"
+      ],
+      "priority_32": false,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R005",
+      "extraction_position": 5,
+      "label": "Allium (2025)",
+      "citation_metadata": "Allium (2025)\nAllium. 2025.\n\n_Allium - Enterprise Blockchain Data Platform_.\n\nURL: [https://www.allium.so/](https://www.allium.so/ \"\").",
+      "urls": [
+        "https://www.allium.so/"
+      ],
+      "priority_32": true,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R006",
+      "extraction_position": 6,
+      "label": "Allium Docs (2025)",
+      "citation_metadata": "Allium Docs (2025)\nAllium Docs. 2025.\n\n_Overview - Allium Documentation Hub_.\n\nURL: [https://docs.allium.so/historical-data/prices](https://docs.allium.so/historical-data/prices \"\").",
+      "urls": [
+        "https://docs.allium.so/historical-data/prices"
+      ],
+      "priority_32": true,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R007",
+      "extraction_position": 7,
+      "label": "Arbitrum Docs (2025a)",
+      "citation_metadata": "Arbitrum Docs (2025a)\nArbitrum Docs. 2025a.\n\n_A gentle introduction to Arbitrum \\| Arbitrum Docs_.\n\nURL: [https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction](https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction \"\").",
+      "urls": [
+        "https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction"
+      ],
+      "priority_32": false,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R008",
+      "extraction_position": 8,
+      "label": "Arbitrum Docs (2025b)",
+      "citation_metadata": "Arbitrum Docs (2025b)\nArbitrum Docs. 2025b.\n\n_Quickstart: Arbitrum Bridge \\| Arbitrum Docs_.\n\nURL: [https://docs.arbitrum.io/arbitrum-bridge/quickstart](https://docs.arbitrum.io/arbitrum-bridge/quickstart \"\").",
+      "urls": [
+        "https://docs.arbitrum.io/arbitrum-bridge/quickstart"
+      ],
+      "priority_32": true,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R009",
+      "extraction_position": 9,
+      "label": "Axelar (2025)",
+      "citation_metadata": "Axelar (2025)\nAxelar. 2025.\n\n_Exploring Cross-Chain Solutions: how to Bridge Into Arbitrum_.\n\nURL: [https://www.axelar.network/blog/arbitrum-bridge](https://www.axelar.network/blog/arbitrum-bridge \"\").",
+      "urls": [
+        "https://www.axelar.network/blog/arbitrum-bridge"
+      ],
+      "priority_32": true,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R010",
+      "extraction_position": 10,
+      "label": "Bahrani et al. (2025)",
+      "citation_metadata": "Bahrani et al. (2025)\nMaryam Bahrani, Pranav Garimidi, and Tim Roughgarden. 2025.\n\nCentralization in Block-Building and Proposer-Builder Separation. In _Financial Cryptography and Data Security_, Jeremy Clark and Elaine Shi (Eds.). Springer Nature Switzerland, Cham, 331–349.",
+      "urls": [],
+      "priority_32": false,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R011",
+      "extraction_position": 11,
+      "label": "Base Docs (2025)",
+      "citation_metadata": "Base Docs (2025)\nBase Docs. 2025.\n\n_Base Docs_.\n\nURL: [https://docs.base.org/](https://docs.base.org/ \"\").",
+      "urls": [
+        "https://docs.base.org/"
+      ],
+      "priority_32": false,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R012",
+      "extraction_position": 12,
+      "label": "Binance (2025)",
+      "citation_metadata": "Binance (2025)\nBinance. 2025.\n\n_Binance Data Collection_.\n\nURL: [https://data.binance.vision/](https://data.binance.vision/ \"\").",
+      "urls": [
+        "https://data.binance.vision/"
+      ],
+      "priority_32": false,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R013",
+      "extraction_position": 13,
+      "label": "BNB Chain Docs (2025)",
+      "citation_metadata": "BNB Chain Docs (2025)\nBNB Chain Docs. 2025.\n\n_BNB Chain_.\n\nURL: [https://docs.bnbchain.org](https://docs.bnbchain.org/ \"\").",
+      "urls": [
+        "https://docs.bnbchain.org/"
+      ],
+      "priority_32": false,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R014",
+      "extraction_position": 14,
+      "label": "BuilderNet (2025)",
+      "citation_metadata": "BuilderNet (2025)\nBuilderNet. 2025.\n\nWelcome to BuilderNet.\n\n[https://buildernet.org/docs](https://buildernet.org/docs \"\")",
+      "urls": [
+        "https://buildernet.org/docs"
+      ],
+      "priority_32": true,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R015",
+      "extraction_position": 15,
+      "label": "Celer cBridge Docs (2025)",
+      "citation_metadata": "Celer cBridge Docs (2025)\nCeler cBridge Docs. 2025.\n\n_FAQ \\| Celer cBridge_.\n\nURL: [https://cbridge-docs.celer.network/reference/faq](https://cbridge-docs.celer.network/reference/faq \"\").",
+      "urls": [
+        "https://cbridge-docs.celer.network/reference/faq"
+      ],
+      "priority_32": true,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R016",
+      "extraction_position": 16,
+      "label": "Chawla (2024)",
+      "citation_metadata": "Chawla (2024)\nVishal Chawla. 2024.\n\nBase sees big surge in transactions and users after Dencun upgrade.\n\n[https://www.theblock.co/post/283056/base-dencun-transactions-users-surge](https://www.theblock.co/post/283056/base-dencun-transactions-users-surge \"\")Section: Layer 2s and Scaling.",
+      "urls": [
+        "https://www.theblock.co/post/283056/base-dencun-transactions-users-surge"
+      ],
+      "priority_32": false,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R017",
+      "extraction_position": 17,
+      "label": "Chen et al. (2023)",
+      "citation_metadata": "Chen et al. (2023)\nEugene Chen, Alex Toberoff, Suraj Srinivasan, and Ankit Chiplunkar. 2023.\n\n_A Tale of Two Arbitrages_.\n\n[https://frontier.tech/a-tale-of-two-arbitrages](https://frontier.tech/a-tale-of-two-arbitrages \"\")URL: [https://frontier.tech/a-tale-of-two-arbitrages](https://frontier.tech/a-tale-of-two-arbitrages \"\").",
+      "urls": [
+        "https://frontier.tech/a-tale-of-two-arbitrages"
+      ],
+      "priority_32": true,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R018",
+      "extraction_position": 18,
+      "label": "CoinGecko (2025)",
+      "citation_metadata": "CoinGecko (2025)\nCoinGecko. 2025.\n\n_Top Decentralized Exchanges Ranked by Volume \\| CoinGecko_.\n\nURL: [https://www.coingecko.com/en/exchanges/decentralized](https://www.coingecko.com/en/exchanges/decentralized \"\").",
+      "urls": [
+        "https://www.coingecko.com/en/exchanges/decentralized"
+      ],
+      "priority_32": false,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R019",
+      "extraction_position": 19,
+      "label": "Daian et al. (2020)",
+      "citation_metadata": "Daian et al. (2020)\nPhilip Daian, Steven Goldfeder, Tyler Kell, Yunqi Li, Xueyuan Zhao, Iddo Bentov, Lorenz Breidenbach, and Ari Juels. 2020.\n\nFlash Boys 2.0: Frontrunning in Decentralized Exchanges, Miner Extractable Value, and Consensus Instability. In _2020 IEEE Symposium on Security and Privacy (SP)_. 910–927.\n\n[doi:10.1109/SP40000.2020.00040](https://doi.org/10.1109/SP40000.2020.00040 \"\")",
+      "urls": [
+        "https://doi.org/10.1109/SP40000.2020.00040"
+      ],
+      "priority_32": false,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R020",
+      "extraction_position": 20,
+      "label": "Data Always (2024)",
+      "citation_metadata": "Data Always (2024)\nData Always. 2024.\n\nUnderstanding Minimum Blob Base Fees - Layer 2.\n\n[https://ethresear.ch/t/understanding-minimum-blob-base-fees/20489](https://ethresear.ch/t/understanding-minimum-blob-base-fees/20489 \"\")Section: Layer 2.",
+      "urls": [
+        "https://ethresear.ch/t/understanding-minimum-blob-base-fees/20489"
+      ],
+      "priority_32": false,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R021",
+      "extraction_position": 21,
+      "label": "DefiLlama (2025a)",
+      "citation_metadata": "DefiLlama (2025a)\nDefiLlama. 2025a.\n\n_Aerodrome Volume - DefiLlama_.\n\nURL: [https://defillama.com/dexs/aerodrome](https://defillama.com/dexs/aerodrome \"\").",
+      "urls": [
+        "https://defillama.com/dexs/aerodrome"
+      ],
+      "priority_32": false,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R022",
+      "extraction_position": 22,
+      "label": "DefiLlama (2025b)",
+      "citation_metadata": "DefiLlama (2025b)\nDefiLlama. 2025b.\n\n_Ethereum DEX Volume - DefiLlama_.\n\nURL: [https://defillama.com/dexs/chains/ethereum](https://defillama.com/dexs/chains/ethereum \"\").",
+      "urls": [
+        "https://defillama.com/dexs/chains/ethereum"
+      ],
+      "priority_32": false,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R023",
+      "extraction_position": 23,
+      "label": "Docs (2025a)",
+      "citation_metadata": "Docs (2025a)\nPolygon Docs. 2025a.\n\n_PoS - Polygon Knowledge Layer_.\n\nURL: [https://docs.polygon.technology/pos/](https://docs.polygon.technology/pos/ \"\").",
+      "urls": [
+        "https://docs.polygon.technology/pos/"
+      ],
+      "priority_32": false,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R024",
+      "extraction_position": 24,
+      "label": "Docs (2025b)",
+      "citation_metadata": "Docs (2025b)\nPolygon Docs. 2025b.\n\n_PoS to Etheruem - Polygon Knowledge Layer_.\n\nURL: [https://docs.polygon.technology/pos/how-to/bridging/ethereum-polygon/matic-to-ethereum](https://docs.polygon.technology/pos/how-to/bridging/ethereum-polygon/matic-to-ethereum \"\").",
+      "urls": [
+        "https://docs.polygon.technology/pos/how-to/bridging/ethereum-polygon/matic-to-ethereum"
+      ],
+      "priority_32": false,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R025",
+      "extraction_position": 25,
+      "label": "Drake (2023)",
+      "citation_metadata": "Drake (2023)\nJustin Drake. 2023.\n\nBased rollups—superpowers from L1 sequencing - Layer 2.\n\n[https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016](https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016 \"\")Section: Layer 2.",
+      "urls": [
+        "https://ethresear.ch/t/based-rollups-superpowers-from-l1-sequencing/15016"
+      ],
+      "priority_32": true,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R026",
+      "extraction_position": 26,
+      "label": "Dune Analytics (2025)",
+      "citation_metadata": "Dune Analytics (2025)\nDune Analytics. 2025.\n\n_Dune - Crypto Analytics Powered by Community_.\n\nURL: [https://dune.com/home](https://dune.com/home \"\").",
+      "urls": [
+        "https://dune.com/home"
+      ],
+      "priority_32": true,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R027",
+      "extraction_position": 27,
+      "label": "Eskandari et al. (2019)",
+      "citation_metadata": "Eskandari et al. (2019)\nShayan Eskandari, Seyedehmahsa Moosavi, and Jeremy Clark. 2019.\n\nSoK: Transparent Dishonesty: Front-Running Attacks on Blockchain. In _Financial Cryptography and Data Security - FC 2019 International Workshops, VOTING and WTSC, St. Kitts, St. Kitts and Nevis, February 18-22, 2019, Revised Selected Papers_ _(Lecture Notes in Computer Science, Vol. 11599)_, Andrea Bracciali, Jeremy Clark, Federico Pintore, Peter B. Rønne, and Massimiliano Sala (Eds.). Springer, 170–189.",
+      "urls": [],
+      "priority_32": false,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R028",
+      "extraction_position": 28,
+      "label": "Ethereum.org (2025)",
+      "citation_metadata": "Ethereum.org (2025)\nEthereum.org. 2025.\n\n_Cancun - Deneb (Dencun) FAQ_.\n\nURL: [https://ethereum.org/en/roadmap/dencun/](https://ethereum.org/en/roadmap/dencun/ \"\").",
+      "urls": [
+        "https://ethereum.org/en/roadmap/dencun/"
+      ],
+      "priority_32": true,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R029",
+      "extraction_position": 29,
+      "label": "Ferreira Torres et al. (2021)",
+      "citation_metadata": "Ferreira Torres et al. (2021)\nChristof Ferreira Torres, Ramiro Camino, and Radu State. 2021.\n\nFrontrunner Jones and the Raiders of the Dark Forest: An Empirical Study of Frontrunning on the Ethereum Blockchain. In _30th USENIX Security Symposium, USENIX Security 2021, August 11-13, 2021_, Michael D. Bailey and Rachel Greenstadt (Eds.). USENIX Association, 1343–1359.",
+      "urls": [],
+      "priority_32": false,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R030",
+      "extraction_position": 30,
+      "label": "Ferreira Torres et al. (2024)",
+      "citation_metadata": "Ferreira Torres et al. (2024)\nChristof Ferreira Torres, Albin Mamuti, Ben Weintraub, Cristina Nita-Rotaru, and Shweta Shinde. 2024.\n\nRolling in the Shadows: Analyzing the Extraction of MEV Across Layer-2 Rollups. In _Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security_ (Salt Lake City, UT, USA) _(CCS ’24)_. Association for Computing Machinery, New York, NY, USA, 2591–2605.\n\n[doi:10.1145/3658644.3690259](https://doi.org/10.1145/3658644.3690259 \"\")",
+      "urls": [
+        "https://doi.org/10.1145/3658644.3690259"
+      ],
+      "priority_32": false,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R031",
+      "extraction_position": 31,
+      "label": "Flashbots (2024)",
+      "citation_metadata": "Flashbots (2024)\nFlashbots. 2024.\n\n_Mempool Dumpster_.\n\nURL: [https://github.com/flashbots/mempool-dumpster](https://github.com/flashbots/mempool-dumpster \"\").",
+      "urls": [
+        "https://github.com/flashbots/mempool-dumpster"
+      ],
+      "priority_32": true,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R032",
+      "extraction_position": 32,
+      "label": "Flashbots Docs (2025)",
+      "citation_metadata": "Flashbots Docs (2025)\nFlashbots Docs. 2025.\n\n_MEV Protection - Block MEV With Flashbots Protect RPC_.\n\nURL: [https://docs.flashbots.net/flashbots-protect/overview](https://docs.flashbots.net/flashbots-protect/overview \"\").",
+      "urls": [
+        "https://docs.flashbots.net/flashbots-protect/overview"
+      ],
+      "priority_32": true,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R033",
+      "extraction_position": 33,
+      "label": "Fox et al. (2023)",
+      "citation_metadata": "Fox et al. (2023)\nElijah Fox, Mallesh M. Pai, and Max Resnick. 2023.\n\nCensorship Resistance in On-Chain Auctions. In _5th Conference on Advances in Financial Technologies (AFT 2023)_ _(Leibniz International Proceedings in Informatics (LIPIcs), Vol. 282)_, Joseph Bonneau and S. Matthew Weinberg (Eds.). Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl, Germany, 19:1–19:20.\n\n[doi:10.4230/LIPIcs.AFT.2023.19](https://doi.org/10.4230/LIPIcs.AFT.2023.19 \"\")",
+      "urls": [
+        "https://doi.org/10.4230/LIPIcs.AFT.2023.19"
+      ],
+      "priority_32": false,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R034",
+      "extraction_position": 34,
+      "label": "Fritsch et al. (2024)",
+      "citation_metadata": "Fritsch et al. (2024)\nRobin Fritsch, Maria Inês Silva, Akaki Mamageishvili, Benjamin Livshits, and Edward W. Felten. 2024.\n\nMEV Capture Through Time-Advantaged Arbitrage.\n\narXiv:2410.10797 \\[cs.DC\\]\n\n[https://arxiv.org/abs/2410.10797](https://arxiv.org/abs/2410.10797 \"\")",
+      "urls": [
+        "https://arxiv.org/abs/2410.10797"
+      ],
+      "priority_32": true,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R035",
+      "extraction_position": 35,
+      "label": "Gogol et al. (2024)",
+      "citation_metadata": "Gogol et al. (2024)\nKrzysztof Gogol, Johnnatan Messias, Deborah Miori, Claudio Tessone, and Benjamin Livshits. 2024.\n\nCross-Rollup MEV: Non-Atomic Arbitrage Across L2 Blockchains.\n\n[http://arxiv.org/abs/2406.02172](http://arxiv.org/abs/2406.02172 \"\")arXiv:2406.02172.",
+      "urls": [
+        "http://arxiv.org/abs/2406.02172"
+      ],
+      "priority_32": true,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R036",
+      "extraction_position": 36,
+      "label": "Gupta et al. (2023)",
+      "citation_metadata": "Gupta et al. (2023)\nTivas Gupta, Mallesh M. Pai, and Max Resnick. 2023.\n\nThe Centralizing Effects of Private Order Flow on Proposer-Builder Separation. In _5th Conference on Advances in Financial Technologies (AFT 2023)_ _(Leibniz International Proceedings in Informatics (LIPIcs), Vol. 282)_, Joseph Bonneau and S. Matthew Weinberg (Eds.). Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl, Germany, 20:1–20:15.\n\n[doi:10.4230/LIPIcs.AFT.2023.20](https://doi.org/10.4230/LIPIcs.AFT.2023.20 \"\")",
+      "urls": [
+        "https://doi.org/10.4230/LIPIcs.AFT.2023.20"
+      ],
+      "priority_32": true,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R037",
+      "extraction_position": 37,
+      "label": "Heimbach et al. (2024)",
+      "citation_metadata": "Heimbach et al. (2024)\nLioba Heimbach, Vabuk Pahari, and Eric Schertenleib. 2024.\n\nNon-Atomic Arbitrage in Decentralized Finance. In _2024 IEEE Symposium on Security and Privacy (SP)_. IEEE Computer Society, Los Alamitos, CA, USA, 224–224.\n\n[doi:10.1109/SP54263.2024.00256](https://doi.org/10.1109/SP54263.2024.00256 \"\")",
+      "urls": [
+        "https://doi.org/10.1109/SP54263.2024.00256"
+      ],
+      "priority_32": true,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R038",
+      "extraction_position": 38,
+      "label": "LayerZero Docs (2025)",
+      "citation_metadata": "LayerZero Docs (2025)\nLayerZero Docs. 2025.\n\n_LayerZero Documentation \\| LayerZero_.\n\nURL: [https://docs.layerzero.network/v2](https://docs.layerzero.network/v2 \"\").",
+      "urls": [
+        "https://docs.layerzero.network/v2"
+      ],
+      "priority_32": true,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R039",
+      "extraction_position": 39,
+      "label": "Mazor and Rottenstreich (2023)",
+      "citation_metadata": "Mazor and Rottenstreich (2023)\nOri Mazor and Ori Rottenstreich. 2023.\n\nAn Empirical Study of Cross-chain Arbitrage in Decentralized Exchanges.\n\n[https://eprint.iacr.org/2023/1898](https://eprint.iacr.org/2023/1898 \"\")Publication info: Published elsewhere. Minor revision. International Conference on Communication Systems and Networks (COMSNETS) 2024.",
+      "urls": [
+        "https://eprint.iacr.org/2023/1898"
+      ],
+      "priority_32": true,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R040",
+      "extraction_position": 40,
+      "label": "Mazorra et al. (2022)",
+      "citation_metadata": "Mazorra et al. (2022)\nBruno Mazorra, Michael Reynolds, and Vanesa Daza. 2022.\n\nPrice of MEV: Towards a Game Theoretical Approach to MEV.\n\n_Proceedings of the 2022 ACM CCS Workshop on Decentralized Finance and Security_ (2022).\n\n[https://api.semanticscholar.org/CorpusID:251903953](https://api.semanticscholar.org/CorpusID:251903953 \"\")",
+      "urls": [
+        "https://api.semanticscholar.org/CorpusID:251903953"
+      ],
+      "priority_32": false,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R041",
+      "extraction_position": 41,
+      "label": "McLaughlin et al. (2023)",
+      "citation_metadata": "McLaughlin et al. (2023)\nRobert McLaughlin, Christopher Kruegel, and Giovanni Vigna. 2023.\n\nA large scale study of the Ethereum arbitrage ecosystem. In _Proceedings of the 32nd USENIX Conference on Security Symposium_ (Anaheim, CA, USA) _(SEC ’23)_. USENIX Association, USA, Article 185, 18 pages.",
+      "urls": [],
+      "priority_32": true,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R042",
+      "extraction_position": 42,
+      "label": "McMenamin (2023)",
+      "citation_metadata": "McMenamin (2023)\nConor McMenamin. 2023.\n\nSoK: Cross-Domain MEV.\n\narXiv:2308.04159 \\[cs.CR\\]\n\n[https://arxiv.org/abs/2308.04159](https://arxiv.org/abs/2308.04159 \"\")",
+      "urls": [
+        "https://arxiv.org/abs/2308.04159"
+      ],
+      "priority_32": true,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R043",
+      "extraction_position": 43,
+      "label": "MEV Blocker (2025)",
+      "citation_metadata": "MEV Blocker (2025)\nMEV Blocker. 2025.\n\n_Mev Blocker - The best MEV protection under the sun_.\n\nURL: [https://cow.fi/mev-blocker](https://cow.fi/mev-blocker \"\").",
+      "urls": [
+        "https://cow.fi/mev-blocker"
+      ],
+      "priority_32": false,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R044",
+      "extraction_position": 44,
+      "label": "MEXC (2025)",
+      "citation_metadata": "MEXC (2025)\nMEXC. 2025.\n\n_About MEXC \\| User-friendly Cryptocurrency Service Provider_.\n\nURL: [https://www.mexc.co/about](https://www.mexc.co/about \"\").",
+      "urls": [
+        "https://www.mexc.co/about"
+      ],
+      "priority_32": false,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R045",
+      "extraction_position": 45,
+      "label": "Neuder et al. (2023)",
+      "citation_metadata": "Neuder et al. (2023)\nMichael Neuder, Vitalik Buterin, Francesco D’Amato, Terence Tsao, Potuz, and Manav Gupta. 2023.\n\nEIP-7547: Inclusion lists.\n\n[https://eips.ethereum.org/EIPS/eip-7547](https://eips.ethereum.org/EIPS/eip-7547 \"\").\n\nEthereum Improvement Proposals, no. 7547.",
+      "urls": [
+        "https://eips.ethereum.org/EIPS/eip-7547"
+      ],
+      "priority_32": false,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R046",
+      "extraction_position": 46,
+      "label": "Neuder and Resnick (2024)",
+      "citation_metadata": "Neuder and Resnick (2024)\nMike Neuder and Max Resnick. 2024.\n\nConcurrent Block Proposers in Ethereum - Proof-of-Stake / Block proposer.\n\n[https://ethresear.ch/t/concurrent-block-proposers-in-ethereum/18777](https://ethresear.ch/t/concurrent-block-proposers-in-ethereum/18777 \"\")",
+      "urls": [
+        "https://ethresear.ch/t/concurrent-block-proposers-in-ethereum/18777"
+      ],
+      "priority_32": false,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R047",
+      "extraction_position": 47,
+      "label": "Obadia et al. (2021)",
+      "citation_metadata": "Obadia et al. (2021)\nAlexandre Obadia, Alejo Salles, Lakshman Sankar, Tarun Chitra, Vaibhav Chellani, and Philip Daian. 2021.\n\nUnity is Strength: A Formalization of Cross-Domain Maximal Extractable Value.\n\narXiv:2112.01472 \\[cs.CR\\]\n\n[https://arxiv.org/abs/2112.01472](https://arxiv.org/abs/2112.01472 \"\")",
+      "urls": [
+        "https://arxiv.org/abs/2112.01472"
+      ],
+      "priority_32": true,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R048",
+      "extraction_position": 48,
+      "label": "OmniCat (2025)",
+      "citation_metadata": "OmniCat (2025)\nOmniCat. 2025.\n\n_OmniCat_.\n\nURL: [https://omnicat.wtf](https://omnicat.wtf/ \"\").",
+      "urls": [
+        "https://omnicat.wtf/"
+      ],
+      "priority_32": false,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R049",
+      "extraction_position": 49,
+      "label": "Optimism Docs (2025a)",
+      "citation_metadata": "Optimism Docs (2025a)\nOptimism Docs. 2025a.\n\n_Using the Standard Bridge \\| Optimism Docs_.\n\nURL: [https://docs.optimism.io/builders/app-developers/bridging/standard-bridge](https://docs.optimism.io/builders/app-developers/bridging/standard-bridge \"\").",
+      "urls": [
+        "https://docs.optimism.io/builders/app-developers/bridging/standard-bridge"
+      ],
+      "priority_32": true,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R050",
+      "extraction_position": 50,
+      "label": "Optimism Docs (2025b)",
+      "citation_metadata": "Optimism Docs (2025b)\nOptimism Docs. 2025b.\n\n_Welcome to the Optimism Docs_.\n\nURL: [https://docs.optimism.io/](https://docs.optimism.io/ \"\").",
+      "urls": [
+        "https://docs.optimism.io/"
+      ],
+      "priority_32": false,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R051",
+      "extraction_position": 51,
+      "label": "Öz et al. (2023)",
+      "citation_metadata": "Öz et al. (2023)\nBurak Öz, Benjamin Kraner, Nicolò Vallarano, Bingle Stegmann Kruger, Florian Matthes, and Claudio Juan Tessone. 2023.\n\nTime Moves Faster When There is Nothing You Anticipate: The Role of Time in MEV Rewards. In _Proceedings of the 2023 Workshop on Decentralized Finance and Security_ (Copenhagen, Denmark) _(DeFi ’23)_. Association for Computing Machinery, New York, NY, USA, 1–8.\n\n[doi:10.1145/3605768.3623563](https://doi.org/10.1145/3605768.3623563 \"\")",
+      "urls": [
+        "https://doi.org/10.1145/3605768.3623563"
+      ],
+      "priority_32": false,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R052",
+      "extraction_position": 52,
+      "label": "Öz et al. (2024a)",
+      "citation_metadata": "Öz et al. (2024a)\nBurak Öz, Filip Rezabek, Jonas Gebele, Felix Hoops, and Florian Matthes. 2024a.\n\nA Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain. In _Proceedings of the 39th ACM/SIGAPP Symposium on Applied Computing_ (Avila, Spain) _(SAC ’24)_. Association for Computing Machinery, New York, NY, USA, 288–297.\n\n[doi:10.1145/3605098.3635990](https://doi.org/10.1145/3605098.3635990 \"\")",
+      "urls": [
+        "https://doi.org/10.1145/3605098.3635990"
+      ],
+      "priority_32": false,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R053",
+      "extraction_position": 53,
+      "label": "Öz et al. (2024b)",
+      "citation_metadata": "Öz et al. (2024b)\nBurak Öz, Danning Sui, Thomas Thiery, and Florian Matthes. 2024b.\n\nWho Wins Ethereum Block Building Auctions and Why?. In _6th Conference on Advances in Financial Technologies (AFT 2024)_ _(Leibniz International Proceedings in Informatics (LIPIcs), Vol. 316)_, Rainer Böhme and Lucianna Kiffer (Eds.). Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl, Germany, 22:1–22:25.\n\n[doi:10.4230/LIPIcs.AFT.2024.22](https://doi.org/10.4230/LIPIcs.AFT.2024.22 \"\")",
+      "urls": [
+        "https://doi.org/10.4230/LIPIcs.AFT.2024.22"
+      ],
+      "priority_32": false,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R054",
+      "extraction_position": 54,
+      "label": "Qin et al. (2022)",
+      "citation_metadata": "Qin et al. (2022)\nKaihua Qin, Liyi Zhou, and Arthur Gervais. 2022.\n\nQuantifying blockchain extractable value: How dark is the forest?. In _2022 IEEE Symposium on Security and Privacy (SP)_. IEEE, 198–214.",
+      "urls": [],
+      "priority_32": false,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R055",
+      "extraction_position": 55,
+      "label": "Rocket et al. (2020)",
+      "citation_metadata": "Rocket et al. (2020)\nTeam Rocket, Maofan Yin, Kevin Sekniqi, Robbert van Renesse, and Emin Gün Sirer. 2020.\n\nScalable and Probabilistic Leaderless BFT Consensus through Metastability.\n\narXiv:1906.08936 \\[cs.DC\\]\n\n[https://arxiv.org/abs/1906.08936](https://arxiv.org/abs/1906.08936 \"\")",
+      "urls": [
+        "https://arxiv.org/abs/1906.08936"
+      ],
+      "priority_32": false,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R056",
+      "extraction_position": 56,
+      "label": "Schwarz-Schilling et al. (2023)",
+      "citation_metadata": "Schwarz-Schilling et al. (2023)\nCaspar Schwarz-Schilling, Fahad Saleh, Thomas Thiery, Jennifer Pan, Nihar Shah, and Barnabé Monnot. 2023.\n\nTime Is Money: Strategic Timing Games in Proof-Of-Stake Protocols. In _5th Conference on Advances in Financial Technologies (AFT 2023)_ _(Leibniz International Proceedings in Informatics (LIPIcs), Vol. 282)_, Joseph Bonneau and S. Matthew Weinberg (Eds.). Schloss Dagstuhl – Leibniz-Zentrum für Informatik, Dagstuhl, Germany, 30:1–30:17.\n\n[doi:10.4230/LIPIcs.AFT.2023.30](https://doi.org/10.4230/LIPIcs.AFT.2023.30 \"\")",
+      "urls": [
+        "https://doi.org/10.4230/LIPIcs.AFT.2023.30"
+      ],
+      "priority_32": true,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R057",
+      "extraction_position": 57,
+      "label": "Scroll (2024)",
+      "citation_metadata": "Scroll (2024)\nScroll. 2024.\n\nScroll White Paper.\n\n[https://scroll.io/files/whitepaper.\n…[truncated]pdf](https://scroll.io/files/whitepaper.pdf \"\").\n\nAccessed: 2025-06-17.",
+      "urls": [
+        "https://scroll.io/files/whitepaper.pdf"
+      ],
+      "priority_32": false,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R058",
+      "extraction_position": 58,
+      "label": "Scroll Docs (2025)",
+      "citation_metadata": "Scroll Docs (2025)\nScroll Docs. 2025.\n\n_Bridge \\| Scroll Documentation_.\n\nURL: [https://docs.scroll.io/en/user-guide/bridge](https://docs.scroll.io/en/user-guide/bridge \"\").",
+      "urls": [
+        "https://docs.scroll.io/en/user-guide/bridge"
+      ],
+      "priority_32": true,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R059",
+      "extraction_position": 59,
+      "label": "Superbridge Docs (2025)",
+      "citation_metadata": "Superbridge Docs (2025)\nSuperbridge Docs. 2025.\n\n_What is bridging? \\| Superbridge Docs_.\n\nURL: [https://docs.superbridge.app/what-is-bridging](https://docs.superbridge.app/what-is-bridging \"\").",
+      "urls": [
+        "https://docs.superbridge.app/what-is-bridging"
+      ],
+      "priority_32": true,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R060",
+      "extraction_position": 60,
+      "label": "Synapse Docs (2025)",
+      "citation_metadata": "Synapse Docs (2025)\nSynapse Docs. 2025.\n\n_Transaction Support FAQ \\| Synapse Docs_.\n\nURL: [https://docs.synapseprotocol.com/docs/Support/Transaction-Support](https://docs.synapseprotocol.com/docs/Support/Transaction-Support \"\").",
+      "urls": [
+        "https://docs.synapseprotocol.com/docs/Support/Transaction-Support"
+      ],
+      "priority_32": true,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R061",
+      "extraction_position": 61,
+      "label": "Systems (2024)",
+      "citation_metadata": "Systems (2024)\nEspresso Systems. 2024.\n\nThe Espresso Sequencer.\n\n[https://hackmd.io/@EspressoSystems/EspressoSequencer](https://hackmd.io/@EspressoSystems/EspressoSequencer \"\")",
+      "urls": [
+        "https://hackmd.io/@EspressoSystems/EspressoSequencer"
+      ],
+      "priority_32": true,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R062",
+      "extraction_position": 62,
+      "label": "Thiery et al. (2024)",
+      "citation_metadata": "Thiery et al. (2024)\nThomas Thiery, Francesco D’amato, and Julian Ma. 2024.\n\nFork-Choice enforced Inclusion Lists (FOCIL): A simple committee-based inclusion list proposal - Proof-of-Stake / Block proposer.\n\n[https://ethresear.ch/t/fork-choice-enforced-inclusion-lists-focil-a-simple-committee-based-inclusion-list-proposal/19870](https://ethresear.ch/t/fork-choice-enforced-inclusion-lists-focil-a-simple-committee-based-inclusion-list-proposal/19870 \"\")",
+      "urls": [
+        "https://ethresear.ch/t/fork-choice-enforced-inclusion-lists-focil-a-simple-committee-based-inclusion-list-proposal/19870"
+      ],
+      "priority_32": false,
+      "owner": "literature",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R063",
+      "extraction_position": 63,
+      "label": "Threshold Network Docs (2025)",
+      "citation_metadata": "Threshold Network Docs (2025)\nThreshold Network Docs. 2025.\n\n_What is the Threshold Network? \\| Threshold Docs_.\n\nURL: [https://docs.threshold.network/](https://docs.threshold.network/ \"\").",
+      "urls": [
+        "https://docs.threshold.network/"
+      ],
+      "priority_32": true,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R064",
+      "extraction_position": 64,
+      "label": "Wadhwa et al. (2025)",
+      "citation_metadata": "Wadhwa et al. (2025)\nSarisht Wadhwa, Julian Ma, Thomas Thiery, Barnabe Monnot, Luca Zanolini, Fan Zhang, and Kartik Nayak. 2025.\n\nAUCIL: An Inclusion List Design for Rational Parties.\n\nCryptology ePrint Archive, Paper 2025/194.\n\n[https://eprint.iacr.org/2025/194](https://eprint.iacr.org/2025/194 \"\")",
+      "urls": [
+        "https://eprint.iacr.org/2025/194"
+      ],
+      "priority_32": false,
+      "owner": "empirical",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R065",
+      "extraction_position": 65,
+      "label": "Wahrstätter et al. (2023)",
+      "citation_metadata": "Wahrstätter et al. (2023)\nAnton Wahrstätter, Jens Ernstberger, Aviv Yaish, Liyi Zhou, Kaihua Qin, Taro Tsuchiya, Sebastian Steinhorst, Davor Svetinovic, Nicolas Christin, Mikolaj Barczentewicz, and Arthur Gervais. 2023.\n\nBlockchain Censorship.\n\n[https://arxiv.org/abs/2305.18545v2](https://arxiv.org/abs/2305.18545v2 \"\")",
+      "urls": [
+        "https://arxiv.org/abs/2305.18545v2"
+      ],
+      "priority_32": false,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R066",
+      "extraction_position": 66,
+      "label": "Wang et al. (2022)",
+      "citation_metadata": "Wang et al. (2022)\nYe Wang, Yan Chen, Haotian Wu, Liyi Zhou, Shuiguang Deng, and Roger Wattenhofer. 2022.\n\nCyclic Arbitrage in Decentralized Exchanges. In _Companion Proceedings of the Web Conference 2022_ (Virtual Event, Lyon, France) _(WWW ’22)_. Association for Computing Machinery, New York, NY, USA, 12–19.\n\n[doi:10.1145/3487553.3524201](https://doi.org/10.1145/3487553.3524201 \"\")",
+      "urls": [
+        "https://doi.org/10.1145/3487553.3524201"
+      ],
+      "priority_32": false,
+      "owner": "settlement",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R067",
+      "extraction_position": 67,
+      "label": "winnsterx (2025)",
+      "citation_metadata": "winnsterx (2025)\nwinnsterx. 2025.\n\n_searcherbuilder.pics_.\n\nURL: [https://github.com/winnsterx/searcherbuilder.pics/blob/main/labels/non\\_mev\\_contracts.py](https://github.com/winnsterx/searcherbuilder.pics/blob/main/labels/non_mev_contracts.py \"\").",
+      "urls": [
+        "https://github.com/winnsterx/searcherbuilder.pics/blob/main/labels/non_mev_contracts.py"
+      ],
+      "priority_32": false,
+      "owner": "economics",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R068",
+      "extraction_position": 68,
+      "label": "Wood et al. (2014)",
+      "citation_metadata": "Wood et al. (2014)\nGavin Wood et al. 2014.\n\nEthereum: A secure decentralised generalised transaction ledger.\n\n_Ethereum project yellow paper_ 151, 2014 (2014), 1–32.",
+      "urls": [],
+      "priority_32": false,
+      "owner": "onchain",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R069",
+      "extraction_position": 69,
+      "label": "Wormhole Docs (2025)",
+      "citation_metadata": "Wormhole Docs (2025)\nWormhole Docs. 2025.\n\n_Native Token Transfers Rate Limiting \\| Wormhole Docs_.\n\nURL: [https://wormhole.com/docs/build/contract-integrations/native-token-transfers/configuration/rate-limiting](https://wormhole.com/docs/build/contract-integrations/native-token-transfers/configuration/rate-limiting \"\").",
+      "urls": [
+        "https://wormhole.com/docs/build/contract-integrations/native-token-transfers/configuration/rate-limiting"
+      ],
+      "priority_32": true,
+      "owner": "instruments",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R070",
+      "extraction_position": 70,
+      "label": "Yang et al. (2025)",
+      "citation_metadata": "Yang et al. (2025)\nSen Yang, Kartik Nayak, and Fan Zhang. 2025.\n\nDecentralization of Ethereum’s Builder Market . In _2025 IEEE Symposium on Security and Privacy (SP)_. IEEE Computer Society, Los Alamitos, CA, USA, 1512–1530.\n\n[doi:10.1109/SP61157.2025.00157](https://doi.org/10.1109/SP61157.2025.00157 \"\")",
+      "urls": [
+        "https://doi.org/10.1109/SP61157.2025.00157"
+      ],
+      "priority_32": true,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R071",
+      "extraction_position": 71,
+      "label": "Yang et al. (2024)",
+      "citation_metadata": "Yang et al. (2024)\nSen Yang, Fan Zhang, Ken Huang, Xi Chen, Youwei Yang, and Feng Zhu. 2024.\n\nSoK: MEV Countermeasures. In _Proceedings of the Workshop on Decentralized Finance and Security_ (Salt Lake City, UT, USA) _(DeFi ’24)_. Association for Computing Machinery, New York, NY, USA, 21–30.\n\n[doi:10.1145/3689931.3694911](https://doi.org/10.1145/3689931.3694911 \"\")",
+      "urls": [
+        "https://doi.org/10.1145/3689931.3694911"
+      ],
+      "priority_32": false,
+      "owner": "durability",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R072",
+      "extraction_position": 72,
+      "label": "ZKsync Docs (2025a)",
+      "citation_metadata": "ZKsync Docs (2025a)\nZKsync Docs. 2025a.\n\n_Bridges - ZKsync Docs_.\n\nURL: [https://docs.zksync.io/zksync-era/ecosystem/bridges](https://docs.zksync.io/zksync-era/ecosystem/bridges \"\").",
+      "urls": [
+        "https://docs.zksync.io/zksync-era/ecosystem/bridges"
+      ],
+      "priority_32": false,
+      "owner": "audit",
+      "status": "not_reviewed"
+    },
+    {
+      "id": "R073",
+      "extraction_position": 73,
+      "label": "ZKsync Docs (2025b)",
+      "citation_metadata": "ZKsync Docs (2025b)\nZKsync Docs. 2025b.\n\n_ZKsync Docs_.\n\nURL: [https://docs.zksync.io/](https://docs.zksync.io/ \"\").",
+      "urls": [
+        "https://docs.zksync.io/"
+      ],
+      "priority_32": false,
+      "owner": "literature",
+      "status": "not_reviewed"
+    }
+  ]
+}

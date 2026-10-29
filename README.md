@@ -4,7 +4,7 @@ Evidence-first research into legitimate, risk-adjusted on-chain strategies for a
 
 **Research only. No live trading, transaction signing, mainnet deployments, or private keys. No strategy is currently certified or recommended.**
 
-**Search closed at the user's request, 2026-10-29.** Read the [early closeout](FINAL_REPORT.md): all twelve entries remained unverified, and no further research or paper run is scheduled.
+**Discovery restarted at the user's request, 2026-10-29.** The [new discovery-first pass](discovery/README.md) follows papers, citations, recent instruments and on-chain mechanisms. It includes a 32-reference reading target and the full extracted bibliography for triage. The [earlier study's closeout](FINAL_REPORT.md) and twelve unverified verdicts remain historical; no trading or forward paper run is authorized.
 
 ## Research question
 
@@ -12,6 +12,8 @@ Can a single operator realistically earn $2,000–$5,000 net per month while res
 
 ## Starting points
 
+- [Current discovery brief and source coverage](discovery/README.md)
+- [Extracted bibliography and 32 priority-reference owners](discovery/citation-inventory.json)
 - [Final early-closeout findings and stop state](FINAL_REPORT.md)
 - [Interim discovery findings and limits](STAGE01_REPORT.md)
 - [Charter, constraints, and evidence gates](docs/CHARTER.md)
@@ -39,7 +41,7 @@ A recommendation requires T2 **and** T3, plus independent capacity, cost, risk, 
 
 ## Status
 
-Eight workstreams supplied discovery, partial actor evidence, independent reviews and paper-only tools. The user stopped the search before the required economic validation. No qualifying historical strategy replay or forward paper duration was established. Evidence-gathering scripts are preserved for reference, not scheduled to run.
+The user restarted the eight workstreams for one bounded citation/instrument/mechanism discovery pass after stopping the earlier study. The first new deliverable is a source-backed opportunity map, not a generic simulator or deployment recommendation. No qualifying historical strategy replay or forward paper duration was established; earlier evidence-gathering scripts remain preserved, not scheduled to run.
 
 ## Running checks
 

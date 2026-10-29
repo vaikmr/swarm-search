@@ -1,5 +1,7 @@
 # Strategy board
 
+**Historical phase-1 tracker.** The later [discovery-first pass](discovery/README.md) has separate source and mechanism records; these twelve verdicts have not been upgraded by the restart.
+
 **Search closed at the user's request, 2026-10-29.** No qualifying T1/T2/T3 performance package or strategy recommendation was established. The missing evidence below is not scheduled work. See the [early closeout](FINAL_REPORT.md); the [interim report](STAGE01_REPORT.md) is a historical checkpoint.
 
 States distinguish `unverified`, `keep-for-testing`, `killed`, and `evidence-qualified`. A candidate with missing data stays unverified unless an independent hard-constraint failure establishes rejection. Returning no qualifying strategy is valid.
