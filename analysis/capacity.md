@@ -78,6 +78,11 @@ loss still exceeds the **$5,000** monthly loss limit. Neither this allocation
 bound nor a short profitable replay proves the hard **99% monthly** risk
 requirement.
 
+**Do not target the maximum deployment by default.** More off-chain reserve and
+less deployed capital can be preferable when eligible independent failure
+domains are scarce. A nominal three-chain/three-token split is not a certified
+portfolio; no compliant net lending benchmark is established by this screen.
+
 ## 2. Capture model: separate every restrictive step
 
 For each candidate, use:
@@ -222,6 +227,25 @@ requires **8.33%-18.33% of matched notional in monthly funding receipts before
 trading, hedge and basis costs**. Those are hurdle rates, not observed funding.
 Spot and perp notional cannot each independently earn the same quoted APY on
 all portfolio capital.
+
+**Historical cross-check, still T4:** the public-source package pinned at
+[`0767bcc`](https://github.com/vaikmr/swarm-search/tree/0767bcc1cb2b01d3dfc732fc7ed3c8b9f625652f/strategies/funding-basis/evidence)
+retains hourly BTC and ETH funding rates. An [independent offline check](capacity_sources/verify_funding_histories.py)
+re-sums all observations and reproduces the results in
+[funding_crosscheck.json](capacity_sources/funding_crosscheck.json). In the
+**30-day window ending 2026-10-29 06:59:59.999 UTC**, both assets have **720**
+hourly observations. On a hypothetical constant **$30,000 short notional**, the
+signed funding-only sums imply **$211.93 for BTC** and **$190.28 for ETH**
+before any spot/basis effects, fees, margin losses or infrastructure. The
+respective series contain **45** and **71 negative-funding hours**.
+
+These observations materially weaken the case for reaching the target from
+simple BTC/ETH funding receipts alone at this sizing in this window. They are
+not account PnL, an executable constant-notional position, a forecast, or
+evidence against every other funding market. Retain T4 status and the same
+missing execution, risk and fee gates. The machine-readable output also records
+the much larger counterfactual notional needed at these historical sums; do
+not treat that as permission to exceed any capital, leverage or venue cap.
 
 [Concentrated-liquidity docs][UNISWAP_CL] explain why an out-of-range position
 stops earning fees and can become one asset. Position count does not diversify
