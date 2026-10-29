@@ -13,6 +13,11 @@ Can a single operator realistically earn $2,000–$5,000 net per month while res
 - [Charter, constraints, and evidence gates](docs/CHARTER.md)
 - [Strategy tracker](STRATEGY_BOARD.md)
 - [Worker ownership and independent review](docs/WORKSTREAMS.md)
+- [Independent evidence rubric](review/AUDIT_RUBRIC.md)
+- [Independent risk specifications](risk/README.md)
+- [Canonical cost accounting](analysis/costs.md)
+- [Replay-accounting and provenance tools](research_tools/replay_README.md)
+- [Read-only yield inputs and paper observer](research_tools/paper_yield_README.md)
 
 Each strategy package will use `strategies/<slug>/hypothesis.md`, `evidence/`, `sim/`, `redteam.md`, and `verdict.md`. Missing files or evidence are not proof that a strategy fails economically.
 
@@ -33,10 +38,13 @@ Eight workstreams have been assigned. The initial phase establishes the lending 
 
 ## Running checks
 
-The foundation is documentation-only. As tools arrive, use Python's standard-library test discovery unless their documentation specifies otherwise:
+The tools use Python's standard library. Run the accounting, provenance, public-snapshot, paper-observer, and risk-arithmetic checks from the repository root:
 
 ```sh
 python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s risk -p 'test_*.py' -v
 ```
 
-Do not interpret a passing unit test as profitable strategy evidence.
+The delivered public snapshots reproduce gross modeled rate/funding components only. The default observer rejects all fills because a strategy and complete cost model have not been configured. Its single sample is not seven-day forward evidence.
+
+Do not interpret passing tests, a source hash, historical APY integration, or precomputed accounting as profitable strategy evidence or a qualifying fork replay.
