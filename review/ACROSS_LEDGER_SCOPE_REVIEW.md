@@ -70,4 +70,29 @@ git worktree add --detach /tmp/swarm-across-source 23d2fd15c1d736b6c8cee4614e82f
 python3 review/evidence/across_ledger_scope_probe.py --source-root /tmp/swarm-across-source
 ```
 
-This script is deliberately network-free and verifies only the two pinned committed JSON files. It cannot authenticate or recount omitted raw pages. An offline raw rehash/recount and event-role clarification have been requested from the source owner, with **zero additional public requests**; any response must be distinguished from checks independently run by the judge.
+This script is deliberately network-free. The original check verifies only the two pinned committed JSON files and cannot authenticate or recount omitted raw pages.
+
+## Follow-up: author self-audit and exported raw witnesses
+
+The source owner's response is committed at [`12a5426c528d691d7ecf5e51eff8ec2d63f32cc6`](https://github.com/vaikmr/swarm-search/commit/12a5426c528d691d7ecf5e51eff8ec2d63f32cc6). The owner reports rehashing all 144 successful response bodies and reproducing the original counts/totals with a separate byte-offset decoder. This is explicitly a **collection-author self-audit**, not the judge's bulk-data recount.
+
+The judge inspected that audit's code/report and independently:
+
+- Ran all 21 focused tests at the follow-up revision successfully.
+- Checked the author-audit summary's manifest reference, reported byte/count totals and canonical checklist fingerprint are consistent with the original successful-entry manifest. This does not rehash the absent bodies.
+- Recomputed the three exported original log-object fingerprints and checked their HTTP-response name/hash/size references against the earlier manifest.
+- Parsed the selected fill and refund byte layout directly, and matched the exported USDC allocation to its original raw pool-to-address `Transfer` log, including token/raw amount and transaction/block identity. This confirms consistency of the supplied objects under the declared layout, not deployed historical ABI semantics or full receipt/page membership.
+
+This closes the narrow gap that previously only derived witnesses were available. It **does not** give the judge all raw HTTP pages or independently prove each exported object's membership in an absent source response. A canonical object fingerprint is not its enclosing HTTP-body digest.
+
+The owner explicitly confirmed that no retained immutable ABI/source body or historically deployed implementation mapping is available; only mutable source URLs had been retained. The indexed fill address therefore remains a logged address, not a certified sender/payer/entity or pinned beneficiary role for every fill. Historical semantics, broader canonicality and all ledger/economic gates remain unresolved. The specific example's refund recipient is visible in its transfer topics; that cannot be generalized into fill-payer attribution.
+
+To include the follow-up in the same network-free reviewer check:
+
+```sh
+git worktree add --detach /tmp/swarm-across-audit 12a5426c528d691d7ecf5e51eff8ec2d63f32cc6
+python3 review/evidence/across_ledger_scope_probe.py \
+  --source-root /tmp/swarm-across-audit --include-raw-witness-followup
+```
+
+No new public requests were made by the owner's audit or this judge review. No material discrepancy was found in the inspected objects/metadata; bulk independent recount, historical semantic qualification, actor PnL and recommendation eligibility remain unestablished.
