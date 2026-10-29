@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "as_of_utc": "2026-10-29",
+  "evidence_level": "Public paper and explorer witnesses; not independent receipt replay, actor-complete PnL, T2 or T3",
+  "rpc_calls": 0,
+  "reported_21_trade_candidate": {
+    "reported_actor_abbreviation": "0xEf6c",
+    "reported_trade_count": 21,
+    "reported_loss_tickers": ["GNO", "ZGAP", "DOS"],
+    "status": "unidentified_not_testable",
+    "full_actor_address": null,
+    "chain_ids": null,
+    "utc_day": null,
+    "utc_window": null,
+    "executed_transaction_hashes": null,
+    "token_contracts_and_decimals": null,
+    "event_order_and_leg_mapping": null,
+    "notionals_and_realized_fees": null,
+    "beginning_and_ending_inventory": null,
+    "actual_offchain_hedges": null,
+    "historical_executable_depth": null,
+    "historical_perp_checks": [
+      {"reported_ticker": "GNO", "underlying_identity": null, "venue": null, "listed_at_original_time": null, "executable_size": null, "fees_funding_and_margin": null},
+      {"reported_ticker": "ZGAP", "underlying_identity": null, "venue": null, "listed_at_original_time": null, "executable_size": null, "fees_funding_and_margin": null},
+      {"reported_ticker": "DOS", "underlying_identity": null, "venue": null, "listed_at_original_time": null, "executable_size": null, "fees_funding_and_margin": null}
+    ],
+    "attempted_resolution": [
+      "Searched complete seed v1/v2 extracted text and hyperlinks for actor abbreviation, tickers and 21-trade wording; no resolving witness recovered. No figure OCR.",
+      "Bounded public searches did not establish an exact address/day/transaction list.",
+      "Read candidate lead arXiv:2604.03083v1 abstract, introduction and data section, and searched complete text: aggregate daily panels, no resolving candidate witness.",
+      "SSRN abstract_id=7161018 fetch failed HTTP 500; title and contents unknown."
+    ],
+    "interpretation": "Unknown is not zero trades, zero loss or no profitable actor. A ticker is not a contract identity. Current listings or a different loan case cannot substitute.",
+    "minimum_input_gate": "Exact actor, chain(s), UTC day/window, all 21 transaction hashes and token identities before any historical hedge comparison.",
+    "replay_generated": false,
+    "counterfactual_pnl": null
+  },
+  "separate_loan_case": {
+    "status": "selected_public_witnesses_recovered_material_amount_discrepancy_open",
+    "not_a_substitute_for_21_trade_candidate": true,
+    "actor": "0xca74f404e0c7bfa35b13b511097df966d5a65597",
+    "utc_day": "2024-07-23",
+    "utc_window": ["2024-07-23T08:52:23Z", "2024-07-23T08:59:48Z"],
+    "chain_ids": [1, 42161],
+    "paper_url": "https://arxiv.org/html/2501.17335v2#A7",
+    "paper_html_sha256": "32e29d06d1824c2ee2bd3dcb935082c4eea75a3468cd434039c198a01336c695",
+    "tokens_and_contracts": {
+      "ethereum_weth": {"chain_id": 1, "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "decimals": 18},
+      "ethereum_wbtc": {"chain_id": 1, "address": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "decimals": 8},
+      "arbitrum_wbtc": {"chain_id": 42161, "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f", "decimals": 8},
+      "arbitrum_variable_wbtc_debt": {"chain_id": 42161, "address": "0x92b42c66840c7ad907b4bf74879ff3ef7c529473", "decimals": 8},
+      "arbitrum_aave_wbtc_reserve_token": {"chain_id": 42161, "address": "0x078f358208685046a11c85e8ad32895ded33a249", "decimals": 8},
+      "arbitrum_received_eth": {"chain_id": 42161, "address": null, "native": true, "decimals": 18}
+    },
+    "transactions": [
+      {
+        "step": 1,
+        "role": "loan-buy",
+        "chain_id": 1,
+        "hash": "0xf9dac896022ab70b8831e4a0139b97738180bf1605f216400f66bb0957f9208a",
+        "url": "https://etherscan.io/tx/0xf9dac896022ab70b8831e4a0139b97738180bf1605f216400f66bb0957f9208a",
+        "block_number": 20368154,
+        "utc": "2024-07-23T08:52:23Z",
+        "unix_timestamp": 1721724743,
+        "sender": "0xca74f404e0c7bfa35b13b511097df966d5a65597",
+        "to": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
+        "flows": [
+          {"token": "ethereum_weth", "actor_delta": "-50", "raw_units": "-50000000000000000000"},
+          {"token": "ethereum_wbtc", "actor_delta": "2.62922794", "raw_units": "262922794"}
+        ],
+        "transaction_fee_eth": "0.003562084965522949",
+        "snapshot": {"name": "loan-buy.part0.md", "bytes": 31932, "sha256": "12dbc74740f0556744dfb7f29cce596d3fc6c6cd27ff0399ab3812859c7ccc0e", "truncated": false}
+      },
+      {
+        "step": 2,
+        "role": "loan-bridge",
+        "chain_id": 1,
+        "hash": "0x452a9c05cc02fe146ce13a788456f02bf68c83ee3d6a57c0402ccfd8c5108903",
+        "url": "https://etherscan.io/tx/0x452a9c05cc02fe146ce13a788456f02bf68c83ee3d6a57c0402ccfd8c5108903",
+        "block_number": 20368155,
+        "utc": "2024-07-23T08:52:35Z",
+        "unix_timestamp": 1721724755,
+        "sender": "0xca74f404e0c7bfa35b13b511097df966d5a65597",
+        "to": "0x72ce9c846789fdb6fc1f34ac4ad25dd9ef7031ef",
+        "gateway": "0xa3a7b6f88361f48403514059f1f16c8e78d60eec",
+        "flows": [{"token": "ethereum_wbtc", "actor_delta": "-2.62922794", "raw_units": "-262922794"}],
+        "transaction_fee_eth": "0.00264975278515902",
+        "msg_value_eth": "0.00014645778195328",
+        "msg_value_interpretation": "Bridge retry prefunding; settlement gas/refunds and economic payer not fully attributed. Do not double-count against arrival gas.",
+        "snapshot": {"name": "loan-bridge.part0.md", "bytes": 30850, "sha256": "937c9694c2594df98ef8a63ac9ade78b989beb71348f104a2ab941e99bea9702", "truncated": false}
+      },
+      {
+        "step": 3,
+        "role": "loan-borrow",
+        "chain_id": 42161,
+        "hash": "0xf7e5f28d391c2dee5f982fd27f8caf6fc250acd54ebe3d06ace25ac2a85feeff",
+        "url": "https://arbiscan.io/tx/0xf7e5f28d391c2dee5f982fd27f8caf6fc250acd54ebe3d06ace25ac2a85feeff",
+        "block_number": 235161432,
+        "utc": "2024-07-23T08:52:43Z",
+        "unix_timestamp": 1721724763,
+        "sender": "0xca74f404e0c7bfa35b13b511097df966d5a65597",
+        "to": "0x794a61358d6845594f94dc1db02a252b5b4814ad",
+        "flows": [
+          {"token": "arbitrum_wbtc", "actor_delta": "2.6292", "raw_units": "262920000"},
+          {"token": "arbitrum_variable_wbtc_debt", "actor_delta": "2.6292", "raw_units": "262920000", "interpretation": "Debt-token mint is a liability, not free income"}
+        ],
+        "transaction_fee_eth": "0.00001348599987",
+        "collateral_and_health_factor": null,
+        "snapshot": {"name": "loan-borrow.part0.md", "bytes": 17295, "sha256": "68e1b02ee3c8dac771c4d2b537292ccdf99a8ddc258f6769ec0dfa05aaf75875", "truncated": false}
+      },
+      {
+        "step": 4,
+        "role": "loan-sell",
+        "chain_id": 42161,
+        "hash": "0xdd45995d12a9404a667c13ec0ab014b927abeea3cf9cd650a5e8e63845c7972f",
+        "url": "https://arbiscan.io/tx/0xdd45995d12a9404a667c13ec0ab014b927abeea3cf9cd650a5e8e63845c7972f",
+        "block_number": 235161460,
+        "utc": "2024-07-23T08:52:50Z",
+        "unix_timestamp": 1721724770,
+        "sender": "0xca74f404e0c7bfa35b13b511097df966d5a65597",
+        "to": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
+        "flows": [
+          {"token": "arbitrum_wbtc", "actor_delta": "-2.6292", "raw_units": "-262920000"},
+          {"token": "arbitrum_received_eth", "actor_delta": "50.054589166191564555", "raw_units": "50054589166191564555", "evidence": "Internal transfer from aggregator to actor, visible before truncation"}
+        ],
+        "transaction_fee_eth": "0.000084176136792",
+        "snapshot": {"name": "loan-sell.part0.md", "bytes": 50079, "sha256": "2def0b27ea353b59e3b5b30a5d5fc9bb7743256d3698044d7e17a6eb61de2409", "truncated": true, "scope": "Overview, actor token flow and internal ETH receipt visible; full log suffix not fetched"}
+      },
+      {
+        "step": 5,
+        "role": "loan-arrival",
+        "chain_id": 42161,
+        "hash": "0x7015f3ceff63cc5e4c2e7abffe3ed6c1d21da6b3305724ed1c9177e50cf411bf",
+        "url": "https://arbiscan.io/tx/0x7015f3ceff63cc5e4c2e7abffe3ed6c1d21da6b3305724ed1c9177e50cf411bf",
+        "block_number": 235163027,
+        "utc": "2024-07-23T08:59:23Z",
+        "unix_timestamp": 1721725163,
+        "sender": "0xb4b8b6f88361f48403514059f1f16c8e78d61ffd",
+        "to": "0x09e9222e96e7b4ae2a407b98d48e330053351eee",
+        "sender_is_actor": false,
+        "flows": [{"token": "arbitrum_wbtc", "actor_delta": "2.62922794", "raw_units": "262922794", "evidence": "Gateway mint to actor"}],
+        "transaction_fee_eth": "0.000001053137904",
+        "fee_economic_payer": null,
+        "fee_attribution_note": "Retry transaction type 104; sender is aliased gateway, not actor. Original bridge msg.value may fund execution; economic attribution unverified.",
+        "snapshot": {"name": "loan-arrival.part0.md", "bytes": 12719, "sha256": "522ea75396fb3cf6c22243825891315ff83016482221fc46dbca01213dfaed47", "truncated": false}
+      },
+      {
+        "step": 6,
+        "role": "loan-repay",
+        "chain_id": 42161,
+        "hash": "0x798b5371e00f8a0d5dd7471aa36488e490f853004e638b547f272013b19db935",
+        "url": "https://arbiscan.io/tx/0x798b5371e00f8a0d5dd7471aa36488e490f853004e638b547f272013b19db935",
+        "block_number": 235163128,
+        "utc": "2024-07-23T08:59:48Z",
+        "unix_timestamp": 1721725188,
+        "sender": "0xca74f404e0c7bfa35b13b511097df966d5a65597",
+        "to": "0x794a61358d6845594f94dc1db02a252b5b4814ad",
+        "flows": [
+          {"token": "arbitrum_wbtc", "actor_delta": "-2.62920022", "raw_units": "-262920022", "recipient": "0x078f358208685046a11c85e8ad32895ded33a249"},
+          {"token": "arbitrum_variable_wbtc_debt", "actor_delta": "-2.6292", "raw_units": "-262920000", "interpretation": "Displayed debt-token burn; complete post-state debt not independently checked"}
+        ],
+        "transaction_fee_eth": "0.000002426611478",
+        "snapshot": {"name": "loan-repay.part0.md", "bytes": 18210, "sha256": "ca0c089ab220ffde5a8a71468b8e75077c4c9df69b3e8b55866404d4796e9698", "truncated": false}
+      }
+    ],
+    "derived_arithmetic_not_pnl": {
+      "paper_claim_eth_earned": "0.5",
+      "observed_selected_leg_eth_minus_weth_nominal": "0.054589166191564555",
+      "calculation": "50.054589166191564555 native ETH received on Arbitrum minus 50 WETH spent on Ethereum, before fees and unobserved positions",
+      "assumptions": "One WETH is one nominal ETH for arithmetic only; cross-chain settlement, wrapper and bridge risks are not priced away.",
+      "repayment_above_borrowed_wbtc": "0.00000022",
+      "bridged_wbtc_minus_repayment": "0.00002772",
+      "bridge_to_arrival_seconds": 408,
+      "borrow_to_repay_seconds": 425,
+      "first_buy_to_repay_seconds": 445,
+      "discrepancy_status": "Paper's 0.5 ETH and linked sale overview not reconciled. Do not use paper amount as validated profit.",
+      "net_profit_eth": null,
+      "net_profit_usd": null
+    },
+    "unverified": [
+      "Raw receipts, full sale logs and post-transaction state independently verified together",
+      "All actor accounts, hedges, transactions and initial/final balances",
+      "Collateral composition, posted amount, health factor and liquidation buffer before borrow",
+      "Debt index, full interest/other credit charges, final debt and collateral releases",
+      "Bridge fee/retry funding/refunds and economic payer without double-counting",
+      "Protocol audit, TVL and access eligibility at original time or today",
+      "Capital/leverage/concentration compliance at $50,000 scale and achievable scaled execution",
+      "Repeatability, full net PnL, T2, T3 and independent review"
+    ]
+  },
+  "provenance": {
+    "explorer_retrieved_utc": "2026-10-29T08:50:32.814Z",
+    "snapshot_hash_semantics": "SHA-256 of saved UTF-8 extracted Markdown, not raw transaction receipts or block hashes. Raw extracts retained locally, not bulk-published.",
+    "raw_amount_policy": "raw_units are exact decimal scaling of displayed quantities using the stated token decimals, not a claim of independently decoded raw receipts. Token metadata and full receipts remain part of independent verification.",
+    "fiat_display_policy": "No current explorer token/fee USD displays used as original-time valuations.",
+    "labels_policy": "Current explorer names are conveniences; addresses and chain IDs identify contracts. A current label is not proof of historical branding or access.",
+    "instrument_policy": "No historical perp asserted from present-day ticker/listing/fee pages.",
+    "publication_policy": "Compact public factual inputs only; no keys, private data, attack construction or live execution."
+  }
+}
