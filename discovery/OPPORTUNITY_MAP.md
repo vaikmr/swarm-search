@@ -1,6 +1,6 @@
 # Cross-chain opportunity map: what survived the discovery pass
 
-**2026-10-29. Research priorities, not trades or return forecasts.** Seven originating/challenge packages are integrated; the final independent citation audit is pending. No complete-cycle net profit, historical hedge replay or deployment recommendation was established.
+**2026-10-29. Research priorities, not trades or return forecasts.** All eight research/audit packages are integrated, including the final independent citation audit. No complete-cycle net profit, historical hedge replay or deployment recommendation was established.
 
 The positive finding is a more specific search space: real inventory-financing mechanisms, exact differences between token claims, and recent non-EVM destination/rail changes. The pass did **not** establish academically new arbitrage classes, practitioner novelty, repeatable entrant capture, or the $2–5k monthly target.
 
@@ -16,7 +16,7 @@ The positive finding is a more specific search space: real inventory-financing m
 | 6. Inventory-aware intent filling | A real **cost/working-capital optimization hypothesis**; existing routing features already implement parts of it. Incremental earnings are unmeasured. | Same accessible fills and terminal inventory versus ordinary filling, spendable repayments, admission, restoration costs and capital tied up. |
 | 7. LST/LRT discount | A **claim/queue-risk carry** candidate, not automatically riskless or USD-hedged. Exit amounts, time and product-specific exposure matter. | Exact claim and queue/instant-exit terms, adverse finalization, liquidity, hedge numeraire and full closing costs. |
 
-Supporting packages: [hedge and public-state checks](workstreams/onchain/findings.md), [stock and instrument claims](workstreams/instruments/findings.md), [conversion and economics](workstreams/economics/findings.md), [deployment literature](workstreams/literature/findings.md), [settlement comparator](workstreams/settlement/findings.md), and [independent seven-candidate critique](workstreams/durability/findings.md). The final LST/LRT claim audit remains pending.
+Supporting packages: [hedge and public-state checks](workstreams/onchain/findings.md), [stock and instrument claims](workstreams/instruments/findings.md), [conversion and economics](workstreams/economics/findings.md), [deployment literature](workstreams/literature/findings.md), [settlement comparator](workstreams/settlement/findings.md), [independent seven-candidate critique](workstreams/durability/findings.md), and [LST/LRT and global claim audit](workstreams/audit/findings.md).
 
 ## Three useful research directions
 
@@ -56,4 +56,6 @@ The current quote probe contains provider estimates, not fills. Current Solana s
 
 Original concentration, capital, leverage, protocol/instrument eligibility, drawdown, annual-tail and independent-review requirements remain unresolved. No genuine T2 plus elapsed T3 qualification was created. All research outputs remain hypotheses, scoped observations or useful rejections.
 
-The originating workers completed their one bounded package and paused. The independent coverage audit and final integration close this pass; no live trading, paid backfill, automatic next wave or unattended paper run was started.
+All eight workers completed their one bounded package and paused. The independent audit reconciled 73 relevance triages and 32 scoped priority topics, with one official legacy recovery and three explicit replacements; it does not establish 32 exact-original full reads. The coordinator's current cBridge quote supplement is separately attributed and was not independently certified or counted toward those 32 topics.
+
+The source audit and final integration closed this pass; no live trading, paid backfill, automatic next wave or unattended paper run was started.

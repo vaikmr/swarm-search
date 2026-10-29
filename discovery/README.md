@@ -8,7 +8,7 @@ The user clarified that the goal is to discover new cross-chain arbitrage strate
 
 ## Integrated results
 
-Seven bounded research packages have been integrated. The final independent source-coverage audit remains pending; this is not a completed claim of 32 exact-original full reads. The coordinator's [opportunity map](OPPORTUNITY_MAP.md) distinguishes promising mechanisms, rejected shortcuts and the next small tests.
+All eight bounded research/audit packages have been integrated, and the workers paused. The coordinator's [opportunity map](OPPORTUNITY_MAP.md) distinguishes promising mechanisms, rejected shortcuts and the next small tests. This is not a completed claim of 32 exact-original full reads.
 
 | Package | Findings |
 | --- | --- |
@@ -19,6 +19,7 @@ Seven bounded research packages have been integrated. The final independent sour
 | Economics | [Complete-cycle costs, bridge rebalancing and stablecoin conversion identities](workstreams/economics/findings.md) |
 | Durability | [Independent critiques of all seven proposed mechanisms](workstreams/durability/findings.md) |
 | On-chain evidence | [Current public state, historical hedge-data limits and the unrun counterfactual](workstreams/onchain/findings.md) |
+| Independent audit | [All-source coverage reconciliation, LST/LRT claims and cross-package conflicts](workstreams/audit/findings.md) |
 
 A narrow coordinator [current-quote probe](probes/cbridge-2026-10-29.md) supplements those packages. At one timestamp, two independent 1,000-unit cBridge estimates showed no imbalance bonus. More importantly, the configured Arbitrum `USDC` was bridged USDC.e, not native USDC: a native-USDC return rail cannot silently close that inventory cycle. This is an indicative snapshot, not a fill, historical replay or conclusion about every corridor.
 
@@ -31,6 +32,10 @@ Seed: [Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance,
 The [citation inventory](citation-inventory.json) contains **73 extracted bibliography entries**, all assigned for relevance triage. **32 distinct entries** have explicit reading owners, four each. These are local `R001` identifiers, not the paper's original bibliography numbers. Both Flashbots/mempool and Protect references are included; the original paper is canonical if extraction omitted anything.
 
 An inventory row, search snippet, citation count or abstract is not a completed source review. Report actual access and reading separately. Resolve missing URLs by title/author from primary or author-hosted sources; do not invent URLs or bypass paywalls. Duplicate URLs, paper revisions and repeated citations do not count as independent evidence. If fewer than 32 sources can be meaningfully read within this pass, report the shortfall rather than silently claiming coverage or extending the pass indefinitely.
+
+**Final audit:** all 73 assigned entries received relevance triage; 32 distinct priority topics have documented scoped reading. The resolution split is **28 cited-work/current-page resolutions, one official same-path legacy recovery and three substantive current replacements**. This includes documentation roots/homepages and a README, not 32 independent academic papers or datasets. Three cited original texts were not recovered; their replacements remain explicitly different evidence. Other owners' reading counts were audited through immutable manifests/reports, not independently re-read in full by the judge. See the [coverage ledger](workstreams/audit/coverage-audit.json).
+
+The initial inventory preserves the assignment-time reading statuses. The coverage ledger and each workstream's source file contain the completed-pass results; do not treat the initial `not_reviewed` fields as current completion state.
 
 Follow backward references **and** newer citing/related work. Investigate actual deployed instrument changes during **2025-10-29 through 2026-10-29**, with earlier work as context. Publication date, data window, protocol age and instrument launch date are separate fields. A newer paper reusing 2023–24 data is not current-market evidence.
 
