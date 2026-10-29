@@ -87,7 +87,9 @@ is no second chain here to falsely treat as independent.
 
 This is a better bounded research candidate, not the requested certified
 compliant baseline. Finish current-deployment audit linkage and cash exposure,
-price all actual costs, and require the same T1/T2/T3 and independent risk gates.
+price all actual costs, and require qualifying T2 plus T3 and independent risk
+review. Reconciled T1 actor evidence is preferred, not mandatory. The conditional
+annual component budget does not establish the separate annual tail-probability gate.
 
 ## Reproduction
 

@@ -17,6 +17,28 @@ ATOKEN = "0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c"
 SLOT = "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc"
 
 
+def validate_header(header, requested_block):
+    """Reject missing/substituted headers; return actual validated source fields."""
+    if not isinstance(header, dict):
+        raise ValueError("Missing or malformed block header")
+    number, block_hash, timestamp = (header.get(k) for k in ("number", "hash", "timestamp"))
+    for label, value in (("requested block", requested_block), ("block number", number),
+                         ("block timestamp", timestamp)):
+        if not isinstance(value, str) or not re.fullmatch(r"0x[0-9a-fA-F]+", value):
+            raise ValueError("Malformed " + label)
+    if int(number, 16) != int(requested_block, 16):
+        raise ValueError("Returned block does not match requested historical tag")
+    if not isinstance(block_hash, str) or not re.fullmatch(r"0x[0-9a-fA-F]{64}", block_hash):
+        raise ValueError("Missing or malformed block hash")
+    try:
+        block_time = dt.datetime.fromtimestamp(int(timestamp, 16), dt.timezone.utc).isoformat()
+    except (ValueError, OverflowError, OSError) as exc:
+        raise ValueError("Invalid block timestamp") from exc
+    return {"block": int(number, 16), "requested_block_tag": requested_block,
+            "returned_block_number": number, "block_hash": block_hash,
+            "returned_block_timestamp": timestamp, "block_time": block_time}
+
+
 def request(url, body=None):
     args = ["curl", "--fail", "-sS", "--max-time", "60", url]
     if body is not None:
@@ -46,7 +68,7 @@ def main():
         raise ValueError("Incomplete read-only RPC evidence")
     if int(response[1]["result"], 16) != 1:
         raise ValueError("Unexpected chain")
-    block = response[2]["result"]
+    block = validate_header(response[2]["result"], BLOCK)
     actual = "0x" + response[3]["result"][-40:]
     if actual.lower() != expected.lower():
         raise ValueError("Official registry and fixed-block implementation differ")
@@ -57,8 +79,7 @@ def main():
         "observed_at": observed, "tier": "deployment identity observation, not performance",
         "registry": {"source": BOOK_URL, "commit": BOOK_COMMIT, "sha256": hashlib.sha256(book).hexdigest()},
         "rpc": {"source": RPC, "request": calls, "response_sha256": hashlib.sha256(raw).hexdigest(),
-                "chain_id": 1, "block": int(BLOCK, 16), "block_hash": block["hash"],
-                "block_time": dt.datetime.fromtimestamp(int(block["timestamp"], 16), dt.timezone.utc).isoformat()},
+                "chain_id": 1, **block},
         "pool": POOL, "underlying": USDC, "a_token": ATOKEN,
         "implementation": actual, "registry_implementation_match": True,
         "usdc_balance_at_a_token": int(response[4]["result"], 16) / 10**6,
