@@ -1,0 +1,194 @@
+{
+  "as_of": "2026-10-29",
+  "workstream": "literature",
+  "candidate": 4,
+  "status": "unverified_discovery_hypotheses_not_recommendations",
+  "mechanisms": [
+    {
+      "id": "LIT-D4-01",
+      "name": "Established-claim destination onboarding after public deployment",
+      "hypothesis": "An existing economic claim may temporarily trade at different executable prices after a new destination deployment or pool becomes usable. Ordinary prefunded spot correction could earn a residual after restoring both token and cash inventories, but no such residual has been measured here.",
+      "economic_cause": "Segmented inventory, newly forming depth and constrained transfer/market-making capacity, not an entitlement to favorable transaction ordering.",
+      "who_pays_and_earns": "If a discrepancy exists, buyers/sellers face different prevailing market prices; an ordinary liquidity taker may receive the difference while paying LPs, chains and transfer providers. No pending user transaction is targeted or reordered.",
+      "recurrence_reason": "Additional legitimate destination deployments may repeat onboarding friction. One historical launch episode does not establish repeatability, frequency or positive expected value.",
+      "novelty": {
+        "new_strategy_claim": false,
+        "prior_art": ["R047 section 3.1", "R035", "R039", "LIT-SEED section 4.4.1 and Appendix B.1"],
+        "potential_new_input": "USDT0 on Stellar, officially announced 2026-09-02, is a recent non-EVM destination lead rather than a new arbitrage principle."
+      },
+      "candidate_instrument": {
+        "asset": "USDT0, not every asset with ticker USDT or OMNI",
+        "chains_under_research": ["Stellar", "Ethereum and one source destination only if exact supported route is verified"],
+        "protocols_under_research": ["USDT0", "LayerZero", "ordinary eligible spot venue not yet identified"],
+        "event_date": "2026-09-02",
+        "event_evidence": "LIT-STELLAR",
+        "deployment_status": "official_network_announcement_read_not_independently_block_verified",
+        "protocol_launch": "January 2025 according to the release; particular Stellar deployment is younger",
+        "contracts": {
+          "Stellar_asset_issuer_or_contract": null,
+          "source_token_and_adapter": null,
+          "pool_ids": [],
+          "status": "unverified"
+        }
+      },
+      "historical_comparator": {
+        "asset": "OmniCat OMNI, distinct from Omni Network",
+        "source": "LIT-SEED Appendix B.1",
+        "loop": "Base buy, Arbitrum sale from pre-held OMNI, later LayerZero rebalance.",
+        "identity_sources": ["R048", "LIT-OMNI-EXPLORER"],
+        "current_or_historical_config_verified": false,
+        "cex_listing": "Seed reports MEXC 2023-12-28; exact primary event record was not found, and causality is not established."
+      },
+      "claim_equivalence": {
+        "required": [
+          "Exact issuer/token/adapter identities and supported directional pathway.",
+          "Same underlying economic claim, accounting units and permissions on both chains.",
+          "Actual debit/credit after taxes, fees, precision conversion and dust.",
+          "A lawful available closing route, not a matching ticker or generic OFT/ITS label."
+        ],
+        "OFT_caveat": "Direct versus adapter, peers, governance, message verification and token-specific restrictions matter. Modern protocol documentation does not prove historic OmniCat configuration.",
+        "ITS_caveat": "If the representation uses ITS, verify interchainTokenId, metadata/scaling, per-chain manager and authority. No ITS pair was verified here.",
+        "USDT0_specific": "Provider describes Ethereum lock/mint and burn/unlock; backing and cash redemption are distinct questions. IOTA's dedicated route shows universal direct mesh connectivity cannot be assumed.",
+        "verified_for_candidate": false
+      },
+      "financing_and_lifecycle": [
+        "Use only publicly finalized market state after deployment; require ordinary spot and transfer availability before treating an event as eligible.",
+        "Pre-position a bounded source cash inventory, destination token inventory and gas balances; count all of them as committed capital.",
+        "Hypothetically buy the same claim at the cheaper ordinary spot venue and sell pre-held inventory at the dearer venue without front-running users.",
+        "Restore destination token inventory through the verified route after actual finality; restore source cash inventory through a separately eligible route.",
+        "Reconcile all assets, liabilities, fees, failed attempts and residual marks against passive inventory before any net-return claim."
+      ],
+      "access_and_capital": {
+        "ordinary_entrant_access": "Unverified; no privileged ordering, private flow or maker agreement assumed.",
+        "capital_ceiling_usd": 50000,
+        "allocation": null,
+        "leverage_assumed": 1,
+        "flash_loan_assumed": false,
+        "borrowed_inventory": "Not assumed. The seed's loan-backed replacement requires separate collateral and a complete repayment ledger.",
+        "CEX_dependency": "None required by the hypothesis; if price anchoring or execution requires one, identify it and apply the one-CEX limit."
+      },
+      "costs_and_risks": [
+        "Both spot fees, price impact, taxes, approval/gas costs and failed attempts.",
+        "Actual transfer quote, message/destination costs, delays, return-cash route and dust.",
+        "Inventory opportunity cost, directional residuals, bridge/issuer default, pauses and withdrawal restrictions.",
+        "Overlapping issuer/adapter/Ethereum lockbox failures can concentrate exposure across chains.",
+        "Incumbent capture, finite depth and disappearance before ordinary entrant execution."
+      ],
+      "cheap_falsifiers_if_later_authorized": [
+        "Fail the particular route if exact asset/issuer or permissions do not match, no eligible sellable pool exists, or no available closing route exists.",
+        "Obtain synchronized size-specific public quotes and complete transfer estimates at a prespecified small size; fail the sampled route when proceeds cannot cover actual full-cycle costs.",
+        "Compare a complete inventory-neutral result with passive inventory; mark-to-market appreciation alone is not arbitrage.",
+        "For any CEX-causality claim, first resolve the exact listing/deposit/withdrawal event and define a comparison; otherwise keep causal attribution unknown."
+      ],
+      "measurements": {
+        "current_executable_spread": null,
+        "attainable_capture": null,
+        "all_in_cycle_cost": null,
+        "net_monthly_pnl": null,
+        "benchmark_excess_pnl": null,
+        "tail_probability": null
+      },
+      "charter_eligibility": "Not established: verify age/TVL/audit, at most three chains/one CEX, overlapping 30% dependency limits, leverage and tail gates before any allocation. A new destination is not automatically a new underlying protocol, nor automatically eligible.",
+      "evidence": {
+        "paper_example": "historical_source_reported_not_independently_reconciled",
+        "recent_deployment": "provider_or_network_documented",
+        "qualifying_T2": false,
+        "qualifying_T3": false,
+        "independent_strategy_approval": false
+      },
+      "sources": ["R035", "R039", "R042", "R047", "R048", "LIT-SEED", "LIT-OFT", "LIT-USDT0", "LIT-STELLAR", "LIT-OMNI-EXPLORER", "LIT-ITS"]
+    },
+    {
+      "id": "LIT-D4-02",
+      "name": "Existing-asset route expansion and inventory restoration",
+      "hypothesis": "A newly available canonical transfer route might lower the cost of restoring existing spot inventory enough to change whether an already-public cross-chain correction is economical. It may instead eliminate discrepancies; no positive return is assumed.",
+      "economic_cause": "The former transfer, settlement or available-inventory constraint changes after a new supported route, rather than a new asset automatically offering cheap value.",
+      "who_pays_and_earns": "Any gross residual would come from ordinary market price differences; LPs, chains and issuer/transfer services collect their quoted charges. A lower transfer fee is a cost reduction, not itself trading revenue.",
+      "recurrence_reason": "Further supported-route changes may alter restoration costs. Frequency and persistence are unknown.",
+      "novelty": {
+        "new_strategy_claim": false,
+        "prior_art": ["R047 section 3.1", "R035", "LIT-SEED inventory and bridge examples"],
+        "potential_new_input": "EURC support through Circle Gateway including Solana, announced 2026-10-23.",
+        "cross_workstream_overlap": "Economics rail-convergence research; do not double-count as independent alpha."
+      },
+      "candidate_instrument": {
+        "asset": "EURC on both sides, not EURC converted into USDC or cirBTC",
+        "candidate_chain_pair": ["Ethereum or Base, choose one", "Solana"],
+        "protocols": ["Circle Gateway", "issuer-native EURC", "eligible ordinary spot venues not yet identified"],
+        "event_date": "2026-10-23",
+        "event_sources": ["LIT-CIRCLE-LAUNCH", "LIT-SOLANA-PREMINT"],
+        "deployment_status": "issuer_announced_and_current_technical_docs_supported_not_independently_block_verified",
+        "contracts": {
+          "EURC_source_token": null,
+          "EURC_Solana_mint": null,
+          "Gateway_wallet_minter": null,
+          "pool_ids": [],
+          "status": "unverified_do_not_use_the_pre_mint_staging_account_as_a_mint_pool_or_deposit"
+        }
+      },
+      "claim_equivalence": {
+        "description": "Gateway maintains balances per asset and transfers the same issuer asset. EURC is 6 decimals; cirBTC is a separate 8-decimal claim, not native BTC.",
+        "no_cross_asset_conversion": true,
+        "same_asset_technical_description_verified": true,
+        "actual_contracts_permissions_and_operator_terms_verified": false,
+        "jurisdiction_and_redemption": "Unverified; native issuer form does not imply unrestricted cash redemption or eligibility.",
+        "limits": "EURC issuance on Stellar/Cronos does not imply Gateway support there. cirBTC is not supported on Solana, and Solana nanopayments are not supported."
+      },
+      "financing_and_lifecycle": [
+        "Start from identified, eligible existing EURC/quote-asset inventories on the selected two chains; count all gas and reserves.",
+        "Observe ordinary finalized spot prices; independently verify executable depth before considering any hypothetical correction.",
+        "For prefunded correction, restore the consumed inventory using the actual same-asset Gateway route and source-finality requirements.",
+        "Close or explicitly mark the quote-asset inventory imbalance, fees, delays and residual currency exposure.",
+        "Compare full cost and passive-inventory results with the prior restoration route; do not equate a fee saving with realized profit."
+      ],
+      "settlement_constraints": {
+        "instant_access": "Sub-500ms is the advertised post-finalization access, not initial capital availability or atomic trade execution.",
+        "ordinary_source_deposit": "Provider table: Ethereum/Base approximately 13-19 minutes to attestation; no timing was measured in this pass.",
+        "withdrawal": "Announcement gives a seven-day permissionless withdrawal delay; asset-specific docs confirm delayed withdrawal applies.",
+        "fee": "Announcement advertises 1bp for EURC/cirBTC outside Arc, but transfer-specific estimate and token-unit gas are authoritative; actual all-in quote remains unknown.",
+        "premint": "Staging balances are not user inventory, circulating supply or tradable pool depth.",
+        "operational_safety": "No direct sends to a pre-mint account or Gateway Wallet; proper deposit methods are required. This pass submitted nothing."
+      },
+      "access_and_capital": {
+        "capital_ceiling_usd": 50000,
+        "allocation": null,
+        "leverage_assumed": 1,
+        "flash_loan_assumed": false,
+        "capital_efficiency": "Post-finality mobility may change restoration time, not remove the cost of prefunded inventory or delayed emergency exit.",
+        "CEX_dependency": "None assumed; any later dependence must be explicit."
+      },
+      "costs_and_risks": [
+        "Both spot fees, price impact, transfer estimate, source/destination gas, return-cash inventory and failed attempts.",
+        "EUR/USD exposure and benchmark valuation if results are reported in dollars.",
+        "Issuer/freeze/custody, Gateway messaging and attestation, chain finality, outages and delayed withdrawal.",
+        "Common issuer/protocol/chain dependencies across supposedly separate inventories.",
+        "Asset-specific operator terms not resolved by generic or inconsistent marketing boilerplate."
+      ],
+      "cheap_falsifiers_if_later_authorized": [
+        "First identify canonical token/mint and pools, verify ordinary sell/return permissions, and obtain an actual same-asset route estimate at stated size.",
+        "Reject the sampled route if completed-cycle proceeds fail to cover costs and capital lock, even if a single fee component fell.",
+        "Compare against old-route restoration and passive inventory; eliminate marks or FX drift mislabeled as arbitrage.",
+        "Reject the income hypothesis if ordinary entrants cannot act before the new route removes the discrepancy."
+      ],
+      "measurements": {
+        "current_executable_spread": null,
+        "transfer_estimate": null,
+        "attainable_capture": null,
+        "all_in_cycle_cost": null,
+        "net_monthly_pnl": null,
+        "benchmark_excess_pnl": null,
+        "tail_probability": null
+      },
+      "charter_eligibility": "Protocol-specific age/TVL/audit, overlapping exposure limits, reserve custody and tail evidence remain unknown; older EURC issuance does not establish Gateway or route eligibility.",
+      "evidence": {
+        "recent_deployment": "issuer_documented_two_notices_for_one_capability",
+        "qualifying_T2": false,
+        "qualifying_T3": false,
+        "independent_strategy_approval": false
+      },
+      "sources": ["R003", "R035", "R042", "R047", "LIT-SEED", "LIT-ATOMIC", "LIT-CIRCLE-LAUNCH", "LIT-SOLANA-PREMINT", "LIT-GATEWAY-CHAINS", "LIT-GATEWAY-ASSETS"]
+    }
+  ],
+  "next_phase_authorized": false,
+  "pause_after_publication": true
+}
