@@ -49,7 +49,7 @@ class ReplayTests(unittest.TestCase):
 
     def test_costs_net_benchmark_and_30day_sample_reconcile(self):
         result = self.run_fixture()
-        self.assertEqual(D(result["cash_net_pnl_usd"]), D("65"))
+        self.assertEqual(D(result["net_economic_pnl_usd"]), D("65"))
         self.assertEqual(D(result["benchmark_excess_usd"]), D("60"))
         self.assertEqual(D(result["terminal_equity_usd"]), D("50065"))
         self.assertEqual(D(result["equity_curve"][-1]["equity_usd"]), D("50065"))
@@ -59,10 +59,21 @@ class ReplayTests(unittest.TestCase):
         self.assertEqual(result["evidence_tier"], "T4")
         self.assertFalse(result["recommendation_eligible"])
 
+    def test_marked_economics_are_not_labeled_received_cash(self):
+        # A final MTM/accrual mark does not establish asset sales, token receipts,
+        # external transfers, or the realized-cash component of economic PnL.
+        row = fixture()
+        result = self.run_fixture(row)
+        self.assertEqual(D(result["gross_pnl_usd"]), D("100"))
+        self.assertEqual(D(result["net_economic_pnl_usd"]), D("65"))
+        self.assertIsNone(result["realized_cash_pnl_usd"])
+        self.assertNotIn("cash_net_pnl_usd", result)
+        self.assertEqual(result["evidence_tier"], "T4")
+
     def test_latency_stress_loses_tie_and_charges_failed_gas(self):
         result = self.run_fixture(scenario=Scenario("tie", added_latency_ms=100))
         self.assertEqual(result["outcome_counts"]["lost_or_tied_race"], 1)
-        self.assertEqual(D(result["cash_net_pnl_usd"]), D("-31"))
+        self.assertEqual(D(result["net_economic_pnl_usd"]), D("-31"))
         self.assertEqual(D(result["failed_attempt_cost_usd"]), D("1"))
 
     def test_unproven_and_unknown_races_lose(self):
@@ -75,12 +86,12 @@ class ReplayTests(unittest.TestCase):
         row = fixture()
         row["opportunities"][0]["race_proven"] = False
         row["opportunities"][0]["attempt_on_loss"] = False
-        self.assertEqual(D(self.run_fixture(row)["cash_net_pnl_usd"]), D("-30"))
+        self.assertEqual(D(self.run_fixture(row)["net_economic_pnl_usd"]), D("-30"))
 
     def test_gas_stress_doubles_only_gas(self):
         result = self.run_fixture(scenario=Scenario("gas", gas_multiplier=D("2")))
         self.assertEqual(D(result["variable_cost_usd"]), D("7"))
-        self.assertEqual(D(result["cash_net_pnl_usd"]), D("63"))
+        self.assertEqual(D(result["net_economic_pnl_usd"]), D("63"))
 
     def test_capital_cannot_be_reused_during_lock(self):
         row = fixture()
