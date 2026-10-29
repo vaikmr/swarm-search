@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-10-29",
+  "status": "hypotheses_and_pressure_test_only",
+  "recommended": false,
+  "mechanisms": [
+    {
+      "id": "SET-C6",
+      "name": "Inventory-aware intent filling versus ordinary filling plus independent rebalancing",
+      "source_ids": [
+        "C6-ACROSS-FEES",
+        "C6-ACROSS-NOMINATION",
+        "C6-ACROSS-LIFECYCLE",
+        "C6-RELAY-HOW",
+        "C6-RELAY-VAULTS",
+        "S-CREDIT",
+        "S-CCTP-FEES",
+        "S-ARB-USDC"
+      ],
+      "classification": "conditional operational optimization; no separate payer or incremental net profit established",
+      "recommended": false,
+      "economic_cause": "Destination inventory is fronted before reimbursement; repayment-location and withdrawal-frequency choices can reduce relocation and funding costs.",
+      "payer_and_repeatability": "Users pay ordinary execution/settlement spread. Opposite-direction flow may reduce inventory imbalance. No separate inventory-service customer, recurring accessible flow or independent rebate was established.",
+      "asset_claim_equivalence": "Verify exact source/destination/refund token contracts and redemption rights. A Hub balance is a protocol claim, not wallet tokens; USDC.e is not Circle-native USDC. No present route mapping was independently verified.",
+      "deployment_evidence": "Current provider descriptions of Across V3-style mechanics and Relay Settlement; no contract addresses, deployed-version reconciliation, balances, admission or executed quote independently checked.",
+      "chain_contexts": [
+        "Across origin/destination, repayment chain and Ethereum HubPool/canonical bridge dependencies",
+        "Relay origin/destination, Relay Chain and Aurora/NEAR Allocator dependencies; exact distinct-chain count unresolved"
+      ],
+      "roles": [
+        "origin depositor",
+        "destination user or contract beneficiary",
+        "fill executor",
+        "repayment/withdrawal beneficiary",
+        "optional destination appFeeRecipient"
+      ],
+      "inventory_lifecycle": [
+        "Reserve spendable destination token inventory and gas.",
+        "Front q to the destination user; record pending receivable, not revenue or free capital.",
+        "Across: validate fill/deposit, propose/challenge bundle, transmit roots, execute relayer refund on chosen chain.",
+        "Relay: attest fill/deposit, credit Hub, select withdrawal parameters, authorize and obtain MPC proof, release actual Depository tokens.",
+        "Rebalance or match independently available opposite flow; retire borrowing if used.",
+        "Close same terminal chain/token inventory, liabilities and unresolved claims as comparator."
+      ],
+      "accounting": {
+        "pending_claims_spendable": false,
+        "hub_credit_is_wallet_cash": false,
+        "same_fills_and_terminal_inventory": true,
+        "profit_identity": "V(actual net reimbursement)-V(destination output)-all nonembedded gas/rebalance/funding/failure/inventory/access costs+proven separate payments",
+        "incremental_identity": "difference in net reimbursements minus difference in all costs plus difference in proven separate payments; same fills and terminal inventories",
+        "double_counting_prohibitions": [
+          "Do not add ordinary fill margin, quoted capital compensation and the same input-output spread as separate revenues.",
+          "Do not subtract embedded LP deductions twice or add a refund of principal as profit.",
+          "Do not assign integrator appFee to the relayer without proving recipient ownership and actual payment.",
+          "Do not fund overlapping obligations from the same pending refund or undisbursed credit."
+        ]
+      },
+      "access": {
+        "across_open_after_exclusivity_documented": true,
+        "across_nomination_requires_application_and_track_record": true,
+        "entrant_allocation_verified": false,
+        "relay_solver_admission_verified": null,
+        "relay_oracle_authorization_does_not_establish_solver_whitelist": true,
+        "relay_vault_new_deposits_supported": false,
+        "relay_vault_existing_ui_exit_deadline": "2026-12-31"
+      },
+      "capital_assumptions": [
+        "Only available settled balances or actually disbursed credit fund obligations.",
+        "Count liabilities, collateral and pending protocol claims; no automatic debt netting against common-failure exposure.",
+        "Original 50k equity, 15k common-domain, <=3-chain and <=2x delta-neutral leverage gates remain unresolved."
+      ],
+      "costs_and_risks": [
+        "Fill/claim/withdrawal gas and failed races",
+        "Location-dependent LP fees and exact refund deductions",
+        "Independent bridge/swap slippage, time and representation risk",
+        "Funding interest, collateral/liquidation, access and operating costs",
+        "Oracle/MPC/Hub/bridge/issuer/chain dependencies and settlement liquidity"
+      ],
+      "lock_time": "First irrevocable capital commitment to spendable return in required chain/token. Neither Across minimum ~1.5h proposal cadence nor Relay real-time Hub credit is a measured or guaranteed capital-lock bound.",
+      "recent_change_assessment": "Relay Vaults currently disallows new deposits; dated wind-down start unknown. Across now documents Solana destination app-fee recipients but launch date/deployment not verified. Circle 2026 credit facilities are contractual and no direct integration was established.",
+      "cheap_falsifiers": [
+        "Stop new-depositor Relay Vaults branch based on official no-new-deposits notice.",
+        "Establish one eligible order route, solver access and exact beneficiaries before collecting performance history.",
+        "For same accessible fills and terminal inventories require positive incremental net after all repayment-location and rebalancing costs.",
+        "Verify withdrawal spendability and common dependencies; reject concurrent reuse of pending principal."
+      ],
+      "unknown_metrics": {
+        "observed_net_profit_usd": null,
+        "monthly_net_profit_usd": null,
+        "entrant_fill_share": null,
+        "capital_lock_p99_hours": null
+      }
+    },
+    {
+      "id": "SET-LOAN",
+      "name": "Collateralized temporary inventory replacement while a bridge leg is pending",
+      "source_ids": [
+        "SEED",
+        "S-CREDIT"
+      ],
+      "classification": "historical paper mechanism with current financing analogues; not a flash loan",
+      "recommended": false,
+      "economic_cause": "Borrow exact expensive-chain sale asset to reduce time between price-dislocated trade legs; bridge purchased cheap-chain asset to repay later.",
+      "payer_and_repeatability": "Price-takers sustaining a cross-chain dislocation may fund a gross spread; competition and financing can consume it. No current repeatable dislocation observed.",
+      "asset_claim_equivalence": "Incoming bridged asset must exactly repay debt token; wrapper, gateway, decimals and redemption claims must match.",
+      "deployment_evidence": "Seed Appendix G reports Ethereum WBTC purchase, Arbitrum Aave borrow/sale and later arrival/repayment. Historical transaction links are retained in sources.json; not independently rechecked. Current borrowing caps/health factors unknown.",
+      "financing_inventory_lifecycle": [
+        "Preposition eligible collateral or obtain an approved contractual line.",
+        "Buy cheaper asset and initiate bridge.",
+        "Borrow matching destination debt asset, sell there.",
+        "Receive exact repayment asset and retire principal plus all costs.",
+        "Release collateral only after obligations close."
+      ],
+      "capital_assumptions": [
+        "Collateral and credit capacity are economic capital, even if already held.",
+        "No free flash-loan funding across non-atomic chains.",
+        "No qualifying 2x leverage or common-domain compliance established."
+      ],
+      "costs_and_risks": [
+        "Borrow rate, liquidation/oracle risk and collateral opportunity cost",
+        "Bridge arrival/representation mismatch, paused borrowing or caps",
+        "All execution, settlement and failed-leg costs"
+      ],
+      "cheap_falsifiers": [
+        "Reject if borrowed token cannot be repaid by the bridged claim.",
+        "Compare full collateral/debt lifecycle against prepositioned inventory, not just trade-leg delay."
+      ],
+      "unknown_metrics": {
+        "observed_net_profit_usd": null,
+        "monthly_net_profit_usd": null,
+        "entrant_fill_share": null,
+        "capital_lock_p99_hours": null
+      }
+    },
+    {
+      "id": "SET-BASIS",
+      "name": "Native-versus-canonical bridged stablecoin conversion basis",
+      "source_ids": [
+        "R008",
+        "R049",
+        "R058",
+        "S-ARB-USDC",
+        "S-CCTP",
+        "S-CCTP-FEES"
+      ],
+      "classification": "conditional liquidity/redemption risk premium, no observed spread",
+      "recommended": false,
+      "economic_cause": "Holders may pay for liquidity in the preferred token representation while a discounted wrapper has a slower redemption path.",
+      "payer_and_repeatability": "Urgent liquidity users might pay the basis; issuer/bridge risk and competition can fully explain it. Current payer, quote and recurring volume unknown.",
+      "asset_claim_equivalence": "Arbitrum native USDC 0xaf88d065e77c8cC2239327C5EDb3A432268e5831 differs from USDC.e 0xff970a61a04b1ca14834a43f5de4533ebddb5cc8. Canonical redemption and native burn/mint are distinct legs; no permissionless par conversion or personal Mint redemption right assumed.",
+      "deployment_evidence": "Public token addresses and documented canonical/CCTP distinction. No current gateway escrow/contract mapping, caps or pool state checked.",
+      "financing_inventory_lifecycle": [
+        "Acquire a specifically discounted claim only if exact redemption path is established.",
+        "Finance full canonical withdrawal/finality/proof/claim window.",
+        "Convert into the exact native sale/debt token using a supported route.",
+        "Close all hedge/debt/rebalance legs and terminal inventory."
+      ],
+      "capital_assumptions": [
+        "<=3 selected chains and 15k issuer/bridge/common-domain ceiling apply to full lifecycle.",
+        "Returned claims and sale proceeds cannot both be counted as free inventory."
+      ],
+      "costs_and_risks": [
+        "Slow redemption and separate claim gas",
+        "Issuer eligibility/freeze, bridge collateral and representation mismatch",
+        "Swap/route fees, CCTP deployment-specific fees, funding and competing conversions"
+      ],
+      "cheap_falsifiers": [
+        "No current actionable discounted quote means no demonstrated trade.",
+        "Reject a supposed shortcut that burns USDC.e in native USDC CCTP or assumes symbol equivalence.",
+        "Check exact claim and personal redemption eligibility before a price comparison."
+      ],
+      "unknown_metrics": {
+        "observed_net_profit_usd": null,
+        "monthly_net_profit_usd": null,
+        "entrant_fill_share": null,
+        "capital_lock_p99_hours": null
+      }
+    },
+    {
+      "id": "SET-CREDIT",
+      "name": "Contractual RWA redemption or settlement advance",
+      "source_ids": [
+        "S-CIRCLE2026",
+        "S-CREDIT"
+      ],
+      "classification": "recent provider-released institutional financing instrument, not open arbitrage",
+      "recommended": false,
+      "economic_cause": "Funding bridges time from an Arc token burn/redemption or slow fiat settlement into available USD/USDC.",
+      "payer_and_repeatability": "Eligible institutions pay draw/recurring credit fees for working capital. No investment return or independently paying inventory-service customer established.",
+      "asset_claim_equivalence": "An RWA burn receipt, a credit-line receivable, USD funding and onchain USDC delivery are different claims; funding does not prove underlying asset redeemability or par value.",
+      "deployment_evidence": "Circle release records list 2026-04-01 Credit API and 2026-10-19 RWA Redemption Advance. Provider release claim, not independent onchain activity or user entitlement.",
+      "financing_inventory_lifecycle": [
+        "Execute Core API Agreement and separate credit contract; enable entitlement.",
+        "Reserve line capacity, submit Arc burn hash and proof; Treasury approves or rejects.",
+        "Wait for actual disbursement and any separate Credit Express destination delivery.",
+        "Maintain required wallet balance, pay draw/recurring fees and repay by contractual deadline."
+      ],
+      "access": "No user agreement, approval, entitlement, limit, fees or disbursement timing established; not assumed available to a 50k entrant.",
+      "capital_assumptions": [
+        "Minimum wallet balance and credit liabilities reduce usable capital.",
+        "New Arc exposure, protocol maturity/TVL/audit and <=3-chain/common-domain gates remain unverified."
+      ],
+      "costs_and_risks": [
+        "Draw and hourly/daily recurring fees",
+        "Manual approval/rejection, expired reservation and delivery failure",
+        "Issuer, fiat settlement, collateral and default/overdue risk"
+      ],
+      "cheap_falsifiers": [
+        "Establish lawful institutional eligibility and real terms before any implementation.",
+        "Reject if fee/deadline or redemption risk dominates the working-capital benefit."
+      ],
+      "unknown_metrics": {
+        "observed_net_profit_usd": null,
+        "monthly_net_profit_usd": null,
+        "entrant_fill_share": null,
+        "capital_lock_p99_hours": null
+      }
+    },
+    {
+      "id": "SET-NEAR",
+      "name": "Direction- and representation-aware NEAR settlement routing",
+      "source_ids": [
+        "S-NEAR-OVERVIEW",
+        "S-NEAR-FLOW",
+        "R052"
+      ],
+      "classification": "non-EVM enabling rail, not observed arbitrage",
+      "recommended": false,
+      "economic_cause": "Different finality/signature/verification paths can change inventory lock and liquidity-service cost.",
+      "payer_and_repeatability": "Users may pay for faster liquidity; a cheaper route can instead eliminate the old premium. No actual token-specific spread or payer observed.",
+      "asset_claim_equivalence": "Need exact origin token, NEAR token account and destination representation; local NEP-141 refund atomicity does not imply global rollback.",
+      "deployment_evidence": "Current official architecture identifies omni.bridge.near and heterogeneous light-client, Wormhole and MPC verification plus Chain Signatures. No route deployment date, token mapping or current activity independently checked.",
+      "financing_inventory_lifecycle": [
+        "Select at most three asset venues and verify exact token routes.",
+        "Lock/burn source token; wait for the specified verifier and signature path.",
+        "Mint/release destination token; close any fronted inventory or borrowing."
+      ],
+      "capital_assumptions": [
+        "Pending bridge messages are not spendable inventory.",
+        "All chain/verifier/bridge/issuer domains must be included in concentration and maturity checks."
+      ],
+      "costs_and_risks": [
+        "Route-specific signature/verifier assumptions and time",
+        "Exact claim mismatch, mint/release limits, destination gas and depth",
+        "Unpriced funding and competition"
+      ],
+      "cheap_falsifiers": [
+        "First establish token equivalence and one real route; stop if proposed arbitrage only compares names or old timing tables.",
+        "Do not infer deployment age from a docs update timestamp."
+      ],
+      "unknown_metrics": {
+        "observed_net_profit_usd": null,
+        "monthly_net_profit_usd": null,
+        "entrant_fill_share": null,
+        "capital_lock_p99_hours": null
+      }
+    }
+  ]
+}

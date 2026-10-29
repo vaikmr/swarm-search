@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "as_of_date": "2026-10-29",
+  "limits": {
+    "original_document_fetches": 20,
+    "candidate6_extra_document_fetches": 6,
+    "original_searches": 6,
+    "candidate6_extra_searches": 2
+  },
+  "counts": {
+    "document_fetch_attempts": 26,
+    "search_calls": 8,
+    "new_rpc_calls": 0
+  },
+  "copyright_and_security": "Only URL/title/date/status metadata and digests retained. No full fetched bodies, snippets, runtime configuration, credentials, transactions or private data stored.",
+  "document_fetches": [
+    {
+      "id": "R008",
+      "requested_url": "https://docs.arbitrum.io/arbitrum-bridge/quickstart",
+      "title": "Quickstart: Arbitrum bridge",
+      "retrieved_at": "2026-10-29T08:44:16.941Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "8152b33d10ea17a54025d70ee0ca747681fae8c946c5064b774335c51be00c43",
+      "main_body_sha256": "8152b33d10ea17a54025d70ee0ca747681fae8c946c5064b774335c51be00c43",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "R049",
+      "requested_url": "https://docs.optimism.io/builders/app-developers/bridging/standard-bridge",
+      "title": "Page Not Found",
+      "retrieved_at": "2026-10-29T08:44:16.941Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": true,
+      "next_start_index": 50000,
+      "error": null,
+      "fetched_markdown_sha256": "e7d5fa939343dae97563b32a1e86a0a8a74d999f014f5ad1f29afcd1b255d0bb",
+      "main_body_sha256": "c360a2bf13433ef2884090dae8818dd1fe78a325a623392a3bb85c362b5684e4",
+      "reading_note": "Not Found body at original URL; not full reading."
+    },
+    {
+      "id": "R059",
+      "requested_url": "https://docs.superbridge.app/what-is-bridging",
+      "title": "Superbridge Docs",
+      "retrieved_at": "2026-10-29T08:44:16.941Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "main_body_sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "reading_note": "Not Found body at original URL; not full reading."
+    },
+    {
+      "id": "R058",
+      "requested_url": "https://docs.scroll.io/en/user-guide/bridge",
+      "title": "Community FAQ | Scroll Documentation",
+      "retrieved_at": "2026-10-29T08:44:16.941Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "b0772215568bb4a6289fca3ef565c6ec31460a63b1c958e72b9962bdf747cdab",
+      "main_body_sha256": "b0772215568bb4a6289fca3ef565c6ec31460a63b1c958e72b9962bdf747cdab",
+      "reading_note": "Resolved to unrelated Community FAQ, not cited Bridge text; excluded from relevant full-read count."
+    },
+    {
+      "id": "R049-current",
+      "requested_url": "https://docs.optimism.io/app-developers/guides/bridging/standard-bridge",
+      "title": "Optimism Documentation",
+      "retrieved_at": "2026-10-29T08:45:01.033Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "9981261526e77a94a5fac03110ef600b526aa89a048fced6ba57d9323ba04e0a",
+      "main_body_sha256": "9981261526e77a94a5fac03110ef600b526aa89a048fced6ba57d9323ba04e0a",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "SEED",
+      "requested_url": "https://arxiv.org/html/2501.17335v2#A7",
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+      "retrieved_at": "2026-10-29T08:45:01.033Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": true,
+      "next_start_index": 50000,
+      "error": null,
+      "fetched_markdown_sha256": "708ac836a03c9dd5e87ac19ad22b7f10d2b2ed1f16b6e56cabaffc677d2e1651",
+      "main_body_sha256": "708ac836a03c9dd5e87ac19ad22b7f10d2b2ed1f16b6e56cabaffc677d2e1651",
+      "reading_note": "Selected introductory/model sections; not full paper."
+    },
+    {
+      "id": "R059-current",
+      "requested_url": "https://docs.superbridge.app/overview/bridging",
+      "title": "Bridging - Superbridge Docs",
+      "retrieved_at": "2026-10-29T08:45:25.754Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "410a050e5ed5ec83ead5255d002b284fb25f032d7ae1b8d1809741cc4d313d57",
+      "main_body_sha256": "410a050e5ed5ec83ead5255d002b284fb25f032d7ae1b8d1809741cc4d313d57",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "R058-current",
+      "requested_url": "https://docs.scroll.io/en/technology/bridge/withdraw-gateways",
+      "title": "Withdraw Gateways | Scroll Documentation",
+      "retrieved_at": "2026-10-29T08:45:25.754Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "a2f481b1b32a0df86275c7e61f5e68e5486a319c666e69fccb80ad68466159ff",
+      "main_body_sha256": "a2f481b1b32a0df86275c7e61f5e68e5486a319c666e69fccb80ad68466159ff",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "SEED-2",
+      "requested_url": "https://arxiv.org/html/2501.17335v2#A7",
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+      "retrieved_at": "2026-10-29T08:45:25.754Z",
+      "start_index": 50000,
+      "phase": "original_discovery",
+      "response_truncated": true,
+      "next_start_index": 100000,
+      "error": null,
+      "fetched_markdown_sha256": "f0c06e6d855990ddd4fde7b59c80caf7191c3c033669f069c83cf244fba0fe15",
+      "main_body_sha256": "f0c06e6d855990ddd4fde7b59c80caf7191c3c033669f069c83cf244fba0fe15",
+      "reading_note": "Selected empirical/limitation sections; not full paper."
+    },
+    {
+      "id": "N-NEAR",
+      "requested_url": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+      "title": "Omni Bridge Overview - NEAR Docs",
+      "retrieved_at": "2026-10-29T08:45:25.754Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "2b5e202c3315535d9e68c2fda0ee69d016ccad719be4a974e469a143874d319c",
+      "main_body_sha256": "0bfe259e188f88733fe7e8f85ef0c036e4c1f2dccb8c3a0460b9862df73e7e33",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "N-CCTP",
+      "requested_url": "https://www.circle.com/cross-chain-transfer-protocol",
+      "title": "CCTP (Cross-Chain Transfer Protocol) | Circle",
+      "retrieved_at": "2026-10-29T08:45:25.754Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "592f3e6e8f5968e5df3dca4bb48024fc810695cfe0df0a8dc1ebb87357486b30",
+      "main_body_sha256": "592f3e6e8f5968e5df3dca4bb48024fc810695cfe0df0a8dc1ebb87357486b30",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "SEED-3",
+      "requested_url": "https://arxiv.org/html/2501.17335v2#A7",
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+      "retrieved_at": "2026-10-29T08:45:54.474Z",
+      "start_index": 100000,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "cdbf7fcec704e3a6e7858e0c3de69bf6f0ac5424cf14c28d2779744fe8ccc6f1",
+      "main_body_sha256": "cdbf7fcec704e3a6e7858e0c3de69bf6f0ac5424cf14c28d2779744fe8ccc6f1",
+      "reading_note": "Appendix G and Appendix B examples read; not full paper."
+    },
+    {
+      "id": "R059-withdrawals",
+      "requested_url": "https://docs.superbridge.app/arbitrum/withdrawals",
+      "title": "Superbridge Docs",
+      "retrieved_at": "2026-10-29T08:45:54.474Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "main_body_sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "reading_note": "Stale supplemental withdrawal URL also returned Not Found."
+    },
+    {
+      "id": "R008-USDC",
+      "requested_url": "https://docs.arbitrum.io/arbitrum-bridge/usdc-arbitrum-one",
+      "title": "USDC on Arbitrum One",
+      "retrieved_at": "2026-10-29T08:45:54.474Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "dc39eadf10155598178a8f6ad546d2ccf03570c5aa743dc92608e9dfaaec826e",
+      "main_body_sha256": "dc39eadf10155598178a8f6ad546d2ccf03570c5aa743dc92608e9dfaaec826e",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "N-Circle2026",
+      "requested_url": "https://developers.circle.com/release-notes/mint-2026",
+      "title": "Release notes - Mint - 2026 - Circle Docs",
+      "retrieved_at": "2026-10-29T08:46:35.103Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": true,
+      "next_start_index": 50000,
+      "error": null,
+      "fetched_markdown_sha256": "9f6f53213399e2c247440ea6814f3eeb00af140eaeab0b536de393ab23d82d44",
+      "main_body_sha256": "2f633f7e175fa47a81f79c702279f30bf438ab3b27b231fda284a56e6bb8ce43",
+      "reading_note": "Full substantive release-note body through page footer read; response truncation occurred in runtime metadata."
+    },
+    {
+      "id": "N-NEAR-flow",
+      "requested_url": "https://docs.near.org/chain-abstraction/omnibridge/how-it-works",
+      "title": "How Omni Bridge Works - NEAR Docs",
+      "retrieved_at": "2026-10-29T08:46:35.103Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "4752c20dc5c5272cf6b8fa8ac9643ec59acbea6fe498870feb851e9f647117fc",
+      "main_body_sha256": "69627f5bc89e797faff562ee6dafb9886d7b9ba05089a72bef0473f9550593fb",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "R040-abstract",
+      "requested_url": "https://arxiv.org/abs/2208.13464",
+      "title": "[2208.13464] Price of MEV: Towards a Game Theoretical Approach to MEV",
+      "retrieved_at": "2026-10-29T08:46:35.103Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "c3c23f12ea0627d7979cc6e315820d8129fa4d1dc9822f35565f63bd71083ce7",
+      "main_body_sha256": "c3c23f12ea0627d7979cc6e315820d8129fa4d1dc9822f35565f63bd71083ce7",
+      "reading_note": "Abstract only, not paper body."
+    },
+    {
+      "id": "R052-abstract",
+      "requested_url": "https://arxiv.org/abs/2308.06513",
+      "title": "[2308.06513] A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain",
+      "retrieved_at": "2026-10-29T08:46:35.103Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "85ea73936bf8411fdc64d9eff3d9040a37ada7f8ad957263a98399d0cfc7bafb",
+      "main_body_sha256": "85ea73936bf8411fdc64d9eff3d9040a37ada7f8ad957263a98399d0cfc7bafb",
+      "reading_note": "Abstract only, not paper body."
+    },
+    {
+      "id": "N-Credit",
+      "requested_url": "https://developers.circle.com/circle-mint/concepts/credit-api",
+      "title": "Credit API - Circle Docs",
+      "retrieved_at": "2026-10-29T08:47:17.017Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": true,
+      "next_start_index": 50000,
+      "error": null,
+      "fetched_markdown_sha256": "4602f5e0de34f7459f40114e9789adb7ceb100ef0427479ab6f8e6f185707be8",
+      "main_body_sha256": "6ea3ec078ae755aea1674c9fa41407a6c5414bc9f0a6d12f5dc97491dc3d6b96",
+      "reading_note": "Full substantive article through page footer read; response truncation occurred in runtime metadata."
+    },
+    {
+      "id": "N-CCTP-fees",
+      "requested_url": "https://developers.circle.com/cctp/concepts/fees",
+      "title": "CCTP fees - Circle Docs",
+      "retrieved_at": "2026-10-29T08:47:17.017Z",
+      "start_index": null,
+      "phase": "original_discovery",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "c2389d7381db72a77f8ec3405da46413d45c63ee3ae545ee4f095be9a1049ecd",
+      "main_body_sha256": "c2389d7381db72a77f8ec3405da46413d45c63ee3ae545ee4f095be9a1049ecd",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "C6-ACROSS-FEES",
+      "requested_url": "https://docs.across.to/introduction/fees",
+      "title": "Fees in the System | Across Docs",
+      "retrieved_at": "2026-10-29T08:51:32.201Z",
+      "start_index": null,
+      "phase": "candidate6_extension",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "51f89d2e5338accf579c5b03eb98a8a2adbd3c6bfb68b4e2dc3461f1ce0c35dc",
+      "main_body_sha256": "51f89d2e5338accf579c5b03eb98a8a2adbd3c6bfb68b4e2dc3461f1ce0c35dc",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "C6-ACROSS-NOMINATION",
+      "requested_url": "https://docs.across.to/introduction/relayers/relayer-nomination",
+      "title": "Relayer Nomination | Across Docs",
+      "retrieved_at": "2026-10-29T08:51:32.201Z",
+      "start_index": null,
+      "phase": "candidate6_extension",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "8ca17424f7acf7c01b726738530ec7d9258aa1d14494a8139763d988f9df487e",
+      "main_body_sha256": "8ca17424f7acf7c01b726738530ec7d9258aa1d14494a8139763d988f9df487e",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "C6-ACROSS-LIFECYCLE",
+      "requested_url": "https://docs.across.to/concepts/intent-lifecycle-in-across",
+      "title": "Intent Lifecycle in Across | Across Docs",
+      "retrieved_at": "2026-10-29T08:51:46.709Z",
+      "start_index": null,
+      "phase": "candidate6_extension",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "765f29dc6bba01385afafa933591dc2e3f4b1e4e4b4cae96d53217400bb6cccd",
+      "main_body_sha256": "765f29dc6bba01385afafa933591dc2e3f4b1e4e4b4cae96d53217400bb6cccd",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    },
+    {
+      "id": "C6-RELAY-SOLVERS",
+      "requested_url": "https://docs.relay.link/references/protocol/guides/for-solvers",
+      "title": "How It Works - Relay",
+      "retrieved_at": "2026-10-29T08:51:46.709Z",
+      "start_index": null,
+      "phase": "candidate6_extension",
+      "response_truncated": true,
+      "next_start_index": 50000,
+      "error": null,
+      "fetched_markdown_sha256": "31b33073d31c1559e87ea24339cded7a0d07ac431008f378633030613c959679",
+      "main_body_sha256": "05a52316dedd992145fea8d190f354f59bd8f5aeca00a9b8a586802782544f9e",
+      "reading_note": "Requested solver-guide URL resolved to How It Works; duplicate of C6-RELAY-HOW, not independent access-guide evidence."
+    },
+    {
+      "id": "C6-RELAY-HOW",
+      "requested_url": "https://docs.relay.link/references/protocol/how-it-works",
+      "title": "How It Works - Relay",
+      "retrieved_at": "2026-10-29T08:51:46.709Z",
+      "start_index": null,
+      "phase": "candidate6_extension",
+      "response_truncated": true,
+      "next_start_index": 50000,
+      "error": null,
+      "fetched_markdown_sha256": "31b33073d31c1559e87ea24339cded7a0d07ac431008f378633030613c959679",
+      "main_body_sha256": "05a52316dedd992145fea8d190f354f59bd8f5aeca00a9b8a586802782544f9e",
+      "reading_note": "Full substantive How It Works body through footer read; runtime metadata truncated."
+    },
+    {
+      "id": "C6-RELAY-VAULTS",
+      "requested_url": "https://docs.relay.link/references/protocol/vaults/overview",
+      "title": "Overview - Relay",
+      "retrieved_at": "2026-10-29T08:51:46.709Z",
+      "start_index": null,
+      "phase": "candidate6_extension",
+      "response_truncated": false,
+      "next_start_index": null,
+      "error": null,
+      "fetched_markdown_sha256": "290d33b3342d72b3fbc0df310464af147c387596f4e23666e72d3a79e05dc1e3",
+      "main_body_sha256": "999a171b9c8092b18e4c5778fee2b43616d24ed42351455b3c88ffd673fd83db",
+      "reading_note": "Full relevant substantive page body read; not a market-data or deployment audit."
+    }
+  ],
+  "searches": [
+    {
+      "id": "resolve-bridge-docs",
+      "phase": "original_discovery",
+      "retrieved_at": "2026-10-29T08:45:01.033Z",
+      "arguments": {
+        "query": "Where are the current official Superbridge bridging and Scroll bridge documentation pages, and what withdrawal process do they document?",
+        "searchQueries": [
+          "site:docs.superbridge.app bridging withdrawals",
+          "site:docs.scroll.io bridge withdrawals 2026"
+        ],
+        "count": 6
+      },
+      "results": [
+        {
+          "title": "Withdrawals | Superbridge Docs",
+          "url": "https://docs.superbridge.app/arbitrum/withdrawals",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Bridging - Superbridge Docs",
+          "url": "https://docs.superbridge.app/overview/bridging",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Welcome | Superbridge Docs",
+          "url": "https://docs.superbridge.app/",
+          "reported_publication_date": null
+        },
+        {
+          "title": "ETH and ERC20 Token Bridge | Scroll Documentation",
+          "url": "https://docs.scroll.io/en/developers/l1-and-l2-bridging/eth-and-erc20-token-bridge/",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Bridge ERC20 through the Custom Gateway | Scroll Documentation",
+          "url": "https://docs.scroll.io/en/developers/guides/bridge-erc20-through-the-custom-gateway",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Withdraw Gateways | Scroll Documentation",
+          "url": "https://docs.scroll.io/en/technology/bridge/withdraw-gateways",
+          "reported_publication_date": null
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "resolve-context-papers",
+      "phase": "original_discovery",
+      "retrieved_at": "2026-10-29T08:45:01.033Z",
+      "arguments": {
+        "query": "Find primary or author-hosted versions of Centralization in Block-Building and Proposer-Builder Separation by Bahrani Garimidi Roughgarden, Price of MEV by Mazorra Reynolds Daza, and A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain by Öz.",
+        "searchQueries": [
+          "Bahrani Garimidi Roughgarden centralization block building",
+          "Mazorra Reynolds Daza Price MEV",
+          "Öz first come first served blockchain MEV"
+        ],
+        "count": 7
+      },
+      "results": [
+        {
+          "title": "A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain | Proceedings of the 39th ACM/SIGAPP Symposium on Applied Computing",
+          "url": "https://dl.acm.org/doi/abs/10.1145/3605098.3635990",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Centralization in Block-Building and Proposer-Builder Separation | Financial Cryptography and Data Security",
+          "url": "https://dl.acm.org/doi/10.1007/978-3-031-78676-1_19",
+          "reported_publication_date": null
+        },
+        {
+          "title": "A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain | Proceedings of the 39th ACM/SIGAPP Symposium on Applied Computing",
+          "url": "https://dl.acm.org/doi/10.1145/3605098.3635990",
+          "reported_publication_date": null
+        },
+        {
+          "title": "[PDF] Centralization in Block-Building and Proposer-Builder Separation",
+          "url": "https://fc24.ifca.ai/preproceedings/185.pdf",
+          "reported_publication_date": null
+        },
+        {
+          "title": "[2308.06513] A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain",
+          "url": "https://arxiv.org/abs/2308.06513",
+          "reported_publication_date": null
+        },
+        {
+          "title": "A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain",
+          "url": "https://arxiv.org/html/2308.06513v3",
+          "reported_publication_date": null
+        },
+        {
+          "title": "A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain",
+          "url": "https://arxiv.org/pdf/2308.06513",
+          "reported_publication_date": null
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "recent-settlement",
+      "phase": "original_discovery",
+      "retrieved_at": "2026-10-29T08:45:01.033Z",
+      "arguments": {
+        "query": "What actual mainnet bridge redemption, fast finality, or native inventory settlement changes were deployed from October 29 2025 through October 29 2026 for NEAR Omni Bridge, Circle CCTP or rollup withdrawals?",
+        "searchQueries": [
+          "NEAR Omni Bridge 2026 Solana deployed",
+          "Circle CCTP 2026 new chains fast transfers",
+          "rollup withdrawal 2026 mainnet upgrade"
+        ],
+        "count": 9,
+        "isTextExtended": true
+      },
+      "results": [
+        {
+          "title": "Commits · Near-One/omni-bridge · GitHub",
+          "url": "https://github.com/Near-One/omni-bridge/commits/main",
+          "reported_publication_date": null
+        },
+        {
+          "title": "CCTP (Cross-Chain Transfer Protocol) | Circle",
+          "url": "https://www.circle.com/cross-chain-transfer-protocol",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Alpenglow is Live on Solana: The World's Fastest Finality on a Global Network",
+          "url": "https://www.prnewswire.com/news-releases/alpenglow-is-live-on-solana-the-worlds-fastest-finality-on-a-global-network-302915579.html",
+          "reported_publication_date": "2026-10-21"
+        },
+        {
+          "title": "Omni Bridge Overview",
+          "url": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+          "reported_publication_date": null
+        },
+        {
+          "title": "CCTP V2: Delivering Secure Cross-Chain USDC Transfers | Circle",
+          "url": "https://www.circle.com/blog/cctp-v2-the-future-of-cross-chain",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Solana Cuts Transaction Finality to 150 Milliseconds With Alpenglow - Startup Fortune",
+          "url": "https://startupfortune.com/solana-cuts-transaction-finality-to-150-milliseconds-with-alpenglow/",
+          "reported_publication_date": "2026-10-20"
+        },
+        {
+          "title": "Solana Completes 'Alpenglow' Mainnet Upgrade, Targets 0.15-Second Transaction Finality",
+          "url": "https://en.bloomingbit.io/feed/news/122723",
+          "reported_publication_date": "2026-10-22"
+        },
+        {
+          "title": "Solana Sets Alpenglow Mainnet Activation for Oct. 21, 2026 | TokenPost",
+          "url": "https://www.tokenpost.com/news/technology/34321",
+          "reported_publication_date": "2026-10-18"
+        },
+        {
+          "title": "Solana’s Alpenglow Upgrade Goes Live, Promising 99% Faster Finality",
+          "url": "https://news.bitcoin.com/technology/solana-alpenglow-upgrade-live-promising-99-faster-finality/",
+          "reported_publication_date": "2026-10-21"
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "resolve-mev-and-new-claims",
+      "phase": "original_discovery",
+      "retrieved_at": "2026-10-29T08:45:54.474Z",
+      "arguments": {
+        "query": "Where are the primary paper Price of MEV: Towards a Game Theoretical Approach to MEV by Mazorra Reynolds Daza and official dated 2026 Circle cirBTC CCTP deployment announcements?",
+        "searchQueries": [
+          "Mazorra Reynolds Daza Price of MEV paper",
+          "site:circle.com cirBTC launch 2026",
+          "site:near.org Omni Bridge mainnet 2026"
+        ],
+        "count": 8,
+        "isTextExtended": true
+      },
+      "results": [
+        {
+          "title": "Author: Bruno Mazorra - arXiv.gg",
+          "url": "http://arxiv.gg/author/Bruno%20Mazorra",
+          "reported_publication_date": null
+        },
+        {
+          "title": "cirBTC overview",
+          "url": "https://developers.circle.com/assets/what-is-cirbtc",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Circle Launches Arc Mainnet, an Economic OS for the Internet | Circle",
+          "url": "https://www.circle.com/pressroom/circle-launches-arc-mainnet-an-economic-operating-system-for-the-internet",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Publications - Vanesa Daza (UPF)",
+          "url": "https://www.upf.edu/web/vanesa-daza/publications",
+          "reported_publication_date": null
+        },
+        {
+          "title": "cirBTC Is Live on Ethereum for Wrapped BTC Deployment | Circle",
+          "url": "https://www.circle.com/blog/cirbtc-is-now-live-on-ethereum",
+          "reported_publication_date": "2026-06-08"
+        },
+        {
+          "title": "Price of MEV: Towards a Game Theoretical Approach to MEV",
+          "url": "https://arxiv.org/html/2208.13464v1",
+          "reported_publication_date": null
+        },
+        {
+          "title": "[2208.13464] Price of MEV: Towards a Game Theoretical Approach to MEV",
+          "url": "https://arxiv.org/abs/2208.13464",
+          "reported_publication_date": "2022-08-29"
+        },
+        {
+          "title": "Release notes - Mint - 2026",
+          "url": "https://developers.circle.com/release-notes/mint-2026",
+          "reported_publication_date": null
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "R066-and-new-related",
+      "phase": "original_discovery",
+      "retrieved_at": "2026-10-29T08:46:35.103Z",
+      "arguments": {
+        "query": "Find the primary arXiv version of Cyclic Arbitrage in Decentralized Exchanges by Ye Wang Yan Chen Haotian Wu Liyi Zhou Shuiguang Deng Roger Wattenhofer, and recent 2025-2026 research that cites Cross-Chain Arbitrage The Next Frontier of MEV 2501.17335.",
+        "searchQueries": [
+          "Wang Chen Wu cyclic arbitrage decentralized exchanges arxiv",
+          "\"2501.17335\" \"2026\" inventory borrowing",
+          "\"2501.17335\" \"2025\" settlement latency"
+        ],
+        "count": 7,
+        "isTextExtended": true
+      },
+      "results": [
+        {
+          "title": "[2501.17335] Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://arxiv.org/abs/2501.17335",
+          "reported_publication_date": "2025-01-28"
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3771566",
+          "reported_publication_date": "2025-11-07"
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://arxiv.org/html/2501.17335",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://arxiv.org/html/2501.17335v2",
+          "reported_publication_date": null
+        },
+        {
+          "title": "[2501.17335v2] Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://arxiv.org/abs/2501.17335v2",
+          "reported_publication_date": "2025-01-28"
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://arxiv.org/pdf/2501.17335",
+          "reported_publication_date": "2025-06-19"
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://arxiv.org/pdf/2501.17335v2",
+          "reported_publication_date": "2025-06-19"
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "newer-related-check",
+      "phase": "original_discovery",
+      "retrieved_at": "2026-10-29T08:47:17.017Z",
+      "arguments": {
+        "query": "Which papers published after June 2025 provide newer empirical or theoretical results on cross-chain inventory arbitrage, delayed settlement, and borrowing to replace inventory rather than simply republishing arXiv 2501.17335?",
+        "searchQueries": [
+          "cross chain arbitrage borrowing inventory 2026 paper",
+          "cross chain settlement latency arbitrage 2026",
+          "\"2501.17335\" \"cited\""
+        ],
+        "count": 7,
+        "isTextExtended": true
+      },
+      "results": [
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance | ACM SIGMETRICS Performance Evaluation Review",
+          "url": "https://dl.acm.org/doi/10.1145/3820171.3806898",
+          "reported_publication_date": "2026-06-08"
+        },
+        {
+          "title": "When AI Agents Meet MEV:Cross-Chain Arbitrage in the Agentic Economy",
+          "url": "https://arxiv.org/html/2609.17897v1",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3820171.3806898",
+          "reported_publication_date": "2026-04-17"
+        },
+        {
+          "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance | Proceedings of the ACM on Measurement and Analysis of Computing Systems",
+          "url": "https://dl.acm.org/doi/10.1145/3771566",
+          "reported_publication_date": "2025-12-02"
+        },
+        {
+          "title": "Cross-Chain MEV: How Bots Extract Value When You Move Between Chains - CoW DAO",
+          "url": "https://cow.fi/learn/cross-chain-mev-how-bots-extract-value-when-you-move-between-chains",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Signals and Spoils: Speculative Oracle Extractable Value in the Era of Cross-Chain Interoperability",
+          "url": "https://arxiv.org/pdf/2606.03434",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Bunny Hops and Blockchain Stops: Cross-Chain MEV Detection With N-Hops",
+          "url": "https://arxiv.org/pdf/2511.17527",
+          "reported_publication_date": null
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "candidate6-relay-access",
+      "phase": "candidate6_extension",
+      "retrieved_at": "2026-10-29T08:51:32.201Z",
+      "arguments": {
+        "query": "Relay protocol solver admission, capital inventory and repayment model official docs",
+        "searchQueries": [
+          "site.docs.relay.link relayer permissionless solver liquidity inventory repayment",
+          "site:docs.relay.link solvers permissioned relayers whitelist",
+          "site:relay.link 2026 solver liquidity relayer"
+        ],
+        "count": 6,
+        "isTextExtended": true
+      },
+      "results": [
+        {
+          "title": "For Solvers - Relay Docs",
+          "url": "https://docs.relay.link/references/protocol/guides/for-solvers",
+          "reported_publication_date": null
+        },
+        {
+          "title": "For Solvers",
+          "url": "https://docs.relay.link/references/protocol/guides/for-solvers.md",
+          "reported_publication_date": null
+        },
+        {
+          "title": "How It Works",
+          "url": "https://docs.relay.link/references/protocol/how-it-works.md",
+          "reported_publication_date": null
+        },
+        {
+          "title": "How Relay Works",
+          "url": "https://docs.relay.link/how-relay-works",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Overview - Relay Docs",
+          "url": "https://docs.relay.link/references/protocol/vaults/overview",
+          "reported_publication_date": null
+        },
+        {
+          "title": "The Relay Protocol - Relay",
+          "url": "https://docs.relay.link/references/protocol",
+          "reported_publication_date": null
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    },
+    {
+      "id": "candidate6-across-current",
+      "phase": "candidate6_extension",
+      "retrieved_at": "2026-10-29T08:51:32.201Z",
+      "arguments": {
+        "query": "Across protocol 2026 changes and refund beneficiary repayment-chain inventory management",
+        "searchQueries": [
+          "site:docs.across.to repayment chain refund relayer origin chain fees",
+          "site:across.to 2026 V4 relayer inventory protocol upgrade",
+          "site:docs.across.to exclusivity relayer nomination permission"
+        ],
+        "count": 6,
+        "isTextExtended": true
+      },
+      "results": [
+        {
+          "title": "Running a Relayer | Across Docs",
+          "url": "https://docs.across.to/introduction/relayers/running-relayer",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Fees in the System | Across Docs",
+          "url": "https://docs.across.to/introduction/fees",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Relayer Nomination | Across Docs",
+          "url": "https://docs.across.to/introduction/relayers/relayer-nomination",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Actors in the System | Across Docs",
+          "url": "https://docs.across.to/introduction/actors",
+          "reported_publication_date": null
+        },
+        {
+          "title": "Intent Architecture in Across | Across Docs",
+          "url": "https://docs.across.to/guides/concepts/intents-architecture",
+          "reported_publication_date": null
+        },
+        {
+          "title": "What Happens When You Bridge?",
+          "url": "https://across.to/blog/what-happens-when-you-bridge",
+          "reported_publication_date": null
+        }
+      ],
+      "reading_note": "Search metadata/snippets are not full reads or independent verification of underlying claims."
+    }
+  ]
+}

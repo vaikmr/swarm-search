@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "workstream": "settlement",
+  "as_of_date": "2026-10-29",
+  "instrument_change_window": {
+    "start": "2025-10-29",
+    "end": "2026-10-29"
+  },
+  "evidence_scope": "Mechanism documentation and historical paper observations only; no current executable quote, fresh RPC, claimant ownership ledger, entrant allocation or T2/T3 return proof.",
+  "coverage": {
+    "assigned_references_triaged": 9,
+    "priority_topics_with_full_original_or_replacement_main_text": 4,
+    "exact_priority_originals_fully_read": 1,
+    "current_priority_replacement_bodies_fully_read": 3,
+    "distinct_full_main_texts": 16,
+    "full_main_text_count_definition": "Four priority topic bodies plus seven supplementary and five distinct candidate6 bodies; excludes unrelated FAQ, duplicates, seed sections, abstracts and search metadata.",
+    "full_original_seed_paper_read": false,
+    "nonpriority_abstracts_read": 2,
+    "nonpriority_search_snippet_only": 1,
+    "nonpriority_inventory_context_only": 2,
+    "original_document_fetch_attempts": 20,
+    "candidate6_document_fetch_attempts": 6,
+    "original_search_calls": 6,
+    "candidate6_search_calls": 2,
+    "new_rpc_calls": 0
+  },
+  "assigned_references": [
+    {
+      "id": "R008",
+      "priority": true,
+      "title": "Quickstart: Arbitrum Bridge",
+      "authors_and_citation": "Arbitrum Docs (2025b)\nArbitrum Docs. 2025b.\n\n_Quickstart: Arbitrum Bridge \\| Arbitrum Docs_.\n\nURL: [https://docs.arbitrum.io/arbitrum-bridge/quickstart](https://docs.arbitrum.io/arbitrum-bridge/quickstart \"\").",
+      "original_url": "https://docs.arbitrum.io/arbitrum-bridge/quickstart",
+      "original_urls": [
+        "https://docs.arbitrum.io/arbitrum-bridge/quickstart"
+      ],
+      "read_url": "https://docs.arbitrum.io/arbitrum-bridge/quickstart",
+      "resolved_title": "Quickstart: Arbitrum bridge",
+      "access_status": "retrieved",
+      "reading_status": "full_exact_cited_main_text",
+      "exact_original_fully_read": true,
+      "replacement_main_text_fully_read": false,
+      "original_access_status": null,
+      "publication_date": null,
+      "publication_year_from_citation": 2025,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": "2026-10-29T08:44:16.941Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "Asymmetric deposit/withdrawal, gas and separate claim; documentation estimates not measured lock-time distribution.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-BASIS"
+      ]
+    },
+    {
+      "id": "R010",
+      "priority": false,
+      "title": "Centralization in Block-Building and Proposer-Builder Separation",
+      "authors_and_citation": "Bahrani et al. (2025)\nMaryam Bahrani, Pranav Garimidi, and Tim Roughgarden. 2025.\n\nCentralization in Block-Building and Proposer-Builder Separation. In _Financial Cryptography and Data Security_, Jeremy Clark and Elaine Shi (Eds.). Springer Nature Switzerland, Cham, 331–349.",
+      "original_url": null,
+      "original_urls": [],
+      "read_url": "https://fc24.ifca.ai/preproceedings/185.pdf",
+      "resolved_title": null,
+      "access_status": "primary_url_resolved_not_fetched",
+      "reading_status": "search_snippet_and_citation_metadata_only",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": false,
+      "original_access_status": null,
+      "publication_date": null,
+      "publication_year_from_citation": 2025,
+      "date_notes": "Seed cites Springer publication in2025; resolved preproceedings URL is FC2024. No precise publication day or empirical window verified.",
+      "retrieval_date": null,
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "research paper, primary conference PDF resolved",
+      "relevance": "Ordering/flow concentration context; no credit or settlement instrument inferred from unread body.",
+      "mechanism_ids": [
+        "SET-C6"
+      ]
+    },
+    {
+      "id": "R021",
+      "priority": false,
+      "title": "Aerodrome Volume - DefiLlama",
+      "authors_and_citation": "DefiLlama (2025a)\nDefiLlama. 2025a.\n\n_Aerodrome Volume - DefiLlama_.\n\nURL: [https://defillama.com/dexs/aerodrome](https://defillama.com/dexs/aerodrome \"\").",
+      "original_url": "https://defillama.com/dexs/aerodrome",
+      "original_urls": [
+        "https://defillama.com/dexs/aerodrome"
+      ],
+      "read_url": null,
+      "resolved_title": null,
+      "access_status": "not_fetched",
+      "reading_status": "inventory_metadata_and_seed_context_only",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": false,
+      "original_access_status": null,
+      "publication_date": null,
+      "publication_year_from_citation": 2025,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": null,
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "public DEX-volume dashboard, not fetched",
+      "relevance": "Volume can contextualize venue activity, not entrant fills, net margin or currently available liquidity.",
+      "mechanism_ids": [
+        "SET-C6"
+      ]
+    },
+    {
+      "id": "R040",
+      "priority": false,
+      "title": "Price of MEV: Towards a Game Theoretical Approach to MEV",
+      "authors_and_citation": "Mazorra et al. (2022)\nBruno Mazorra, Michael Reynolds, and Vanesa Daza. 2022.\n\nPrice of MEV: Towards a Game Theoretical Approach to MEV.\n\n_Proceedings of the 2022 ACM CCS Workshop on Decentralized Finance and Security_ (2022).\n\n[https://api.semanticscholar.org/CorpusID:251903953](https://api.semanticscholar.org/CorpusID:251903953 \"\")",
+      "original_url": "https://api.semanticscholar.org/CorpusID:251903953",
+      "original_urls": [
+        "https://api.semanticscholar.org/CorpusID:251903953"
+      ],
+      "read_url": "https://arxiv.org/abs/2208.13464",
+      "resolved_title": "[2208.13464] Price of MEV: Towards a Game Theoretical Approach to MEV",
+      "access_status": "retrieved",
+      "reading_status": "abstract_only_not_full_paper",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": false,
+      "original_access_status": null,
+      "publication_date": "2022-08-29",
+      "publication_year_from_citation": 2022,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": "2026-10-29T08:46:35.103Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "research paper abstract",
+      "relevance": "Theoretical ordering/MEV-game context. Attack content excluded; no live return or cross-chain replication claim.",
+      "mechanism_ids": [
+        "SET-C6"
+      ]
+    },
+    {
+      "id": "R049",
+      "priority": true,
+      "title": "Using the Standard Bridge",
+      "authors_and_citation": "Optimism Docs (2025a)\nOptimism Docs. 2025a.\n\n_Using the Standard Bridge \\| Optimism Docs_.\n\nURL: [https://docs.optimism.io/builders/app-developers/bridging/standard-bridge](https://docs.optimism.io/builders/app-developers/bridging/standard-bridge \"\").",
+      "original_url": "https://docs.optimism.io/builders/app-developers/bridging/standard-bridge",
+      "original_urls": [
+        "https://docs.optimism.io/builders/app-developers/bridging/standard-bridge"
+      ],
+      "read_url": "https://docs.optimism.io/app-developers/guides/bridging/standard-bridge",
+      "resolved_title": "Optimism Documentation",
+      "access_status": "retrieved",
+      "reading_status": "full_current_replacement_main_text_original_not_found",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": true,
+      "original_access_status": "Not Found page",
+      "publication_date": null,
+      "publication_year_from_citation": 2025,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": "2026-10-29T08:45:01.033Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation, current replacement URL",
+      "relevance": "Token-pair accounting, independent bridged representations and unsupported fee/rebase semantics constrain repayment equivalence.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-BASIS"
+      ]
+    },
+    {
+      "id": "R052",
+      "priority": false,
+      "title": "A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain",
+      "authors_and_citation": "Öz et al. (2024a)\nBurak Öz, Filip Rezabek, Jonas Gebele, Felix Hoops, and Florian Matthes. 2024a.\n\nA Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain. In _Proceedings of the 39th ACM/SIGAPP Symposium on Applied Computing_ (Avila, Spain) _(SAC ’24)_. Association for Computing Machinery, New York, NY, USA, 288–297.\n\n[doi:10.1145/3605098.3635990](https://doi.org/10.1145/3605098.3635990 \"\")",
+      "original_url": "https://doi.org/10.1145/3605098.3635990",
+      "original_urls": [
+        "https://doi.org/10.1145/3605098.3635990"
+      ],
+      "read_url": "https://arxiv.org/abs/2308.06513",
+      "resolved_title": "[2308.06513] A Study of MEV Extraction Techniques on a First-Come-First-Served Blockchain",
+      "access_status": "retrieved",
+      "reading_status": "abstract_only_not_full_paper",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": false,
+      "original_access_status": null,
+      "publication_date": "2023-08-12",
+      "publication_year_from_citation": 2024,
+      "date_notes": "First arXiv preprint2023-08-12, abstract page lists2024-01-15 revision; seed publication citation is SAC2024. Data window not read.",
+      "retrieval_date": "2026-10-29T08:46:35.103Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "research paper abstract",
+      "relevance": "Algorand FCFS context warns against assuming EVM gas-auction ordering. Attack techniques excluded from hypotheses.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-NEAR"
+      ]
+    },
+    {
+      "id": "R058",
+      "priority": true,
+      "title": "Bridge (cited); Withdraw Gateways (replacement read)",
+      "authors_and_citation": "Scroll Docs (2025)\nScroll Docs. 2025.\n\n_Bridge \\| Scroll Documentation_.\n\nURL: [https://docs.scroll.io/en/user-guide/bridge](https://docs.scroll.io/en/user-guide/bridge \"\").",
+      "original_url": "https://docs.scroll.io/en/user-guide/bridge",
+      "original_urls": [
+        "https://docs.scroll.io/en/user-guide/bridge"
+      ],
+      "read_url": "https://docs.scroll.io/en/technology/bridge/withdraw-gateways",
+      "resolved_title": "Withdraw Gateways | Scroll Documentation",
+      "access_status": "retrieved",
+      "reading_status": "full_replacement_withdrawal_page_original_content_unrecovered",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": true,
+      "original_access_status": "Old URL serves Community FAQ, not cited Bridge page",
+      "publication_date": null,
+      "publication_year_from_citation": 2025,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": "2026-10-29T08:45:25.754Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation, narrower replacement page",
+      "relevance": "Finalized root, proof and later claim execution; no numeric delay or assignable withdrawal claim established.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-BASIS"
+      ]
+    },
+    {
+      "id": "R059",
+      "priority": true,
+      "title": "What is bridging? (cited); Bridging (current overview)",
+      "authors_and_citation": "Superbridge Docs (2025)\nSuperbridge Docs. 2025.\n\n_What is bridging? \\| Superbridge Docs_.\n\nURL: [https://docs.superbridge.app/what-is-bridging](https://docs.superbridge.app/what-is-bridging \"\").",
+      "original_url": "https://docs.superbridge.app/what-is-bridging",
+      "original_urls": [
+        "https://docs.superbridge.app/what-is-bridging"
+      ],
+      "read_url": "https://docs.superbridge.app/overview/bridging",
+      "resolved_title": "Bridging - Superbridge Docs",
+      "access_status": "retrieved",
+      "reading_status": "full_current_replacement_main_text_original_not_found",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": true,
+      "original_access_status": "Not Found; stale supplemental withdrawal URL also unavailable",
+      "publication_date": null,
+      "publication_year_from_citation": 2025,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": "2026-10-29T08:45:25.754Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official aggregator documentation, replacement overview",
+      "relevance": "Current canonical/third-party/solver aggregation is not a new independent settlement failure domain or a uniform bridge timing.",
+      "mechanism_ids": [
+        "SET-C6"
+      ]
+    },
+    {
+      "id": "R066",
+      "priority": false,
+      "title": "Cyclic Arbitrage in Decentralized Exchanges",
+      "authors_and_citation": "Wang et al. (2022)\nYe Wang, Yan Chen, Haotian Wu, Liyi Zhou, Shuiguang Deng, and Roger Wattenhofer. 2022.\n\nCyclic Arbitrage in Decentralized Exchanges. In _Companion Proceedings of the Web Conference 2022_ (Virtual Event, Lyon, France) _(WWW ’22)_. Association for Computing Machinery, New York, NY, USA, 12–19.\n\n[doi:10.1145/3487553.3524201](https://doi.org/10.1145/3487553.3524201 \"\")",
+      "original_url": "https://doi.org/10.1145/3487553.3524201",
+      "original_urls": [
+        "https://doi.org/10.1145/3487553.3524201"
+      ],
+      "read_url": null,
+      "resolved_title": null,
+      "access_status": "not_fetched",
+      "reading_status": "inventory_metadata_and_seed_context_only",
+      "exact_original_fully_read": false,
+      "replacement_main_text_fully_read": false,
+      "original_access_status": null,
+      "publication_date": null,
+      "publication_year_from_citation": 2022,
+      "date_notes": "Bibliography citation year is not a measured data window or verified page publication date.",
+      "retrieval_date": null,
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "research paper citation metadata",
+      "relevance": "Same-chain atomic cycle background cannot establish asynchronous claim equivalence or completed debt repayment; full paper not read.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-BASIS"
+      ]
+    }
+  ],
+  "supplementary_sources": [
+    {
+      "id": "SEED",
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance, v2",
+      "url": "https://arxiv.org/html/2501.17335v2#A7",
+      "requested_fetch_id": "SEED",
+      "access_status": "retrieved",
+      "reading_status": "selected_sections_and_full_appendix_G_not_full_paper",
+      "publication_date": "2025-06-18",
+      "retrieval_date": "2026-10-29T08:45:01.033Z",
+      "triage_date": "2026-10-29",
+      "data_window": {
+        "start": "2023-09",
+        "end": "2024-08"
+      },
+      "source_type": "empirical research paper",
+      "relevance": "Historical loan-backed non-atomic inventory replacement, inventory-first bridge rebalancing and limitations of reported arbitrage economics.",
+      "mechanism_ids": [
+        "SET-LOAN",
+        "SET-C6"
+      ],
+      "notes": "Three fetch chunks are one source. AppendixG transaction links are paper-reported, not newly checked.",
+      "transaction_references": [
+        "https://etherscan.io/tx/0xf9dac896022ab70b8831e4a0139b97738180bf1605f216400f66bb0957f9208a",
+        "https://etherscan.io/tx/0x452a9c05cc02fe146ce13a788456f02bf68c83ee3d6a57c0402ccfd8c5108903",
+        "https://arbiscan.io/tx/0xf7e5f28d391c2dee5f982fd27f8caf6fc250acd54ebe3d06ace25ac2a85feeff",
+        "https://arbiscan.io/tx/0xdd45995d12a9404a667c13ec0ab014b927abeea3cf9cd650a5e8e63845c7972f",
+        "https://arbiscan.io/tx/0x7015f3ceff63cc5e4c2e7abffe3ed6c1d21da6b3305724ed1c9177e50cf411bf",
+        "https://arbiscan.io/tx/0x798b5371e00f8a0d5dd7471aa36488e490f853004e638b547f272013b19db935"
+      ]
+    },
+    {
+      "id": "S-ARB-USDC",
+      "title": "USDC on Arbitrum One",
+      "url": "https://docs.arbitrum.io/arbitrum-bridge/usdc-arbitrum-one",
+      "requested_fetch_id": "R008-USDC",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:45:54.474Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official token/bridge documentation",
+      "relevance": "Exact native versus canonical USDC.e identity; distinct return paths and no proof of user Mint redemption rights.",
+      "mechanism_ids": [
+        "SET-BASIS",
+        "SET-C6"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "S-NEAR-OVERVIEW",
+      "title": "Omni Bridge Overview - NEAR Docs",
+      "url": "https://docs.near.org/chain-abstraction/omnibridge/overview",
+      "requested_fetch_id": "N-NEAR",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:45:25.754Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "omni.bridge.near and heterogeneous chain-specific verification, not uniform security or dated deployment proof.",
+      "mechanism_ids": [
+        "SET-NEAR"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "S-NEAR-FLOW",
+      "title": "How Omni Bridge Works - NEAR Docs",
+      "url": "https://docs.near.org/chain-abstraction/omnibridge/how-it-works",
+      "requested_fetch_id": "N-NEAR-flow",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:46:35.103Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "NEAR lock/burn, signature and destination mint/release; local callback atomicity is not cross-chain rollback.",
+      "mechanism_ids": [
+        "SET-NEAR"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "S-CCTP",
+      "title": "CCTP (Cross-Chain Transfer Protocol) | Circle",
+      "url": "https://www.circle.com/cross-chain-transfer-protocol",
+      "requested_fetch_id": "N-CCTP",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:45:25.754Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official product page",
+      "relevance": "Fast/standard native-transfer and wrapping claims; product fee statements need deployment-specific reconciliation; future legacy phaseout is not complete asofcutoff.",
+      "mechanism_ids": [
+        "SET-BASIS",
+        "SET-C6"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "S-CIRCLE2026",
+      "title": "Release notes - Mint - 2026 - Circle Docs",
+      "url": "https://developers.circle.com/release-notes/mint-2026",
+      "requested_fetch_id": "N-Circle2026",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:46:35.103Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official dated release notes",
+      "relevance": "Recent provider-recorded credit, cirBTC, Arc, Match and redemption-advance instruments, not user access or onchain performance.",
+      "mechanism_ids": [
+        "SET-CREDIT",
+        "SET-C6",
+        "SET-LOAN"
+      ],
+      "notes": "Response truncated only after complete substantive release-note body into site runtime metadata.",
+      "documented_release_events": [
+        {
+          "date": "2026-04-01",
+          "event": "Credit API launched"
+        },
+        {
+          "date": "2026-05-12",
+          "event": "cirBTC API support on Ethereum"
+        },
+        {
+          "date": "2026-09-16",
+          "event": "Digital Asset-Backed Borrowing launched and Arc mainnet supported"
+        },
+        {
+          "date": "2026-09-28",
+          "event": "Circle Match launched for eligible Mint customers"
+        },
+        {
+          "date": "2026-10-19",
+          "event": "RWA Redemption Advance added"
+        }
+      ]
+    },
+    {
+      "id": "S-CREDIT",
+      "title": "Credit API - Circle Docs",
+      "url": "https://developers.circle.com/circle-mint/concepts/credit-api",
+      "requested_fetch_id": "N-Credit",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:47:17.017Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official credit facility documentation",
+      "relevance": "Contractual entitlement, Treasury approval, actual disbursement, minimum balance, recurring/draw fees and separate Credit Express delivery lifecycle.",
+      "mechanism_ids": [
+        "SET-CREDIT",
+        "SET-LOAN",
+        "SET-C6"
+      ],
+      "notes": "Complete substantive body read before truncated runtime metadata. No credit contract, user entitlement or numeric offered rates obtained."
+    },
+    {
+      "id": "S-CCTP-FEES",
+      "title": "CCTP fees - Circle Docs",
+      "url": "https://developers.circle.com/cctp/concepts/fees",
+      "requested_fetch_id": "N-CCTP-fees",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:47:17.017Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol fee documentation",
+      "relevance": "Fast/standard route-dependent fee, fee-switch/version conditions and source inconsistency about maxFee failure behavior; no current fee API call or hardcoded guarantee.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-BASIS"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "C6-ACROSS-FEES",
+      "title": "Fees in the System | Across Docs",
+      "url": "https://docs.across.to/introduction/fees",
+      "requested_fetch_id": "C6-ACROSS-FEES",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:51:32.201Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "Input-output spread is total LP+relayer fee, origin repayment zero LP fee, optional app fee belongs to destination appFeeRecipient; no independent double revenue.",
+      "mechanism_ids": [
+        "SET-C6"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "C6-ACROSS-NOMINATION",
+      "title": "Relayer Nomination | Across Docs",
+      "url": "https://docs.across.to/introduction/relayers/relayer-nomination",
+      "requested_fetch_id": "C6-ACROSS-NOMINATION",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:51:32.201Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "Exclusive deadline/open fallback, application and track record; still contains old Q1-Q22025 rollout text and upgrade banner, not verified current entrant allocation.",
+      "mechanism_ids": [
+        "SET-C6"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "C6-ACROSS-LIFECYCLE",
+      "title": "Intent Lifecycle in Across | Across Docs",
+      "url": "https://docs.across.to/concepts/intent-lifecycle-in-across",
+      "requested_fetch_id": "C6-ACROSS-LIFECYCLE",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:51:46.709Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "Destination fronting, repayment-chain choice and validation/bundle/challenge/canonical-root/payment chain; cadence not capital-lock upper bound.",
+      "mechanism_ids": [
+        "SET-C6"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "C6-RELAY-HOW",
+      "title": "How It Works - Relay",
+      "url": "https://docs.relay.link/references/protocol/how-it-works",
+      "requested_fetch_id": "C6-RELAY-HOW",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:51:46.709Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol documentation",
+      "relevance": "Per-order Hub credit and separate Oracle/MPC/Depository withdrawal; external quoting/distribution; extra RelayChain/Aurora dependencies; solver access not established.",
+      "mechanism_ids": [
+        "SET-C6"
+      ],
+      "notes": "for-solvers URL resolves to this same body. Count once; no independent access-guide content. Complete substantive body read before runtime truncation.",
+      "duplicate_requested_url": "https://docs.relay.link/references/protocol/guides/for-solvers"
+    },
+    {
+      "id": "C6-RELAY-VAULTS",
+      "title": "Overview - Relay",
+      "url": "https://docs.relay.link/references/protocol/vaults/overview",
+      "requested_fetch_id": "C6-RELAY-VAULTS",
+      "access_status": "retrieved",
+      "reading_status": "full_substantive_main_text_runtime_metadata_excluded",
+      "publication_date": null,
+      "retrieval_date": "2026-10-29T08:51:46.709Z",
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "official protocol status and historical mechanism documentation",
+      "relevance": "New deposits no longer supported; historical solver-rebalance/base/boost yield description not a new entrant product.",
+      "mechanism_ids": [
+        "SET-C6"
+      ],
+      "notes": "Existing-position UI withdrawal available until2026-12-31; actual start of winddown not dated on page."
+    },
+    {
+      "id": "S-RELATED-AI",
+      "title": "When AI Agents Meet MEV: Cross-Chain Arbitrage in the Agentic Economy",
+      "url": "https://arxiv.org/html/2609.17897v1",
+      "requested_fetch_id": null,
+      "access_status": "not_fetched_search_metadata_only",
+      "reading_status": "search_result_only_not_full_read",
+      "publication_date": null,
+      "retrieval_date": null,
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "research paper search result",
+      "relevance": "Newer related/citing lead; no independently read data window or return evidence here. Attack content excluded.",
+      "mechanism_ids": [
+        "SET-C6"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "S-RELATED-BUNNY",
+      "title": "Bunny Hops and Blockchain Stops: Cross-Chain MEV Detection With N-Hops",
+      "url": "https://arxiv.org/pdf/2511.17527",
+      "requested_fetch_id": null,
+      "access_status": "not_fetched_search_metadata_only",
+      "reading_status": "search_result_only_not_full_read",
+      "publication_date": null,
+      "retrieval_date": null,
+      "triage_date": "2026-10-29",
+      "data_window": null,
+      "source_type": "research paper search result",
+      "relevance": "Newer multihop sequence-dependent arbitrage detection lead, not a read paper or verified executable opportunity.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-BASIS"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    },
+    {
+      "id": "S-SEED-2026",
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance, SIGMETRICS extended abstract",
+      "url": "https://dl.acm.org/doi/10.1145/3820171.3806898",
+      "requested_fetch_id": null,
+      "access_status": "not_fetched_search_metadata_only",
+      "reading_status": "search_result_only_same_historical_study_not_independent_evidence",
+      "publication_date": "2026-06-08",
+      "retrieval_date": null,
+      "triage_date": "2026-10-29",
+      "data_window": {
+        "start": "2023-09",
+        "end": "2024-08"
+      },
+      "source_type": "publisher search result for related version",
+      "relevance": "Publication inside current window still repeats seed sample and does not establish new market data.",
+      "mechanism_ids": [
+        "SET-C6",
+        "SET-LOAN"
+      ],
+      "notes": "Documentation describes mechanism, not verified deployment state or realized returns."
+    }
+  ]
+}
