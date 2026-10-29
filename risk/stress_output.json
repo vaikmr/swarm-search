@@ -1,0 +1,74 @@
+{
+  "allocation_arithmetic": {
+    "max_onchain_fraction": "0.90",
+    "max_onchain_usd": "45000.00",
+    "min_offchain_usd": "5000.00"
+  },
+  "hypothetical_declared_allocation": {
+    "capital_usd": "50000",
+    "chain_count": 3,
+    "chain_count_breach": false,
+    "domain_breaches": [],
+    "domain_cap_usd": "15000.00",
+    "evidence_tier": "T4",
+    "exposures_usd": {
+      "bridge": {},
+      "cex": {
+        "Venue-D": "5000"
+      },
+      "chain": {
+        "A": "15000",
+        "B": "15000",
+        "C": "15000"
+      },
+      "protocol": {
+        "Lender-A": "15000",
+        "Lender-B": "15000",
+        "Lender-C": "15000"
+      },
+      "shared_dependency": {},
+      "stablecoin": {
+        "Coin-A": "15000",
+        "Coin-B": "15000",
+        "Coin-C": "15000"
+      }
+    },
+    "input_kind": "declared exposures; completeness not verified",
+    "risk_certificate": false
+  },
+  "iid_statistical_illustrations_not_empirical_estimates": {
+    "annual_probability_given_iid_1pct_monthly": 0.11361512828387077,
+    "monthly_probability_given_iid_1pct_annual": 0.0008371773591205889,
+    "upper_bound_at_that_sample_size": 0.00996914679289927,
+    "zero_breach_months_for_one_sided_95pct_upper_bound_below_1pct": 299
+  },
+  "probability_source": "No observed frequency model. Illustrative IID assumptions only.",
+  "purpose": "T4 deterministic arithmetic and hypothetical input fixture; NOT replay or a portfolio recommendation",
+  "risk_certificate": false,
+  "stresses": {
+    "assumed_total_loss_of_hypothetical_15000_bucket": {
+      "annual_kill_gate_established": false,
+      "annual_probability": null,
+      "conditional_loss_usd": "15000",
+      "evidence_tier": "T4",
+      "exceeds_annual_scenario_severity_limit": true,
+      "exceeds_monthly_severity_limit": true,
+      "exposure_usd": "15000",
+      "portfolio_loss_fraction": "0.3",
+      "risk_certificate": false,
+      "severity_fraction": "1"
+    },
+    "source_context_usdc_0_87_mark_applied_to_hypothetical_15000": {
+      "annual_kill_gate_established": false,
+      "annual_probability": null,
+      "conditional_loss_usd": "1950.00",
+      "evidence_tier": "T4",
+      "exceeds_annual_scenario_severity_limit": false,
+      "exceeds_monthly_severity_limit": false,
+      "exposure_usd": "15000",
+      "portfolio_loss_fraction": "0.039",
+      "risk_certificate": false,
+      "severity_fraction": "0.13"
+    }
+  }
+}
