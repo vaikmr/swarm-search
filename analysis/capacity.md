@@ -85,6 +85,13 @@ portfolio; no compliant net lending benchmark is established by this screen.
 
 ## 2. Capture model: separate every restrictive step
 
+**Historical Across follow-up:** the [independent ledger-capacity review](capacity-across-ledger.md)
+checks a source-pinned 14-day OP request manifest and selected decoded witnesses.
+It separates OP destination inventory from mostly Arbitrum repayment choices
+and specifies a finite deposit-to-bundle-to-payment/rebalance matching test.
+Raw-event recounting, measured locks, receivable peaks and entrant share remain
+unknown; the update creates no qualified T1/T2/T3 evidence.
+
 For each candidate, use:
 
 1. **Visible opportunity** at the information and timestamp actually available.

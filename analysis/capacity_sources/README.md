@@ -23,3 +23,22 @@ The margin, lock-duration and polling-workload examples are hypothetical inputs,
 not measured market opportunities. The infrastructure ceiling is a sensitivity
 input, not an invoice or spending authorization. Use the cost accountant's
 period-aligned all-in cost ledger for actual performance.
+
+## Across historical-slice consistency review
+
+`verify_across_ledger.py` checks only committed request/aggregate metadata and
+selected decoded witnesses at immutable scout commit `23d2fd1`. It makes no RPC
+requests and does not independently recount or decode omitted raw event logs.
+`across_crosscheck.json` records source hashes, units, chain-role counts and
+explicitly unknown capacity/profit/lock values. See
+[`../capacity-across-ledger.md`](../capacity-across-ledger.md) for the finite next
+data requirements. `test_across_ledger.py` includes synthetic mutation tests.
+
+From the repository root, with the source commit available (the fetch below
+retrieves committed repository evidence, not new blockchain data):
+
+```sh
+git fetch origin 23d2fd15c1d736b6c8cee4614e82f3d55fc430c4
+python3 analysis/capacity_sources/verify_across_ledger.py > analysis/capacity_sources/across_crosscheck.json
+python3 -m unittest discover -s analysis/capacity_sources -p 'test_*.py' -v
+```
