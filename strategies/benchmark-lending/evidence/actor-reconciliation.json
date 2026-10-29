@@ -1,0 +1,184 @@
+{
+  "status": "OBSERVED_ADDRESS_COMPONENTS_RECONCILED_NOT_FULL_ACTOR_OR_T1",
+  "evidence_label": "Observed partial one-address ledger; nonqualifying for T1, not T2/T3",
+  "actor": "0x56957e411ea83a0b4a0689c1fb0d1e5ea0d20149",
+  "start": {
+    "block": 26196084,
+    "requested_block_tag": "0x18fb874",
+    "returned_block_number": "0x18fb874",
+    "block_hash": "0x15fd2fe9e765bc9daae9b88c16ec42e292bb783fa2c1a00fdaf986a0bdd3446e",
+    "returned_block_timestamp": "0x6ad070cb",
+    "block_time": "2026-10-15T06:20:59+00:00"
+  },
+  "end": {
+    "block": 26296884,
+    "requested_block_tag": "0x1914234",
+    "returned_block_number": "0x1914234",
+    "block_hash": "0x534506ea07ed9fef6d016fb370ea548ff8554e3f33241f481e0ec84de4c08f30",
+    "returned_block_timestamp": "0x6ae2f4cb",
+    "block_time": "2026-10-29T07:24:59+00:00"
+  },
+  "elapsed_days": "14.0444444444444444444444444444444444444444444444444444444444",
+  "scope": "one public address, only verified USDC/aUSDC/native ETH and Aave V3 debt endpoints",
+  "price_basis": "Aave oracle getAssetPrice: reference USD accounting marks at each flow/expense block; not executable spot or realized USD",
+  "usd_equity_components": {
+    "opening": {
+      "USDC_and_aUSDC": "133886491.22298447489216",
+      "native_ETH": "1569.66764508866075932614",
+      "recorded_Aave_debt_base_usd": "0"
+    },
+    "closing": {
+      "USDC_and_aUSDC": "134052497.95141853366646",
+      "native_ETH": "1541.00249541550563229587587238",
+      "recorded_Aave_debt_base_usd": "0"
+    }
+  },
+  "transfers": {
+    "verified_token_logs": 126,
+    "receipt_checked_logs": 126,
+    "normal_transactions": 41,
+    "sender_transactions_with_paid_gas": 39,
+    "internal_transactions": 0,
+    "USDC_external_net_units": "-7664.757399",
+    "USDC_external_net_reference_usd": "-7663.26614764262842",
+    "native_ETH_external_net_units": "3E-8"
+  },
+  "reconciliation": {
+    "USDC_raw_cash_residual": 0,
+    "ETH_wei_residual": 0,
+    "Aave_collateral_base_price_residuals": {
+      "opening": 0,
+      "closing": 0
+    },
+    "scaled_index_balances_match": true,
+    "post_opening_USDC_interest_units": "194463.135111",
+    "closed_segment_post_opening_cash_interest_units": "173998.001186",
+    "unclosed_segment_closing_accrual_units": "20465.133925",
+    "withdrawal_cycles": [
+      {
+        "withdraw_block": 26201229,
+        "tx": "0x6f054925b454dd389cbb8f292d9f82a0c4375f5e9d4fb4cbff93ab52f6c9297e",
+        "cash_withdrawn_usdc": "133912869",
+        "observed_remaining_aUSDC_units": "16.734918",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26208410,
+        "tx": "0x1824afdeba0f304ff41ab11c8d3c5bea7d64fc987be93de8ef552175fa07800e",
+        "cash_withdrawn_usdc": "133926303",
+        "observed_remaining_aUSDC_units": "15.946397",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26215588,
+        "tx": "0xe52dbf25cced24e08055527600d1a86955d1c97d8b8aeebfa8893b45ede785c1",
+        "cash_withdrawn_usdc": "133939000",
+        "observed_remaining_aUSDC_units": "788.397391",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26222772,
+        "tx": "0x44a908d055d460737d9bcdcba84d38c31943ed7d964ebcc491b7a55a9df9bb36",
+        "cash_withdrawn_usdc": "133953248",
+        "observed_remaining_aUSDC_units": "27.529598",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26229930,
+        "tx": "0x7c2e9d341d3375632f962c0ada058b70083063123c66d4e58c834914ffa807d9",
+        "cash_withdrawn_usdc": "133966000",
+        "observed_remaining_aUSDC_units": "775.651565",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26237103,
+        "tx": "0x5c7666c1a47354a4b5c45e60a77456f58c576871098b0c3c00565b2bec9922b1",
+        "cash_withdrawn_usdc": "133980000",
+        "observed_remaining_aUSDC_units": "350.258607",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26244290,
+        "tx": "0xf8725e76e33a50c527ece761e6060a2aa6f4aca2660d87ba4c3325a2be4f63a2",
+        "cash_withdrawn_usdc": "133990000",
+        "observed_remaining_aUSDC_units": "3896.220098",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26251465,
+        "tx": "0xa7516577317261203d049ffab8f4b57c607e1bd53ec5d135a714f59e6a4acb45",
+        "cash_withdrawn_usdc": "134007665.189881",
+        "observed_remaining_aUSDC_units": "0",
+        "completed_segment_cash_interest_usdc": "105019.95111"
+      },
+      {
+        "withdraw_block": 26258638,
+        "tx": "0x8cec38e93794d01241b25aa457a753cd4ea90ca61658440541fce6b21a637c7b",
+        "cash_withdrawn_usdc": "134013854",
+        "observed_remaining_aUSDC_units": "11.669443",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26265831,
+        "tx": "0x5b9e1b4406c023a17e904f4d4544c11ea91a557ebf87f7b3ea70f23f973c2cdb",
+        "cash_withdrawn_usdc": "134028134",
+        "observed_remaining_aUSDC_units": "12.711846",
+        "completed_segment_cash_interest_usdc": null
+      },
+      {
+        "withdraw_block": 26273013,
+        "tx": "0x02c61212bf1f97bd3fb06b06cb0ff99abbdb472c88b84d2b90c05bfa7371689b",
+        "cash_withdrawn_usdc": "134041736.854897",
+        "observed_remaining_aUSDC_units": "0",
+        "completed_segment_cash_interest_usdc": "41736.854104"
+      },
+      {
+        "withdraw_block": 26280180,
+        "tx": "0xcd55b7e8e99696fc9717d1f61d9bedb907ebd0b51e4b916c56ef4d7a28ecc67f",
+        "cash_withdrawn_usdc": "134055284.569644",
+        "observed_remaining_aUSDC_units": "0",
+        "completed_segment_cash_interest_usdc": "13547.714747"
+      },
+      {
+        "withdraw_block": 26287366,
+        "tx": "0x5a6fd55e523d9b7cc271263ca50e68c27c5137a0f317d1e12d6926e5c78e8865",
+        "cash_withdrawn_usdc": "134068978.481359",
+        "observed_remaining_aUSDC_units": "0",
+        "completed_segment_cash_interest_usdc": "13693.481225"
+      }
+    ]
+  },
+  "observed_network_fees": {
+    "paid_wei": "334130451297696",
+    "paid_ETH": "0.000334130451297696",
+    "reference_usd_at_transaction_blocks": "0.79976342890542135972220161",
+    "warning": "Sender-only paid gas; already included through native balance changes; do not subtract twice"
+  },
+  "marked_components_usd": {
+    "USDC_including_price_changes_before_network_fee_allocation": "173669.99458170140272",
+    "USDC_after_observed_network_fee_allocation": "173669.19481827249729864027779839",
+    "native_ETH_including_price_changes_and_network_fees": "-28.66522123663769343026412762",
+    "selected_wallet_components_after_observed_network_fees": "173641.32936046476502656973587238"
+  },
+  "unknown_costs_and_liabilities": {
+    "infrastructure": null,
+    "custody": null,
+    "tax": null,
+    "other_protocol_debt": null,
+    "off_address_assets_liabilities": null
+  },
+  "full_actor_net_pnl_usd": null,
+  "T1_qualified": false,
+  "limits": [
+    "Other tokens, NFTs, protocols, chains, custody and off-address assets/liabilities not reconciled",
+    "Current holder does not identify beneficial owner or prove strategy/firm equity",
+    "No paid endpoint, private credential, signer, transaction broadcast or fork replay",
+    "Indexer pagination plus receipt checks is not an independent all-chain getLogs completeness proof",
+    "Token-index accrual includes unrealized closing value; not all income is realized",
+    "Only network fees borne by this address observed; infrastructure/overhead/tax/custody costs unknown",
+    "Oracle-defined accounting marks are not realized USD prices or executable bids",
+    "Post-opening realized cash interest is in USDC units, not full realized USD net income",
+    "No scaling this large holder's dollars into a $50k strategy recommendation",
+    "No p99, annual tail probability, fork replay or qualifying paper evidence"
+  ]
+}

@@ -48,7 +48,8 @@ This query did return current on-chain accounts, including an account labelled
 These are explorer labels, not identified beneficial owners or verified strategies.
 Large raw aToken balances are not net capital or realized profit; borrowers,
 vault depositors and transfers must be reconciled. The holder list is partial.
-There is no fourteen-day reconciled PnL result in this package.
+These initial holder records alone contain no fourteen-day reconciled net-PnL
+result. The later partial ledger linked below remains explicitly scope-limited.
 
 ## Run
 
@@ -72,3 +73,11 @@ gross_usd = position_capital * expm1(log_growth)
 
 The unit tests are synthetic arithmetic tests, not performance evidence. Exact
 cost accounting remains owned independently; absent fees are unknown, not zero.
+
+## Actual holder follow-up
+
+The later [fourteen-day public holder ledger](../actor-ledger.md) adds actual
+historical state, token-index checks, transfers, receipts, observed network fees
+and historical oracle marks. These are explicitly scoped account components,
+not APY arithmetic, full-firm equity, certified T1, fork replay or paper trading.
+Its actual-input regressions are distinguished from synthetic arithmetic tests.
