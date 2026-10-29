@@ -312,7 +312,8 @@ def run_replay(data: ReplayInput, scenario: Scenario) -> dict[str, Any]:
         "recommendation_eligible": False,
         "gross_pnl_usd": str(gross), "variable_cost_usd": str(costs),
         "failed_attempt_cost_usd": str(failed_costs),
-        "infrastructure_cost_usd": str(infrastructure), "cash_net_pnl_usd": str(net),
+        "infrastructure_cost_usd": str(infrastructure), "net_economic_pnl_usd": str(net),
+        "realized_cash_pnl_usd": None,
         "benchmark_excess_usd": str(net - data.benchmark_period_net_usd)
         if data.benchmark_period_net_usd is not None else None,
         "terminal_equity_usd": str(data.initial_capital_usd + net),
@@ -335,6 +336,7 @@ def run_replay(data: ReplayInput, scenario: Scenario) -> dict[str, Any]:
             "Accounting scaffolding is T4, not a stateful EVM fork, a fill simulator, or T2.",
             "No latency-adjusted repricing/slippage model; stale quoted economics may not fill.",
             "Race proof and complete marks are adapter assertions, not independently verified.",
+            "Marked/accrued economics are not proof of received cash; realized cash PnL is unknown.",
             "Unknown races and ties lose; hypothetical failed attempts incur supplied failed costs.",
             "Profits do not compound; prior marked losses/fees reduce available capital. No margin-call model.",
             "Capital locks reserve principal from decision to settlement, conservatively.",
