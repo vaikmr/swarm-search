@@ -209,31 +209,56 @@ def lending_carry(points, start_s, end_s, capital_usd, costs_usd, max_gap_s=36*3
 
 def funding_carry(rows, start_ms, end_ms, notional_usd, costs_usd,
                   period_ms=3600000, tolerance_ms=120000):
-    """Gross short-side funding component only, not a delta-neutral backtest."""
+    """Gross short-side funding component only, not a delta-neutral backtest.
+
+    Require every epoch-aligned scheduled event in the inclusive window, not
+    merely sub-period distances from the window edges. Tolerance applies ONLY
+    to a row's timestamp jitter about its scheduled event; it cannot excuse an
+    omitted boundary event. Ambiguous near-grid cutoffs fail closed.
+    """
     notional_usd = finite(notional_usd, "notional", minimum=0)
     costs_usd = None if costs_usd is None else finite(costs_usd, "costs", minimum=0)
-    if end_ms <= start_ms or period_ms <= 0 or tolerance_ms < 0:
+    for value, name in ((start_ms, "start_ms"), (end_ms, "end_ms"),
+                        (period_ms, "period_ms"), (tolerance_ms, "tolerance_ms")):
+        if finite(value, name, minimum=0) != value or not isinstance(value, int):
+            raise DataError("integer millisecond bounds required")
+    if (end_ms <= start_ms or period_ms <= 0 or tolerance_ms < 0
+            or tolerance_ms*2 >= period_ms):
         raise DataError("invalid funding interval")
-    stamps, rate_sum = [], 0.0
+    first_slot = (start_ms+period_ms-1)//period_ms
+    last_slot = end_ms//period_ms
+    expected_count = max(0, last_slot-first_slot+1)
+    slots, rate_sum = [], 0.0
     for row in rows:
-        stamp = int(row["time"])
+        stamp = row["time"]
+        if not isinstance(stamp, int) or isinstance(stamp, bool):
+            raise DataError("integer source timestamp required")
         if not start_ms <= stamp <= end_ms:
             raise DataError("funding outside requested window")
-        stamps.append(stamp)
+        slot = (stamp+period_ms//2)//period_ms
+        if abs(stamp-slot*period_ms) > tolerance_ms:
+            raise DataError("funding timestamp outside scheduled-event tolerance")
+        if not first_slot <= slot <= last_slot:
+            raise DataError("ambiguous boundary event outside nominal window")
+        slots.append(slot)
         rate_sum += finite(row.get("fundingRate"), "fundingRate")
-    if not stamps:
+    if not slots:
         raise DataError("no funding history")
-    if stamps[0]-start_ms > period_ms+tolerance_ms or end_ms-stamps[-1] > period_ms+tolerance_ms:
-        raise DataError("funding history truncated at window edge")
-    if any(not period_ms-tolerance_ms <= b-a <= period_ms+tolerance_ms
-           for a, b in zip(stamps, stamps[1:])):
-        raise DataError("missing, duplicate or non-hourly funding data")
+    if (len(slots) != expected_count or slots[0] != first_slot
+            or slots[-1] != last_slot
+            or any(b != a+1 for a, b in zip(slots, slots[1:]))):
+        raise DataError("missing, duplicate, reversed or unexpected scheduled funding event")
     gross = notional_usd * rate_sum
     return {
         "evidence_tier": "T4", "calculation": "funding_component_only",
         "constant_short_notional_usd": notional_usd,
         "start_ms": start_ms, "end_ms": end_ms,
         "window_days": (end_ms-start_ms)/86400000, "payments": len(rows),
+        "coverage": {"grid_origin_ms": 0, "period_ms": period_ms,
+                     "timestamp_tolerance_ms": tolerance_ms,
+                     "expected_events": expected_count,
+                     "first_scheduled_ms": first_slot*period_ms,
+                     "last_scheduled_ms": last_slot*period_ms},
         "funding_rate_sum": rate_sum, "gross_short_funding_usd": gross,
         "explicit_costs_usd": costs_usd,
         "net_component_after_explicit_costs_only_usd": (
