@@ -37,3 +37,8 @@ a bounded 14-day Optimism log/state retrieval for one actor, the observed
 pagination limits, actual repayment-path witness and remaining cross-chain
 receivable/cost gaps. It does not establish actor PnL. Its small provenance
 summary is published; bulk per-event records remain in ignored `data/raw/`.
+
+[`OFFLINE_RAW_AUDIT.md`](OFFLINE_RAW_AUDIT.md) adds a network-free rehash/recount
+against those saved responses, original raw witnesses, and the explicit missing
+ABI/deployed-source pin. It distinguishes collection-author integrity checks from
+the independent reviewer's narrower witness review and from actor economics.

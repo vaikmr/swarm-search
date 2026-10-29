@@ -6,6 +6,11 @@ data-availability and partial-cashflow evidence, not qualifying T1, T2 or T3.
 Realized net PnL, total deployed capital, opening/closing receivables, and costs
 not actually reconciled remain **unknown**, never zero.
 
+The subsequent [offline raw audit](OFFLINE_RAW_AUDIT.md) reproduced the counts
+and aggregates but identified a missing exact ABI/deployed-source pin.
+The indexed relayer address must not be equated with verified sender or gas
+payer across all fill-event transaction hashes.
+
 ## Actor and exact window
 
 Selected relayer address:
