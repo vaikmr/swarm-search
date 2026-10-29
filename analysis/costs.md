@@ -409,3 +409,54 @@ pathwise maximum drawdown, annual tails or confidence levels.
 the on-chain sleeve in specified scenarios, but leaves reserve concentration,
 custody/access/FX risks and missing cost evidence unresolved. Any off-chain
 income must be independently evidenced and reconciled, not assumed or omitted.
+
+## 8. Actual holder receipts: independently checked partial costs, not T1
+
+The scout's [actual holder ledger](https://github.com/vaikmr/swarm-search/blob/cd38c61b47ee55e3a3f1b9f9aeb892a4a2171a77/strategies/benchmark-lending/actor-ledger.md)
+preserves [observations](https://github.com/vaikmr/swarm-search/blob/cd38c61b47ee55e3a3f1b9f9aeb892a4a2171a77/strategies/benchmark-lending/evidence/actor-observations.json)
+and a [reconciliation](https://github.com/vaikmr/swarm-search/blob/cd38c61b47ee55e3a3f1b9f9aeb892a4a2171a77/strategies/benchmark-lending/evidence/actor-reconciliation.json).
+Its window is blocks 26,196,084–26,296,884, 2026-10-15T06:20:59Z to
+2026-10-29T07:24:59Z, or 14.044444 days. This is one public address with roughly
+$134 million in the selected lending position, not a $50,000 strategy.
+
+The accountant performed a separate offline calculation directly from the
+preserved observations, without importing the scout's reconciler:
+
+- Identified all **39 actor-sent receipts** independently from receipt senders
+  and matched their transaction IDs to the normal-transaction list. All 39
+  were type-2, successful transactions; no failed-attempt fee was observed in
+  this preserved sender sample. Other senders' expenses were not assigned to
+  this address.
+- Summed actual `gasUsed * effectiveGasPrice`, checked that observed receipts
+  had no blob-fee component, and reproduced **334,130,451,297,696 wei =
+  0.000334130451297696 ETH**. Using preserved transaction-block ETH oracle marks
+  gives **$0.79976342890542135972220161**, not an executable USD conversion.
+- Matched all **126 unique selected token logs** to preserved receipt token,
+  transaction/block identity, topics, parties, values and log indices, and
+  confirmed the logs were not marked removed.
+- Independently recomputed external versus internal token flows, verified
+  **zero raw USDC and native-ETH residuals**, and checked both endpoint indexed
+  aToken balances using integer floor multiplication.
+- Reproduced **194,463.135111 USDC units** of post-opening position accrual and
+  **$173,641.32936046476502656973587238** of flow-adjusted, oracle-marked change
+  in the selected USDC/aUSDC/native-ETH components.
+
+These checks validate arithmetic and internal consistency of the **archived
+sample**. They are not an independent live RPC re-fetch, proof that an indexer
+omitted no transactions, full-actor accounting, owner/strategy attribution,
+fork execution, forward-paper observation or T1 qualification.
+
+**No double fee deduction:** the selected-component marked change already
+includes paid gas through native-ETH balances. Add the unallocated stable
+component ($173,669.99458170140272) to the native component
+(-$28.66522123663769343026412762). Do not instead add a stable component with
+gas deducted to that same fee-inclusive native component. The report's
+alternative stable-only fee allocation is not a second wallet expense.
+
+**Keep full net unknown.** Infrastructure, custody, other assets/liabilities,
+off-address accounts and USD realization remain unresolved. Closed-position
+cash-interest units are not full realized USD profit or a known lifetime/tax
+basis. Neither the large holder's dollars nor its observed $0.80 network bill
+can be linearly transferred to the proposed capital, fee environment or
+deployment plan. This observation does not replace section 7's missing
+strategy-specific all-in costs, reserve evidence or risk gates.
