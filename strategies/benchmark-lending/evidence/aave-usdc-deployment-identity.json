@@ -1,0 +1,87 @@
+{
+  "observed_at": "2026-10-29T07:28:20.990722+00:00",
+  "tier": "deployment identity observation, not performance",
+  "registry": {
+    "source": "https://raw.githubusercontent.com/aave-dao/aave-address-book/73676d409a24eb33d04687f28287f23a40f2afd9/src/AaveV3Ethereum.sol",
+    "commit": "73676d409a24eb33d04687f28287f23a40f2afd9",
+    "sha256": "afe8adbbf8fe7d709ae1d2168b8d97ccb8110fdedb572fc2120ecae10ae7588b"
+  },
+  "rpc": {
+    "source": "https://ethereum-rpc.publicnode.com",
+    "request": [
+      {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "eth_chainId",
+        "params": []
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "eth_getBlockByNumber",
+        "params": [
+          "0x1914234",
+          false
+        ]
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "eth_getStorageAt",
+        "params": [
+          "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+          "0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc",
+          "0x1914234"
+        ]
+      },
+      {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "method": "eth_call",
+        "params": [
+          {
+            "to": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "data": "0x70a0823100000000000000000000000098c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c"
+          },
+          "0x1914234"
+        ]
+      }
+    ],
+    "response_sha256": "00f0fe64b92f6a98044c9dffda87fbc8aed4271bcce158bcb72d2f8718e4a769",
+    "chain_id": 1,
+    "block": 26296884,
+    "block_hash": "0x534506ea07ed9fef6d016fb370ea548ff8554e3f33241f481e0ec84de4c08f30",
+    "block_time": "2026-10-29T07:24:59+00:00"
+  },
+  "pool": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+  "underlying": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "a_token": "0x98C23E9d8f34FEFb1B7BD6a91B7FF122F4e16F5c",
+  "implementation": "0x728a138a4823392c2efa55e028d434f526fe03cf",
+  "registry_implementation_match": true,
+  "usdc_balance_at_a_token": 134392870.622605,
+  "liquidity_warning": "Point-in-time token inventory, not reserved exit capacity or a withdrawal guarantee",
+  "explorer": {
+    "source": "https://eth.blockscout.com/api/v2/smart-contracts/0x728a138a4823392c2efa55e028d434f526fe03cf",
+    "response_sha256": "c3e118fdeba418386c2101bf0e1312bf4ea532d30b6143ff441d08a7e697a4e6",
+    "name": "PoolInstance",
+    "is_verified": true,
+    "verified_at": "2026-05-29T09:33:05.284481Z",
+    "source_sha256": "0062f84b7d8597fc9d25853a73fff8100e41cc9d6d3bc51b5571d15c1ae4c918"
+  },
+  "activation": {
+    "source": "https://governance-v2.aave.com/governance/proposal/147",
+    "executed_date": "2023-01-27",
+    "usdc_explicitly_in_initial_listing": true,
+    "basis": "Manually read official executed proposal; not a fresh contract creation proof"
+  },
+  "audit": {
+    "source": "https://aave.com/security",
+    "public_protocol_audits_exist": true,
+    "exact_deployed_implementation_to_audited_build_equivalence": null
+  },
+  "warnings": [
+    "No protocol safety or portfolio compliance certification",
+    "No transaction, signer, private credential, or paid service",
+    "urllib RPC returned403; ordinary public curl succeeded"
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "built_at": "2026-10-29T07:28:23.637347+00:00",
+  "status": "CONDITIONAL_SINGLE_CHAIN_STRESS_NOT_A_CERTIFIED_COMPLIANT_BASELINE",
+  "tier": "T4 rate arithmetic and hypothetical component loss budgets",
+  "market": {
+    "label": "aave-ethereum-usdc",
+    "pool": "aa70268e-4b52-42bf-a116-608b370f9501",
+    "source": "https://yields.llama.fi/chart/aa70268e-4b52-42bf-a116-608b370f9501",
+    "current": {
+      "chain": "Ethereum",
+      "project": "aave-v3",
+      "symbol": "USDC",
+      "tvlUsd": 134847807,
+      "apyBase": 4.17536,
+      "apyReward": null,
+      "apy": 4.17536,
+      "rewardTokens": null,
+      "pool": "aa70268e-4b52-42bf-a116-608b370f9501",
+      "apyPct1D": 0.3263,
+      "apyPct7D": 0.40438,
+      "apyPct30D": 0.59837,
+      "stablecoin": true,
+      "ilRisk": "no",
+      "exposure": "single",
+      "predictions": {
+        "predictedClass": "Down",
+        "predictedProbability": 62,
+        "binnedConfidence": 2
+      },
+      "poolMeta": null,
+      "mu": 4.65116,
+      "sigma": 0.15244,
+      "count": 1358,
+      "outlier": false,
+      "underlyingTokens": [
+        "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+      ],
+      "il7d": null,
+      "apyBase7d": null,
+      "apyMean30d": 4.3748,
+      "volumeUsd1d": null,
+      "volumeUsd7d": null,
+      "apyBaseInception": null
+    },
+    "windows": {
+      "30": {
+        "start": "2026-09-29T06:01:03.674000+00:00",
+        "end": "2026-10-29T06:01:03.674000+00:00"
+      },
+      "90": {
+        "start": "2026-07-31T06:01:03.674000+00:00",
+        "end": "2026-10-29T06:01:03.674000+00:00"
+      }
+    }
+  },
+  "cases": [
+    {
+      "principal_usd": 0,
+      "offchain_cash_before_costs_usd": 50000,
+      "protocol_chain_coin_exposure_pct": 0.0,
+      "gross_history_usd": {
+        "30": 0.0,
+        "90": 0.0
+      },
+      "actual_net_usd": null,
+      "scenario_monthly_aggregate_cost_ceiling_usd": 500,
+      "component_stress": {
+        "monthly_full_sleeve_loss_plus_cost_usd": 500,
+        "annual_one_time_full_sleeve_loss_plus_12_costs_usd": 6000,
+        "monthly_pct_of_initial_total": 1.0,
+        "annual_pct_of_initial_total": 12.0,
+        "within_monthly_10pct_component_bound": true,
+        "within_annual_20pct_component_bound": true,
+        "portfolio_tail_probability": null
+      },
+      "cash_counterparty_slots_needed_at_15000_maximum": 4
+    },
+    {
+      "principal_usd": 4000,
+      "offchain_cash_before_costs_usd": 46000,
+      "protocol_chain_coin_exposure_pct": 8.0,
+      "gross_history_usd": {
+        "30": 12.581271087679594,
+        "90": 35.17897676086303
+      },
+      "actual_net_usd": null,
+      "scenario_monthly_aggregate_cost_ceiling_usd": 500,
+      "component_stress": {
+        "monthly_full_sleeve_loss_plus_cost_usd": 4500,
+        "annual_one_time_full_sleeve_loss_plus_12_costs_usd": 10000,
+        "monthly_pct_of_initial_total": 9.0,
+        "annual_pct_of_initial_total": 20.0,
+        "within_monthly_10pct_component_bound": true,
+        "within_annual_20pct_component_bound": true,
+        "portfolio_tail_probability": null
+      },
+      "cash_counterparty_slots_needed_at_15000_maximum": 4
+    },
+    {
+      "principal_usd": 4500,
+      "offchain_cash_before_costs_usd": 45500,
+      "protocol_chain_coin_exposure_pct": 9.0,
+      "gross_history_usd": {
+        "30": 14.153929973639546,
+        "90": 39.57634885597091
+      },
+      "actual_net_usd": null,
+      "scenario_monthly_aggregate_cost_ceiling_usd": 500,
+      "component_stress": {
+        "monthly_full_sleeve_loss_plus_cost_usd": 5000,
+        "annual_one_time_full_sleeve_loss_plus_12_costs_usd": 10500,
+        "monthly_pct_of_initial_total": 10.0,
+        "annual_pct_of_initial_total": 21.0,
+        "within_monthly_10pct_component_bound": true,
+        "within_annual_20pct_component_bound": false,
+        "portfolio_tail_probability": null
+      },
+      "cash_counterparty_slots_needed_at_15000_maximum": 4
+    },
+    {
+      "principal_usd": 5000,
+      "offchain_cash_before_costs_usd": 45000,
+      "protocol_chain_coin_exposure_pct": 10.0,
+      "gross_history_usd": {
+        "30": 15.726588859599493,
+        "90": 43.973720951078796
+      },
+      "actual_net_usd": null,
+      "scenario_monthly_aggregate_cost_ceiling_usd": 500,
+      "component_stress": {
+        "monthly_full_sleeve_loss_plus_cost_usd": 5500,
+        "annual_one_time_full_sleeve_loss_plus_12_costs_usd": 11000,
+        "monthly_pct_of_initial_total": 11.0,
+        "annual_pct_of_initial_total": 22.0,
+        "within_monthly_10pct_component_bound": false,
+        "within_annual_20pct_component_bound": false,
+        "portfolio_tail_probability": null
+      },
+      "cash_counterparty_slots_needed_at_15000_maximum": 3
+    },
+    {
+      "principal_usd": 10000,
+      "offchain_cash_before_costs_usd": 40000,
+      "protocol_chain_coin_exposure_pct": 20.0,
+      "gross_history_usd": {
+        "30": 31.453177719198987,
+        "90": 87.94744190215759
+      },
+      "actual_net_usd": null,
+      "scenario_monthly_aggregate_cost_ceiling_usd": 500,
+      "component_stress": {
+        "monthly_full_sleeve_loss_plus_cost_usd": 10500,
+        "annual_one_time_full_sleeve_loss_plus_12_costs_usd": 16000,
+        "monthly_pct_of_initial_total": 21.0,
+        "annual_pct_of_initial_total": 32.0,
+        "within_monthly_10pct_component_bound": false,
+        "within_annual_20pct_component_bound": false,
+        "portfolio_tail_probability": null
+      },
+      "cash_counterparty_slots_needed_at_15000_maximum": 3
+    },
+    {
+      "principal_usd": 15000,
+      "offchain_cash_before_costs_usd": 35000,
+      "protocol_chain_coin_exposure_pct": 30.0,
+      "gross_history_usd": {
+        "30": 47.17976657879848,
+        "90": 131.92116285323638
+      },
+      "actual_net_usd": null,
+      "scenario_monthly_aggregate_cost_ceiling_usd": 500,
+      "component_stress": {
+        "monthly_full_sleeve_loss_plus_cost_usd": 15500,
+        "annual_one_time_full_sleeve_loss_plus_12_costs_usd": 21000,
+        "monthly_pct_of_initial_total": 31.0,
+        "annual_pct_of_initial_total": 42.0,
+        "within_monthly_10pct_component_bound": false,
+        "within_annual_20pct_component_bound": false,
+        "portfolio_tail_probability": null
+      },
+      "cash_counterparty_slots_needed_at_15000_maximum": 3
+    }
+  ],
+  "conditions": [
+    "All costs combined, not only infrastructure, stay within assumed $500/month; no actual costs observed",
+    "Principal is never replenished after a loss; no borrowing, leverage or unlimited external liability",
+    "Cash income is explicitly zero in these scenarios; cash custody/FX/access losses are not included",
+    "Cash counterparties are hypothetical independent slots, not existing or verified user accounts",
+    "All Ethereum-dependent positions would share one aggregate budget; this model uses only Ethereum L1",
+    "Capital loss and costs bound only the modeled sleeve, not path-dependent portfolio drawdown",
+    "No 99% drawdown probability, annual tail probability, T1/T2/T3 or exact audit-build coverage established",
+    "No spending, transfer, account-opening or deployment authorization"
+  ],
+  "unknowns": {
+    "cash_risk": null,
+    "cash_access": null,
+    "actual_costs": null,
+    "exact_audit_build_linkage": null,
+    "portfolio_99pct_drawdown": null
+  }
+}
