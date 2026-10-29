@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-29",
+  "status": "hypothesis_and_availability_map_not_trade_recommendations",
+  "economic_claim_policy": {
+    "present_day_gross_return": null,
+    "present_day_net_return": null,
+    "target_attainment": "unknown",
+    "evidence_level": "T4 discovery/context only; no new T2 or T3 evidence",
+    "approval": "none",
+    "capital_constraint_usd": 50000,
+    "allocation": null,
+    "qualification": "Research across ecosystems is not a proposed allocation or authorization to trade."
+  },
+  "mechanisms": [
+    {
+      "id": "INST-01",
+      "name": "Collateralized borrowing as temporary cross-chain inventory replacement",
+      "status": "historically_documented_mechanism_current_feasibility_unverified",
+      "source_ids": ["I001", "R001", "I002", "R007", "R020"],
+      "spread_cause": "An ordinary cross-chain price discrepancy may close before a bridge transfer arrives; locally borrowable inventory can shorten the exposed execution interval.",
+      "economic_payer": "Other voluntary market participants trading across temporarily segmented liquidity; no guaranteed protocol subsidy.",
+      "potential_recurrence": "Independent venue order flow and non-instant inventory replenishment may recur, but competition can fully absorb the residual.",
+      "asset_claim_equivalence": {
+        "required": "Borrowed liability must be repaid in exactly the reserve token owed; bridged receipt must be the same accepted token or have a documented executable conversion.",
+        "historical_example": "Seed Appendix G describes WETH/WBTC on Ethereum and WBTC borrowing/trading on Arbitrum.",
+        "not_assumed": "WBTC, tBTC, cbBTC and native BTC are not interchangeable delivery claims."
+      },
+      "chain_protocol_contract_evidence": {
+        "chains": ["Ethereum", "Arbitrum"],
+        "protocol": "Aave, as named by historical paper",
+        "historical_borrow_tx_paper_link": "https://arbiscan.io/tx/0xf7e5f28d391c2dee5f982fd27f8caf6fc250acd54ebe3d06ace25ac2a85feeff",
+        "historical_repayment_tx_paper_link": "https://arbiscan.io/tx/0x798b5371e00f8a0d5dd7471aa36488e490f853004e638b547f272013b19db935",
+        "independently_verified_here": false,
+        "current_reserve_contract": null
+      },
+      "financing_inventory_repayment_lifecycle": "Supply sufficient collateral on the borrowing chain, or obtain credit delegated by an adequately collateralized supplier; use temporary local inventory while an independent bridge transfer settles; repay the precise debt plus accrued interest from received inventory; only then release collateral. No global atomic rollback.",
+      "capital_access_assumptions": [
+        "Collateral, haircut/liquidation buffer, inventory for the other leg, gas and failure reserve count against total capital.",
+        "Borrow cap, utilization, eMode, health-factor and reserve token restrictions must permit the desired liability.",
+        "Credit delegation requires a willing delegator and enforceable terms; borrower-level uncollateralized access is not collateral-free financing."
+      ],
+      "costs": ["Two trade fees and slippage", "Borrow interest over actual delay", "Bridge fees", "Gas and failed transactions", "Rebalancing", "Collateral opportunity cost", "Hedge/funding if required"],
+      "risks": ["One leg fills while the other fails", "Bridge or inclusion delay", "Collateral liquidation", "Token/issuer mismatch", "Borrow liquidity exhaustion", "Competition"],
+      "cheap_falsifiers": [
+        "Exact destination reserve cannot be borrowed or bridged proceeds cannot repay that token.",
+        "Collateral and required inventory exhaust the capital constraint before a meaningful trade size.",
+        "A synchronized firm-quote edge is no larger than full costs under an honest delay/failure treatment."
+      ],
+      "next_read_only_check_if_separately_authorized": "Verify one named reserve's present token identity, borrow-enabled/cap state and public executable quote availability; reject before any price-series build if unavailable.",
+      "return_usd": null
+    },
+    {
+      "id": "INST-02",
+      "name": "tBTC-native BTC conversion basis with stake-dependent fee segmentation",
+      "status": "documented_2026_cost_change_no_executable_basis_measured",
+      "source_ids": ["R063", "I005", "I006", "I007", "I009"],
+      "spread_cause": "Native BTC redemption is asynchronous and fee-bearing; eligible T stakers may have different conversion cost floors from unstaked traders.",
+      "economic_payer": "An ordinary secondary-market counterparty may pay for faster/differently located inventory. The waiver reduces an eligible protocol fee; it is not guaranteed cash income or a separate protocol reward.",
+      "potential_recurrence": "Recurring BTC inventory demand and rolling waiver capacity could preserve heterogeneous costs. Competition or low turnover can eliminate any gain.",
+      "asset_claim_equivalence": {
+        "required": "Identify the exact tBTC representation and authorized gateway back to the Ethereum redemption claim, then account for native BTC amount, treasury fee, Bitcoin fee and time.",
+        "not_assumed": "Solana/Sui tBTC, native BTC, WBTC and strkBTC do not have automatically identical delivery, issuer, privacy or recovery rights."
+      },
+      "chain_protocol_contract_evidence": {
+        "verification_level": "official_registry_only_no_code_or_balance_checks",
+        "ethereum_tbtc": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+        "ethereum_bridge": "0x5e4861a80B55f035D899f66772117F00FA0E8e7B",
+        "ethereum_rebate_staking": "0x0184739C32edc3471D3e4860c8E39a5f3Ff85A45",
+        "arbitrum_tbtc": "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+        "base_tbtc": "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b",
+        "solana_tbtc_mint": "6DNSN2BJsaPFdFFc1zP37kkeNe4Usc1Sqkzr9C9vPWcU",
+        "sui_tbtc_type": "0x77045f1b9f811a7a8fb9ebd085b5b0c55c5cb0d1520ff55f7037f89b5da9f5f1::TBTC::TBTC"
+      },
+      "financing_inventory_repayment_lifecycle": "If eligible, lock T to obtain finite rolling fee-offset capacity; acquire the exact tBTC claim, satisfy the documented redemption path and wait for BTC settlement; replenish inventory only after settlement. Any BTC/tBTC/T hedge or loan has its own collateral, funding and repayment requirement. Timeout returns the documented token claim, not assured native BTC at a fixed time.",
+      "capital_access_assumptions": [
+        "Current rendered product article documents 100000 T offsetting up to 0.001 tBTC eligible fees per rolling 30 days and a 30-day unstaking period; current contract settings unverified.",
+        "T principal, T market exposure, BTC/tBTC inventory, collateral, gas and locked funds all count toward capital.",
+        "Waiver eligibility, remaining capacity, dust thresholds, wallet capacity, gateway access and real BTC settlement latency must be verified."
+      ],
+      "costs": ["Non-waived mint/redemption fee", "Bitcoin miner fee", "Chain/bridge/messaging costs", "Slippage", "T capital opportunity cost", "T hedge or directional risk", "Borrow/funding and rebalancing"],
+      "risks": ["Signer/bridge or gateway impairment", "Long/failed settlement", "BTC wrapper basis widening", "T price movement", "Fee/waiver parameter change", "Insufficient qualifying turnover"],
+      "cheap_falsifiers": [
+        "Waiver capacity is too small relative to required T capital and turnover to overcome capital/hedge costs.",
+        "Claim cannot be redeemed by the relevant participant or cross-chain route is not live.",
+        "Full BTC settlement costs and conservative delay erase the measured secondary-market discount."
+      ],
+      "next_read_only_check_if_separately_authorized": "Reconcile current waiver eligibility/capacity and actual claim-to-BTC settlement path before collecting a price history.",
+      "return_usd": null
+    },
+    {
+      "id": "INST-03",
+      "name": "Inventory service around naturally rate-limited NTT routes",
+      "status": "protocol_constraint_documented_economic_payer_and_live_route_unverified",
+      "source_ids": ["R069", "R007", "R020"],
+      "spread_cause": "Naturally exhausted directional bridge capacity can temporarily segment otherwise related token inventories.",
+      "economic_payer": "A voluntary user or secondary-market counterparty wanting immediate inventory, if a real service premium exists; documentation does not establish a capacity-reset bounty.",
+      "potential_recurrence": "Persistent one-way flow may produce repeated imbalances. Reverse natural flow replenishes capacity and may remove the premium.",
+      "asset_claim_equivalence": {
+        "required": "Exact configured NTT token pair, custody/mint authority, supported direction and delivery right.",
+        "not_assumed": "Same ticker or protocol name does not establish equal redemption rights; outbound and inbound queues are separate."
+      },
+      "chain_protocol_contract_evidence": {
+        "protocol": "Wormhole Native Token Transfers",
+        "specific_mainnet_route": null,
+        "specific_token_contracts": null,
+        "qualification": "Read source includes a Sepolia configuration example; no production constrained route identified."
+      },
+      "financing_inventory_repayment_lifecycle": "Hold working inventory on both sides; serve genuine demand using existing accessible liquidity; replenish through normal permitted transfers as capacity becomes available. Any borrowing remains collateralized until actual settlement. Reverse-flow capacity replenishment is accounting, not a trader refund or source-chain cancellation guarantee.",
+      "capital_access_assumptions": ["Two-sided inventory and buffers count toward capital", "Rate-window, cap and queue policy are deployment-specific", "No induced congestion, drain, manipulation or attack"],
+      "costs": ["Inventory carry", "Market slippage and venue fees", "Messaging/gas", "Queue completion operations", "Borrow/funding if used", "Rebalance and failure reserves"],
+      "risks": ["No paying demand", "Queue lasts longer than financing horizon", "Administrative cap/pause changes", "Claim or issuer mismatch", "Inventory becomes one-sided"],
+      "cheap_falsifiers": [
+        "No genuinely constrained live route with third-party demand exists.",
+        "Observed premium never exceeds carry/rebalance/full execution costs.",
+        "Captured value is merely uncompensated bridge/issuer risk rather than a repeatable service margin."
+      ],
+      "next_read_only_check_if_separately_authorized": "Identify one documented mainnet token route and publicly observable naturally constrained transfer/quote before any simulation.",
+      "return_usd": null
+    },
+    {
+      "id": "INST-04",
+      "name": "Exact-representation conversion and asymmetric route-cost basis",
+      "status": "documented_claim_and_fee_structure_no_measured_edge",
+      "source_ids": ["R038", "I004", "I008"],
+      "spread_cause": "Bridged versus natively issued representations, route-specific fees and asynchronous settlement can create different inventory costs even when assets reference the same currency.",
+      "economic_payer": "A voluntary trader needing a particular representation/location; no guaranteed fee rebate or issuer redemption access.",
+      "potential_recurrence": "Payment flow and chain-specific demand may recur, but routing competition can remove any residual.",
+      "asset_claim_equivalence": {
+        "required": "Separate Tempo USDC.e backed through Stargate from native USDC and other native issuance, and standard OFT issuer claims from Stargate pools.",
+        "normalization": "Use documented unit/share conversion, paired channels, shared decimals and dust. Vanilla OFT does not automatically reconcile fee-on-transfer or rebasing assets.",
+        "not_assumed": "OUSD, USDC.e, USDT0 and yield-bearing stablecoin receipts are not identical assets."
+      },
+      "chain_protocol_contract_evidence": {
+        "verification_level": "official_mainnet_labeled_documentation_only",
+        "tempo_usdce": "0x20C000000000000000000000b9537d11c60E8b50",
+        "tempo_usdt0": "0x20c00000000000000000000014f22ca97301eb73",
+        "tempo_stargate_usdce": "0x8c76e2F6C5ceDA9AA7772e7efF30280226c44392",
+        "tempo_lz_endpoint_dollar": "0x0cEb237E109eE22374a567c6b09F373C73FA4cBb",
+        "tempo_stargate_token_messaging_OApp": "0x19Ff94Fe4C93D546e4DB3E1FB124D45366B0b9F5",
+        "qualification": "A Stargate token pool address is not its message-security OApp. No live peer/DVN configuration was read."
+      },
+      "financing_inventory_repayment_lifecycle": "Use a documented representation-conversion path; finance both non-atomic legs and required fee inventory until destination credit/any composed action completes; only release financing after final accepted claim or liability repayment. Tempo outbound messaging uses the LZEndpointDollar fee wrapper, not native msg.value.",
+      "capital_access_assumptions": ["0 bps is the documented Stargate transfer fee only for Ethereum-Tempo; other routes are quote-dependent", "Gas, messaging, fee-wrapper inventory and finality are not free", "Borrowability, issuer eligibility and channel configuration remain unknown"],
+      "costs": ["Trading fees/slippage", "Messaging and execution gas", "Fee-wrapper conversion", "Route-dependent bridge fees", "Borrow/funding", "Inventory rebalancing", "Dust/share conversion"],
+      "risks": ["Wrong issuer/representation", "Custom token accounting", "Destination compose failure after transfer", "Channel/DVN/administrative risk", "Liquidity or eligibility mismatch"],
+      "cheap_falsifiers": [
+        "Representation has no available conversion to the asset required for closing the other leg.",
+        "Zero transfer fee is overwhelmed by messaging, gas, borrow and rebalance costs.",
+        "The apparent edge disappears after share/decimal normalization or exact route quoting."
+      ],
+      "next_read_only_check_if_separately_authorized": "Verify exact issuer/route rights and matched executable quote availability, not ticker-level historical prices.",
+      "return_usd": null
+    },
+    {
+      "id": "INST-05",
+      "name": "New borrowing-market and collateral-claim segmentation",
+      "status": "2026_deployments_reported_mechanism_speculative",
+      "source_ids": ["R001", "I003"],
+      "spread_cause": "New hub/spoke collateral admission may alter financing costs for a particular issuer claim, without making that claim deliverable against another issuer or a stock perpetual.",
+      "economic_payer": "Potentially voluntary financing/liquidity demand; no payer or realizable spread identified.",
+      "potential_recurrence": "Different eligibility, collateral haircuts and borrower demand could persist; may simply price issuer, liquidation and access risks.",
+      "asset_claim_equivalence": {"required": "Exact legal claim, token contract, share entitlement, permitted redemption, quote currency and collateral treatment.", "not_assumed": "AAPLc is not automatically AAPLx, a Robinhood token, an exchange share or a cash-settled perpetual."},
+      "chain_protocol_contract_evidence": {
+        "source_reported": ["V4 Ethereum 2026-03-30", "V4 Avalanche 2026-07-15", "V4 Arc 2026-09-16", "V4 Base MAG7 2026-10-07"],
+        "verified_contracts": [],
+        "qualification": "Changelog is deployment documentation, not proof every listed collateral can be borrowed or transferred permissionlessly."
+      },
+      "financing_inventory_repayment_lifecycle": "Would require permitted collateral delivery, a borrowable matched liability, hedge or redemption with actual access, financing until settlement, and repayment before collateral release. That complete lifecycle was not identified.",
+      "capital_access_assumptions": ["Issuer/access terms unknown", "Caps/oracles/liquidation and concentration unknown", "New instrument/version age must be evaluated separately from mature protocol brand", "No allocation or leverage amount proposed"],
+      "costs": ["Borrow interest", "Collateral haircut and opportunity cost", "Issuer/dealer conversion", "Hedge funding/basis", "Trading and chain costs"],
+      "risks": ["No convergent delivery path", "Corporate-action mismatch", "KYC/jurisdiction restrictions", "Market-hour/oracle mismatch", "New-version or issuer risk"],
+      "cheap_falsifiers": ["Listed asset is collateral-only or inaccessible", "No matched redeemable/shortable claim exists", "Funding benefit is fully offset by conversion, hedge and collateral costs"],
+      "next_read_only_check_if_separately_authorized": "Verify one actual issuer claim and its borrowing/redemption rights before collecting prices.",
+      "return_usd": null
+    },
+    {
+      "id": "INST-06",
+      "candidate_number": 2,
+      "name": "Tokenized-stock cross-issuer, chain and perpetual basis",
+      "status": "clean_accessible_comparison_not_identified_within_pass",
+      "source_ids": ["I003", "I004", "I010", "I011", "I012", "I013", "I014", "I015"],
+      "documentary_result": "Official Robinhood mainnet, transferable debt-token structure and Apple registry row identified; xStocks tracker-certificate rights, eligible redemption and corporate-action accounting read; HIP-3 equity-market existence documented. A matched accessible closing pair is still unverified.",
+      "spread_cause": "Different access, trading hours, settlement/redemption rights, corporate-action conventions, collateral and funding may segment instruments referring to the same stock.",
+      "economic_payer": "If real, voluntary liquidity/financing demand on the richer leg; persistent issuer or cash-settlement risk premia need not converge.",
+      "potential_recurrence": "Trading-hour and access segmentation can recur. This is not a locked arbitrage without an accessible documented conversion/hedge and a valid convergence mechanism.",
+      "asset_claim_equivalence": {
+        "required_match_fields": ["Underlying share class and exchange", "Quote/settlement currency and FX", "Token units or share multiplier", "Issuer and legal entitlement", "Dividend treatment", "Split and other corporate actions", "Redemption eligibility and delivery", "Trading and redemption hours", "Perpetual index/oracle/mark and settlement", "Funding and collateral/liquidation"],
+        "verified_matched_pair": null,
+        "Robinhood_claim": "RHJ tokenized debt security, no underlying legal/beneficial shareholder rights; primary subscription limited to authorized KYB participants, initially BBVI.",
+        "xStocks_claim": "Tracker certificate with economic exposure and segregated backing according to FAQ, not shareholder voting rights; eligible KYC retail redemption stated with $5000 minimum, subject to full issuer terms not read.",
+        "corporate_action_normalization": "Robinhood uiMultiplier changes shares per token with raw balance static. xStocks EVM balances rebase; Solana raw units stay static and Scaled UI applies. Dividend tax/reinvestment and underlying share units must be matched, not raw token balances.",
+        "qualification": "Neither issuer's claim is automatically deliverable against the other or against a cash-settled perpetual. Matched ticker/correlation does not establish convergence."
+      },
+      "chain_protocol_contract_evidence": {
+        "Robinhood_Chain_mainnet_vs_testnet": "Official support describes mainnet chain ID 4663 and a separately available testnet. Not independently queried.",
+        "Robinhood_real_transferable_stock_contract": {
+          "symbol": "AAPL",
+          "chain_id": 4663,
+          "address": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9",
+          "evidence": "Official canonical registry; bytecode, transfer and liquidity not independently checked."
+        },
+        "Robinhood_executable_market": null,
+        "xStocks_exact_chain_and_mint_contract": null,
+        "xStocks_Solana_or_other_non_EVM_issuance": "Official FAQ explicitly lists native Solana and TON issuance; Solana SPL Token-2022/Scaled UI is described. Exact stock mint or TON token contract not identified.",
+        "HIP_3_equity_market_availability": "Official June 2026 product update reports deployed equity markets and builder-defined oracle/spec/collateral. No exact matched stock instrument specification read.",
+        "HIP_3_exact_equity_market": null,
+        "Lighter_exact_equity_market": null,
+        "Kraken_xStocks_perp": "Official search-only corporate-action FAQ lead; not a substitute for HIP-3/Lighter availability.",
+        "SSRN_7161018": "Exact-ID search unresolved; direct supplied URL fetch failed with scraper 500. No title, authors, version or contents retrieved; no claim attributed to it."
+      },
+      "financing_inventory_repayment_lifecycle": "A valid candidate would acquire or borrow one actual issuer claim, hedge an independently identified equivalent economic exposure, reconcile all dividends/splits/FX/funding, and unwind or redeem through a documented permitted path while repaying loans and releasing collateral. No such accessible complete pair/lifecycle was established.",
+      "capital_access_assumptions": ["User jurisdiction and institutional/retail eligibility not established; Robinhood explicitly excludes US persons and restricts other jurisdictions, while xStocks FAQ excludes US marketing/offers/solicitation", "Robinhood primary subscription requires AP/KYB access; mint/burn documented Mon 02:00 to Sat 02:00 CET/CEST, not unrestricted 24/7 primary convertibility", "xStocks FAQ describes eligible KYC retail direct redemption with $5000 minimum and normally 24/5 primary versus platform-dependent 24/7 secondary trading", "Spot borrow/short availability, actual collateral assets, margin and cross-chain inventory all unknown; HIP-3 markets have independent deployer settings", "No proposed notional or return"],
+      "costs": ["Bid-ask and trading fees", "Stock-token issuer/dealer issuance or redemption", "Borrow availability/rate", "Perp funding and liquidation buffer", "Dividend/corporate-action adjustments", "FX", "Bridge/gas", "Settlement and inventory capital"],
+      "risks": ["Issuer claims diverge without delivery convergence", "Corporate-action or share multiplier mismatch", "Jurisdiction blocks one leg or redemption", "Only mock/testnet token exists for a proposed leg", "Market or redemption hours differ", "Oracle/mark and underlying settlement mismatch", "Borrow recall or funding reverses"],
+      "cheap_falsifiers": [
+        "A supposed live leg is mock/testnet-only or lacks a verified transferable contract and executable market.",
+        "No single legally eligible participant can access both legs and the closing/redemption path.",
+        "Underlying share class, currency, corporate-action units or derivative index cannot be matched.",
+        "There is no deliverable conversion or otherwise defensible convergence mechanism; basis is then unbounded exposure, not locked arbitrage.",
+        "Full financing, funding, corporate-action and settlement costs erase a synchronized executable spread."
+      ],
+      "next_read_only_check_if_separately_authorized": "Match the documented Robinhood Apple contract to an exact xStocks mint and named HIP-3/Lighter contract, then reconcile full issuer Final Terms, legal access, primary closing path, multiplier/tax and derivative specifications. Resolve SSRN metadata only if access recovers. Stop before price-series construction if no accessible matched comparison survives.",
+      "blocked_checks": "The original budget plus targeted extension is exhausted at 26 fetches/8 searches. SSRN failed 500; Lighter official specs, exact xStock mint, matched derivative specs and full issuer Final Terms remain unverified. No 60-day price comparison was authorized or run.",
+      "return_usd": null
+    }
+  ]
+}

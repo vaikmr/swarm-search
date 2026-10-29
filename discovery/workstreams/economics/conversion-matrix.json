@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "candidate": "Stablecoin-variant convergence",
+  "mechanism_id": "ECO-VARIANT-06",
+  "as_of": "2026-10-29",
+  "verdict": "Contract identities and intended rail distinctions documented; no complete current executable convergence cycle or repeatable net basis established.",
+  "evidence_level": "Primary public documentation; no independent explorer, RPC, quote, receipt or execution verification.",
+  "assets": [
+    {
+      "id": "ETH_NATIVE_USDC",
+      "chain": "Ethereum",
+      "evm_chain_id": 1,
+      "cctp_domain": 0,
+      "contract": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "claim": "Circle-issued Ethereum native USDC",
+      "identity_sources": ["C3_USDC_ADDRESSES"],
+      "explorer_reference_not_independently_read": "https://etherscan.io/token/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    },
+    {
+      "id": "ARB_NATIVE_USDC",
+      "chain": "Arbitrum One",
+      "evm_chain_id": 42161,
+      "cctp_domain": 3,
+      "contract": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "claim": "Circle-issued Arbitrum native USDC",
+      "identity_sources": ["C3_ARB_USDC", "C3_USDC_ADDRESSES"],
+      "explorer_reference_not_independently_read": "https://arbiscan.io/token/0xaf88d065e77c8cC2239327C5EDb3A432268e5831"
+    },
+    {
+      "id": "ARB_BRIDGED_USDC_E",
+      "chain": "Arbitrum One",
+      "evm_chain_id": 42161,
+      "cctp_domain": null,
+      "contract": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
+      "claim": "Arbitrum canonical bridged representation of Ethereum USDC, not the Circle-native Arbitrum token",
+      "identity_sources": ["C3_ARB_USDC"],
+      "explorer_reference_not_independently_read": "https://arbiscan.io/token/0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
+    }
+  ],
+  "documented_cctp_native_rail_contracts": {
+    "chains": ["Ethereum", "Arbitrum One"],
+    "token_messenger_v2": "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+    "message_transmitter_v2": "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
+    "source_ids": ["C3_CCTP_CONTRACTS", "C3_CCTP_DOMAINS"],
+    "verification": "Publisher registry matches; no deployed implementation, roles, pause status or token mapping independently checked."
+  },
+  "routes": [
+    {
+      "id": "NATIVE_ETH_TO_ARB",
+      "input_asset": "ETH_NATIVE_USDC",
+      "output_asset": "ARB_NATIVE_USDC",
+      "rail": "Standard CCTP V2",
+      "mechanics": "Issuer native-USDC burn and destination native-USDC mint, subject to attestation and destination execution.",
+      "supported_domains": [0, 3],
+      "status": "intended_native_route_documented_not_executed",
+      "sources": ["C3_ARB_USDC", "C3_USDC_ADDRESSES", "C3_CCTP_DOMAINS", "C3_CCTP_CONTRACTS", "CCTP_FEES"],
+      "access_kyc": "On-chain token transfer, not fiat redemption. No account onboarding, jurisdictional eligibility or legal terms were tested; do not infer unrestricted fiat access.",
+      "minimum": null,
+      "delay": "Source finality/attestation plus destination inclusion; no exact route timing or tail distribution measured.",
+      "fees": "Retrieved fee table: Ethereum-source Fast 1 bp, Standard 0 bp. Mutable protocol-only documentation, not a live amount-specific quote; gas/relaying and any integration fee remain.",
+      "liquidity_caps": "No LP-pool claim required by the native burn/mint design, but current burn limit, Fast allowance, pause/denylist and remaining capacity were not checked.",
+      "redemption_rights": "Output is documented Circle-native USDC, not proof of user eligibility to redeem for bank USD.",
+      "unknowns": ["minimum", "current fee quote", "runtime capacity", "actual completion time", "user legal eligibility"]
+    },
+    {
+      "id": "NATIVE_ARB_TO_ETH",
+      "input_asset": "ARB_NATIVE_USDC",
+      "output_asset": "ETH_NATIVE_USDC",
+      "rail": "Standard CCTP V2",
+      "mechanics": "Issuer native-USDC burn and destination native-USDC mint; not a USDC.e-to-USDC exchange.",
+      "supported_domains": [3, 0],
+      "status": "intended_native_route_documented_not_executed",
+      "sources": ["C3_ARB_USDC", "C3_USDC_ADDRESSES", "C3_CCTP_DOMAINS", "C3_CCTP_CONTRACTS", "CCTP_FEES"],
+      "access_kyc": "No fiat conversion or Circle Mint account is assumed; legal/onboarding eligibility was not independently read.",
+      "minimum": null,
+      "delay": "Source finality/attestation plus destination inclusion; exact timing and tails unknown.",
+      "fees": "Retrieved fee table: Arbitrum-source Fast 1.4 bp, Standard 0 bp. Gas, destination submission, failure and integration costs not included; current fee quote unknown.",
+      "liquidity_caps": "Current burn cap/Fast allowance and operational state unknown.",
+      "redemption_rights": "Circle-native Ethereum USDC output; bank-redemption eligibility and terms unverified.",
+      "unknowns": ["minimum", "current fee quote", "runtime capacity", "actual completion time", "user legal eligibility"]
+    },
+    {
+      "id": "CANONICAL_ETH_TO_ARB",
+      "input_asset": "ETH_NATIVE_USDC",
+      "output_asset": "ARB_BRIDGED_USDC_E",
+      "rail": "Arbitrum canonical token gateway",
+      "mechanics": "Escrow the parent-chain token and mint its paired child-chain representation, rather than native issuer burn/mint.",
+      "supported_domains": ["Ethereum parent chain", "Arbitrum One child chain"],
+      "gateway_contract": null,
+      "status": "asset_forms_and_generic_architecture_documented_current_custom_gateway_unverified",
+      "sources": ["C3_ARB_USDC", "C3_ARB_TOKEN_BRIDGE"],
+      "access_kyc": "Generic standard ERC-20 gateway is described as permissionless; exact USDC custom-gateway restrictions and applicable terms not verified.",
+      "minimum": null,
+      "delay": "L1-to-L2 messaging/retryable completion; no current route-specific numerical timing verified.",
+      "fees": "Source gas, child-chain execution/retryable funding and failure costs; no current quote or amount.",
+      "liquidity_caps": "Token-to-gateway mapping, operational limits and state unknown; canonical minting is not an AMM inventory quote.",
+      "redemption_rights": "USDC.e is a bridge-backed claim on the escrowed parent-chain asset, not the native Arbitrum USDC contract.",
+      "unknowns": ["exact current gateway addresses/mapping", "minimum", "fees", "operational limits", "current state"]
+    },
+    {
+      "id": "CANONICAL_ARB_TO_ETH",
+      "input_asset": "ARB_BRIDGED_USDC_E",
+      "output_asset": "ETH_NATIVE_USDC",
+      "rail": "Arbitrum canonical token gateway",
+      "mechanics": "Burn the paired child-chain representation, wait for the dispute window and confirmed assertion, then claim the escrowed parent-chain token.",
+      "supported_domains": ["Arbitrum One child chain", "Ethereum parent chain"],
+      "gateway_contract": null,
+      "status": "documented_architectural_redemption_path_not_current_contract_complete",
+      "sources": ["C3_ARB_USDC", "C3_ARB_TOKEN_BRIDGE"],
+      "access_kyc": "A bridge claim, not issuer fiat redemption. Current USDC-specific gateway restrictions and applicable terms unverified.",
+      "minimum": null,
+      "delay": "Dispute-window expiry and confirmed assertion are documented conditions; exact present duration and completion tails were not verified.",
+      "fees": "Child-chain withdrawal, eventual Ethereum claim gas and any retry/recovery costs; no quote.",
+      "liquidity_caps": "Exact gateway mapping and sufficient escrow backing are unverified; no completed claim receipt or current capacity evidence.",
+      "redemption_rights": "Conditional bridge-backed release of Ethereum USDC, not unconditional immediate USD redemption.",
+      "unknowns": ["exact current gateway addresses/mapping", "escrow sufficiency", "current dispute duration", "claim gas", "operational restrictions"]
+    },
+    {
+      "id": "DIRECT_E_TO_NATIVE_CCTP",
+      "input_asset": "ARB_BRIDGED_USDC_E",
+      "output_asset": "ARB_NATIVE_USDC",
+      "rail": "Proposed direct CCTP convergence",
+      "mechanics": null,
+      "supported_domains": null,
+      "status": "not_established_do_not_treat_as_supported_converter",
+      "sources": ["C3_ARB_USDC", "C3_USDC_ADDRESSES", "C3_CCTP_DOMAINS", "C3_CCTP_EXPANDED"],
+      "access_kyc": null,
+      "minimum": null,
+      "delay": null,
+      "fees": null,
+      "liquidity_caps": null,
+      "redemption_rights": "No evidence that submitting this bridged contract produces the different Circle-native Arbitrum contract.",
+      "unknowns": ["any exact configured connection", "accepted contract", "output contract", "issuer rights", "all operational terms"]
+    },
+    {
+      "id": "AMM_ARB_VARIANTS",
+      "input_asset": "ARB_NATIVE_USDC",
+      "output_asset": "ARB_BRIDGED_USDC_E",
+      "rail": "Potential AMM exchange",
+      "mechanics": "A market swap between distinct contracts, not issuer or bridge redemption; reverse swap would also be market priced.",
+      "supported_domains": ["Arbitrum One only, if a suitable pool exists"],
+      "pool_contract": null,
+      "status": "no_current_pool_or_executable_quote_verified",
+      "sources": ["C3_ARB_USDC"],
+      "access_kyc": "No pool/router or venue access checked.",
+      "minimum": null,
+      "delay": "Unmeasured transaction inclusion; a bridge return is a separate non-atomic leg.",
+      "fees": "Unknown pool fee, depth/slippage, gas and failure costs.",
+      "liquidity_caps": "Unknown; no current reserves, executable depth or quote was obtained.",
+      "redemption_rights": "An AMM quote cannot itself upgrade a bridge-backed claim to native issuer redemption rights.",
+      "unknowns": ["pool existence/address", "executable bid/ask", "depth", "fee", "actual fill", "repeatable flow"]
+    }
+  ],
+  "expanded_cctp_guard": {
+    "source": "C3_CCTP_EXPANDED",
+    "documented_entry": "CrossChainTokenService",
+    "standard_native_usdc_entry": "TokenMessengerV2",
+    "scope": "Configured non-USDC ERC-20 assets including preconfigured EURC; additional token configuration paths are documented.",
+    "fees": "Source native-gas fee model, distinct from native-USDC fee deduction.",
+    "claim_limit": "General permissionless third-party bridging does not prove a configured USDC.e route or that a wrapper becomes Circle-native USDC. Connection, output token and backing must be verified separately.",
+    "exact_usdc_e_connection": null,
+    "native_usdc_output_proof": null
+  },
+  "hypothetical_cycle": {
+    "status": "architecture_level_hypothesis_only_not_contract_complete_or_profitable",
+    "steps": [
+      "Start with native Arbitrum USDC and buy discounted exact-contract USDC.e in an actually available AMM pool.",
+      "Redeem the USDC.e through its verified canonical gateway to the exact Ethereum native-USDC contract after the required dispute process.",
+      "Use the documented native-USDC CCTP Ethereum-to-Arbitrum rail to return native Arbitrum USDC and restore the starting asset."
+    ],
+    "who_pays": "A seller willing to discount a delayed/bridge-backed claim for immediacy; not a stablecoin issuer paying free yield.",
+    "repeatability": "Requires recurring real discounted flow, sufficient pool depth, functioning and backed redemption, and a net margin above all capital/time and execution costs. None was measured.",
+    "economic_net_identity": "native_USDC_returned - native_USDC_spent - all_USD_gas_and_relay_costs - actual_financing_costs - allocated_operating_costs - realized_losses",
+    "benchmark_treatment": "Any exposure-weighted benchmark excess is separate from economic net; do not subtract the same funding or inventory cost twice.",
+    "hypothetical_numerical_returns": null,
+    "expected_net_return": null,
+    "riskless": false,
+    "cheapest_falsifiers": [
+      "No supported exact USDC.e gateway mapping or insufficient redeemable parent-chain backing.",
+      "No executable native-USDC/USDC.e discount at the intended size after AMM fee/slippage.",
+      "Discount smaller than measured canonical claim gas plus CCTP/relay costs and capital locked across the actual dispute interval.",
+      "Paused/denied transfer, missing capacity or user-ineligible access breaks the cycle.",
+      "Apparent par quote refers to a different token contract, wrapped output or conditional issuer access."
+    ]
+  },
+  "excluded_scope": {
+    "USDT_USDT0": "Not independently researched; no assertion of equivalence, converter, access or fee.",
+    "USDG": "Not independently researched; no assertion of equivalence, converter, access or fee.",
+    "fiat_redemption": "No independently read user-specific Circle Mint/KYC/jurisdiction/minimum terms; not used as an assumed exit.",
+    "risk_qualification": "No T2/T3, independent risk approval, 99% drawdown certificate or annual tail-probability estimate."
+  }
+}
