@@ -1,0 +1,31 @@
+{
+  "source_url": "https://mainnet.base.org",
+  "retrieved_at_utc": "2026-10-29T07:20:15.402263+00:00",
+  "receipt_method": "eth_getTransactionReceipt",
+  "transaction_hash": "0xeb546c545453b6b1ecc6ebf8ad694d4b4dafcc208c330cc505f10b4954037f7c",
+  "evidence_kind": "public_receipt_discovery_not_actor_pnl",
+  "qualifies_t1": false,
+  "realized_pnl_usd": null,
+  "selected_receipt": {
+    "transactionHash": "0xeb546c545453b6b1ecc6ebf8ad694d4b4dafcc208c330cc505f10b4954037f7c",
+    "blockNumber": "0x7e8ed6",
+    "blockHash": "0x85bbf2dcf5bf0a2fbcab0bf32ebfbc66f50dfad4f6f5277ce56ac9b492f690e3",
+    "from": "0x4cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9",
+    "to": "0x6bded42c6da8fbf0d2ba55b2fa120c5e0c8d7891",
+    "status": "0x1",
+    "gasUsed": "0x172ea",
+    "effectiveGasPrice": "0x2169159290",
+    "l1Fee": "0x2ffca00440fa",
+    "l1GasUsed": "0xf54",
+    "l1GasPrice": "0x493b36f7f",
+    "l1FeeScalar": "0.684",
+    "gasUsedForL1": null
+  },
+  "receipt_response_sha256": "25d365ec8bb218905f377763d4755d53781024b66168556ae961afb0aee1ac06",
+  "server_date": "Thu, 29 Oct 2026 07:20:15 GMT",
+  "block_response_sha256": "36ae10718d3ae69a9756d34eab7dc535496a85ae7c19e3d04e2a31279121eec9",
+  "block_timestamp_unix": 1703377551,
+  "block_timestamp_utc": "2023-12-24T00:25:51+00:00",
+  "block_hash_matches_receipt": true,
+  "ok": true
+}

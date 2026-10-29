@@ -1,0 +1,31 @@
+{
+  "source_url": "https://arb1.arbitrum.io/rpc",
+  "retrieved_at_utc": "2026-10-29T07:20:15.403113+00:00",
+  "receipt_method": "eth_getTransactionReceipt",
+  "transaction_hash": "0xffefbd860c0b9a3219c8961a5566b995ed29286683c146fcc13851856c3aa7aa",
+  "evidence_kind": "public_receipt_discovery_not_actor_pnl",
+  "qualifies_t1": false,
+  "realized_pnl_usd": null,
+  "selected_receipt": {
+    "transactionHash": "0xffefbd860c0b9a3219c8961a5566b995ed29286683c146fcc13851856c3aa7aa",
+    "blockNumber": "0x9b8a3b3",
+    "blockHash": "0x65eee44f457c59c4fc4d9ae871bdbd23a24ea2504d7acfad54db8853158ad947",
+    "from": "0x4cb6f0ef0eeb503f8065af1a6e6d5dd46197d3d9",
+    "to": "0x1b02da8cb0d097eb8d57a175b88c7d8b47997506",
+    "status": "0x1",
+    "gasUsed": "0xbe706",
+    "effectiveGasPrice": "0x5f5e100",
+    "l1Fee": null,
+    "l1GasUsed": null,
+    "l1GasPrice": null,
+    "l1FeeScalar": null,
+    "gasUsedForL1": "0xa2737"
+  },
+  "receipt_response_sha256": "a765b5d9d83b7f7b76150bc6d3aee5f11d14b7775100f5caada2e768a0ae31fc",
+  "server_date": "Thu, 29 Oct 2026 07:20:15 GMT",
+  "block_response_sha256": "06d2a6453c8526156a8a6df7bf544fe633f06148e7478a908d18165f78c178e0",
+  "block_timestamp_unix": 1703377578,
+  "block_timestamp_utc": "2023-12-24T00:26:18+00:00",
+  "block_hash_matches_receipt": true,
+  "ok": true
+}

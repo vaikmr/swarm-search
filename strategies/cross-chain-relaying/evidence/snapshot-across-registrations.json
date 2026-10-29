@@ -1,0 +1,28 @@
+{
+  "source_url": "https://api.github.com/repos/across-protocol/relayer-registration-repository/contents/relayer_registration",
+  "retrieved_at_utc": "2026-10-29T07:17:32.488654+00:00",
+  "method": "GET",
+  "evidence_kind": "public_discovery_sample_not_T1_T2_or_T3",
+  "realized_pnl_usd": null,
+  "capital_deployed_usd": null,
+  "qualifies_t1": false,
+  "http_status": 200,
+  "server_date": "Thu, 29 Oct 2026 07:17:32 GMT",
+  "upstream_body_sha256": "d9080132c827def80b8595437f0a38f2e3f279abfef35708f080b0fbe4e99e33",
+  "selected_records": [
+    {
+      "name": "example.json",
+      "sha": "a139a5efc8adfac4ba076bffe2751027ac622e0e",
+      "source_url": "https://github.com/across-protocol/relayer-registration-repository/blob/master/relayer_registration/example.json",
+      "type": "file"
+    }
+  ],
+  "summary": {
+    "file_count": 1,
+    "example_files": [
+      "example.json"
+    ],
+    "warning": "Do not count example configurations as active actors."
+  },
+  "ok": true
+}
