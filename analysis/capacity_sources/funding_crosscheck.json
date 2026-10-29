@@ -1,0 +1,90 @@
+{
+  "tier": "T4 independent arithmetic on sourced hourly funding rates",
+  "source_commit": "0767bcc1cb2b01d3dfc732fc7ed3c8b9f625652f",
+  "not_strategy_pnl": true,
+  "limitations": [
+    "Constant USD notional would require a separate execution and rebalancing model.",
+    "No spot/basis PnL, fee, margin path, funding liquidity or live account is verified.",
+    "Required notionals are counterfactual capacity requirements, not executable allocations.",
+    "The $500 fixed-cost input is the budget-ceiling scenario, not an actual expense.",
+    "This is not T1, T2, T3, a current-rate forecast or a global funding-strategy bound."
+  ],
+  "assets": [
+    {
+      "asset": "BTC",
+      "source_path": "strategies/funding-basis/evidence/btc-funding-summary.json",
+      "source_blob_sha256": "820cdb07edad580950dc40cca1170ab33886956ed01092f6daa938fd4d9b3140",
+      "source_url": "https://github.com/vaikmr/swarm-search/blob/0767bcc1cb2b01d3dfc732fc7ed3c8b9f625652f/strategies/funding-basis/evidence/btc-funding-summary.json",
+      "underlying_public_endpoint": "https://api.hyperliquid.xyz/info",
+      "source_retrieved_at": "2026-10-29T07:21:57.229417+00:00",
+      "windows": {
+        "30": {
+          "start_exclusive_utc": "2026-09-29T06:59:59.999000+00:00",
+          "end_inclusive_utc": "2026-10-29T06:59:59.999000+00:00",
+          "hourly_rows": 720,
+          "negative_hours": 45,
+          "sum_funding_fraction": "0.0070643530",
+          "gross_funding_usd_on_constant_30000_notional": "211.9305900000",
+          "required_notional_at_same_historical_sum": [
+            {
+              "net_target_usd": 2000,
+              "fixed_cost_ceiling_scenario_usd": 500,
+              "notional_usd_before_other_costs": "353889.4503148412883671017006"
+            },
+            {
+              "net_target_usd": 5000,
+              "fixed_cost_ceiling_scenario_usd": 500,
+              "notional_usd_before_other_costs": "778556.7906926508344076237413"
+            }
+          ]
+        },
+        "90": {
+          "start_exclusive_utc": "2026-07-31T06:59:59.999000+00:00",
+          "end_inclusive_utc": "2026-10-29T06:59:59.999000+00:00",
+          "hourly_rows": 2160,
+          "negative_hours": 174,
+          "sum_funding_fraction": "0.0211137745",
+          "gross_funding_usd_on_constant_30000_notional": "633.4132350000"
+        }
+      }
+    },
+    {
+      "asset": "ETH",
+      "source_path": "strategies/funding-basis/evidence/eth-funding-summary.json",
+      "source_blob_sha256": "22d21845ab41a5101bfbe168a8c6d327c6281698cf9d5f33e92065ff0647fd40",
+      "source_url": "https://github.com/vaikmr/swarm-search/blob/0767bcc1cb2b01d3dfc732fc7ed3c8b9f625652f/strategies/funding-basis/evidence/eth-funding-summary.json",
+      "underlying_public_endpoint": "https://api.hyperliquid.xyz/info",
+      "source_retrieved_at": "2026-10-29T07:21:57.229417+00:00",
+      "windows": {
+        "30": {
+          "start_exclusive_utc": "2026-09-29T06:59:59.999000+00:00",
+          "end_inclusive_utc": "2026-10-29T06:59:59.999000+00:00",
+          "hourly_rows": 720,
+          "negative_hours": 71,
+          "sum_funding_fraction": "0.0063427053",
+          "gross_funding_usd_on_constant_30000_notional": "190.2811590000",
+          "required_notional_at_same_historical_sum": [
+            {
+              "net_target_usd": 2000,
+              "fixed_cost_ceiling_scenario_usd": 500,
+              "notional_usd_before_other_costs": "394153.5798612620390860663194"
+            },
+            {
+              "net_target_usd": 5000,
+              "fixed_cost_ceiling_scenario_usd": 500,
+              "notional_usd_before_other_costs": "867137.8756947764859893459026"
+            }
+          ]
+        },
+        "90": {
+          "start_exclusive_utc": "2026-07-31T06:59:59.999000+00:00",
+          "end_inclusive_utc": "2026-10-29T06:59:59.999000+00:00",
+          "hourly_rows": 2160,
+          "negative_hours": 157,
+          "sum_funding_fraction": "0.0215678699",
+          "gross_funding_usd_on_constant_30000_notional": "647.0360970000"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "built_at": "2026-10-29T07:22:04.309195+00:00",
+  "tier": "T4 historical APY arithmetic",
+  "status": "NOMINAL_CAPS_ONLY_NOT_A_COMPLIANT_OR_RECOMMENDED_ALLOCATION",
+  "total_capital_usd": 50000,
+  "positions": [
+    {
+      "pool": "3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
+      "label": "aave-ethereum-dai",
+      "protocol": "Aave",
+      "chain": "Ethereum",
+      "asset": "DAI",
+      "capital_usd": 15000
+    },
+    {
+      "pool": "85247b13-8180-44e7-b38c-4d324cc68a92",
+      "label": "compound-arbitrum-usdt",
+      "protocol": "Compound",
+      "chain": "Arbitrum",
+      "asset": "USDT",
+      "capital_usd": 15000
+    },
+    {
+      "pool": "a5fab52f-73fa-4f44-9c09-9af1eb20996c",
+      "label": "morpho-base-sparkusdc",
+      "protocol": "Morpho",
+      "chain": "Base",
+      "asset": "USDC",
+      "capital_usd": 15000
+    }
+  ],
+  "nominal_caps": {
+    "protocol_pct": 30,
+    "chain_pct": 30,
+    "stablecoin_pct": 30,
+    "offchain_cash_pct": 10
+  },
+  "lookthrough_unknowns": [
+    "DAI issuer/reserve exposures may overlap USDC and other backing; no verified backing matrix in this package",
+    "Ethereum common settlement and bridge dependencies of Arbitrum/Base are not independent tail domains",
+    "Morpho SparkUSDC exact deployed version, vault creation date, oracle/collateral/curator allocations and audit linkage unverified",
+    "Initial/final gas, bridging, reward-realization and infrastructure costs unknown, not zero",
+    "Protocol-wide TVL/audits do not establish specific market eligibility or cash availability"
+  ],
+  "current_rate_30d_gross_usd_scenario": 136.62531434093904,
+  "current_rate_scenario_warning": "Assumes current base APYs persist for 30d, cash earns zero, and costs excluded; not forecast",
+  "windows": {
+    "30": {
+      "start": "2026-09-29T06:01:03.674000+00:00",
+      "end": "2026-10-29T06:01:03.674000+00:00",
+      "positions": [
+        {
+          "label": "aave-ethereum-dai",
+          "protocol": "Aave",
+          "chain": "Ethereum",
+          "asset": "DAI",
+          "capital_usd": 15000,
+          "source": "https://yields.llama.fi/chart/3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
+          "math": {
+            "coverage_fraction": 0.9999999999999998,
+            "time_weighted_mean_apy_pct": 3.3350191922591286,
+            "implied_gross_return_pct": 0.2700000590383502,
+            "gross_usd_on_50000": 135.00002951917511,
+            "warning": "T4 piecewise APY arithmetic; missing coverage is not zero yield; no fees, depeg, default or fill model",
+            "position_gross_usd": 40.50000885575253
+          }
+        },
+        {
+          "label": "compound-arbitrum-usdt",
+          "protocol": "Compound",
+          "chain": "Arbitrum",
+          "asset": "USDT",
+          "capital_usd": 15000,
+          "source": "https://yields.llama.fi/chart/85247b13-8180-44e7-b38c-4d324cc68a92",
+          "math": {
+            "coverage_fraction": 1.0,
+            "time_weighted_mean_apy_pct": 2.3938812520022106,
+            "implied_gross_return_pct": 0.19462665175791924,
+            "gross_usd_on_50000": 97.31332587895963,
+            "warning": "T4 piecewise APY arithmetic; missing coverage is not zero yield; no fees, depeg, default or fill model",
+            "position_gross_usd": 29.19399776368789
+          }
+        },
+        {
+          "label": "morpho-base-sparkusdc",
+          "protocol": "Morpho",
+          "chain": "Base",
+          "asset": "USDC",
+          "capital_usd": 15000,
+          "source": "https://yields.llama.fi/chart/a5fab52f-73fa-4f44-9c09-9af1eb20996c",
+          "math": {
+            "coverage_fraction": 0.9999999999999998,
+            "time_weighted_mean_apy_pct": 4.149404634351255,
+            "implied_gross_return_pct": 0.3347073704995692,
+            "gross_usd_on_50000": 167.3536852497846,
+            "warning": "T4 piecewise APY arithmetic; missing coverage is not zero yield; no fees, depeg, default or fill model",
+            "position_gross_usd": 50.20610557493538
+          }
+        }
+      ],
+      "cash_usd": 5000,
+      "cash_income_scenario_usd": 0,
+      "cash_income_basis": "explicit zero-yield cash scenario, not observed yield",
+      "gross_usd": 119.9001121943758,
+      "gross_return_pct_on_total_capital": 0.2398002243887516,
+      "net_usd": null,
+      "benchmark_excess_usd": null
+    },
+    "90": {
+      "start": "2026-07-31T06:01:03.674000+00:00",
+      "end": "2026-10-29T06:01:03.674000+00:00",
+      "positions": [
+        {
+          "label": "aave-ethereum-dai",
+          "protocol": "Aave",
+          "chain": "Ethereum",
+          "asset": "DAI",
+          "capital_usd": 15000,
+          "source": "https://yields.llama.fi/chart/3665ee7e-6c5d-49d9-abb7-c47ab5d9d4ac",
+          "math": {
+            "coverage_fraction": 1.0,
+            "time_weighted_mean_apy_pct": 3.1090203722330365,
+            "implied_gross_return_pct": 0.7576691432975491,
+            "gross_usd_on_50000": 378.8345716487745,
+            "warning": "T4 piecewise APY arithmetic; missing coverage is not zero yield; no fees, depeg, default or fill model",
+            "position_gross_usd": 113.65037149463234
+          }
+        },
+        {
+          "label": "compound-arbitrum-usdt",
+          "protocol": "Compound",
+          "chain": "Arbitrum",
+          "asset": "USDT",
+          "capital_usd": 15000,
+          "source": "https://yields.llama.fi/chart/85247b13-8180-44e7-b38c-4d324cc68a92",
+          "math": {
+            "coverage_fraction": 0.9999999999999999,
+            "time_weighted_mean_apy_pct": 2.3951444798659134,
+            "implied_gross_return_pct": 0.5852551534069883,
+            "gross_usd_on_50000": 292.6275767034941,
+            "warning": "T4 piecewise APY arithmetic; missing coverage is not zero yield; no fees, depeg, default or fill model",
+            "position_gross_usd": 87.78827301104823
+          }
+        },
+        {
+          "label": "morpho-base-sparkusdc",
+          "protocol": "Morpho",
+          "chain": "Base",
+          "asset": "USDC",
+          "capital_usd": 15000,
+          "source": "https://yields.llama.fi/chart/a5fab52f-73fa-4f44-9c09-9af1eb20996c",
+          "math": {
+            "coverage_fraction": 0.9999999999999998,
+            "time_weighted_mean_apy_pct": 3.977121482591817,
+            "implied_gross_return_pct": 0.9662544684212561,
+            "gross_usd_on_50000": 483.127234210628,
+            "warning": "T4 piecewise APY arithmetic; missing coverage is not zero yield; no fees, depeg, default or fill model",
+            "position_gross_usd": 144.9381702631884
+          }
+        }
+      ],
+      "cash_usd": 5000,
+      "cash_income_scenario_usd": 0,
+      "cash_income_basis": "explicit zero-yield cash scenario, not observed yield",
+      "gross_usd": 346.37681476886894,
+      "gross_return_pct_on_total_capital": 0.6927536295377379,
+      "net_usd": null,
+      "benchmark_excess_usd": null
+    }
+  },
+  "cost_status": {
+    "entry_exit_gas_usd": null,
+    "bridge_usd": null,
+    "execution_slippage_usd": null,
+    "infra_usd": null,
+    "stablecoin_mtm_usd": null,
+    "default_loss_usd": null
+  }
+}

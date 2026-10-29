@@ -1,0 +1,31 @@
+{
+  "source_url": "https://mainnet.optimism.io",
+  "retrieved_at_utc": "2026-10-29T07:20:15.398546+00:00",
+  "receipt_method": "eth_getTransactionReceipt",
+  "transaction_hash": "0xe1c03f2fef3f72891fa4623fd20ec10705f88d77c76e45f35e8babe6554e958e",
+  "evidence_kind": "public_receipt_discovery_not_actor_pnl",
+  "qualifies_t1": false,
+  "realized_pnl_usd": null,
+  "selected_receipt": {
+    "transactionHash": "0xe1c03f2fef3f72891fa4623fd20ec10705f88d77c76e45f35e8babe6554e958e",
+    "blockNumber": "0x9778c74",
+    "blockHash": "0x84398dce0cf1def43c3a42def04dcb5462cf5f82aadc641a88d67d11e883401a",
+    "from": "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+    "to": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+    "status": "0x1",
+    "gasUsed": "0x1936e",
+    "effectiveGasPrice": "0x1e85eb",
+    "l1Fee": "0x5b321289",
+    "l1GasUsed": "0xd8b",
+    "l1GasPrice": "0x31d3f49",
+    "l1FeeScalar": null,
+    "gasUsedForL1": null
+  },
+  "receipt_response_sha256": "47da1753211bb4568cb8b1867cd401713cbea71ebebca71dc983e98166cb2c13",
+  "server_date": "Thu, 29 Oct 2026 07:20:15 GMT",
+  "block_response_sha256": "dd02722f2e4d77001b60a2af35cb45e33c46bae7ff7433891b3ec510c92a42c1",
+  "block_timestamp_unix": 1793258145,
+  "block_timestamp_utc": "2026-10-29T07:15:45+00:00",
+  "block_hash_matches_receipt": true,
+  "ok": true
+}

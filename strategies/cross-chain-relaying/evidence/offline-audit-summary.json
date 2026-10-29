@@ -1,0 +1,99 @@
+{
+  "audit_kind": "collection_author_offline_raw_rehash_recount_not_independent_review",
+  "network_requests_performed": 0,
+  "qualifies_t1": false,
+  "realized_pnl_usd": null,
+  "capital_deployed_usd": null,
+  "audited_manifest_sha256": "dbf2ebe7576773324ae604518a0e0494275de18a5a8488e0171ada4bd80c4cee",
+  "source_window_utc": {
+    "opening": "2026-10-15T07:15:45+00:00",
+    "closing": "2026-10-29T07:15:45+00:00"
+  },
+  "successful_raw_entries_checked": 144,
+  "all_response_sha256_and_sizes_matched": true,
+  "all_source_checks_canonical_fingerprint": "7109c55c987bc5165dbc950a622fc8644de0c3b4aa3d4ddd09462c321208c222",
+  "raw_http_bytes_checked": 7389954,
+  "boundary_header_checks": {
+    "opening": {
+      "number_matches_requested": true,
+      "hash_matches_summary": true,
+      "timestamp_matches_summary": true
+    },
+    "closing": {
+      "number_matches_requested": true,
+      "hash_matches_summary": true,
+      "timestamp_matches_summary": true
+    }
+  },
+  "receipt_checks": {
+    "hash_matches_request": true,
+    "successful": true,
+    "recipient_is_spoke_pool": true,
+    "sender_is_different_from_indexed_relayer": true,
+    "all_logs_match_receipt_header": true,
+    "refund_page_logs_equal_receipt_logs": true,
+    "block_hash_agrees_with_page": true,
+    "transfers_equal_summary": true
+  },
+  "recount_comparisons": {
+    "fill_event_count": true,
+    "unique_fill_event_transaction_hashes": true,
+    "repayment_chain_counts": true,
+    "fill_type_counts": true,
+    "fill_token_totals": true,
+    "refund_actor_event_count": true,
+    "refund_token_totals": true,
+    "deferred_batch_count": true,
+    "fill_page_interval": true,
+    "refund_page_interval": true
+  },
+  "fill_event_count": 2915,
+  "distinct_fill_event_transaction_hashes": 2915,
+  "actor_refund_allocation_event_count": 983,
+  "repayment_chain_counts": {
+    "999": 4,
+    "42161": 2076,
+    "8453": 100,
+    "56": 238,
+    "1": 114,
+    "10": 72,
+    "324": 40,
+    "137": 36,
+    "43114": 18,
+    "9745": 31,
+    "57073": 31,
+    "143": 11,
+    "4663": 55,
+    "59144": 10,
+    "480": 15,
+    "130": 15,
+    "5042": 16,
+    "4217": 1,
+    "4326": 1,
+    "1868": 31
+  },
+  "fill_output_totals_by_token_raw_not_profit": {
+    "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": "519006660325",
+    "0x0b2c639c533813f4aa9d7837caf62653d097ff85": "409530985490",
+    "0x4200000000000000000000000000000000000006": "196811347856704392357",
+    "0x7f5c764cbc14f9669b88837ca1490cca17c31607": "4618771449",
+    "0x68f180fcce6836688e9084f035309e29bf0a2095": "11905823"
+  },
+  "refund_allocations_by_token_raw_not_cash_or_profit": {
+    "0x0b2c639c533813f4aa9d7837caf62653d097ff85": "989006502167",
+    "0x4200000000000000000000000000000000000006": "274795552527564093295",
+    "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": "125830883942",
+    "0x68f180fcce6836688e9084f035309e29bf0a2095": "116372374"
+  },
+  "page_counts": {
+    "fills": 61,
+    "refunds": 61
+  },
+  "abi_source_pin_available_in_saved_data": false,
+  "abi_semantics_limit": "Only mutable master source URLs were retained, not the source bodies, commit/blob IDs, or deployed implementation mapping. Layout parity and an explorer example do not pin ABI semantics. Indexed relayer address must not be promoted to verified transaction sender, payer or firm.",
+  "canonicality_limit": "Two saved boundary headers and within-response/page/receipt hash consistency checked; no independent headers for every intermediate block, block-header hash recomputation, or external canonicality recheck.",
+  "independent_review_limit": "Raw 144 HTTP bodies remain local/ignored. Reviewer can inspect exported raw witnesses, but this collection-author audit is not an independent reviewer's recount of all 122 raw log pages.",
+  "errors": [],
+  "raw_integrity_recount_passed": true,
+  "economic_or_attribution_semantics_certified": false
+}

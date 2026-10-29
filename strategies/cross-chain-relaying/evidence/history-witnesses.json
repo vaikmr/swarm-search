@@ -1,0 +1,109 @@
+{
+  "evidence_class": "primary_public_event_and_state_availability_not_qualified_T1",
+  "qualifies_t1": false,
+  "realized_pnl_usd": null,
+  "selection_rule": "First/last collected fill and actor-allocation event plus independently checked refund example; witnesses only, not a representative profitability sample.",
+  "fill_boundaries": [
+    {
+      "transaction_hash": "0xe7d40db22c5d1d50e263c81c2450744edf50e3b7d979e631d6f1cd7ccbd7d2a9",
+      "log_index": "0xd7",
+      "block_number": 158225034,
+      "input_token": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+      "output_token": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "input_amount_raw": "10412765",
+      "original_output_amount_raw": "10393806",
+      "repayment_chain_id": 999,
+      "origin_chain_id": 999,
+      "deposit_id": "80533928396969715276128853761028053500742968989951839086264381730897629223865",
+      "actual_output_amount_raw": "10393806",
+      "fill_type": 0
+    },
+    {
+      "transaction_hash": "0xe1c03f2fef3f72891fa4623fd20ec10705f88d77c76e45f35e8babe6554e958e",
+      "log_index": "0x18",
+      "block_number": 158829684,
+      "input_token": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "output_token": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "input_amount_raw": "100000",
+      "original_output_amount_raw": "100000",
+      "repayment_chain_id": 42161,
+      "origin_chain_id": 42161,
+      "deposit_id": "53807010055689497315805094444375316998028819292809911339999975484984250718528",
+      "actual_output_amount_raw": "100000",
+      "fill_type": 0
+    }
+  ],
+  "refund_boundaries": [
+    {
+      "transaction_hash": "0x55c8e64efc744b58f95d4807df34197f88159bc4d024028bf8f283fc457dab3d",
+      "log_index": "0x7e",
+      "block_number": 158225521,
+      "root_bundle_id": 29813,
+      "leaf_id": 4,
+      "token": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "allocated_amount_raw": "663173091",
+      "any_batch_refunds_deferred": false,
+      "cash_receipt_independently_verified": false
+    },
+    {
+      "transaction_hash": "0x0e82833ef339794c103952684387b5ce1080dd46f3647812284fe04674189582",
+      "log_index": "0xa",
+      "block_number": 158829590,
+      "root_bundle_id": 30445,
+      "leaf_id": 5,
+      "token": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "allocated_amount_raw": "3894164",
+      "any_batch_refunds_deferred": false,
+      "cash_receipt_independently_verified": false
+    }
+  ],
+  "refund_example_allocation_rows": [
+    {
+      "transaction_hash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+      "log_index": "0x17",
+      "block_number": 158820146,
+      "root_bundle_id": 30435,
+      "leaf_id": 3,
+      "token": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "allocated_amount_raw": "300000",
+      "any_batch_refunds_deferred": false,
+      "cash_receipt_independently_verified": false
+    },
+    {
+      "transaction_hash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+      "log_index": "0x1d",
+      "block_number": 158820146,
+      "root_bundle_id": 30435,
+      "leaf_id": 5,
+      "token": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "allocated_amount_raw": "30398523",
+      "any_batch_refunds_deferred": false,
+      "cash_receipt_independently_verified": false
+    }
+  ],
+  "refund_example_selected_receipt": {
+    "transactionHash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+    "blockNumber": "0x9776732",
+    "blockHash": "0xdc0d6543fd1153501c5891b98ba79b977d23e4f3dc9800d76789ca8b22b9f907",
+    "from": "0xf7bac63fc7ceacf0589f25454ecf5c2ce904997c",
+    "to": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+    "status": "0x1",
+    "gasUsed": "0x376b9",
+    "effectiveGasPrice": "0x1e85ea",
+    "l1Fee": "0x2cd786170"
+  },
+  "actual_pool_to_actor_transfers": [
+    {
+      "transaction_hash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+      "log_index": "0x16",
+      "token": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "amount_raw": "300000"
+    },
+    {
+      "transaction_hash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+      "log_index": "0x1c",
+      "token": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "amount_raw": "30398523"
+    }
+  ]
+}

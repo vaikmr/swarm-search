@@ -1,0 +1,76 @@
+{
+  "source_commit": "23d2fd15c1d736b6c8cee4614e82f3d55fc430c4",
+  "sources": [
+    {
+      "url": "https://github.com/vaikmr/swarm-search/blob/23d2fd15c1d736b6c8cee4614e82f3d55fc430c4/strategies/cross-chain-relaying/evidence/history-probe-summary.json",
+      "sha256": "dbf2ebe7576773324ae604518a0e0494275de18a5a8488e0171ada4bd80c4cee"
+    },
+    {
+      "url": "https://github.com/vaikmr/swarm-search/blob/23d2fd15c1d736b6c8cee4614e82f3d55fc430c4/strategies/cross-chain-relaying/evidence/history-witnesses.json",
+      "sha256": "9172258921e58191313809970a0cb97e51d38075059beae6326235bdd9048836"
+    }
+  ],
+  "verification_scope": "Offline consistency of committed summaries and selected decoded witnesses",
+  "network_rpc_requests_performed_by_this_checker": 0,
+  "summary": {
+    "window_seconds": 1209600,
+    "window_is_historical_not_forward_paper": true,
+    "recorded_contiguous_pages": {
+      "fills": 61,
+      "refunds": 61
+    },
+    "reported_fill_count_not_independently_recounted": 2915,
+    "reported_actor_allocation_event_count_not_paid_refund_count": 983,
+    "reported_repayment_chain_counts": {
+      "arbitrum_42161": 2076,
+      "optimism_10": 72,
+      "other_chain_ids": 767
+    },
+    "repayment_chain_id_does_not_determine_origin_chain": true,
+    "nonce_advance_not_transaction_census": 4661,
+    "selected_wallet_balances_token_units_not_USD_or_total_capital": {
+      "opening": {
+        "native_ETH": "0.199886595759699386",
+        "USDC": "38683.840618",
+        "WETH": "60.457741367599737641",
+        "bridged_USDT": "133340.677594"
+      },
+      "closing": {
+        "native_ETH": "0.199081521123773935",
+        "USDC": "35878.824937",
+        "WETH": "35.124401441065366289",
+        "bridged_USDT": "12057.016628"
+      }
+    }
+  },
+  "witnesses": {
+    "decoded_witnesses_only_no_raw_log_redecode": true,
+    "example_allocation_transfer_amounts_consistent": true,
+    "example_selected_transfers_token_units_not_profit": {
+      "0x0b2c639c533813f4aa9d7837caf62653d097ff85": "0.300000",
+      "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": "30.398523"
+    },
+    "example_refund_transaction_sender_is_selected_actor": false,
+    "retained_arbitrum_origin_and_repayment_route_witnesses": [
+      {
+        "destination_chain_id": 10,
+        "origin_chain_id": 42161,
+        "repayment_chain_id": 42161,
+        "output_token": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+        "output_token_units": "0.100000",
+        "block_number": 158829684,
+        "matched_claim_or_payment": false
+      }
+    ]
+  },
+  "unverified": {
+    "actor_pnl_usd": null,
+    "entrant_capture_share": null,
+    "qualified_lock_time_seconds": null,
+    "peak_outstanding_receivables_usd": null,
+    "entrant_deployable_capital_usd": null,
+    "qualifies_t1": false,
+    "qualifies_t2": false,
+    "qualifies_t3": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Delivered public-input snapshots, tools and synthetic tests. Integrity hashes, not authenticity, return evidence or independent timestamps.",
+  "evidence_tier": "inputs_and_T4_only",
+  "file_sha256": {
+    "research_tools/yield_data.py": "878c1e749d73009ee538dbb5e529cb9ba65299ef019dd89c643fba95a8455141",
+    "research_tools/paper_observer.py": "b47fcad723748818a38a8c23ad6d5def612303fd3bb9700377b6747b6732040b",
+    "research_tools/paper_yield_README.md": "9684ece54f53a8898efc643145590b385bde844f35d959e51927b0f86f2fc470",
+    "research_tools/yield_sample_20261029.json": "6128fb8f927176ebde4cfd6bf425265f1d0e75cadf8c12ad36841c66fd59b492",
+    "research_tools/yield_funding_sample_20261029.json": "e6d78d7143314f49a317b38f8609816310865c4ffe7070dc49be91abc29c173b",
+    "research_tools/paper_sample_20261029.json": "7c8e2e76e8da857f9c48d8f26a269c23281475233ce06455124c76bc452336de",
+    "tests/test_paper_observer.py": "c07ef3108e9be12be19641b51c72b058b37d45028ffbff9c6da81b02772a30d9",
+    "tests/test_yield_data.py": "1e4fca8fe71aeeb2ffc66db3338096381960ac2ebf55fdc407a51a6f6f123488",
+    "tests/test_yield_samples.py": "7d04b97386d87b68597ddcd0f20f92da9c2534d41b277b9c2a4432ebdd3acad9"
+  }
+}

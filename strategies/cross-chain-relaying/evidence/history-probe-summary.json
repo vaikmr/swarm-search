@@ -1,0 +1,3292 @@
+{
+  "actor_address": "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+  "chain_id": 10,
+  "spoke_pool": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+  "scope": "one_chain_availability_and_partial_cashflow_not_full_actor_ledger",
+  "source_urls": [
+    "https://docs.across.to/api-reference/deposits/get",
+    "https://docs.across.to/concepts/intent-lifecycle-in-across",
+    "https://docs.across.to/reference/contract-addresses",
+    "https://raw.githubusercontent.com/across-protocol/contracts/master/contracts/interfaces/V3SpokePoolInterface.sol",
+    "https://raw.githubusercontent.com/across-protocol/contracts/master/contracts/spoke-pools/SpokePool.sol",
+    "https://optimistic.etherscan.io/tx/0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6#eventlog"
+  ],
+  "qualifies_t1": false,
+  "realized_pnl_usd": null,
+  "capital_deployed_usd": null,
+  "opening_receivables_raw": null,
+  "closing_receivables_raw": null,
+  "all_costs_reconciled": false,
+  "source_coverage_complete": false,
+  "open_block_excluded": 158224884,
+  "close_block_included": 158829684,
+  "selected_inventory_not_total_capital": {
+    "opening": {
+      "block_number": 158224884,
+      "block_hash": "0x31c6a4087ef9815dbf78bd347b670293c665bf2a0380d4e98a0b2ee3cd138743",
+      "timestamp_unix": 1792048545,
+      "timestamp_utc": "2026-10-15T07:15:45+00:00",
+      "native_wei": "199886595759699386",
+      "USDC_raw": "38683840618",
+      "WETH_raw": "60457741367599737641",
+      "bridged_USDT_raw": "133340677594",
+      "account_nonce": "460293"
+    },
+    "closing": {
+      "block_number": 158829684,
+      "block_hash": "0x84398dce0cf1def43c3a42def04dcb5462cf5f82aadc641a88d67d11e883401a",
+      "timestamp_unix": 1793258145,
+      "timestamp_utc": "2026-10-29T07:15:45+00:00",
+      "native_wei": "199081521123773935",
+      "USDC_raw": "35878824937",
+      "WETH_raw": "35124401441065366289",
+      "bridged_USDT_raw": "12057016628",
+      "account_nonce": "464954"
+    }
+  },
+  "elapsed_window_seconds": 1209600,
+  "token_decimals": {
+    "USDC": 6,
+    "WETH": 18,
+    "bridged_USDT": 6
+  },
+  "closing_code": "0x",
+  "pagination": {
+    "page_size_blocks": 10000,
+    "expected_pages_per_kind": 61,
+    "successful_pages": {
+      "fills": 61,
+      "refunds": 61
+    },
+    "failed_pages": [],
+    "decode_errors": []
+  },
+  "observed_fill_event_count": 2915,
+  "observed_unique_fill_transactions": 2915,
+  "fill_repayment_chain_counts": {
+    "999": 4,
+    "42161": 2076,
+    "8453": 100,
+    "56": 238,
+    "1": 114,
+    "10": 72,
+    "324": 40,
+    "137": 36,
+    "43114": 18,
+    "9745": 31,
+    "57073": 31,
+    "143": 11,
+    "4663": 55,
+    "59144": 10,
+    "480": 15,
+    "130": 15,
+    "5042": 16,
+    "4217": 1,
+    "4326": 1,
+    "1868": 31
+  },
+  "fill_type_counts": {
+    "0": 2915
+  },
+  "fill_output_totals_by_token_raw_not_profit": {
+    "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": "519006660325",
+    "0x0b2c639c533813f4aa9d7837caf62653d097ff85": "409530985490",
+    "0x4200000000000000000000000000000000000006": "196811347856704392357",
+    "0x7f5c764cbc14f9669b88837ca1490cca17c31607": "4618771449",
+    "0x68f180fcce6836688e9084f035309e29bf0a2095": "11905823"
+  },
+  "refund_event_count_with_actor_allocation": 983,
+  "refund_allocations_by_token_raw_not_cash_or_profit": {
+    "0x0b2c639c533813f4aa9d7837caf62653d097ff85": "989006502167",
+    "0x4200000000000000000000000000000000000006": "274795552527564093295",
+    "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": "125830883942",
+    "0x68f180fcce6836688e9084f035309e29bf0a2095": "116372374"
+  },
+  "refund_batches_with_any_deferred_payment": 0,
+  "one_receipt_confirmed_refund_transfers_not_profit": [
+    {
+      "transaction_hash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+      "log_index": "0x16",
+      "token": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "amount_raw": "300000"
+    },
+    {
+      "transaction_hash": "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6",
+      "log_index": "0x1c",
+      "token": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+      "amount_raw": "30398523"
+    }
+  ],
+  "deposit_api_pagination_probes": [
+    {
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=0",
+      "skip": 0,
+      "returned_count": 2,
+      "timestamps": [
+        "2026-10-29T07:36:35.000Z",
+        "2026-10-29T07:36:35.000Z"
+      ]
+    },
+    {
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=1000",
+      "skip": 1000,
+      "returned_count": 2,
+      "timestamps": [
+        "2026-10-29T07:00:25.000Z",
+        "2026-10-29T07:00:23.000Z"
+      ]
+    },
+    {
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=5000",
+      "skip": 5000,
+      "returned_count": 0,
+      "timestamps": []
+    },
+    {
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=10000",
+      "skip": 10000,
+      "returned_count": 0,
+      "timestamps": []
+    },
+    {
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=100000",
+      "skip": 100000,
+      "returned_count": 0,
+      "timestamps": []
+    }
+  ],
+  "missing_for_actor_pnl": [
+    "All other chains, all other token inventories and related entity addresses",
+    "Opening/closing unexecuted refund entitlements and disputed/deferred receivables",
+    "Fill-to-refund-root/bundle allocations and exact repayment latency",
+    "All nonfill/reverted transactions, gas and explicit payments",
+    "Funding/withdrawals, liabilities and bridge/rebalance transfers",
+    "Token marks, protocol fees, infrastructure costs and operator capital denominator",
+    "Other event versions, proxy implementation history, claims and legacy SpokePools"
+  ],
+  "request_count": 146,
+  "request_manifest": [
+    {
+      "name": "closing-USDC",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "data": "0x70a0823100000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+        },
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:03.659492+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:03 GMT",
+      "response_sha256": "07383f8f3d8f359341e2669cb3eb397f32877b1a525319465e158e81f5971362",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "closing-WETH",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x4200000000000000000000000000000000000006",
+          "data": "0x70a0823100000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+        },
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:04.009625+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:04 GMT",
+      "response_sha256": "08a26d1f2b5ede82ba0e6c0336956388fd192869ad2ab9352c76680ab2d0a8ba",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "closing-block",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x9778c74",
+        false
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:02.609107+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:02 GMT",
+      "response_sha256": "dd02722f2e4d77001b60a2af35cb45e33c46bae7ff7433891b3ec510c92a42c1",
+      "response_bytes": 3087,
+      "ok": true
+    },
+    {
+      "name": "closing-bridged_USDT",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "data": "0x70a0823100000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+        },
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:04.359872+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:04 GMT",
+      "response_sha256": "ffab031810941cbceb73891b47545f631703f58a5bcab21212cead344b8aa707",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "closing-code",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getCode",
+      "params": [
+        "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:05.760373+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:05 GMT",
+      "response_sha256": "899512c4a47d406146076b95c471a2424774661b631b8237b02bdc6308f2e335",
+      "response_bytes": 39,
+      "ok": true
+    },
+    {
+      "name": "closing-native_wei",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getBalance",
+      "params": [
+        "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:02.959221+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:03 GMT",
+      "response_sha256": "c9f8ff23ae92e7da06989532b9c31a49436719b9415d0b2c5ad83ca558d3a72e",
+      "response_bytes": 54,
+      "ok": true
+    },
+    {
+      "name": "closing-outgoing_nonce",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:03.309382+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:03 GMT",
+      "response_sha256": "34e405f6df32896c2651da930ac531aa281938c14136b295d9c8d92b41da1a40",
+      "response_bytes": 44,
+      "ok": true
+    },
+    {
+      "name": "decimals-USDC",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "data": "0x313ce567"
+        },
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:04.710018+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:04 GMT",
+      "response_sha256": "b9affdcdc9ebdd0148b7e901e8839657e1a9bb488878788e7234df75a6d8099e",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "decimals-WETH",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x4200000000000000000000000000000000000006",
+          "data": "0x313ce567"
+        },
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:05.060127+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:05 GMT",
+      "response_sha256": "5703d4b6224aca5e99ca0f83a1c6498a6c24a5c77a675c16d0d47af8ac3feee8",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "decimals-bridged_USDT",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "data": "0x313ce567"
+        },
+        "0x9778c74"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:05.410259+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:05 GMT",
+      "response_sha256": "b9affdcdc9ebdd0148b7e901e8839657e1a9bb488878788e7234df75a6d8099e",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "deposits-skip-0",
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=0",
+      "method": "GET",
+      "params": null,
+      "retrieved_at_utc": "2026-10-29T07:36:49.675080+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:49 GMT",
+      "response_sha256": "6b77a855d4533c90dfdab73e31a311dec0da490a1c5701c4f4787e7c7f0241f0",
+      "response_bytes": 4984,
+      "ok": true
+    },
+    {
+      "name": "deposits-skip-1000",
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=1000",
+      "method": "GET",
+      "params": null,
+      "retrieved_at_utc": "2026-10-29T07:36:50.025220+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:50 GMT",
+      "response_sha256": "b8cff3b271509c3c05849917fba901b629cdb0b6118fa18fdf9ac0bb5c5c1aa1",
+      "response_bytes": 3939,
+      "ok": true
+    },
+    {
+      "name": "deposits-skip-10000",
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=10000",
+      "method": "GET",
+      "params": null,
+      "retrieved_at_utc": "2026-10-29T07:36:51.110745+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:51 GMT",
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "response_bytes": 2,
+      "ok": true
+    },
+    {
+      "name": "deposits-skip-100000",
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=100000",
+      "method": "GET",
+      "params": null,
+      "retrieved_at_utc": "2026-10-29T07:36:51.460857+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:51 GMT",
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "response_bytes": 2,
+      "ok": true
+    },
+    {
+      "name": "deposits-skip-5000",
+      "source_url": "https://app.across.to/api/deposits?limit=2&skip=5000",
+      "method": "GET",
+      "params": null,
+      "retrieved_at_utc": "2026-10-29T07:36:50.760634+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:51 GMT",
+      "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "response_bytes": 2,
+      "ok": true
+    },
+    {
+      "name": "fills-158224885-158234884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96e51f5",
+          "toBlock": "0x96e7904",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:06.460632+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:06 GMT",
+      "response_sha256": "9450fec0f46a209539939a11b4b4b1b831c70abe0346c076a02a4ded027678b4",
+      "response_bytes": 88035,
+      "ok": true
+    },
+    {
+      "name": "fills-158234885-158244884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96e7905",
+          "toBlock": "0x96ea014",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:07.160879+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:07 GMT",
+      "response_sha256": "81309ad84fe9617fc7c811852c5eab4384bea70fbc1f317c7d17472199fb3abe",
+      "response_bytes": 92823,
+      "ok": true
+    },
+    {
+      "name": "fills-158244885-158254884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96ea015",
+          "toBlock": "0x96ec724",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:07.861428+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:08 GMT",
+      "response_sha256": "525ec2940ad9e9c8f5773ca71b6075491a20fa224eb06a50d6efa55229041679",
+      "response_bytes": 64026,
+      "ok": true
+    },
+    {
+      "name": "fills-158254885-158264884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96ec725",
+          "toBlock": "0x96eee34",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:08.561701+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:08 GMT",
+      "response_sha256": "a02a84678d25bdd5ca84541773b00f1f437d7870a1f66239da3526be69e5a440",
+      "response_bytes": 68844,
+      "ok": true
+    },
+    {
+      "name": "fills-158264885-158274884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96eee35",
+          "toBlock": "0x96f1544",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:09.262123+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:09 GMT",
+      "response_sha256": "eb81fec3c649546f52608cfe800cd58d95476f5b2ba521393c5d29f850fc97c3",
+      "response_bytes": 70450,
+      "ok": true
+    },
+    {
+      "name": "fills-158274885-158284884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f1545",
+          "toBlock": "0x96f3c54",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:09.962464+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:10 GMT",
+      "response_sha256": "43f0c28d92241403be3b52aebb3d1cb66db94defd4afb3c61994fcf56b4865ed",
+      "response_bytes": 102424,
+      "ok": true
+    },
+    {
+      "name": "fills-158284885-158294884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f3c55",
+          "toBlock": "0x96f6364",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:10.312571+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:10 GMT",
+      "response_sha256": "81a93c79ee9952ab3e980d1b69a3aa5065e09927a6f9c13b0ce731cf1732acb7",
+      "response_bytes": 70432,
+      "ok": true
+    },
+    {
+      "name": "fills-158294885-158304884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f6365",
+          "toBlock": "0x96f8a74",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:11.713548+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:11 GMT",
+      "response_sha256": "0f459c7777acbea45aac48c0cf6f45af7dde70cb20906138a82be01b77bf0c0a",
+      "response_bytes": 68833,
+      "ok": true
+    },
+    {
+      "name": "fills-158304885-158314884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f8a75",
+          "toBlock": "0x96fb184",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:12.414018+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:12 GMT",
+      "response_sha256": "85e06ad72f15a621a16f1b9eecc6cc5f83612b182953369c707e3ba86edcaf9c",
+      "response_bytes": 75229,
+      "ok": true
+    },
+    {
+      "name": "fills-158314885-158324884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96fb185",
+          "toBlock": "0x96fd894",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:13.114406+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:13 GMT",
+      "response_sha256": "a2e3f7619be2f2aa3de02e9bcc1699efd685681ab8c75e458f723c278c256dcd",
+      "response_bytes": 83236,
+      "ok": true
+    },
+    {
+      "name": "fills-158324885-158334884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96fd895",
+          "toBlock": "0x96fffa4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:13.464599+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:13 GMT",
+      "response_sha256": "e5d804e14bb1a2c603c001adb5b4aa2d8898d8a1090169a0e9ffcd7af08365ac",
+      "response_bytes": 88049,
+      "ok": true
+    },
+    {
+      "name": "fills-158334885-158344884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96fffa5",
+          "toBlock": "0x97026b4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:14.165078+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:14 GMT",
+      "response_sha256": "25d31415163f3b0dcf7534c46ad23e39bda78dc1070488add867f7a7c51bac15",
+      "response_bytes": 62428,
+      "ok": true
+    },
+    {
+      "name": "fills-158344885-158354884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97026b5",
+          "toBlock": "0x9704dc4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:14.865511+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:15 GMT",
+      "response_sha256": "776e33ab4ca87d7cdba54fa2b8be3c1ff4fc03e974af869f1a025815a94b7246",
+      "response_bytes": 65633,
+      "ok": true
+    },
+    {
+      "name": "fills-158354885-158364884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9704dc5",
+          "toBlock": "0x97074d4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:15.565829+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:16 GMT",
+      "response_sha256": "ee1edb0c626c6ca91bb38e12c53c547fec128f800126063d5fc8770978bf2808",
+      "response_bytes": 64018,
+      "ok": true
+    },
+    {
+      "name": "fills-158364885-158374884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97074d5",
+          "toBlock": "0x9709be4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:16.266216+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:16 GMT",
+      "response_sha256": "ff56a0499159b3924f2961da359a8827765b70aa909ae4be0f81b8c14fb8e222",
+      "response_bytes": 75238,
+      "ok": true
+    },
+    {
+      "name": "fills-158374885-158384884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9709be5",
+          "toBlock": "0x970c2f4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:16.966381+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:17 GMT",
+      "response_sha256": "0825545166f3f09c957d3d26b7010869039d239805e93e22f3c3ab5b817b2b23",
+      "response_bytes": 62442,
+      "ok": true
+    },
+    {
+      "name": "fills-158384885-158394884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x970c2f5",
+          "toBlock": "0x970ea04",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:17.666905+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:18 GMT",
+      "response_sha256": "2be5570b65d151887b7d873ac7b5d3f9181c7f53a60706aede2cdf9e2f1c2624",
+      "response_bytes": 59234,
+      "ok": true
+    },
+    {
+      "name": "fills-158394885-158404884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x970ea05",
+          "toBlock": "0x9711114",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:18.367298+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:19 GMT",
+      "response_sha256": "2cc9f7bdc3595dcb27331da010c93697c3321be6bdb72ab515181d71dc2a0df3",
+      "response_bytes": 72040,
+      "ok": true
+    },
+    {
+      "name": "fills-158404885-158414884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9711115",
+          "toBlock": "0x9713824",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:19.208955+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:19 GMT",
+      "response_sha256": "08f8d4e9f4947892d7997aacd7d6972966cac81aea61ab91ae807bbfa8002ec2",
+      "response_bytes": 84821,
+      "ok": true
+    },
+    {
+      "name": "fills-158414885-158424884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9713825",
+          "toBlock": "0x9715f34",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:19.909116+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:20 GMT",
+      "response_sha256": "b7d560d599c7dbc29b182b8f098b3156cc0b6f7851eaad12a2bc90ea79d8e20d",
+      "response_bytes": 78425,
+      "ok": true
+    },
+    {
+      "name": "fills-158424885-158434884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9715f35",
+          "toBlock": "0x9718644",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:20.609468+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:20 GMT",
+      "response_sha256": "717df3bd68db19b06859e840069fc7631e30c659f58784cca7f50a983f9c01b6",
+      "response_bytes": 64025,
+      "ok": true
+    },
+    {
+      "name": "fills-158434885-158444884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9718645",
+          "toBlock": "0x971ad54",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:20.959686+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:21 GMT",
+      "response_sha256": "299052a9fa7a9733aba57bab799d233923f8b094e3febf710c676c32ffbf388c",
+      "response_bytes": 88026,
+      "ok": true
+    },
+    {
+      "name": "fills-158444885-158454884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x971ad55",
+          "toBlock": "0x971d464",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:22.360513+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:22 GMT",
+      "response_sha256": "0c3f50a0c060339b39f811d96dd27397887c08b00cbd7fdce2295de05f2313e8",
+      "response_bytes": 102433,
+      "ok": true
+    },
+    {
+      "name": "fills-158454885-158464884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x971d465",
+          "toBlock": "0x971fb74",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:22.710851+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:22 GMT",
+      "response_sha256": "a39be699078d0475bb40e269e7810b29e02621420d520735ac360b1c7f9fbbc7",
+      "response_bytes": 86438,
+      "ok": true
+    },
+    {
+      "name": "fills-158464885-158474884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x971fb75",
+          "toBlock": "0x9722284",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:23.411142+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:23 GMT",
+      "response_sha256": "2c53192bbf434663e03109e4c27dd402c124bf8a94233db5ffe229cf056416cc",
+      "response_bytes": 68840,
+      "ok": true
+    },
+    {
+      "name": "fills-158474885-158484884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9722285",
+          "toBlock": "0x9724994",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:23.761258+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:24 GMT",
+      "response_sha256": "7c5e81a81517bfece324ac007863591450c31f50637405d925ae31921587df00",
+      "response_bytes": 59233,
+      "ok": true
+    },
+    {
+      "name": "fills-158484885-158494884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9724995",
+          "toBlock": "0x97270a4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:24.811685+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:25 GMT",
+      "response_sha256": "b419b9c61a4765bdc78d4bab39bcca472fb9a8923c147b2162b05022164e0121",
+      "response_bytes": 86444,
+      "ok": true
+    },
+    {
+      "name": "fills-158494885-158504884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97270a5",
+          "toBlock": "0x97297b4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:25.512196+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:25 GMT",
+      "response_sha256": "27e274f91cf5696581d19bddae92a4fa377b63f2ba4f25fbed60819b543ad697",
+      "response_bytes": 76833,
+      "ok": true
+    },
+    {
+      "name": "fills-158504885-158514884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97297b5",
+          "toBlock": "0x972bec4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:26.212396+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:26 GMT",
+      "response_sha256": "de94ab4a7f7a6955f0a1da4b94dabcc24ad7accf61a0235ea9c6aba8a07eaea1",
+      "response_bytes": 62442,
+      "ok": true
+    },
+    {
+      "name": "fills-158514885-158524884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x972bec5",
+          "toBlock": "0x972e5d4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:26.562605+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:26 GMT",
+      "response_sha256": "ef01301a2c2e0067b489a22ecc2d003cbf7cf619403bea1e2d97810760c7c252",
+      "response_bytes": 67198,
+      "ok": true
+    },
+    {
+      "name": "fills-158524885-158534884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x972e5d5",
+          "toBlock": "0x9730ce4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:27.963351+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:28 GMT",
+      "response_sha256": "a1cb59f92aa48550704a158fa0126e203ae36feeede5fae25a0c7a9e2056dda8",
+      "response_bytes": 80015,
+      "ok": true
+    },
+    {
+      "name": "fills-158534885-158544884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9730ce5",
+          "toBlock": "0x97333f4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:28.663727+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:28 GMT",
+      "response_sha256": "9c21b274993034ddb43a657060d9d10913a2b4093d96675d6fbf64c61a9934c7",
+      "response_bytes": 81582,
+      "ok": true
+    },
+    {
+      "name": "fills-158544885-158554884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97333f5",
+          "toBlock": "0x9735b04",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:29.014098+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:29 GMT",
+      "response_sha256": "2fd604716674624b21af3283d0b690a9366b477cc2a7f96de9f88c8a97987045",
+      "response_bytes": 71979,
+      "ok": true
+    },
+    {
+      "name": "fills-158554885-158564884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9735b05",
+          "toBlock": "0x9738214",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:29.715070+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:29 GMT",
+      "response_sha256": "f7d0babc654e52a97d4934078882732953233fd4d085dfe6534c0b86f5379633",
+      "response_bytes": 63989,
+      "ok": true
+    },
+    {
+      "name": "fills-158564885-158574884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9738215",
+          "toBlock": "0x973a924",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:30.415645+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:30 GMT",
+      "response_sha256": "a648ef11822fe09de9fe6315d75a062ab1c2bad603025bcb2f725ab0423c3077",
+      "response_bytes": 95965,
+      "ok": true
+    },
+    {
+      "name": "fills-158574885-158584884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x973a925",
+          "toBlock": "0x973d034",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:31.115973+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:31 GMT",
+      "response_sha256": "d6d204edcab0f1638dca3d9809cf8748783821738432e79ff5e919c2fdf4b4af",
+      "response_bytes": 78378,
+      "ok": true
+    },
+    {
+      "name": "fills-158584885-158594884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x973d035",
+          "toBlock": "0x973f744",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:31.816308+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:31 GMT",
+      "response_sha256": "870340a38e6907a57203176a89685de1357ddf28f7832c2df4256ac8cb111af1",
+      "response_bytes": 78376,
+      "ok": true
+    },
+    {
+      "name": "fills-158594885-158604884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x973f745",
+          "toBlock": "0x9741e54",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:32.166462+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:32 GMT",
+      "response_sha256": "e6a5d0bf25260af918a5eba30081eb6344b7950b09af1c9a6f771cfc1d27e30b",
+      "response_bytes": 70396,
+      "ok": true
+    },
+    {
+      "name": "fills-158604885-158614884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9741e55",
+          "toBlock": "0x9744564",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:33.216863+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:33 GMT",
+      "response_sha256": "0a37b4809811274d47eed2b902fe8e03025f762b5868cfb13ca0a45f2d47ec39",
+      "response_bytes": 75188,
+      "ok": true
+    },
+    {
+      "name": "fills-158614885-158624884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9744565",
+          "toBlock": "0x9746c74",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:33.917105+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:34 GMT",
+      "response_sha256": "2d0e52dfc47515ead9148d962e61c61824dddca2e1dfdc11bef5257d5b4423a6",
+      "response_bytes": 84775,
+      "ok": true
+    },
+    {
+      "name": "fills-158624885-158634884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9746c75",
+          "toBlock": "0x9749384",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:34.967537+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:35 GMT",
+      "response_sha256": "540949d33aae764e5c9b934a3ed013e21c45715c08e8c2964957f4d72a495d59",
+      "response_bytes": 113575,
+      "ok": true
+    },
+    {
+      "name": "fills-158634885-158644884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9749385",
+          "toBlock": "0x974ba94",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:35.667823+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:36 GMT",
+      "response_sha256": "e73f440e2023d85be904b1c8272eaf3e1b7c4adf80a6365b1001e4ce302edecf",
+      "response_bytes": 87977,
+      "ok": true
+    },
+    {
+      "name": "fills-158644885-158654884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x974ba95",
+          "toBlock": "0x974e1a4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:36.017929+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:36 GMT",
+      "response_sha256": "7b099c8232309db5ebdc86d36e6f4e17f1e6813f8878ad64859136fa1bc8758c",
+      "response_bytes": 68774,
+      "ok": true
+    },
+    {
+      "name": "fills-158654885-158664884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x974e1a5",
+          "toBlock": "0x97508b4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:36.718243+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:37 GMT",
+      "response_sha256": "ce2895adb7400c88582ab50c850da9a66797b5db22cc0130abe96613b29ae6d1",
+      "response_bytes": 89579,
+      "ok": true
+    },
+    {
+      "name": "fills-158664885-158674884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97508b5",
+          "toBlock": "0x9752fc4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:37.418459+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:37 GMT",
+      "response_sha256": "05339ba91d988c94dcaabf706c050029dcec817aa2e3b7b8295fd81382ac65a3",
+      "response_bytes": 89569,
+      "ok": true
+    },
+    {
+      "name": "fills-158674885-158684884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9752fc5",
+          "toBlock": "0x97556d4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:38.118663+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:38 GMT",
+      "response_sha256": "49f03ef98f858b9bc155b7979c8d1cb63a7a95759a1940d2893ee5f3225136d7",
+      "response_bytes": 71972,
+      "ok": true
+    },
+    {
+      "name": "fills-158684885-158694884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97556d5",
+          "toBlock": "0x9757de4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:38.818951+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:39 GMT",
+      "response_sha256": "79b145b1a2a3d03e646dbebe3b1ae44bf4fa77ebfa1eebf1ea6315185064b4a6",
+      "response_bytes": 67196,
+      "ok": true
+    },
+    {
+      "name": "fills-158694885-158704884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9757de5",
+          "toBlock": "0x975a4f4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:39.519371+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:39 GMT",
+      "response_sha256": "78d3d0d0712e698b481c681268983b0134b901884b6c64c429b35a29dc2f2481",
+      "response_bytes": 79976,
+      "ok": true
+    },
+    {
+      "name": "fills-158704885-158714884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x975a4f5",
+          "toBlock": "0x975cc04",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:40.219652+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:40 GMT",
+      "response_sha256": "57e0206e190302ba0645686614aa62f6b90edd24f78a1802f3c77f778390617a",
+      "response_bytes": 78382,
+      "ok": true
+    },
+    {
+      "name": "fills-158714885-158724884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x975cc05",
+          "toBlock": "0x975f314",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:40.569825+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:40 GMT",
+      "response_sha256": "dfbcb87084bd971e39b37248475917e54f3be039cc9e966065558a6901e39e59",
+      "response_bytes": 75188,
+      "ok": true
+    },
+    {
+      "name": "fills-158724885-158734884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x975f315",
+          "toBlock": "0x9761a24",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:41.970651+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:42 GMT",
+      "response_sha256": "7221a3df10e7a11e85ffc592d74cb54812d2ef8bf8400cc53bb3054c53928a72",
+      "response_bytes": 68803,
+      "ok": true
+    },
+    {
+      "name": "fills-158734885-158744884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9761a25",
+          "toBlock": "0x9764134",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:42.671072+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:42 GMT",
+      "response_sha256": "a9a98e703202fa42b5f9c42f2095aefc8c29ab5faf122ca14fafbc39899037ee",
+      "response_bytes": 67200,
+      "ok": true
+    },
+    {
+      "name": "fills-158744885-158754884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9764135",
+          "toBlock": "0x9766844",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:43.021391+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:43 GMT",
+      "response_sha256": "4e584a4b6cab2cbfd45e4ba6337e48149bb430d1d999f3c014ec598915963892",
+      "response_bytes": 73594,
+      "ok": true
+    },
+    {
+      "name": "fills-158754885-158764884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9766845",
+          "toBlock": "0x9768f54",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:43.721699+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:43 GMT",
+      "response_sha256": "4564647fd134acdd9bd81019c76e4feb30ae9cc5a4183905ea4c799f0896de5e",
+      "response_bytes": 83197,
+      "ok": true
+    },
+    {
+      "name": "fills-158764885-158774884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9768f55",
+          "toBlock": "0x976b664",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:44.422045+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:44 GMT",
+      "response_sha256": "77621397d92b7201d93bc9189a3660d0b9adb2f281c9bb1a172e02cf7ee86aa6",
+      "response_bytes": 78366,
+      "ok": true
+    },
+    {
+      "name": "fills-158774885-158784884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x976b665",
+          "toBlock": "0x976dd74",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:44.772228+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:44 GMT",
+      "response_sha256": "de05414389f8ecc2892346b10515e27530d05118e23764dd2c65640c15fa3446",
+      "response_bytes": 67181,
+      "ok": true
+    },
+    {
+      "name": "fills-158784885-158794884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x976dd75",
+          "toBlock": "0x9770484",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:46.173138+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:46 GMT",
+      "response_sha256": "56ab2e6a48fab738375157716dd71499c08a0392ebf73e0ca94839416f3c370b",
+      "response_bytes": 83170,
+      "ok": true
+    },
+    {
+      "name": "fills-158794885-158804884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9770485",
+          "toBlock": "0x9772b94",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:46.523291+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:46 GMT",
+      "response_sha256": "9a32595dd8cb2a1f4ae071b0d6dca65566072abc5e950c85f76d147d4584eccf",
+      "response_bytes": 102379,
+      "ok": true
+    },
+    {
+      "name": "fills-158804885-158814884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9772b95",
+          "toBlock": "0x97752a4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:47.223692+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:47 GMT",
+      "response_sha256": "db5b61bfd456c13fc5b26821c9c5beecd1d5436a91f6713f87bf39712b78b21b",
+      "response_bytes": 83190,
+      "ok": true
+    },
+    {
+      "name": "fills-158814885-158824884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97752a5",
+          "toBlock": "0x97779b4",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:47.573876+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:47 GMT",
+      "response_sha256": "87539075f8e360b2dcf8d29255ba71e7ef68d7d913af8e2f337c99f6c6599174",
+      "response_bytes": 67199,
+      "ok": true
+    },
+    {
+      "name": "fills-158824885-158829684",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97779b5",
+          "toBlock": "0x9778c74",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:48.974729+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:49 GMT",
+      "response_sha256": "d8dcad9aac257a2c44edf5a896af9117dff9a088c5d823fd6f9b3e43ebb19026",
+      "response_bytes": 28821,
+      "ok": true
+    },
+    {
+      "name": "full-window-fill-probe",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96e51f5",
+          "toBlock": "0x9778c74",
+          "topics": [
+            "0x44b559f101f8fbcc8a0ea43fa91a05a729a5ea6e14a7c75aa750374690137208",
+            null,
+            null,
+            "0x00000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:06.110507+00:00",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 413: Request Entity Too Large",
+      "http_status": 413,
+      "error_body": "{\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32614,\"message\":\"eth_getLogs is limited to a 10,000 range\"},\"id\":1}\n"
+    },
+    {
+      "name": "opening-USDC",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "data": "0x70a0823100000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+        },
+        "0x96e51f4"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:01.558687+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:01 GMT",
+      "response_sha256": "1587902f8e15467b96baded5b084fa4aeb7e55374b9a0e6e5e5296ee9342dcc3",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "opening-WETH",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x4200000000000000000000000000000000000006",
+          "data": "0x70a0823100000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+        },
+        "0x96e51f4"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:01.908817+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:01 GMT",
+      "response_sha256": "73f738723874f7bf1d0fecdaad0c605931ebfae88d34a78d255bcd1bfd1c9fb9",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "opening-block",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getBlockByNumber",
+      "params": [
+        "0x96e51f4",
+        false
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:00.508074+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:00 GMT",
+      "response_sha256": "5f7d7b484ba72756cfce5a31e86c8b14274af74b91af536a6153eb0db5eebccd",
+      "response_bytes": 4954,
+      "ok": true
+    },
+    {
+      "name": "opening-bridged_USDT",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_call",
+      "params": [
+        {
+          "to": "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58",
+          "data": "0x70a0823100000000000000000000000007ae8551be970cb1cca11dd7a11f47ae82e70e67"
+        },
+        "0x96e51f4"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:02.258996+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:02 GMT",
+      "response_sha256": "71f864667ae69b2f49c362066b64bf19f17cb7f19018ecc7a19ebb8b57745901",
+      "response_bytes": 103,
+      "ok": true
+    },
+    {
+      "name": "opening-native_wei",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getBalance",
+      "params": [
+        "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+        "0x96e51f4"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:00.858206+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:01 GMT",
+      "response_sha256": "80f9132c32eb8e80e2193cbbf76c1d50e71424e70f849bd582f43681e057d807",
+      "response_bytes": 54,
+      "ok": true
+    },
+    {
+      "name": "opening-outgoing_nonce",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getTransactionCount",
+      "params": [
+        "0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+        "0x96e51f4"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:01.208342+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:01 GMT",
+      "response_sha256": "db326fd28fd4e379887b3879277c733e33145616e93d83274f63f9e14bac538a",
+      "response_bytes": 44,
+      "ok": true
+    },
+    {
+      "name": "refund-receipt-example",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getTransactionReceipt",
+      "params": [
+        "0x5bd36a12ca618cf6e3d406d9352207fd6c413f323ced70dfc4768523e9e953e6"
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:49.324844+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:49 GMT",
+      "response_sha256": "b6aaaa8528f64fdddab8ead80869baf9ccddb0e4fbe301c7de3633ed0486ee99",
+      "response_bytes": 10024,
+      "ok": true
+    },
+    {
+      "name": "refunds-158224885-158234884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96e51f5",
+          "toBlock": "0x96e7904",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:06.810772+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:07 GMT",
+      "response_sha256": "fab7e627e9fdbe5b41c787253dda4abaf30ecc81e52b7c5461d8bd9e1545bc2b",
+      "response_bytes": 48662,
+      "ok": true
+    },
+    {
+      "name": "refunds-158234885-158244884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96e7905",
+          "toBlock": "0x96ea014",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:07.511229+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:07 GMT",
+      "response_sha256": "5b4f4e054d8cb2e6a1e5c948f6d84e184376870f880d160eaa2939da13d52fa2",
+      "response_bytes": 49185,
+      "ok": true
+    },
+    {
+      "name": "refunds-158244885-158254884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96ea015",
+          "toBlock": "0x96ec724",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:08.211557+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:08 GMT",
+      "response_sha256": "779ae8838f73e0c0b95199258bad17c28e7e5760b0ec7250c84d61ff9ece63ce",
+      "response_bytes": 40601,
+      "ok": true
+    },
+    {
+      "name": "refunds-158254885-158264884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96ec725",
+          "toBlock": "0x96eee34",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:08.911923+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:09 GMT",
+      "response_sha256": "f87f37e3a17fbc3fb9654b75981af262539ec36c6dc5b65deeb109d14510efef",
+      "response_bytes": 35750,
+      "ok": true
+    },
+    {
+      "name": "refunds-158264885-158274884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96eee35",
+          "toBlock": "0x96f1544",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:09.612225+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:09 GMT",
+      "response_sha256": "258b52a9f63b8dd2dbda5a26b96507f9f0e113c576bd598b7d20ef255ffee0e4",
+      "response_bytes": 42021,
+      "ok": true
+    },
+    {
+      "name": "refunds-158274885-158284884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f1545",
+          "toBlock": "0x96f3c54",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:10.662787+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:10 GMT",
+      "response_sha256": "85670546481d43a2b992e0b2dab79df0e33741aa60e1aa389842174294cb93c3",
+      "response_bytes": 52237,
+      "ok": true
+    },
+    {
+      "name": "refunds-158284885-158294884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f3c55",
+          "toBlock": "0x96f6364",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:11.013159+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:11 GMT",
+      "response_sha256": "5186e7d1ec66d6a9feae80b51772e6176952243d4813770ca0ed2b4cfb69109d",
+      "response_bytes": 40350,
+      "ok": true
+    },
+    {
+      "name": "refunds-158294885-158304884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f6365",
+          "toBlock": "0x96f8a74",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:11.363355+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:11 GMT",
+      "response_sha256": "b3d86965dbb31724e555c0981a1343966567c79039209f708b0ef36074026a85",
+      "response_bytes": 37670,
+      "ok": true
+    },
+    {
+      "name": "refunds-158304885-158314884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96f8a75",
+          "toBlock": "0x96fb184",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:12.063735+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:12 GMT",
+      "response_sha256": "23bde40e1d61d02443f48f66b028385ce3504e26b15db279cecd003b01db12af",
+      "response_bytes": 38810,
+      "ok": true
+    },
+    {
+      "name": "refunds-158314885-158324884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96fb185",
+          "toBlock": "0x96fd894",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:12.764207+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:13 GMT",
+      "response_sha256": "51573da8f1f84132803da0cb8309b04441ec6910dedad675510b043e72cf6e83",
+      "response_bytes": 46240,
+      "ok": true
+    },
+    {
+      "name": "refunds-158324885-158334884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96fd895",
+          "toBlock": "0x96fffa4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:13.814888+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:14 GMT",
+      "response_sha256": "b0622ee6a12e8206afea5506ffa24979aa71a14d8206b2fad957e0e3764eb6a4",
+      "response_bytes": 40980,
+      "ok": true
+    },
+    {
+      "name": "refunds-158334885-158344884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x96fffa5",
+          "toBlock": "0x97026b4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:14.515325+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:15 GMT",
+      "response_sha256": "48118472b01b9f09fcbf4e2a76930e5016d9ea776969f3d92df7a2c2cbb36142",
+      "response_bytes": 37540,
+      "ok": true
+    },
+    {
+      "name": "refunds-158344885-158354884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97026b5",
+          "toBlock": "0x9704dc4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:15.215702+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:15 GMT",
+      "response_sha256": "9a088674481f60ed2f88c565760356e83622518cdd95f5f8de0c4e89415763f8",
+      "response_bytes": 28840,
+      "ok": true
+    },
+    {
+      "name": "refunds-158354885-158364884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9704dc5",
+          "toBlock": "0x97074d4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:15.915895+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:16 GMT",
+      "response_sha256": "9322e47f44fd1bf73216ddace9064ec2158bbd4a17166c06943223873878027a",
+      "response_bytes": 49050,
+      "ok": true
+    },
+    {
+      "name": "refunds-158364885-158374884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97074d5",
+          "toBlock": "0x9709be4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:16.616262+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:17 GMT",
+      "response_sha256": "38709fe7a5f93fa88bece5adba659825ac10bd7706fce83130c223949c9f0d07",
+      "response_bytes": 49843,
+      "ok": true
+    },
+    {
+      "name": "refunds-158374885-158384884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9709be5",
+          "toBlock": "0x970c2f4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:17.316608+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:17 GMT",
+      "response_sha256": "10cb05338f8e9b34f71fa5c4a9c205a159632c6451cfefdf07f9b2a230ad8f4f",
+      "response_bytes": 42016,
+      "ok": true
+    },
+    {
+      "name": "refunds-158384885-158394884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x970c2f5",
+          "toBlock": "0x970ea04",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:18.017081+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:18 GMT",
+      "response_sha256": "d554cc2a34259bfc921fc5d0177363fca495ffa4b88056ca2ec879a19397aaa4",
+      "response_bytes": 43446,
+      "ok": true
+    },
+    {
+      "name": "refunds-158394885-158404884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x970ea05",
+          "toBlock": "0x9711114",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:18.858849+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:19 GMT",
+      "response_sha256": "ead33e2218478888a87a2223ca4e969a67b6d05ea7424e996b99c20e02b19ad0",
+      "response_bytes": 40746,
+      "ok": true
+    },
+    {
+      "name": "refunds-158404885-158414884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9711115",
+          "toBlock": "0x9713824",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:19.559025+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:19 GMT",
+      "response_sha256": "b76b757e098f26f6fffa15c5d58e63e7fdf5309e70125a8ec2ebaa5aa8167db2",
+      "response_bytes": 37790,
+      "ok": true
+    },
+    {
+      "name": "refunds-158414885-158424884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9713825",
+          "toBlock": "0x9715f34",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:20.259214+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:20 GMT",
+      "response_sha256": "ed8cb18bc3ce8baecef7f2d64ef588ef766a990e638df584ab2eb88a1ebf8461",
+      "response_bytes": 43287,
+      "ok": true
+    },
+    {
+      "name": "refunds-158424885-158434884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9715f35",
+          "toBlock": "0x9718644",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:21.309807+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:21 GMT",
+      "response_sha256": "6e84094ebe01994e61482d6b3e394575aa7463b686e49d4b231b3c0a23e8412c",
+      "response_bytes": 35346,
+      "ok": true
+    },
+    {
+      "name": "refunds-158434885-158444884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9718645",
+          "toBlock": "0x971ad54",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:21.660035+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:22 GMT",
+      "response_sha256": "30a03a652b0d385b46f6ca07b8a5d1d9ecb5a3d9e7c920a2193b50490a583584",
+      "response_bytes": 49043,
+      "ok": true
+    },
+    {
+      "name": "refunds-158444885-158454884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x971ad55",
+          "toBlock": "0x971d464",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:22.010313+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:22 GMT",
+      "response_sha256": "b0ab494572a97c690e5fd451bc331b1b72dab8773f223731dc9b56e99ce5a734",
+      "response_bytes": 42125,
+      "ok": true
+    },
+    {
+      "name": "refunds-158454885-158464884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x971d465",
+          "toBlock": "0x971fb74",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:23.061033+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:23 GMT",
+      "response_sha256": "ae6ec0d8b46da40dc7ee00b07d7884d6d04abe4fd70d1671d60010fadbdafc01",
+      "response_bytes": 51240,
+      "ok": true
+    },
+    {
+      "name": "refunds-158464885-158474884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x971fb75",
+          "toBlock": "0x9722284",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:24.111351+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:24 GMT",
+      "response_sha256": "c5257a5b5359e6a3ff486f454eac4677d4513af1277193d95452e3384f65de6a",
+      "response_bytes": 39975,
+      "ok": true
+    },
+    {
+      "name": "refunds-158474885-158484884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9722285",
+          "toBlock": "0x9724994",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:24.461602+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:25 GMT",
+      "response_sha256": "e9a02722a33303b9ea719d10f536f5172bbd15cd1f0759ff8a4c1165033db9c9",
+      "response_bytes": 41256,
+      "ok": true
+    },
+    {
+      "name": "refunds-158484885-158494884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9724995",
+          "toBlock": "0x97270a4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:25.161977+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:25 GMT",
+      "response_sha256": "ed585d7bf62d51243c80f43d3a6193d9b6ab1cb595a486edbee9970116053ca4",
+      "response_bytes": 47129,
+      "ok": true
+    },
+    {
+      "name": "refunds-158494885-158504884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97270a5",
+          "toBlock": "0x97297b4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:25.862308+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:25 GMT",
+      "response_sha256": "fc2b89361311eb6234383435ab747cf284085d3b1ce8330db64f784a8ac70983",
+      "response_bytes": 53927,
+      "ok": true
+    },
+    {
+      "name": "refunds-158504885-158514884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97297b5",
+          "toBlock": "0x972bec4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:26.912723+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:27 GMT",
+      "response_sha256": "d2dcfc82f06ee1fd5fcc522d993061cad32aadc9a1de764c2067b1111673c943",
+      "response_bytes": 44080,
+      "ok": true
+    },
+    {
+      "name": "refunds-158514885-158524884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x972bec5",
+          "toBlock": "0x972e5d4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:27.263109+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:27 GMT",
+      "response_sha256": "6322a26237da235efc6065c5f9dc454c0fa6da0b4cf460733dace258bae9dacf",
+      "response_bytes": 43421,
+      "ok": true
+    },
+    {
+      "name": "refunds-158524885-158534884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x972e5d5",
+          "toBlock": "0x9730ce4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:27.613235+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:27 GMT",
+      "response_sha256": "ab07339cc9bcd87142b89b679346994244e4fb7331e27d1a660366c5c81467e3",
+      "response_bytes": 49040,
+      "ok": true
+    },
+    {
+      "name": "refunds-158534885-158544884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9730ce5",
+          "toBlock": "0x97333f4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:28.313517+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:28 GMT",
+      "response_sha256": "24e44bfe567f26a2b10baf853aeebe7b766747b5132af7ecd68a87554e1d0386",
+      "response_bytes": 52747,
+      "ok": true
+    },
+    {
+      "name": "refunds-158544885-158554884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97333f5",
+          "toBlock": "0x9735b04",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:29.364178+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:29 GMT",
+      "response_sha256": "938e6bbe3e1fb7a6df96e4ab66d8a0898381cd350965c31513ee9513cdd92790",
+      "response_bytes": 53234,
+      "ok": true
+    },
+    {
+      "name": "refunds-158554885-158564884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9735b05",
+          "toBlock": "0x9738214",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:30.065513+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:30 GMT",
+      "response_sha256": "2510d52c5263b53cc4c5f5edd7b69b82a868a249c2e21b4247ca98d058e9be69",
+      "response_bytes": 39550,
+      "ok": true
+    },
+    {
+      "name": "refunds-158564885-158574884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9738215",
+          "toBlock": "0x973a924",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:30.765859+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:30 GMT",
+      "response_sha256": "eed5cdc4b27123c577fdc55917ab11c478a303a0bb63640797e665e37e829beb",
+      "response_bytes": 49280,
+      "ok": true
+    },
+    {
+      "name": "refunds-158574885-158584884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x973a925",
+          "toBlock": "0x973d034",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:31.466094+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:31 GMT",
+      "response_sha256": "b610b04426a355ac46009ace24cb83a843bdea86ca191f6aca1cf4741c1fb5ae",
+      "response_bytes": 48120,
+      "ok": true
+    },
+    {
+      "name": "refunds-158584885-158594884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x973d035",
+          "toBlock": "0x973f744",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:32.516591+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:32 GMT",
+      "response_sha256": "3b5613a42804ab7d27302c5119f1744a420d78c2baef4834532b8c2b0dce9424",
+      "response_bytes": 49796,
+      "ok": true
+    },
+    {
+      "name": "refunds-158594885-158604884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x973f745",
+          "toBlock": "0x9741e54",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:32.866746+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:33 GMT",
+      "response_sha256": "e4c7ae16c162d6d67b9807b10ee444f397fc9839aa3af179a2ed18fffa43e5e9",
+      "response_bytes": 39555,
+      "ok": true
+    },
+    {
+      "name": "refunds-158604885-158614884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9741e55",
+          "toBlock": "0x9744564",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:33.567006+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:33 GMT",
+      "response_sha256": "a045b74431367771116646342a5c192dd531dbaa927309828f9806025d933e06",
+      "response_bytes": 45704,
+      "ok": true
+    },
+    {
+      "name": "refunds-158614885-158624884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9744565",
+          "toBlock": "0x9746c74",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:34.267219+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:34 GMT",
+      "response_sha256": "06c0451bd580bb53b4b8e71688b8ddc7029e8a452f9e25609fac8cf90b0d29a9",
+      "response_bytes": 39949,
+      "ok": true
+    },
+    {
+      "name": "refunds-158624885-158634884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9746c75",
+          "toBlock": "0x9749384",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:34.617356+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:34 GMT",
+      "response_sha256": "75efd02c273544e8a07c4b51387ed28bbae98e7f4b0373a318d05bf93cf0f6ec",
+      "response_bytes": 55702,
+      "ok": true
+    },
+    {
+      "name": "refunds-158634885-158644884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9749385",
+          "toBlock": "0x974ba94",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:35.317671+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:35 GMT",
+      "response_sha256": "6a068eea9628ded8b7a9e9e6d26a3a4c45ed1803d66292c7d39c43c6d28aada7",
+      "response_bytes": 43010,
+      "ok": true
+    },
+    {
+      "name": "refunds-158644885-158654884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x974ba95",
+          "toBlock": "0x974e1a4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:36.368072+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:36 GMT",
+      "response_sha256": "5cc6d6776af954dfd464c26c834a009ad43133f89fa3331b550c05f61ade2ea0",
+      "response_bytes": 45691,
+      "ok": true
+    },
+    {
+      "name": "refunds-158654885-158664884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x974e1a5",
+          "toBlock": "0x97508b4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:37.068379+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:37 GMT",
+      "response_sha256": "d6849e4e9f1ddc0213ea66501382f53e28b5b8a4645d958f2780178a08119afa",
+      "response_bytes": 48386,
+      "ok": true
+    },
+    {
+      "name": "refunds-158664885-158674884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97508b5",
+          "toBlock": "0x9752fc4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:37.768595+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:38 GMT",
+      "response_sha256": "3bd25e3358b927d38c90471cb0ddd9d8153361425bb8df2971bf3f27b9b90e8b",
+      "response_bytes": 55182,
+      "ok": true
+    },
+    {
+      "name": "refunds-158674885-158684884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9752fc5",
+          "toBlock": "0x97556d4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:38.468804+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:38 GMT",
+      "response_sha256": "b1574c9fe84430fd07c40017c6a302c7c9a8379574c265d81c1238d816499251",
+      "response_bytes": 45299,
+      "ok": true
+    },
+    {
+      "name": "refunds-158684885-158694884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97556d5",
+          "toBlock": "0x9757de4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:39.169136+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:39 GMT",
+      "response_sha256": "afd4f358f287c9be005b88b5613dc4ea6a3539e5a288a6daa934a4651f875a79",
+      "response_bytes": 46593,
+      "ok": true
+    },
+    {
+      "name": "refunds-158694885-158704884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9757de5",
+          "toBlock": "0x975a4f4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:39.869457+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:39 GMT",
+      "response_sha256": "1e5805d090a5ccd36893a5538f8b57293bb31f8ebca71ffa26da1ac19cb4a5a9",
+      "response_bytes": 49408,
+      "ok": true
+    },
+    {
+      "name": "refunds-158704885-158714884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x975a4f5",
+          "toBlock": "0x975cc04",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:40.920126+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:41 GMT",
+      "response_sha256": "739c1932bbdfc69cca8c64a64d283af1b19296bc715e7c8ff440f5ca305b4a7a",
+      "response_bytes": 49413,
+      "ok": true
+    },
+    {
+      "name": "refunds-158714885-158724884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x975cc05",
+          "toBlock": "0x975f314",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:41.270306+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:41 GMT",
+      "response_sha256": "bdf3df0e671a56a63128edfd528036a6b6890218870f42ce3932ea9fe8fae029",
+      "response_bytes": 42639,
+      "ok": true
+    },
+    {
+      "name": "refunds-158724885-158734884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x975f315",
+          "toBlock": "0x9761a24",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:41.620486+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:41 GMT",
+      "response_sha256": "edb95a70fc735cd50fad13fbaeb4e4f5cb7c8885958947bc70531e6c91428ca7",
+      "response_bytes": 38785,
+      "ok": true
+    },
+    {
+      "name": "refunds-158734885-158744884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9761a25",
+          "toBlock": "0x9764134",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:42.320871+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:42 GMT",
+      "response_sha256": "f9005386e7a7e245fc5d6d154862a602f15bb1943565ddfd56cebb686c19d1b0",
+      "response_bytes": 36736,
+      "ok": true
+    },
+    {
+      "name": "refunds-158744885-158754884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9764135",
+          "toBlock": "0x9766844",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:43.371480+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:43 GMT",
+      "response_sha256": "a5c55adf1891e6c7fc4656f25b8e7411842e4f67fd03a2a965d01bf48373e32f",
+      "response_bytes": 54017,
+      "ok": true
+    },
+    {
+      "name": "refunds-158754885-158764884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9766845",
+          "toBlock": "0x9768f54",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:44.071827+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:44 GMT",
+      "response_sha256": "b8f4f28aba36ed86158967f02caf85827a1eae95e99e126a4140c7d42a6f7098",
+      "response_bytes": 47647,
+      "ok": true
+    },
+    {
+      "name": "refunds-158764885-158774884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9768f55",
+          "toBlock": "0x976b664",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:45.122421+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:45 GMT",
+      "response_sha256": "b35219f7ba53637c5e0deeefbc6e65265114a78a670ae71375fb493c70fbc5cd",
+      "response_bytes": 45303,
+      "ok": true
+    },
+    {
+      "name": "refunds-158774885-158784884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x976b665",
+          "toBlock": "0x976dd74",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:45.472699+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:45 GMT",
+      "response_sha256": "29f03d95f9d07ce0010ce9f360a4c4b5e51096b228ce7ebc9b107d83d467f7ab",
+      "response_bytes": 42755,
+      "ok": true
+    },
+    {
+      "name": "refunds-158784885-158794884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x976dd75",
+          "toBlock": "0x9770484",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:45.822935+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:45 GMT",
+      "response_sha256": "f4024fae57edd6d9347061227483a2bc47812e4c29c222030f4c7d27fdc312b7",
+      "response_bytes": 39306,
+      "ok": true
+    },
+    {
+      "name": "refunds-158794885-158804884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9770485",
+          "toBlock": "0x9772b94",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:46.873519+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:46 GMT",
+      "response_sha256": "92fecb472682531fb340f0bc427885022954a519f11fc96d8b7972467429b265",
+      "response_bytes": 49024,
+      "ok": true
+    },
+    {
+      "name": "refunds-158804885-158814884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x9772b95",
+          "toBlock": "0x97752a4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:47.924127+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:48 GMT",
+      "response_sha256": "24b08e01679af7a7069050df97373d9a3eabc38391ee8bf408a1f4660abc4626",
+      "response_bytes": 43658,
+      "ok": true
+    },
+    {
+      "name": "refunds-158814885-158824884",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97752a5",
+          "toBlock": "0x97779b4",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:48.274317+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:48 GMT",
+      "response_sha256": "e81ca933e4a25a68e7c5051cc785cfe698d0b4e2106548a47ea6bf609bb76826",
+      "response_bytes": 39434,
+      "ok": true
+    },
+    {
+      "name": "refunds-158824885-158829684",
+      "source_url": "https://mainnet.optimism.io",
+      "method": "eth_getLogs",
+      "params": [
+        {
+          "address": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "fromBlock": "0x97779b5",
+          "toBlock": "0x9778c74",
+          "topics": [
+            "0xf4ad92585b1bc117fbdd644990adf0827bc4c95baeae8a23322af807b6d0020e"
+          ]
+        }
+      ],
+      "retrieved_at_utc": "2026-10-29T07:36:48.624541+00:00",
+      "http_status": 200,
+      "server_date": "Thu, 29 Oct 2026 07:36:48 GMT",
+      "response_sha256": "20b9c18ac3b787ed332e3f2d76176fe330bbd646eba4b8e09a113cb27b747be4",
+      "response_bytes": 19726,
+      "ok": true
+    },
+    {
+      "name": "unsupported-relayer-filter",
+      "source_url": "https://app.across.to/api/deposits?limit=2&relayer=0x07ae8551be970cb1cca11dd7a11f47ae82e70e67",
+      "method": "GET",
+      "params": null,
+      "retrieved_at_utc": "2026-10-29T07:36:51.810961+00:00",
+      "ok": false,
+      "error": "HTTPError: HTTP Error 400: Bad Request",
+      "http_status": 400,
+      "error_body": "{\"error\":\"ValidationError\",\"message\":\"At path: relayer -- Expected a value of type `never`, but received: `\\\"0x07ae8551be970cb1cca11dd7a11f47ae82e70e67\\\"`\"}"
+    }
+  ],
+  "evidence_class": "primary_public_event_and_state_availability_not_qualified_T1",
+  "report_transform": "Field label outgoing_nonce normalized to account_nonce; raw RPC method/parameters/digests unchanged. Added explicit missing event-version/proxy-history coverage."
+}
