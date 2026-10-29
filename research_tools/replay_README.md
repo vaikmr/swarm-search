@@ -1,6 +1,6 @@
 # Paper-only replay accounting and evidence manifests
 
-**Status: scaffolding only. No T1 actor PnL, no T2 historical fork replay, and no T3 forward observation were produced by these tools.**
+**Status: closed-position-only accounting scaffolding. Complete monthly portfolio coverage is NOT established. No T1 actor PnL, no T2 historical fork replay, and no T3 forward observation were produced by these tools.**
 
 Python standard library only, Python 3.10+; tested in the development sandbox with Python 3.14.7. Run from repository root:
 
@@ -52,7 +52,7 @@ T3: forward_observation_log, decision_logic_identity, simulated_fills,
 
 ## Accounting input contract
 
-`replay.py` consumes **precomputed** opportunities and mark paths, not raw chain state. Its output is always **T4**, including with historical data. It does not qualify as T2 just because the dates cover a month.
+`replay.py` consumes **precomputed, closed-position-only** opportunities and mark paths, not raw chain state. Its output is always **T4**, including with historical data. It does not qualify as T2 or full-portfolio monthly PnL just because the input dates cover a month. Every scenario emits `scope="closed_positions_only"`, `portfolio_coverage_complete=false`, and `monthly_portfolio_pnl_validated=false`.
 
 Top-level required fields:
 
@@ -99,7 +99,7 @@ Use execution/base + priority + chain-specific data/operator gas **exactly once*
 
 The terminal cumulative gross mark must equal the opportunity's final gross PnL. Provide interim marks dense enough to reveal drawdown; settlement-only profitable snapshots cannot establish drawdown. `inventory_marks_complete=false` suppresses drawdown values. Setting it true is an adapter assertion, not independent proof. Real deployment risk may be larger between marks.
 
-The accounting boundary requires opportunities to close within the chosen data window. Extend the data through final settlement, or use a genuine end-of-window fair-value/locked-capital adapter; **never silently drop unsettled positions or their liabilities** to satisfy this input format. This limitation prevents using the scaffold unmodified for live open positions.
+The accounting boundary requires opportunities to close within the chosen data window. A position marked down before cutoff but settling afterward is rejected, not included as a covered monthly position. **Never filter out unsettled positions or their liabilities** to satisfy this format: doing so can censor losses and locked capital. Nor may a fixed-cutoff portfolio calculation use a later settlement outcome to mark a pending position. A future full-portfolio adapter needs cutoff-only receivable/collateral valuation, fees, locks and subsequent-period carryover without settlement lookahead. This scaffold is not that adapter. Extending a toy closed-cohort observation through final settlement does not establish coverage of the original portfolio month.
 
 ## Conservative accounting and sensitivities
 
@@ -113,7 +113,7 @@ The accounting boundary requires opportunities to close within the chosen data w
 - Capture stress raises the **proven incumbent win count** by 20% relative, rounds up, and removes closest-margin entrant wins. It is an ex-post adverse scenario, **not evidence of competitor capture probabilities**. Zero observed incumbent wins implies zero relative uplift: a separate absolute-takeover stress is still needed. Unknown competitor races remain losses.
 - Added latency may alter price/slippage/adverse selection. This accounting grid does not re-execute state or reprice quotes; genuine strategy fork adapters must do that.
 - Marked economic equity and capital-time utilization are reported, along with profitable-fill share and capture share. Received cash is unknown. These do not include liquidation/margin mechanics, leverage eligibility, chain/protocol/stablecoin/bridge exposure gates or CEX freeze risk.
-- Rolling 30-day PnL samples use daily-spaced complete windows; shorter series produce null percentiles, not annualized estimates. Overlapping empirical p5/p50/p95 are descriptive, not independent samples or confidence intervals. One window is one observation even if all percentiles coincide.
+- `closed_position_rolling_30d_economic_pnl_usd` samples use daily-spaced input windows for the supplied closed cohort only; shorter series produce null percentiles, not annualized estimates. `input_window_days` describes timestamps, **not portfolio coverage**. Overlapping empirical p5/p50/p95 are descriptive, not independent samples or confidence intervals. One window is one observation even if all percentiles coincide. Neither these percentiles nor closed-cohort drawdown/terminal-equity outputs establish monthly portfolio economics or risk.
 - A p5 outcome or historical maximum drawdown cannot certify the charter's separate **99% monthly drawdown confidence** or annual tail-loss gate.
 
 ## Reproducible synthetic smoke tests
