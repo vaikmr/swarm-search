@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "candidate_id": "ONCHAIN-C1",
+  "as_of": "2026-10-29",
+  "candidate": "Perp-hedged bridge arbitrage",
+  "reported_sample_size": 21,
+  "reported_sample_status": "unverified identification, not an observed dataset",
+  "identified_trade_rows": 0,
+  "counterfactual_rows_run": 0,
+  "historically_unhedgeable_trade_count": null,
+  "historically_supported_hedge_count": null,
+  "decision": "not_run_missing_identification_and_contemporaneous_execution_inputs",
+  "unhedged_sample_pnl_usd": null,
+  "hedged_sample_pnl_usd": null,
+  "improvement_usd": null,
+  "fits_total_capital_usd_50000": null,
+  "risk_certificate": null,
+  "evidence_upgrade": false,
+  "gates": [
+    {
+      "name": "Identify the actual reported day and all 21 trades",
+      "status": "missing",
+      "required": "Full actor address, date/timezone, immutable source, all source and destination tx hashes and chains, contract/mint addresses, amounts/decimals, bridge message IDs, completion and failed/pending outcomes. Abbreviations or token labels do not identify a dataset."
+    },
+    {
+      "name": "Prove a matching perp was tradable at each decision time",
+      "status": "missing",
+      "required": "Historical venue/DEX namespace, listing and delisting witnesses, exact underlying/index and multiplier, collateral token, trading halts, position/OI limits, trader eligibility. Current metadata is not a historical listing witness."
+    },
+    {
+      "name": "Recover executable entry and close prices for size",
+      "status": "missing",
+      "required": "Timestamped pre-decision bid/ask/depth or matching fills, sizes, clock alignment, latency, partial/rejected orders and exit availability. Never replace these with OHLC, hourly/interpolated/filled marks, allMids or a current book."
+    },
+    {
+      "name": "Identify the exposure and when the hedge starts and stops",
+      "status": "missing_for_reported_sample",
+      "required": "Token/claim equivalence, borrow liabilities and collateral deltas, numeraire and FX, spot purchase time, hedge-entry time, finality/bridge completion, actual sale and hedge-close time. A borrowed-token liability can already offset inventory delta."
+    },
+    {
+      "name": "Reconstruct margin and total capital through the path",
+      "status": "missing",
+      "required": "Historical margin tiers/mode/account abstraction, separate collateral pools, equity/mark path, liquidation/ADL and withdrawal constraints. Count spot cash, hedge collateral/buffers, destination loan collateral, gas reserves and in-flight funds within one total capital budget."
+    },
+    {
+      "name": "Account for all actual costs and funding events",
+      "status": "missing",
+      "required": "Entry and close maker/taker fees, historical user tier/referral/staking settings, HIP-3 deployer/growth/collateral factors, explicit builder fee without double-counting, actual hourly funding events/signs, spot impact, bridge fee, gas, borrowing, conversions and infrastructure allocation. Unknown is not zero."
+    },
+    {
+      "name": "Keep full sample and terminal positions",
+      "status": "not_started_due_to_missing_inputs",
+      "required": "Fixed 21-row sample, no selecting losers or dropping failed bridges; carry open inventory/debt/perps and unrealized marks separately from received cash. No automatic extension to a month."
+    }
+  ],
+  "available_but_not_substitutable": [
+    "Seed v2 Appendix G documents a separate non-atomic WBTC-loan lifecycle; it is not the reported 21-trade sample.",
+    "Public current first-DEX metadata and one BTC book responded successfully. Their current date cannot prove the alleged historical markets or prices.",
+    "Historical L2 storage is documented but requester-pays and potentially incomplete. No paid data requested.",
+    "Hourly/filled accounting prices and published aggregate bridge medians cannot establish matched executable fills or trade-specific costs."
+  ],
+  "minimal_valid_test_if_inputs_are_later_recovered": [
+    "Freeze the complete identified 21-trade manifest and versioned sources before examining improvement.",
+    "For each row, require the historically matching hedge contract and a size-aware sell-bid entry followed by buy-ask close after the predeclared exit condition; mark unavailable rows unavailable, not zero profit.",
+    "Reconcile spot/bridge cash flows, debt and hedge/funding cash flows with one capital and margin path. Hold the original spot fills fixed only as an explicit counterfactual assumption, not a causal execution guarantee.",
+    "Report paired unhedged versus hedged economics, all extra capital/costs, failed fills, pending exposure and sample coverage. No T2, monthly claim or riskless conclusion from this test."
+  ],
+  "analytical_identity_not_a_replay": {
+    "assumptions": "Same economic units, linear contract, fixed spot quantity q and short quantity h; actual receipt quantities/fees must replace this simplification.",
+    "equation": "economic_PnL = q*(destination_spot_exit - source_spot_entry) + h*(perp_bid_entry - perp_ask_exit) + signed_funding - all_other_costs",
+    "interpretation": "For a correctly sized hedge, common price delta may cancel. Destination local basis, perp-index basis, execution gaps, missing token receipts, margin liquidation and counterparty risk do not cancel. Adding a short can change winners as well as losers."
+  }
+}
