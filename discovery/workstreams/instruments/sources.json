@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "scope": "One bounded discovery pass: borrowing, wrappers, cross-chain claims, and tokenized-stock comparison feasibility.",
+  "retrieved_date_utc": "2026-10-29",
+  "recent_change_window": ["2025-10-29", "2026-10-29"],
+  "budget": {
+    "original_document_fetch_limit": 20,
+    "targeted_candidate_document_extension": 6,
+    "document_fetch_limit": 26,
+    "document_fetches_used": 26,
+    "successful_document_fetches": 25,
+    "distinct_documents_attempted": 24,
+    "distinct_documents_fetched": 23,
+    "original_search_limit": 6,
+    "targeted_candidate_search_extension": 2,
+    "search_limit": 8,
+    "searches_used": 8,
+    "rpc_calls": 0,
+    "account_access_checks": 0,
+    "transactions": 0
+  },
+  "coverage": {
+    "assigned_ids_triaged": ["R001", "R007", "R020", "R033", "R038", "R051", "R063", "R065", "R069"],
+    "priority_document_pages_read": ["R001", "R038", "R063", "R069"],
+    "other_assigned_pages_read": ["R007", "R020"],
+    "assigned_abstract_metadata_only": ["R033", "R051", "R065"],
+    "qualification": "Reading a documentation root means its rendered page, not its entire documentation corpus. Supporting technical pages were also read. Three paper abstracts/metadata pages are triage, not full-paper reviews. Search-only stock-token leads do not increase the document-reading count."
+  },
+  "assigned_sources": [
+    {
+      "id": "R001",
+      "title": "Aave Protocol Overview",
+      "url": "https://aave.com/docs",
+      "source_type": "official_documentation_root",
+      "access_status": "accessible",
+      "reading_status": "rendered_root_page_read_with_supporting_technical_pages",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Borrowing requires collateral; newer hub/spoke markets are discovery leads rather than evidence of free cross-chain credit.",
+      "supporting_source_ids": ["I002", "I003"],
+      "mechanism_ids": ["INST-01", "INST-05", "INST-06"]
+    },
+    {
+      "id": "R007",
+      "title": "Arbitrum introduction",
+      "bibliography_title": "A gentle introduction to Arbitrum",
+      "url": "https://docs.arbitrum.io/welcome/arbitrum-gentle-introduction",
+      "rendered_canonical_link": "https://docs.arbitrum.io/get-started/arbitrum-introduction",
+      "source_type": "official_documentation",
+      "access_status": "accessible_updated_page",
+      "reading_status": "rendered_article_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Separates local execution from Ethereum settlement and describes a typical 6.4-day native withdrawal delay versus paid third-party fast bridges. Not an actual route quote or a universal finality bound.",
+      "mechanism_ids": ["INST-01", "INST-03"]
+    },
+    {
+      "id": "R020",
+      "title": "Understanding Minimum Blob Base Fees - Layer 2 - Ethereum Research",
+      "url": "https://ethresear.ch/t/understanding-minimum-blob-base-fees/20489",
+      "source_type": "research_forum_article",
+      "access_status": "accessible",
+      "reading_status": "main_article_read_reply_bodies_not_reviewed",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2024-09-25",
+      "underlying_data_window": {
+        "principal_table": ["2024-07-01", "2024-09-17"],
+        "other_historical_examples": "2024, including June 20"
+      },
+      "relevance": "Historical evidence that blob-space fees are not the whole execution/data cost. Proposed fee parameters and 2024 cost tables are not current execution prices.",
+      "mechanism_ids": ["INST-01", "INST-03", "INST-04"]
+    },
+    {
+      "id": "R033",
+      "title": "Censorship Resistance in On-Chain Auctions",
+      "url": "https://doi.org/10.4230/LIPIcs.AFT.2023.19",
+      "source_type": "peer_reviewed_paper_publisher_landing_page",
+      "access_status": "abstract_metadata_and_references_accessible_full_paper_not_fetched",
+      "reading_status": "abstract_metadata_triage_only",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2023-10-18",
+      "underlying_data_window": null,
+      "relevance": "Context-only warning: eventual inclusion does not establish timely financial execution. Auction interference and attack paths excluded from strategy construction.",
+      "mechanism_ids": []
+    },
+    {
+      "id": "R038",
+      "title": "Get Started with LayerZero - LayerZero",
+      "url": "https://docs.layerzero.network/v2",
+      "source_type": "official_documentation_root",
+      "access_status": "accessible",
+      "reading_status": "rendered_root_page_read_with_OFT_technical_article",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Messaging across EVM and non-EVM environments is not atomic settlement or proof that different issuer claims are fungible.",
+      "supporting_source_ids": ["I004", "I008"],
+      "mechanism_ids": ["INST-04", "INST-06"]
+    },
+    {
+      "id": "R051",
+      "title": "Time Moves Faster When There is Nothing You Anticipate: The Role of Time in MEV Rewards | Proceedings of the 2023 Workshop on Decentralized Finance and Security",
+      "url": "https://doi.org/10.1145/3605768.3623563",
+      "source_type": "peer_reviewed_paper_publisher_landing_page",
+      "access_status": "abstract_metadata_references_and_cited_by_list_accessible_full_paper_not_fetched",
+      "reading_status": "abstract_metadata_and_selected_cited_by_triage_only",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2023-11-27",
+      "underlying_data_window": null,
+      "relevance": "Timing/inclusion context only, not an endorsed validator delay strategy. Landing page lists newer related work; that does not mean those papers or their empirical windows were read.",
+      "mechanism_ids": []
+    },
+    {
+      "id": "R063",
+      "title": "What is the Threshold Network? | Threshold Network Docs",
+      "url": "https://docs.threshold.network/",
+      "source_type": "official_documentation_root",
+      "access_status": "accessible",
+      "reading_status": "rendered_root_page_read_with_redemption_registry_and_2026_updates",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "tBTC is a Bitcoin-backed claim with asynchronous redemption, not instant native BTC. Current registries include Solana and Sui, but listing alone does not prove live liquidity or instrument age.",
+      "supporting_source_ids": ["I005", "I006", "I007", "I009"],
+      "mechanism_ids": ["INST-02"]
+    },
+    {
+      "id": "R065",
+      "title": "[2305.18545v2] Blockchain Censorship",
+      "url": "https://arxiv.org/abs/2305.18545v2",
+      "source_type": "paper_abstract_page",
+      "access_status": "accessible_abstract_full_paper_not_fetched",
+      "reading_status": "abstract_metadata_triage_only",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2023-05-29",
+      "revision_date": "2023-06-02",
+      "underlying_data_window": null,
+      "relevance": "Historical inclusion-delay/security context only. Abstract percentages are neither independently reproduced nor current-market assumptions; attack mechanisms excluded.",
+      "mechanism_ids": []
+    },
+    {
+      "id": "R069",
+      "title": "Native Token Transfers Rate Limiting | Wormhole Docs",
+      "url": "https://wormhole.com/docs/build/contract-integrations/native-token-transfers/configuration/rate-limiting",
+      "rendered_canonical_link": "https://wormhole.com/docs/products/token-transfers/native-token-transfers/configuration/rate-limiting/",
+      "source_type": "official_documentation",
+      "access_status": "accessible",
+      "reading_status": "rendered_article_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "page_created_date_as_displayed": "2026-10-28",
+      "page_updated_date_as_displayed": "2026-10-28",
+      "underlying_data_window": null,
+      "relevance": "Directional caps, queued transfers and reverse-flow capacity replenishment can segment inventory. Page date is not a protocol/instrument launch date; its Sepolia example does not prove a production opportunity.",
+      "mechanism_ids": ["INST-03"]
+    }
+  ],
+  "supporting_sources": [
+    {
+      "id": "I001",
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+      "url": "https://arxiv.org/html/2501.17335v2#A7",
+      "source_type": "research_paper",
+      "access_status": "accessible_three_paginated_fetches",
+      "fetch_start_indices": [0, 50000, 100000],
+      "reading_status": "selected_main_sections_references_and_complete_Appendix_G_case_read_not_a_full_paper_review",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "revision_date": "2025-06-18",
+      "underlying_data_window": ["2023-09", "2024-08"],
+      "relevance": "Historical documented loan-backed inventory replacement; transaction links are paper-provided, not independently replayed here.",
+      "mechanism_ids": ["INST-01"]
+    },
+    {
+      "id": "I002",
+      "title": "Credit Delegation | Aave Protocol Documentation",
+      "url": "https://aave.com/docs/aave-v3/guides/credit-delegation",
+      "source_type": "official_documentation",
+      "access_status": "accessible",
+      "reading_status": "rendered_article_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Delegator must supply collateral; variable-debt-token approval, eMode and health-factor checks constrain borrowing. Delegation shifts debt responsibility, not system-wide collateral requirements.",
+      "mechanism_ids": ["INST-01"]
+    },
+    {
+      "id": "I003",
+      "title": "Changelog | Aave Protocol Documentation",
+      "url": "https://aave.com/docs/resources/changelog",
+      "source_type": "official_deployment_changelog",
+      "access_status": "accessible",
+      "reading_status": "rendered_changelog_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": "Dated deployment/version announcements, not market observations.",
+      "reported_recent_deployments": [
+        {"date": "2026-03-30", "item": "Aave V4 Ethereum mainnet: Core, Plus and Prime hubs"},
+        {"date": "2026-07-15", "item": "Aave V4 Avalanche"},
+        {"date": "2026-09-16", "item": "Aave V4 Arc: Core hub, Main and Forex spokes"},
+        {"date": "2026-10-07", "item": "Aave V4 Base: Equities hub and MAG7 spoke; USDC and AAPLc/AMZNc/GOOGLc/METAc/MSFTc/NVDAc/TSLAc"}
+      ],
+      "relevance": "Officially reported deployed instrument changes inside the recent window. Contract state, issuer rights, borrowability, caps and execution depth were not independently verified.",
+      "mechanism_ids": ["INST-05", "INST-06"]
+    },
+    {
+      "id": "I004",
+      "title": "Omnichain Fungible Token (OFT) Technical Reference - LayerZero",
+      "url": "https://docs.layerzero.network/v2/concepts/technical-reference/oft-reference",
+      "source_type": "official_technical_documentation",
+      "access_status": "fetch_truncated_after_rendered_article_in_embedded_site_metadata",
+      "reading_status": "rendered_technical_article_read_embedded_build_metadata_excluded",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Source debit and destination credit require correctly paired channels. Composed execution is a new destination transaction; shared decimals, dust, adapter escrow, custom fees and nonstandard token accounting matter.",
+      "mechanism_ids": ["INST-04", "INST-06"]
+    },
+    {
+      "id": "I005",
+      "title": "Redemption | Threshold Network Docs",
+      "url": "https://docs.threshold.network/app-development/tbtc-contracts-api/tbtc-v2-api/redemption",
+      "source_type": "official_contract_API_documentation",
+      "access_status": "accessible",
+      "reading_status": "rendered_API_article_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "displayed_update_age": "3 years ago",
+      "underlying_data_window": null,
+      "relevance": "Asynchronous BTC payment, treasury/Bitcoin transaction fees, dust and wallet constraints, SPV completion and timeout token return. Timeout is not guaranteed immediate native BTC payment; live parameters remain unverified.",
+      "mechanism_ids": ["INST-02"]
+    },
+    {
+      "id": "I006",
+      "title": "Mainnet | Threshold Network Docs",
+      "url": "https://docs.threshold.network/contract-addresses/tbtc",
+      "source_type": "official_contract_registry",
+      "access_status": "accessible",
+      "reading_status": "rendered_registry_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "displayed_update_age": "5 months ago",
+      "underlying_data_window": null,
+      "relevance": "Documents Ethereum/Arbitrum/Base/Solana/Sui claim identifiers. Registry entries are not independent code, balances, route state, liquidity or redemption-eligibility checks.",
+      "mechanism_ids": ["INST-02"]
+    },
+    {
+      "id": "I007",
+      "title": "tBTC Redemption Fee Waivers for $T Stakers Are Now Live",
+      "url": "https://www.threshold.network/blog/tbtc-redemption-fee-waivers-for-t-stakers",
+      "source_type": "official_product_announcement",
+      "access_status": "accessible",
+      "reading_status": "rendered_article_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2026-01-22",
+      "revision_date": null,
+      "version_warning": "Currently rendered article contains a retrospective April 15, 2026 mint-fee reinstatement note. It is not a preserved January 22 snapshot.",
+      "underlying_data_window": null,
+      "documented_parameters": {
+        "eligible_fee_offset_tbtc_per_100000_T": "0.001",
+        "rolling_capacity_window_days": 30,
+        "unstaking_days": 30,
+        "mint_fee_bps_as_currently_documented": 20,
+        "redemption_fee_bps_as_currently_documented": 20
+      },
+      "relevance": "In-window fee segmentation through locked T capital. Parameters are product documentation, not verified current on-chain settings or realized returns.",
+      "mechanism_ids": ["INST-02"]
+    },
+    {
+      "id": "I008",
+      "title": "Bridge via LayerZero: USDT0 & More | Docs",
+      "article_heading": "Bridging stablecoins and USDT0 via LayerZero",
+      "url": "https://tempo.xyz/developers/docs/guide/bridge-layerzero",
+      "source_type": "official_chain_documentation",
+      "access_status": "accessible",
+      "reading_status": "asset_fee_contract_and_architecture_sections_read_transaction_examples_not_executed",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "displayed_updated_timestamp": "10/11/2026, 04:13 PM",
+      "date_warning": "Displayed numeric date locale not independently established; do not infer a launch date.",
+      "underlying_data_window": null,
+      "relevance": "Mainnet-labeled registry distinguishes bridged USDC.e/Stargate, native issuance and standard OFT tokens. Ethereum-Tempo transfer fee documented as 0 bps excludes gas/messaging costs; outbound fees use LZEndpointDollar.",
+      "mechanism_ids": ["INST-04"]
+    },
+    {
+      "id": "I009",
+      "title": "Decentralized Wrapped Bitcoin: tBTC Opportunities 2026",
+      "article_heading": "tBTC Opportunities in 2026: Where to Lend Bitcoin and Use It as Collateral in 2026",
+      "url": "https://www.threshold.network/blog/tbtc-opportunities-in-2026-bitcoin-vaults-pools-lending-markets-and-institutional-pathways",
+      "source_type": "official_ecosystem_guide_with_marketing_claims",
+      "access_status": "accessible",
+      "reading_status": "rendered_article_read_images_not_independently_decoded",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2026-05-27",
+      "revision_date": null,
+      "version_warning": "Rendered guide includes a June 2026 institutional case after its displayed May publication date; treat as mutable. Promotional safety, TVL and return claims not independently validated.",
+      "underlying_data_window": "Some vault/pool snapshot references dated 2026-05-25; not current executable quotes.",
+      "relevance": "Documents direct minting versus bridged access distinction, Compound v3 base-asset versus collateral distinction, and reports May 12, 2026 Starknet Ekubo tBTC/WBTC to strkBTC/tBTC migration. Different BTC wrappers are not automatically equivalent claims.",
+      "mechanism_ids": ["INST-02"]
+    },
+    {
+      "id": "I010",
+      "title": "Robinhood Chain | Robinhood",
+      "url": "https://robinhood.com/us/en/support/articles/robinhood-chain-mainnet",
+      "source_type": "official_mainnet_support_and_product_disclosures",
+      "access_status": "accessible",
+      "reading_status": "rendered_article_and_disclosures_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Documents mainnet chain ID 4663 and continued separate testnet. Stock Tokens are RHJ tokenized debt securities with no underlying shareholder rights and US-person/other jurisdiction restrictions. Documentation, not independent runtime or eligibility verification.",
+      "mechanism_ids": ["INST-06"]
+    },
+    {
+      "id": "I011",
+      "title": "Stock Tokens – Robinhood Chain Documentation",
+      "url": "https://docs.robinhood.com/chain/stock-tokens",
+      "source_type": "official_token_architecture_access_and_corporate_action_documentation",
+      "access_status": "accessible",
+      "reading_status": "rendered_article_read_linked_prospectus_final_terms_not_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "Documents transferable 18-decimal ERC-20 debt securities, AP/KYB primary subscription, Mon 02:00 to Sat 02:00 CET/CEST mint/burn window, asset-specific sessions, and uiMultiplier for dividends/splits while raw balances remain static. Full holder redemption rights/prospectus not reviewed.",
+      "mechanism_ids": ["INST-06"]
+    },
+    {
+      "id": "I012",
+      "title": "Robinhood Chain Token Contracts – Robinhood Chain Documentation",
+      "url": "https://docs.robinhood.com/chain/contracts/",
+      "source_type": "official_mainnet_token_registry",
+      "access_status": "accessible",
+      "reading_status": "registry_introduction_and_selected_Apple_row_read_not_every_registry_row",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": "Current registry rendered at retrieval; page says generated live from on-chain asset registry.",
+      "relevance": "Lists canonical Apple Robinhood Token AAPL at 0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9. Not a testnet mock registry; deployed bytecode, transfers, executable market and liquidity not independently checked.",
+      "mechanism_ids": ["INST-06"]
+    },
+    {
+      "id": "I013",
+      "title": "Frequently Asked Questions | xStocks Docs",
+      "url": "https://docs.xstocks.fi/docs/frequently-asked-questions",
+      "source_type": "official_issuer_product_FAQ",
+      "access_status": "accessible",
+      "reading_status": "rendered_FAQ_read_linked_prospectus_and_reserves_not_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "displayed_update_age": "1 month ago",
+      "underlying_data_window": null,
+      "relevance": "Tracker certificates, not shareholder voting rights. Eligible/KYC retail direct redemption stated with $5000 minimum; primary 24/5 versus secondary potentially 24/7. Net-tax dividend reinvestment and EVM balance rebasing versus Solana Scaled UI. Lists Solana and TON native issuance plus EVM networks; exact token identifiers and underlying prospectus not verified.",
+      "mechanism_ids": ["INST-06"]
+    },
+    {
+      "id": "I014",
+      "title": null,
+      "requested_reference": "SSRN 7161018",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7161018",
+      "source_type": "user_provided_paper_link_unresolved",
+      "access_status": "single_fetch_failed_scraper_500_Internal_Server_Error",
+      "reading_status": "unavailable_not_read",
+      "retrieved_date": "2026-10-29",
+      "publication_date": null,
+      "underlying_data_window": null,
+      "relevance": "No title, authors, abstract, version or contents resolved. Fetch failure and unsuccessful exact-ID search are not evidence of nonexistence. No claims attributed to this paper.",
+      "mechanism_ids": ["INST-06"]
+    },
+    {
+      "id": "I015",
+      "title": "Hyperliquid – Infrastructure to House All Finance",
+      "article_label": "HIP-3",
+      "url": "https://hyperliquid.xyz/article/hip-3",
+      "source_type": "official_product_update",
+      "access_status": "accessible",
+      "reading_status": "rendered_product_article_read_not_individual_market_specs",
+      "retrieved_date": "2026-10-29",
+      "publication_date": "2026-06",
+      "underlying_data_window": "Product update reports existing adoption; exact measured window not provided.",
+      "relevance": "Officially documents mainnet builder equity/perpetual markets, deployer-defined oracles/specs and independent margining/collateral. Reports October 2025 launch but exact day unknown. No specific Apple contract/index/funding/corporate-action/eligibility terms read; promotional volume figures not used.",
+      "mechanism_ids": ["INST-06"]
+    }
+  ],
+  "newer_related_work_triage": [
+    {
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+      "url": "https://dl.acm.org/doi/10.1145/3771566",
+      "publication_date_as_listed": "2025-12-02",
+      "status": "R051_cited_by_metadata_only",
+      "qualification": "Later publication of the seed research, not an independently read new dataset."
+    },
+    {
+      "title": "Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance",
+      "url": "https://dl.acm.org/doi/10.1145/3820171.3806898",
+      "publication_date_as_listed": "2026-06",
+      "status": "search_only_extended_abstract_lead",
+      "qualification": "Not fetched; neither a new empirical window nor independent replication established."
+    },
+    {
+      "title": "Geographical Centralization Resilience in Ethereum's Block-Building Paradigms",
+      "url": "https://dl.acm.org/doi/10.1145/3805637",
+      "publication_date_as_listed": "2026-05-29",
+      "status": "R051_cited_by_metadata_only",
+      "qualification": "Timing/risk context lead; full paper and empirical window not read."
+    }
+  ],
+  "candidate_2_source_leads": [
+    {
+      "title": "Robinhood Chain Launches Public Testnet",
+      "url": "https://robinhood.com/us/en/newsroom/robinhood-chain-launches-public-testnet",
+      "status": "official_search_snippet_only_not_fetched",
+      "qualification": "Historical testnet launch does not establish October 29 mainnet status."
+    },
+    {
+      "title": "Robinhood Chain | Robinhood",
+      "url": "https://robinhood.com/us/en/support/articles/robinhood-chain-mainnet",
+      "status": "subsequently_fetched_and_read_as_I010",
+      "qualification": "Mainnet and separate testnet documented; no runtime or actual user eligibility check."
+    },
+    {
+      "title": "Stock Tokens – Robinhood Chain Documentation",
+      "url": "https://docs.robinhood.com/chain/stock-tokens",
+      "status": "subsequently_fetched_and_read_as_I011",
+      "qualification": "Debt claim, AP/KYB subscription, hours, corporate-action multiplier and jurisdiction restrictions documented; linked Final Terms not read."
+    },
+    {
+      "title": "Robinhood Chain Token Contracts – Robinhood Chain Documentation",
+      "url": "https://docs.robinhood.com/chain/contracts/",
+      "status": "subsequently_fetched_selected_registry_as_I012",
+      "qualification": "Canonical Apple token address extracted; no deployed-code, market or liquidity check."
+    },
+    {
+      "title": "Connecting to Robinhood Chain – Robinhood Chain Documentation",
+      "url": "https://docs.robinhood.com/chain/connecting",
+      "status": "official_search_snippet_only_not_fetched",
+      "qualification": "Result mentions mainnet and testnet endpoints; endpoint listing is not issuer asset availability."
+    },
+    {
+      "title": "Frequently Asked Questions | xStocks Docs",
+      "url": "https://docs.xstocks.fi/docs/frequently-asked-questions",
+      "status": "subsequently_fetched_and_read_as_I013",
+      "qualification": "Tracker claim, eligible KYC retail redemption/$5000 minimum, hours, rebase/Scaled UI and chain list documented; full legal/investor rules not reviewed."
+    },
+    {
+      "title": "How xStocks Work | xStocks Docs",
+      "url": "https://docs.xstocks.fi/docs/how-xstocks-work",
+      "status": "official_search_snippet_only_not_fetched",
+      "qualification": "Snippet references share custody, dividends and split adjustments; exact claim/rebasing treatment and chain identifiers unverified."
+    },
+    {
+      "title": "xStocks For Developers | xStocks Docs",
+      "url": "https://docs.xstocks.fi/developers",
+      "status": "official_search_snippet_only_not_fetched",
+      "qualification": "API/metadata availability lead, not verified contracts, venue depth or account access."
+    },
+    {
+      "title": "Corporate Actions on xStocks Perpetual Futures FAQ",
+      "url": "https://support.kraken.com/gb/articles/corporate-actions-xstocks-perpetual-futures-faq",
+      "displayed_update_date_in_snippet": "2026-08-18",
+      "status": "official_search_snippet_only_not_fetched",
+      "qualification": "Kraken derivative lead, NOT evidence of HIP-3 or Lighter instrument availability or equivalent corporate-action accounting."
+    },
+    {
+      "requested_reference": "SSRN 7161018",
+      "title": null,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7161018",
+      "status": "exact_ID_search_unresolved_direct_fetch_failed_500_see_I014",
+      "qualification": "No author/title/abstract/version or claimed mechanism verified. Search/fetch failure is not proof of nonexistence."
+    },
+    {
+      "requested_venue": "HIP-3",
+      "url": "https://hyperliquid.xyz/article/hip-3",
+      "status": "official_June_2026_product_update_read_as_I015",
+      "qualification": "Deployed builder equity markets documented, exact matched contract/specifications and account access not verified."
+    },
+    {
+      "requested_venue": "Lighter",
+      "url": null,
+      "status": "no_official_instrument_page_reached_with_bounded_budget",
+      "qualification": "Markets, tickers, oracle definitions, contract sizes, jurisdiction, collateral, funding and trading hours remain unknown; not a claim the venue lacks stock instruments."
+    }
+  ],
+  "search_queries_in_order": [
+    "Which official Aave sources document credit delegation, non-atomic borrowing and Aave V4 deployment status in 2026?",
+    "Which official Threshold sources document tBTC redemption mechanics, deployed contract addresses, and Solana or Sui instrument launches between October 2025 and October 2026?",
+    "Which official LayerZero or Wormhole sources document OFT asset equivalence and USDT0 deployments or new native-token instruments between October 2025 and October 2026?",
+    "2025 2026 cross-chain arbitrage collateralized loan inventory borrowing research paper",
+    "Robinhood Chain mainnet testnet tokenized stocks SSRN 7161018",
+    "xStocks HIP-3 Lighter stock perpetual official documentation issuer redemption eligibility dividends split 2026",
+    "\"7161018\" SSRN",
+    "HIP-3 Lighter official docs equity stocks markets dividends stock splits trading hours"
+  ],
+  "limitations": [
+    "The stock-token addition arrived after the original 20-fetch budget. A targeted six-fetch/two-search extension was used only for that candidate, including one failed SSRN fetch; no generic follow-on wave ran.",
+    "Robinhood and xStocks product terms and Robinhood's selected Apple registry row were read; full legal prospectuses, exact xStock mint, a matched HIP-3 contract specification and official Lighter instrument terms were not reached.",
+    "No new RPC, account access, transactions, package installation, server, price series, replay or unattended run.",
+    "No market profitability, clean accessible stock comparison, live borrow capacity, T2/T3 qualification or risk certificate established.",
+    "Source titles are fetched page metadata; article headings are separately preserved where different. Public source material is paraphrased, not bulk redistributed."
+  ]
+}
