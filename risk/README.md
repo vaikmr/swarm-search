@@ -2,6 +2,8 @@
 
 Research date: 2026-10-29. Scope: the lending benchmark and all eleven candidate strategies. This is a risk specification and sourced historical review, not a strategy recommendation, audit, T1 actor-PnL study, qualifying T2 replay, or T3 observation.
 
+The [observed holder-component review](actor-components-review.md) independently reproduces the scout's archived partial ledger and checks two-way log consistency within retained receipts. It does not establish complete actor net income, exhaustive chain coverage or the proposed portfolio's tail-risk qualification.
+
 ## Immediate findings
 
 1. **Full-capital on-chain deployment is infeasible under the literal concentration rules.** Three chains capped at 30% of total capital each can hold at most 90%, or $45,000 of the $50,000 budget. At least $5,000 must remain outside those chain buckets. A genuine off-chain USD reserve is conceptually possible; a stablecoin balance on another chain is not off-chain cash. CEX custody introduces its own failure domain and eligibility/access requirements. The reserve and its yield must appear in whole-portfolio accounting. These are charter-derived calculations, reproduced in `stress_output.json` (T4, not observed returns).
