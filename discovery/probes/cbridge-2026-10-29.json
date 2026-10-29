@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "scope": "One indicative current configuration/quote probe; not a fill, sequential round trip or strategy validation.",
+  "recommended": false,
+  "rpc_calls": 0,
+  "transactions_submitted": 0,
+  "wallet_supplied": false,
+  "raw_response_hash_policy": "SHA-256 of original HTTP response body. Raw bodies were not retained; hashes do not describe this reserialized JSON.",
+  "configuration": {
+    "url": "https://cbridge-prod2.celer.app/v2/getTransferConfigsForAll",
+    "retrieved_at": "2026-10-29T09:04:34.834Z",
+    "http_status": 200,
+    "err": null,
+    "response_sha256": "cb2ab694d83c7070d1fc88da0868d0e8fef3ca23dfc8d67ad79b24e5e5ffff86",
+    "raw_bytes": 711354,
+    "raw_response_retained": false,
+    "selection_policy": "Only selected USDC token fields on Ethereum, Arbitrum and Base. Other tokens, global routing/blocking and aggregator configuration omitted.",
+    "selected_tokens": [
+      {
+        "chain_id": 1,
+        "symbol": "USDC",
+        "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "decimal": 6,
+        "transfer_disabled": false,
+        "xfer_disabled": false
+      },
+      {
+        "chain_id": 42161,
+        "symbol": "USDC",
+        "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+        "decimal": 6,
+        "transfer_disabled": false,
+        "xfer_disabled": false
+      },
+      {
+        "chain_id": 42161,
+        "symbol": "USDC_RFQ",
+        "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        "decimal": 6,
+        "transfer_disabled": true,
+        "xfer_disabled": true
+      },
+      {
+        "chain_id": 8453,
+        "symbol": "USDC",
+        "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "decimal": 6,
+        "transfer_disabled": true,
+        "xfer_disabled": true
+      }
+    ]
+  },
+  "estimates": [
+    {
+      "url": "https://cbridge-prod2.celer.app/v2/estimateAmt?src_chain_id=1&dst_chain_id=42161&token_symbol=USDC&amt=1000000000&slippage_tolerance=500&is_pegged=false",
+      "retrieved_at": "2026-10-29T09:04:58.918Z",
+      "http_status": 200,
+      "response_sha256": "d6864e6de6fa649655cadf8abb256553b642036c9ea2d3fee3dfdb718323f332",
+      "raw_bytes": 331,
+      "source_chain_id": 1,
+      "destination_chain_id": 42161,
+      "input_base_units": "1000000000",
+      "decimals": 6,
+      "body": {
+        "base_fee": "7300",
+        "bridge_rate": 1,
+        "drop_gas_amt": "0",
+        "eq_value_token_amt": "1000000000",
+        "err": null,
+        "estimated_receive_amt": "999892700",
+        "max_slippage": 5607,
+        "op_fee_rebate": 0,
+        "op_fee_rebate_end_time": "1793491200",
+        "op_fee_rebate_portion": 1,
+        "perc_fee": "100000",
+        "slippage_tolerance": 500
+      }
+    },
+    {
+      "url": "https://cbridge-prod2.celer.app/v2/estimateAmt?src_chain_id=42161&dst_chain_id=1&token_symbol=USDC&amt=1000000000&slippage_tolerance=500&is_pegged=false",
+      "retrieved_at": "2026-10-29T09:04:59.117Z",
+      "http_status": 200,
+      "response_sha256": "73f047ef79ad5c4ac66e8d68856ba6b71aff4c389a24fdb4479e3a0afe5d288c",
+      "raw_bytes": 335,
+      "source_chain_id": 42161,
+      "destination_chain_id": 1,
+      "input_base_units": "1000000000",
+      "decimals": 6,
+      "body": {
+        "base_fee": "9488601",
+        "bridge_rate": 1,
+        "drop_gas_amt": "0",
+        "eq_value_token_amt": "1000000000",
+        "err": null,
+        "estimated_receive_amt": "990411399",
+        "max_slippage": 15088,
+        "op_fee_rebate": 0,
+        "op_fee_rebate_end_time": "1793491200",
+        "op_fee_rebate_portion": 1,
+        "perc_fee": "100000",
+        "slippage_tolerance": 500
+      }
+    }
+  ],
+  "interpretation": {
+    "independent_equal_input_estimates_not_sequential_round_trip": true,
+    "positive_imbalance_surplus_observed_on_tested_pair_at_tested_size": false,
+    "native_usdc_and_quoted_arbitrum_asset_are_identical_claims": false,
+    "complete_return_rail_verified": false,
+    "full_net_profit": null,
+    "repeatability": null,
+    "evidence_tier_upgrade": false
+  }
+}

@@ -6,6 +6,23 @@ The user subsequently supplied [seven specific candidate mechanisms](USER_CANDID
 
 The user clarified that the goal is to discover new cross-chain arbitrage strategies by following papers, citations, recent instruments and actual on-chain activity. This is not a restart of the old passive-yield/validation loop. The prior [early closeout](../FINAL_REPORT.md) and twelve NOT READY verdicts remain historical facts, not proof that the opportunity space is exhausted.
 
+## Integrated results
+
+Six bounded research packages have been integrated. The on-chain package and final independent source-coverage audit remain pending; this is not a completed claim of 32 exact-original full reads.
+
+| Package | Findings |
+| --- | --- |
+| Literature | [Historical inventory mechanisms, prior art and recent destination/rail changes](workstreams/literature/findings.md) |
+| Empirical | [Identifiable loan witnesses, an unreconciled paper amount and missing hedge-replay inputs](workstreams/empirical/findings.md) |
+| Instruments | [Exact claims, borrowing, fee segmentation and tokenized-equity access](workstreams/instruments/findings.md) |
+| Settlement | [Inventory-aware filling, spendable repayment and unavailable deposit routes](workstreams/settlement/findings.md) |
+| Economics | [Complete-cycle costs, bridge rebalancing and stablecoin conversion identities](workstreams/economics/findings.md) |
+| Durability | [Independent critiques of all seven proposed mechanisms](workstreams/durability/findings.md) |
+
+A narrow coordinator [current-quote probe](probes/cbridge-2026-10-29.md) supplements those packages. At one timestamp, two independent 1,000-unit cBridge estimates showed no imbalance bonus. More importantly, the configured Arbitrum `USDC` was bridged USDC.e, not native USDC: a native-USDC return rail cannot silently close that inventory cycle. This is an indicative snapshot, not a fill, historical replay or conclusion about every corridor.
+
+No complete-cycle net-profit, academic-novelty, T2/T3 or risk-certification claim has been established.
+
 ## Source coverage
 
 Seed: [Cross-Chain Arbitrage: The Next Frontier of MEV in Decentralized Finance, v2](https://arxiv.org/html/2501.17335v2#A7), including Appendix G's collateralized, non-atomic loan-backed inventory replacement.
