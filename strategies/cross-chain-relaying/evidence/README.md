@@ -29,3 +29,11 @@ fields where returned, the canonical block timestamp and block-hash match.
 Reproduce the fixed receipt reads from the repository root with
 `python3 strategies/intent-solvers/evidence/verify_public_receipts.py`.
 Successful execution of a single receipt is not a profit or competition result.
+
+## Historical followup
+
+[`HISTORICAL_LEDGER_AVAILABILITY.md`](HISTORICAL_LEDGER_AVAILABILITY.md) documents
+a bounded 14-day Optimism log/state retrieval for one actor, the observed
+pagination limits, actual repayment-path witness and remaining cross-chain
+receivable/cost gaps. It does not establish actor PnL. Its small provenance
+summary is published; bulk per-event records remain in ignored `data/raw/`.
